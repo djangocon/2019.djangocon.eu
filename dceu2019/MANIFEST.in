@@ -1,0 +1,3 @@
+graft src/dceu2019
+prune media
+global-exclude *.py[co]
