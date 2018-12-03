@@ -35,9 +35,23 @@ INSTALLED_APPS += [
     'django.forms',
 ]
 
+# PreTalx users this
+LOCAL_APPS = [
+    'pretalx.api',
+    'pretalx.common',
+    'pretalx.event',
+    'pretalx.mail',
+    'pretalx.person',
+    'pretalx.schedule',
+    'pretalx.submission',
+    'pretalx.agenda',
+    'pretalx.cfp',
+    'pretalx.orga',
+]
+
 # What is this, is it needed?
 SITE_URL = 'http://localhost'
-SITE_NETLOC = "localhost"
+SITE_NETLOC = "localhost:8000"
 
 
 # Unknown where these are used, or if they are specifically for pretalx..

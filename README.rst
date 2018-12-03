@@ -68,6 +68,9 @@ You can install and work on a development version following these steps:
   # When ready, run migrations.
   $ python dceu2019/manage.py migrate
 
+  # Initialize PreTalx: Creates a superuser etc.
+  $ python dceu2019/manage.py init
+
   # Now you can run the development server
   $ python dceu2019/manage.py runserver
 
