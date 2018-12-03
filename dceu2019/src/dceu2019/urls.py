@@ -16,20 +16,20 @@ Examples:
         2. Add a URL to urlpatterns: path("blog/", include("dceu2019.apps.blog.urls"))
 
 """
+from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 
 
-from pretalx import urls as pretalx_urls
-
-
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("pretalx/", include(pretalx_urls)),
+    path('orga/', include('pretalx.orga.urls', namespace='orga')),
+    path('api/', include('pretalx.api.urls', namespace='api')),
+    path('', include('pretalx.agenda.urls', namespace='agenda')),
+    path('', include('pretalx.cfp.urls', namespace='cfp')),
 ]
 
-# Commenting out because Pretalx hard-coded this behavior
-# if settings.DEBUG:
-#     import debug_toolbar
-# 
-#     urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
