@@ -8,15 +8,16 @@ try:
     from .local import *
 except ImportError:
     sys.stderr.write(
-        "Could not find settings.local, creating a default one. Please "
-        "customize it with your SECRET_KEY, DATABASES etc. and start again.\n"
+        "Could not find dceu2019/src/dceu2019/settings/local.py, creating a "
+        "default one. Please customize it with your SECRET_KEY, DATABASES etc. "
+        "and start again.\n"
     )
     default = (
         """# Using development settings, replace in production!\n"""
         """from .dev import *  # noqa\n"""
         """\n"""
         """SECRET_KEY = "{secret_key}"\n"""
-        """DATABASES = DATABASES = {{\n"""
+        """DATABASES = {{\n"""
         """    "default": {{\n"""
         """        "ENGINE": "django.db.backends.sqlite3",\n"""
         """        "NAME": str(BASE_DIR.parent.parent / "db.sqlite3"),\n"""

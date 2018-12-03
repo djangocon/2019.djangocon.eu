@@ -24,10 +24,10 @@ CELERY_RESULT_BACKEND = ""
 
 # There is only one entry... but whatevs :)
 for _TEMPLATE in TEMPLATES:
-    _TEMPLATE['OPTIONS'].setdefault('loaders', (
+    _TEMPLATE['OPTIONS'].setdefault('loaders', [
             'django.template.loaders.filesystem.Loader',
             'django.template.loaders.app_directories.Loader',
-        )
+        ]
     )
     _TEMPLATE['OPTIONS']['loaders'].prepend('django.template.loaders.cached.Loader')
 
