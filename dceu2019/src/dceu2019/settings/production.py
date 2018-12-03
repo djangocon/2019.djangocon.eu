@@ -29,6 +29,6 @@ for _TEMPLATE in TEMPLATES:
             'django.template.loaders.app_directories.Loader',
         ]
     )
-    _TEMPLATE['OPTIONS']['loaders'].prepend('django.template.loaders.cached.Loader')
+    _TEMPLATE['OPTIONS']['loaders'].insert(0, 'django.template.loaders.cached.Loader')
 
 COMPRESS_ENABLED = COMPRESS_OFFLINE = not DEBUG
