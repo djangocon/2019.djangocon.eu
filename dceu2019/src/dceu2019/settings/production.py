@@ -23,12 +23,14 @@ CELERY_BROKER_URL = ""
 CELERY_RESULT_BACKEND = ""
 
 # There is only one entry... but whatevs :)
-for _TEMPLATE in TEMPLATES:
-    _TEMPLATE['OPTIONS'].setdefault('loaders', [
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-        ]
-    )
-    _TEMPLATE['OPTIONS']['loaders'].prepend('django.template.loaders.cached.Loader')
+# Uncommmented because we need to figure out:
+# ?: (templates.E001) You have 'APP_DIRS': True in your TEMPLATES but also specify 'loaders' in OPTIONS. Either remove APP_DIRS or remove the 'loaders' option.
+# for _TEMPLATE in TEMPLATES:
+#     _TEMPLATE['OPTIONS'].setdefault('loaders', [
+#             'django.template.loaders.filesystem.Loader',
+#             'django.template.loaders.app_directories.Loader',
+#         ]
+#     )
+#     _TEMPLATE['OPTIONS']['loaders'].insert(0, 'django.template.loaders.cached.Loader')
 
 COMPRESS_ENABLED = COMPRESS_OFFLINE = not DEBUG
