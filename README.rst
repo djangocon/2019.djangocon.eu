@@ -33,8 +33,14 @@ Here is the main parts of this project's structure::
   │   │   └── __init__.py
   │   └── staticfiles
   │       └── ...
-  ├── hugo_site
-  │   └── ...
+  └── hugo_site
+      ├── content  # <= This is where all the content lives!
+      │   └── ...
+      └── themes
+          └── dceu2019  # <= The theme
+              ├── layouts  # <= HTML templates
+              ├── static  # <= CSS etc
+              └── ...
 
 
 The first, ``dceu2019`` contains a Django project and ``hugo_site`` contains
