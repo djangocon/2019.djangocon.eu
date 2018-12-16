@@ -1,0 +1,15 @@
+baseURL = "https://2019.djangocon.eu/"
+languageCode = "en-us"
+title = "DjangoCon Europe 2019"
+theme = "dceu2019"
+author = "Django Denmark"
+
+[[menu.main]]
+    name = "CfP"
+    url  = "/cfp"
+[[menu.main]]
+    name = "Sponsors"
+    url  = "/sponsors"
+[[menu.main]]
+    name = "Contact"
+    url  = "/contact"

@@ -1,0 +1,22 @@
+
+body {
+  font-family: "Courier New", monospace;
+  font-size: 150%;
+  padding: 0 0;
+}
+
+h1 {
+  font-size: 250%;
+  text-align: center;
+}
+
+.schedule
+{
+  font-size: 80%;
+}
+
+.all_container {
+  max-width: none;
+  margin: 0;
+}
+

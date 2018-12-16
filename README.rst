@@ -33,16 +33,29 @@ Here is the main parts of this project's structure::
 │   │   └── __init__.py
 │   └── staticfiles
 │       └── ...
-├── public_html
+├── hugo_project
 │   └── ...
 
 
-The first, ``dceu2019`` contains a Django project and ``public_html`` contains
-static HTML files for the main site.
+The first, ``dceu2019`` contains a Django project and ``hugo_project`` contains
+the `Hugo project <https://gohugo.io/>`__ for static site generation (the main
+site).
 
 We use a **static main site** because we want to archive the main conference
-website as easily as possible. The plan is to convert it to a
-[Hugo](https://gohugo.io) project.
+website as easily as possible. We are using the default version of Hugo for
+Ubuntu 18.04, so to generate and run the main site, just do:
+
+.. code-block:: console
+
+  # Install Hugo
+  $ sudo apt install hugo
+
+  # Go to project directory
+  $ cd hugo_project
+
+  # Run dev server
+  $ hugo server
+
 
 The **Django project** will be used before and during the conference for
 planning purposes: Talk submissions, scheduling, and ticket holder services such
