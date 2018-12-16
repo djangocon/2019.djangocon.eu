@@ -3,42 +3,42 @@ Getting started
 
 Here is the main parts of this project's structure::
 
-.
-├── dceu2019
-│   ├── db.sqlite3  # <= NOT in repo
-│   ├── __init__.py
-│   ├── manage.py
-│   ├── MANIFEST.in
-│   ├── media
-│   ├── README.md
-│   ├── setup.cfg
-│   ├── setup.py
-│   ├── src
-│   │   ├── dceu2019
-│   │   │   ├── apps
-│   │   │   │   └── __init__.py
-│   │   │   ├── __init__.py
-│   │   │   ├── locale
-│   │   │   ├── settings
-│   │   │   │   ├── base.py
-│   │   │   │   ├── dev.py
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── local.py  # <= NOT in repo
-│   │   │   │   ├── pretalx.py
-│   │   │   │   └── production.py
-│   │   │   ├── static
-│   │   │   ├── templates
-│   │   │   ├── urls.py
-│   │   │   └── wsgi.py
-│   │   └── __init__.py
-│   └── staticfiles
-│       └── ...
-├── hugo_project
-│   └── ...
+  .
+  ├── dceu2019
+  │   ├── db.sqlite3  # <= NOT in repo
+  │   ├── __init__.py
+  │   ├── manage.py
+  │   ├── MANIFEST.in
+  │   ├── media
+  │   ├── README.md
+  │   ├── setup.cfg
+  │   ├── setup.py
+  │   ├── src
+  │   │   ├── dceu2019
+  │   │   │   ├── apps
+  │   │   │   │   └── __init__.py
+  │   │   │   ├── __init__.py
+  │   │   │   ├── locale
+  │   │   │   ├── settings
+  │   │   │   │   ├── base.py
+  │   │   │   │   ├── dev.py
+  │   │   │   │   ├── __init__.py
+  │   │   │   │   ├── local.py  # <= NOT in repo
+  │   │   │   │   ├── pretalx.py
+  │   │   │   │   └── production.py
+  │   │   │   ├── static
+  │   │   │   ├── templates
+  │   │   │   ├── urls.py
+  │   │   │   └── wsgi.py
+  │   │   └── __init__.py
+  │   └── staticfiles
+  │       └── ...
+  ├── hugo_site
+  │   └── ...
 
 
-The first, ``dceu2019`` contains a Django project and ``hugo_project`` contains
-the `Hugo project <https://gohugo.io/>`__ for static site generation (the main
+The first, ``dceu2019`` contains a Django project and ``hugo_site`` contains
+the `Hugo <https://gohugo.io/>`__ project for static site generation (the main
 site).
 
 We use a **static main site** because we want to archive the main conference
@@ -51,7 +51,7 @@ Ubuntu 18.04, so to generate and run the main site, just do:
   $ sudo apt install hugo
 
   # Go to project directory
-  $ cd hugo_project
+  $ cd hugo_site
 
   # Run dev server
   $ hugo server
