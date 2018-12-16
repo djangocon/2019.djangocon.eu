@@ -4,6 +4,10 @@ title = "DjangoCon Europe 2019"
 theme = "dceu2019"
 author = "Django Denmark"
 
+[params]
+
+    headerimage = "logo_small.png"
+
 [[menu.main]]
     name = "CfP"
     url  = "/cfp"

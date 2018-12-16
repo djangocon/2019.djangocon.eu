@@ -17,9 +17,11 @@
 
 <div class="all_container">
 
-  <a href="{{ .Site.BaseURL }}">
-    <img src="{{ .Site.BaseURL }}img/logo.png" alt="DjangoCPH logo" />
-  </a>
+  <div class="header_image">
+    <a href="{{ .Site.BaseURL }}">
+      <img src="{{ .Site.BaseURL }}img/{{if .Params.headerimage}}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" />
+    </a>
+  </div>
 
   <header>
 	  <nav>
