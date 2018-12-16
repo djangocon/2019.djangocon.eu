@@ -19,8 +19,8 @@ EMAIL_USE_SSL = config.getboolean('mail', 'ssl')
 """
 
 # TODO: Need to figure out if this goes in settings.local
-CELERY_BROKER_URL = "amqp://guest:**@127.0.0.1:5672/"
-CELERY_RESULT_BACKEND = "amqp://guest:**@127.0.0.1:5672/"
+CELERY_BROKER_URL = "redis://127.0.0.1/2"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1/1"
 
 # There is only one entry... but whatevs :)
 # Uncommmented because we need to figure out:
