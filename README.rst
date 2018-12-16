@@ -1,10 +1,13 @@
 Getting started
 ===============
 
-Here is the main parts of this project's structure::
+Here are the essential parts of this project's file structure. The first,
+``dceu2019/`` contains a Django project and ``hugo_site/`` contains the
+`Hugo <https://gohugo.io/>`__ project for static site generation (the main
+site)::
 
   .
-  ├── dceu2019
+  ├── dceu2019  # <= Django project
   │   ├── db.sqlite3  # <= NOT in repo
   │   ├── __init__.py
   │   ├── manage.py
@@ -33,7 +36,7 @@ Here is the main parts of this project's structure::
   │   │   └── __init__.py
   │   └── staticfiles
   │       └── ...
-  └── hugo_site
+  └── hugo_site  # <= Hugo project
       ├── content  # <= This is where all the content lives!
       │   └── ...
       └── themes
@@ -43,9 +46,8 @@ Here is the main parts of this project's structure::
               └── ...
 
 
-The first, ``dceu2019`` contains a Django project and ``hugo_site`` contains
-the `Hugo <https://gohugo.io/>`__ project for static site generation (the main
-site).
+Developing the Hugo site
+------------------------
 
 We use a **static main site** because we want to archive the main conference
 website as easily as possible. We are using the default version of Hugo for
@@ -62,6 +64,9 @@ Ubuntu 18.04, so to generate and run the main site, just do:
   # Run dev server
   $ hugo server
 
+
+Developing the Django project
+-----------------------------
 
 The **Django project** will be used before and during the conference for
 planning purposes: Talk submissions, scheduling, and ticket holder services such
