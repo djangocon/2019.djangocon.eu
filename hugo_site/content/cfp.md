@@ -39,7 +39,7 @@ If you think you have something great to talk about – submit your idea! If you
 
 ## Help! ⛑️
 
-You may think that your idea is not suited to DjangoCon Europe, or that you couldn't possibley present it well, or that others will do it better. **We want to prove you wrong**. We're currently building a list of speaker mentors who are willing to help you develop your idea into a talk, and help you tackle all obstacles on the way. Please check back later (or wait for our blog post). In the meantime, consider reading [Sasha's blog post](https://www.mxsasha.eu/blog/2015/03/11/why-you-should-speak/) on why you should speak at DjangoCon Europe! This blog post still holds true 3 years later.
+You may think that your idea is not suited to DjangoCon Europe, or that you couldn't possibly present it well, or that others will do it better. **We want to prove you wrong**. We're currently building a list of speaker mentors who are willing to help you develop your idea into a talk, and help you tackle all obstacles on the way. Please check back later (or wait for our blog post). In the meantime, consider reading [Sasha's blog post](https://www.mxsasha.eu/blog/2015/03/11/why-you-should-speak/) on why you should speak at DjangoCon Europe! This blog post still holds true 3 years later.
 
 Until we have a mentor list ready: If you would like to ask a question or ask for a mentor, please write the content committee: [content@djangocon.eu](mailto:content@djangocon.eu)
 
