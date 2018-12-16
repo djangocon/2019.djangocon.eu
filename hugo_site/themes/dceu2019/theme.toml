@@ -9,6 +9,11 @@ homepage = "http://example.com/"
 tags = []
 features = []
 min_version = "0.38"
+headerimage = "logo_small.png"
+
+
+[params]
+  headerimage = "logo_small.png"
 
 [author]
   name = ""
