@@ -2,7 +2,7 @@ from .base import *  # noqa
 from .pretalx import *  # noqa
 
 MANAGERS = ADMINS = [
-    ("Main admin team", "info@django-denmark.org")
+    ("Main admin team", "content@djangocon.eu")
 ]
 
 MAIL_FROM = SERVER_EMAIL = DEFAULT_FROM_EMAIL = "content@djangocon.eu"
@@ -19,8 +19,8 @@ EMAIL_USE_SSL = config.getboolean('mail', 'ssl')
 """
 
 # TODO: Need to figure out if this goes in settings.local
-CELERY_BROKER_URL = ""
-CELERY_RESULT_BACKEND = ""
+CELERY_BROKER_URL = "redis://127.0.0.1/2"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1/1"
 
 # There is only one entry... but whatevs :)
 # Uncommmented because we need to figure out:
