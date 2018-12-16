@@ -3,9 +3,11 @@ languageCode = "en-us"
 title = "DjangoCon Europe 2019"
 theme = "dceu2019"
 author = "Django Denmark"
+description = "DjangoCon Europe, In Copenhagen April 10-12th 2019"
 
 [params]
 
+    twittercardimage="twitter_square.png"
     headerimage = "logo_small.png"
 
 [[menu.main]]
