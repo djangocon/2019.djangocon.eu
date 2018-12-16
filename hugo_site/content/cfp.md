@@ -28,7 +28,7 @@ If you think you have something great to talk about – submit your idea! If you
 ## Topics 📚
 
 *   Django internals and challenges in modern web development.
-*   Wild ideas, clever hacks, unsuspected use cases.
+*   Wild ideas, clever hacks, surprising or cool use cases.
 *   Improving Django and Python developers’ lives.
 *   Pushing Django to its limits
 *   Fundamentals, in a modern light.
@@ -38,7 +38,9 @@ If you think you have something great to talk about – submit your idea! If you
 
 ## Help! ⛑️
 
-You may think that your idea is not suited to DjangoCon Europe, or that you couldn't possibley present it well, or that others will do it better. **We want to prove you wrong**. We're currently building a list of speaker mentors who are willing to help you develop your idea into a talk, and help you tackle all obstacles on the way. Please check back later (or wait for our blog post). In the meantime, consider reading [Sasha's blog post](https://www.mxsasha.eu/blog/2015/03/11/why-you-should-speak/) on why you should speak at DjangoCon Europe!
+You may think that your idea is not suited to DjangoCon Europe, or that you couldn't possibley present it well, or that others will do it better. **We want to prove you wrong**. We're currently building a list of speaker mentors who are willing to help you develop your idea into a talk, and help you tackle all obstacles on the way. Please check back later (or wait for our blog post). In the meantime, consider reading [Sasha's blog post](https://www.mxsasha.eu/blog/2015/03/11/why-you-should-speak/) on why you should speak at DjangoCon Europe! This blog post still holds true 3 years later.
+
+Until we have a mentor list ready: If you would like to ask a question or ask for a mentor, please write the content committee: [content@djangocon.eu](mailto:content@djangocon.eu)
 
 ## Speaker bonuses 🎁
 
@@ -46,30 +48,28 @@ As a speaker, you will not need to buy a ticket, since you gain free entrance to
 
 We will not be able to cover travelling and accommodation costs for all speakers, but if you require financial support, please participate in our Opportunity Grant process – speakers will receive special consideration in the selection process.
 
-## Selection 🧐
-
-We will document our selection process on this website.
-
 ## Guidelines 📏
 
-*   Submit your talk in time, no excuses. We are setting up a CfP form soon through PreTalx.
+*   Submit your talk in time, no excuses.
 *   All talks will be **in English**.
 *   Read, understand, and agree to our Code of Conduct. As a speaker, your talk and your slides will need to follow our Code of Conduct – if you are not sure what that means, or have some issue you are not sure about, just ask us!
 *   Make sure you spend some **time and effort** on your proposal. Typos, lack of formatting, half finished sentences are unnecessary and make your proposal hard to be taken serious. (Ask a mentor or a friend to help if this is difficult for you.)
 *   **Don't overdo it** – two or three paragraphs are plenty of space to give us an idea of your talk, we don't require an entire thesis. ;)
 *   **Original content:** Since we have little space and lots of submissions, we prefer original content. If your talk is so awesome that you want to give it in multiple places, we'd ask you to consider putting a new spin on it, if at all possible.
 
-## Talk Selection Process 🕑
+## Talk Selection Process 🧐
 
 Reviewing the talks and tutorials submitted to a conference can be a daunting task – there is much to consider, and usually there are more great submissions than there are slots available in the conference schedule.
 
 We’d like to make our reviewing process and guidelines transparent to every submitter and attendee, both to show you what will await you during the conference as an attendee, and to help you understand our decisions regarding your submissions as a submitter.
 
+We will document our selection process on this website and announce it as a blog post and via Twitter.
+
 ### Composition 📜
 
 First off, a warning: all of the following numbers are **approximate and may change** – we don’t know the future, and we may have to adjust to changed circumstances in a number of ways.
 
-DjangoCon Europe has three conference days reserved for talks (followed by two days of sprints with tutorials on the side). Past experience shows that more than 10 talks per day (plus room for lightning talks) is a bit much, so we’re looking at about 30 talk slots we can distribute among submissions. Of these 30:
+DjangoCon Europe has three conference days reserved for talks (followed by two days of sprints). Past experience shows that more than 10 talks per day (plus room for lightning talks) is a bit much, so we’re looking at about 30 talk slots we can distribute among submissions. Of these 30:
 
 *   3 will go to keynote speakers selected by us. We’re very much open to suggestions, so contact us if there is anybody you’d like to see or hear as a keynote speaker!
 *   2 talks focusing on languages or frameworks that are not Django.
@@ -78,7 +78,7 @@ DjangoCon Europe has three conference days reserved for talks (followed by two d
 *   15 talks about Django and working with Django:
     *   6 talks accessible to beginners, focussing on concepts, introductions, guides, and other material most useful to those new to Django, having used Django for about a year or less. Includes common workflows (like debugging and testing) and introductions to tools integrated with Django.
     *   6 more advanced talks, explaining concepts or implementation details in depth, for people who have used Django for more than a year. Includes uncommon workflows, and improvements on testing and debugging workflows.
-    *   3 talks at a very advanced level on implementation details and planned features. We hope to offer a bit of the Django Under The Hood spirit here, to compensate for last year’s DUTH pause.
+    *   3 talks at a very advanced level on implementation details and planned features. We hope to offer a bit of the Django Under The Hood spirit here, to compensate for its termination.
 
 If your talk idea does not match any of these categories, or matches more than one – don’t worry! This is not a strict list that every submission needs to fit in, it is just meant as a guide for attendees, submitters, and reviewers alike.
 
