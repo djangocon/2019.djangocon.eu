@@ -5,10 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ .Title }} - {{ .Site.Title }}</title>
-	{{ with .Site.Params.description }}
-	  <meta name="description" content="{{ . }}">
-    <meta name="twitter:card" content="{{ . }}">
-  {{ end }}
+  <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta name="twitter:card" content="{{ .Params.description | default .Site.Params.description }}">
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/print.css" media="print">
