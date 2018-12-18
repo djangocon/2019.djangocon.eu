@@ -98,6 +98,5 @@ You can install and work on a development version following these steps:
   # Now you can run the development server
   $ python dceu2019/manage.py runserver
 
-  # Point your browser to localhost:8000/pretalx and you'll see an empty
-  # schedule
+  # Point your browser to localhost:8000/ and you'll see an empty schedule
 

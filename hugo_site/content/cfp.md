@@ -8,7 +8,7 @@ description: "Our Call for Participation is now open: Please feel invited and in
 
 # Call for Participation
 
-This page contains all information regarding the talk submission process for DjangoCon Europe – we will update it regularly as new information becomes available!
+This page contains all information regarding the proposal process for DjangoCon Europe – we will update it regularly as new information becomes available.
 
 ## Deadline is 2019-01-13 🔥
 
@@ -18,24 +18,24 @@ If you think you have something great to talk about – submit your idea! If you
 
 ## What we’re looking for 🌈
 
-*   Talks (main track)
-*   Smaller sessions and workshops (see last section)
+* Talks (main track)
+* Smaller sessions and workshops (see last section)
 
 ## Schedule 🗓️
 
-*   Talks (+smaller sessions and workshops) - April 10-12
-*   Sprints - April 13-14
+* Talks (+smaller sessions and workshops) - April 10-12
+* Sprints - April 13-14
 
 ## Topics 📚
 
-*   Django internals and challenges in modern web development.
-*   Wild ideas, clever hacks, surprising or cool use cases.
-*   Improving Django and Python developers’ lives.
-*   Pushing Django to its limits
-*   Fundamentals, in a modern light.
-*   The Django and Python community, culture, history, past, present & future, the why the who and the what of it all
-*   Security
-*   Whatever you deem appropriate – it's your conference, after all!
+* Django internals and challenges in modern web development.
+* Wild ideas, clever hacks, surprising or cool use cases.
+* Improving Django and Python developers’ lives.
+* Pushing Django to its limits
+* Fundamentals, in a modern light.
+* The Django and Python community, culture, history, past, present & future, the why the who and the what of it all
+* Security
+* Whatever you deem appropriate – it's your conference, after all!
 
 ## Help! ⛑️
 
@@ -51,12 +51,12 @@ We will not be able to cover travelling and accommodation costs for all speakers
 
 ## Guidelines 📏
 
-*   Submit your talk in time, no excuses.
-*   All talks will be **in English**.
-*   Read, understand, and agree to our Code of Conduct. As a speaker, your talk and your slides will need to follow our Code of Conduct – if you are not sure what that means, or have some issue you are not sure about, just ask us!
-*   Make sure you spend some **time and effort** on your proposal. Typos, lack of formatting, half finished sentences are unnecessary and make your proposal hard to be taken serious. (Ask a mentor or a friend to help if this is difficult for you.)
-*   **Don't overdo it** – two or three paragraphs are plenty of space to give us an idea of your talk, we don't require an entire thesis. ;)
-*   **Original content:** Since we have little space and lots of submissions, we prefer original content. If your talk is so awesome that you want to give it in multiple places, we'd ask you to consider putting a new spin on it, if at all possible.
+* Submit your talk in time, no excuses.
+* All talks will be **in English**.
+* Read, understand, and agree to our Code of Conduct. As a speaker, your talk and your slides will need to follow our Code of Conduct – if you are not sure what that means, or have some issue you are not sure about, just ask us!
+* Make sure you spend some **time and effort** on your proposal. Typos, lack of formatting, half finished sentences are unnecessary and make your proposal hard to be taken serious. (Ask a mentor or a friend to help if this is difficult for you.)
+* **Don't overdo it** – two or three paragraphs are plenty of space to give us an idea of your talk, we don't require an entire thesis. ;)
+* **Original content:** Since we have little space and lots of submissions, we prefer original content. If your talk is so awesome that you want to give it in multiple places, we'd ask you to consider putting a new spin on it, if at all possible.
 
 ## Talk Selection Process 🧐
 
@@ -72,14 +72,14 @@ First off, a warning: all of the following numbers are **approximate and may cha
 
 DjangoCon Europe has three conference days reserved for talks (followed by two days of sprints). Past experience shows that more than 10 talks per day (plus room for lightning talks) is a bit much, so we’re looking at about 30 talk slots we can distribute among submissions. Of these 30:
 
-*   3 will go to keynote speakers selected by us. We’re very much open to suggestions, so contact us if there is anybody you’d like to see or hear as a keynote speaker!
-*   2 talks focusing on languages or frameworks that are not Django.
-*   6 community talks. These are meant to show the struggles we face as a community, and as individuals. They can include talks on personal growth, or demonstrate problems that are still waiting to be resolved.
-*   4 project presentations. These talks show ways and areas in which Django may be used.
-*   15 talks about Django and working with Django:
-    *   6 talks accessible to beginners, focussing on concepts, introductions, guides, and other material most useful to those new to Django, having used Django for about a year or less. Includes common workflows (like debugging and testing) and introductions to tools integrated with Django.
-    *   6 more advanced talks, explaining concepts or implementation details in depth, for people who have used Django for more than a year. Includes uncommon workflows, and improvements on testing and debugging workflows.
-    *   3 talks at a very advanced level on implementation details and planned features. We hope to offer a bit of the Django Under The Hood spirit here, to compensate for its termination.
+* 3 will go to keynote speakers selected by us. We’re very much open to suggestions, so contact us if there is anybody you’d like to see or hear as a keynote speaker!
+* 2 talks focusing on languages or frameworks that are not Django.
+* 6 community talks. These are meant to show the struggles we face as a community, and as individuals. They can include talks on personal growth, or demonstrate problems that are still waiting to be resolved.
+* 4 project presentations. These talks show ways and areas in which Django may be used.
+* 15 talks about Django and working with Django:
+  * 6 talks accessible to beginners, focussing on concepts, introductions, guides, and other material most useful to those new to Django, having used Django for about a year or less. Includes common workflows (like debugging and testing) and introductions to tools integrated with Django.
+  * 6 more advanced talks, explaining concepts or implementation details in depth, for people who have used Django for more than a year. Includes uncommon workflows, and improvements on testing and debugging workflows.
+  * 3 talks at a very advanced level on implementation details and planned features. We hope to offer a bit of the Django Under The Hood spirit here, to compensate for its termination.
 
 If your talk idea does not match any of these categories, or matches more than one – don’t worry! This is not a strict list that every submission needs to fit in, it is just meant as a guide for attendees, submitters, and reviewers alike.
 
@@ -97,10 +97,10 @@ We value your feedback. If you have any concerns or suggestions on how we can im
 
 The venue provides a number of rooms adjacent to the main hall, one of which will be setup for self-organized workshops. This is a chance to:
 
-*   Discussions with fellow peers
-*   Introducing Django applications
-*   Find and tutor new developers and maintainers
-*   Live demos
+* Discussions with fellow peers
+* Introducing Django applications
+* Find and tutor new developers and maintainers
+* Live demos
 
 If the schedule permits it, sessions can be organized spontaneously during the conference. However, we encourage getting in touch about the session beforehand, such that the session can be advertised and scheduled for the convenience of everyone.
 
@@ -113,5 +113,5 @@ Not up for a full talk or tutorial? Looking to give your first talk at a confere
 # READY?
 
 <center>
-[Add your submission here](https://members.2019.djangocon.eu/conference/)
+[Add your proposal here](https://members.2019.djangocon.eu/conference/)
 </center>
