@@ -12,7 +12,7 @@ The organisers will introduce a Code of Conduct team that will be primarily resp
 
 The team can be reached on [conduct@djangocon.eu](mailto:conduct@djangocon.eu).
 
-We adapted this CoC from DjangoCon Europe 2018, with some own additions and some inspiraton from other events. A big thank you to their CoC team, especially for the awesome guidelines how to handle reports, which we have adopted unedited.
+We adapted this CoC from DjangoCon Europe 2018, with some own additions and some inspiraton from other events. A big thank you to their CoC team, especially for the awesome response guidelines, which we have adopted unedited.
 
 ## Why do we have a Code of Conduct?
 
