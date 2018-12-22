@@ -1,5 +1,5 @@
 ---
-title: "CoC"
+title: "Code of Conduct (CoC)"
 date: 2018-12-18T21:58:22+01:00
 draft: false
 ---
@@ -11,6 +11,8 @@ Everybody who participates in DjangoCon Europe in one way or another is required
 The organisers will introduce a Code of Conduct team that will be primarily responsible for handling any incidents. The CoC applies before and throughout the event (including related activities such as social events, and social media). We have also published our response guidelines.
 
 The team can be reached on [conduct@djangocon.eu](mailto:conduct@djangocon.eu).
+
+We adapted this CoC from DjangoCon Europe 2018, with some own additions and some inspiraton from other events. A big thank you to their CoC team, especially for the awesome guidelines how to handle reports, which we have adopted unedited.
 
 ## Why do we have a Code of Conduct?
 
