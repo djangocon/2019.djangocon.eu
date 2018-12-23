@@ -80,7 +80,7 @@ Our Code of Conduct team consists of:
  * Sarah Braun: [sarah@triplesec.tech](mailto:sarah@triplesec.tech)
  * Víðir Valberg Guðmundsson: [valberg@orn.li](mailto:valberg@orn.li)
 
-If you prefer to speak to a female you can email Sarah. If you prefer to speak to a male you can email Elvis.
+If you prefer to speak to either a male or female, you can email Sarah/she or Elvis/he.
 
 The team members will be introduced in person at the conference. You can approach any of them at any time to discuss an incident or concern. You can also ask any other staff to help you find them at the conference.
 
