@@ -67,7 +67,7 @@ In case of a Code of Conduct violation, some of the most common actions organise
 
 ## Where to report incidents
 
-If a Code of Conduct incident happens to you, or witness it happening to someone else, please contact the CoC team immediately either in person, or by sending an email to [conduct@djangocon.eu](mailto:conduct@djangocon.eu)
+If a Code of Conduct incident happens to you, or witness it happening to someone else, please contact the CoC team immediately either in person, or by sending an email to [conduct@djangocon.eu](mailto:conduct@djangocon.eu).
 
 Your report will be treated confidentially and only discussed within the CoC team.
 
@@ -75,12 +75,12 @@ We will publish a phone number to call closer to the event.
 
 Our Code of Conduct team consists of:
 
- * Elvis Camilo
- * Jessica Upani
- * Sarah Braun
- * Víðir Valberg Guðmundsson
+ * Elvis Camilo: [evscamilo@gmail.com](mailto:evscamilo@gmail.com)
+ * Jessica Upani: [nabbygirl@gmail.com](nabbygirl@gmail.com)
+ * Sarah Braun: [sarah@triplesec.tech](mailto:sarah@triplesec.tech)
+ * Víðir Valberg Guðmundsson: [valberg@orn.li](mailto:valberg@orn.li)
 
-If you prefer to speak to a female you can email Sarah: [sarah@triplesec.tech](mailto:sarah@triplesec.tech). If you prefer to speak to a male you can email Elvis: [evscamilo@gmail.com](mailto:evscamilo@gmail.com)
+If you prefer to speak to a female you can email Sarah. If you prefer to speak to a male you can email Elvis.
 
 The team members will be introduced in person at the conference. You can approach any of them at any time to discuss an incident or concern. You can also ask any other staff to help you find them at the conference.
 
