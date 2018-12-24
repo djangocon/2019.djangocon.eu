@@ -81,6 +81,8 @@ You can install and work on a development version following these steps:
   
   # Install project & dependencies in "editable" mode (-e), with the [dev]
   # dependency subset.
+  # You should repeat this command when you pull in new changes which can
+  # contain new requirements or version upgrades
   $ pip install -e "dceu2019[dev]"
   
   # Try invoking the Django main management script
