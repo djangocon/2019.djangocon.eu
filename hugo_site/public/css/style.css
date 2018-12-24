@@ -1,0 +1,72 @@
+body, html
+{
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+}
+body {
+  font-family: "Courier New", monospace;
+  font-size: 140%;
+}
+
+h1 {
+  font-size: 250%;
+  text-align: center;
+}
+
+.header_image {
+  text-align: center;
+}
+
+.all_container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 7pt;
+}
+
+ul ul
+{
+  margin-top: 7pt;
+}
+
+footer
+{
+  padding-top: 50px;
+}
+
+nav
+{
+  margin: 30px auto;
+  width: 80%;
+  display: block;
+}
+
+nav ul
+{
+  list-style-type: none;
+  padding: 0;
+  display: table;
+  width: 100%;
+}
+nav ul li
+{
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  display: table-cell;
+  width: 33%;
+}
+nav ul li a
+{
+  background-color: #EEE;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+

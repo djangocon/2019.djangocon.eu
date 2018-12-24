@@ -4,7 +4,7 @@ date: 2018-12-18T21:58:22+01:00
 draft: false
 ---
 
-# Code of Conduct
+## Code of Conduct
 
 Everybody who participates in DjangoCon Europe in one way or another is required to conform to this Code of Conduct (CoC). This includes attendees, speakers, sponsors, organisers and volunteers.
 
@@ -109,8 +109,8 @@ When handling a report, we follow specific guidelines.
 ## Emergencies
 If you’re currently afraid of your physical safety or are in danger, contact local law enforcement in Denmark:
 
-Emergency (Fire, Medical, Police): 112
-Police directly: 114
+* Emergency (Fire, Medical, Police): 112
+* Police directly: 114
 
 ## Other assistance
 Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. However, we will not contact security or law enforcement without your consent, except when not doing so would create significant danger for other participants.

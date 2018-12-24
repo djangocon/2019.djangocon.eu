@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
-<main>
+
+<main class="content page-index">
   {{ .Content }}
 
 	{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
 	{{ range $paginator.Pages }}
 		{{ partial "summary.html" . }}
 	{{ end }}
-
 </main>
 
 {{ partial "footer.html" . }}

@@ -8,13 +8,13 @@ author = "Django Denmark"
 
     description = "DjangoCon Europe, In Copenhagen April 10-12th 2019"
     twittercardimage="twitter_square.png"
-    headerimage = "logo_small.png"
+    headerimage = "logo-white.svg"
 
 [[menu.main]]
-    name = "CfP"
+    name = "Call for Participation"
     url  = "/cfp"
 [[menu.main]]
-    name = "CoC"
+    name = "Code of Conduct"
     url  = "/conduct"
 [[menu.main]]
     name = "Sponsors"
