@@ -103,12 +103,12 @@ If you don't have some of this information, or not at this time, please still ma
 
 If you feel unsafe reporting in person, you may choose someone to represent you. In this case, we'd need their contact information, but we'd ask you to make clear that this person represents you.
 
-When handling a report, we follow specific guidelines.
+When handling a report, we follow our [response guidelines](https://2018.djangocon.eu/conduct-response/) (link correctly refers to 2018 website, contents will be copied over).
 
 ## Emergencies
 If you're currently afraid of your physical safety or are in danger, contact local law enforcement in Denmark:
 
-Emergency (Fire, Medical, Police): 112
+Emergency (Fire, Medical, Police): 112<br>
 Police directly: 114
 
 ## Other assistance
