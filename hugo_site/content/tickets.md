@@ -16,16 +16,16 @@ The early bird tickets are available until end of January. With Early Bird you'r
 
 Here is a short explanation on the selection of ticket types:
 
-* <strong>Student/Concession Ticket</strong>
+* <strong>Student/Concession Ticket (~200€)</strong>
 If you are currently enrolled as a full-time student or if you are currently without regular income. This ticket does not cover our costs for the conference, but we'll be able to provide it to you thanks to other people paying more for their ticket than the minimal price.
-* <strong>Individual Ticket</strong>
+* <strong>Individual Ticket (~300€)</strong>
 If you are paying your ticket from your personal money and are not being reimbursed by your employer. 
-* <strong>Individual Supporter Ticket</strong>
+* <strong>Individual Supporter Ticket (~400€)</strong>
 If you are paying your ticket from your personal money and are not being reimbursed by your employer.  
 The additional money from this ticket type ensure we can afford offering cheaper tickets to students and other people who could not afford to join otherwise. Thank you for doing so!
-* <strong>Business Ticket</strong>
+* <strong>Business Ticket (~430€)</strong>
 If your employer is paying for the ticket or reimbursing you for your conference expenses.
-* <strong>Business Supporter Ticket</strong>
+* <strong>Business Supporter Ticket (~536€)</strong>
 Choose this ticket type if you or your employer want to especially support us doing this conference. It gives you everything the other tickets do as well, and it includes one post on our conference job board for your company. 
 <i>[For sponsorship options please see here](https://2019.djangocon.eu/sponsors/)</i>.
 
