@@ -41,7 +41,7 @@ footer
 nav
 {
   margin: 30px auto;
-  width: 80%;
+  width: 100%;
   display: block;
 }
 
@@ -58,7 +58,7 @@ nav ul li
   padding: 10px;
   margin: 0;
   display: table-cell;
-  width: 33%;
+  width: 20%;
 }
 nav ul li a
 {
