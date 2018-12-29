@@ -1,13 +1,14 @@
 ---
 title: "Speaker Mentors"
 date: 2018-12-28T18:00:02+01:00
+description: "Thinking about doing a talk? Already developing one? Don't get stuck - get help and advice!"
 type: static
 draft: false
 ---
 
 # Speaker Mentors
 
-As our CfP goes into its second half, we're ready to announce speaker mentors – they provide help and advice if you're not sure what to submit to DjangoCon Europe.
+Thinking about doing a talk? Already developing one? Don't get stuck - get help and advice! We're happy to announce speaker mentors once again for a DjangoCon – they provide help and advice if you're not sure what to submit to DjangoCon Europe or if you are in the process and want to develop or improve your talk.
 
 ## Content
 
@@ -23,11 +24,12 @@ You're not sure what you could talk about? Consider these ideas (and keep in min
 
 ## Community
 
-Because we're not just looking for any old tech talk – we're looking for talks from, by, and about our community. No issue relating to Django and the Django community is too big or too small to warrant a talk slot, open slots permitting.
+We're not just looking for any old tech talk – we're looking for talks from, by, and about our community. No issue relating to Django and the Django community is too big or too small to warrant a talk slot, open slots permitting.
 
 Now, we know that submitting a talk can be nerve-wracking even for experienced speakers, and even more so to people who are inexperienced. Since we want to invite everybody to feel comfortable to submit talks, we'd like to introduce our speaker mentors – wonderful people who are experienced speakers, and who'll be happy to offer help and advice regarding your talks. They can help you to formulate a vague idea, or be a sounding board on the best direction you could develop a talk that's already half way done.
 
  * [Anna Ossowski](mailto:annabell.ossowski@gmail.com), Developer Relations at Elastic, speaker, mentor, PyCon Open Spaces advisor, DjangoCon Diversity Chair, Django Girls Omaha and San Francisco organizer, PyLadies Remote co-lead.
+ * [Jacinda Shelly](mailto:jacinda.shelly@gmail.com), Jacinda nurtured an early love of sharing knowledge by recording books on cassette for her brothers to listen to as bedtime stories. She has spoken at multiple technical conferences, including PyCon and DjangoCon US. She works for Doctor On Demand and lives in San Francisco with her husband and daughter.
  * [Katie McLaughlin](mailto:katie@glasnt.com) has spoken about emoji, JavaScript, security, and being nice to people, in half a dozen countries.
  * [Russell Keith-Magee](mailto:russell@keith-magee.com) has spoken (rapidly) about various Python and Django projects, as well as his personal experience in tech, and is a serial DjangoCon visitor.
  * *More are welcome* - please [get in touch](mailto:content@djangocon.eu) if you would like to be listed as a mentor.
