@@ -30,7 +30,7 @@ We ask each attendant to keep the community in mind and do their best to foster 
 
 Behavior that contributes to a positive environment includes:
 
-* Being kind and considerate to others.
+* Being kind and considerate to others
 * Behaving professionally
 * Using welcoming and inclusive language
 * Being respectful of differing viewpoints and experiences
