@@ -2,6 +2,7 @@
 title: "Tickets"
 date: 2018-12-29T01:11:00+01:00
 draft: false
+description: "Be an early bird, be a pioneer, get your ticket at a reduced price now!"
 ---
 
 # Ticketing
