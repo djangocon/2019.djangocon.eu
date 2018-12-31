@@ -2,18 +2,17 @@
 title: "Tickets"
 date: 2018-12-29T01:11:00+01:00
 draft: false
-description: "Be an early bird, be a pioneer, get your ticket at a reduced price now!"
+description: "Be an early bird, be a pioneer, get your ticket at a reduced price before January 31."
 ---
 
 # Ticketing
 
-The early bird tickets are available until end of January. With Early Bird you're <strong>a pioneer</strong> and therefore:
+The Pioneer tickets (early bird) are available until January 31. By buying tickets early, you'll get a rediced price because you're <strong>a pioneer</strong> and therefore:
 
-* Getting reduced prices
-* Secured a ticket since the venue sold out the previous years (venue has less than 400 seats)
-* Helping us tremendiously in our planning
+* Helping us tremendously in our planning
 * Giving us more time to handle any special requirements you may have
-
+* Secured a ticket since the venue sold out the previous years (venue has less than 400 seats)
+* Able to plan your trip earlier and perhaps share a ride or an apartment with another participant...
 
 These are the ticket types that are on sale:
 
