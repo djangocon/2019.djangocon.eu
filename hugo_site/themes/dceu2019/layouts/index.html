@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+
 <main>
   {{ .Content }}
 
@@ -6,7 +7,6 @@
 	{{ range $paginator.Pages }}
 		{{ partial "summary.html" . }}
 	{{ end }}
-
 </main>
 
 {{ partial "footer.html" . }}
