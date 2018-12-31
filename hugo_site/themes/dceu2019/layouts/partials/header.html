@@ -17,25 +17,21 @@
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
 	<meta name="twitter:image" content="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.twittercardimage }}" />
 </head>
+
 <body>
+  <div class="all_container">
+    <div class="header_image">
+      <a href="{{ .Site.BaseURL }}">
+        <img src="{{ .Site.BaseURL }}img/{{if .Params.headerimage}}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" />
+      </a>
+    </div>
 
-
-<div class="all_container">
-
-  <div class="header_image">
-    <a href="{{ .Site.BaseURL }}">
-      <img src="{{ .Site.BaseURL }}img/{{if .Params.headerimage}}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" />
-    </a>
-  </div>
-
-  <header>
-	  <nav>
-		  <ul>
-			  {{ range .Site.Menus.main }}
-			  <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			  {{ end }}
-		  </ul>
-	  </nav>
-  </header>
-
-
+    <header>
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </header>
