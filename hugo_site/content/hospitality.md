@@ -6,7 +6,7 @@ Unfortunately some of them could not provide a discount code to be used in the w
 
 ### Generator Hostel
 
-www.generatorhostels.com
+[www.generatorhostels.com](www.generatorhostels.com)
 
 Method: Discount code in the Website
 
@@ -16,9 +16,9 @@ Discount percentage: 18 %
 
 Date range: From 8th of April to the 16th of April
 
-## Urban House Copenhagen ##
+### Urban House Copenhagen
 
-www.meininger-hotels.com
+[www.meininger-hotels.com](www.meininger-hotels.com)
 
 Method: Discount code in the website OR this link 
 
@@ -28,9 +28,9 @@ Discount percentage: 10% on the refundable rate or 14,5% on the non-refundable r
 
 Date range: From 8th of April to the 16th April.
 
-## Danhostel ##
+### Danhostel
 
-www.danhostel.dk
+[www.danhostel.dk](www.danhostel.dk)
 
 Room prices per night:
 
@@ -54,9 +54,9 @@ Send an e-mail to gb@cphhostel.dk and mention the booking code: “Django 19”.
 
 Cancellation: until 7 days before arrival. There is a cancellation fee of 200 DKK. Less than 7 days before arrival there is no refund.
 
-## GlobalHagen ##
+### GlobalHagen
 
-www.globalhagen.dk
+[www.globalhagen.dk](www.globalhagen.dk)
 
 Send an e-mail to udlejning@ms.dk with code “SDC”.
 
