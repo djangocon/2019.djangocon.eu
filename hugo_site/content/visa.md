@@ -1,5 +1,5 @@
-# VISA
-If your country is not part of the [Schengen Agreement](https://www.schengenvisainfo.com/who-needs-schengen-visa/), you will need to request a tourist VISA in the Danish Embassy. We have spoken to the Danish Immigration Office and below we have compiled a list of documents you will need to provide when requesting the travel document. Have in mind that this process can take some months, therefore we recommend starting it as soon as possible.
+# Visa
+If your country is not part of the [Schengen Agreement](https://www.schengenvisainfo.com/who-needs-schengen-visa/), you will need to request a tourist Visa in the Danish Embassy. We have spoken to the Danish Immigration Office and below we have compiled a list of documents you will need to provide when requesting the travel document. Have in mind that this process can take some months, therefore we recommend starting it as soon as possible.
 
 
 * An invitation letter from the DjangoCon Organiation Team
