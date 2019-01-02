@@ -1,9 +1,9 @@
 # Visa
-If your country is not part of the [Schengen Agreement](https://www.schengenvisainfo.com/who-needs-schengen-visa/), you will need to request a tourist Visa in the Danish Embassy. We have spoken to the Danish Immigration Office and below we have compiled a list of documents you will need to provide when requesting the travel document. Have in mind that this process can take some months, therefore we recommend starting it as soon as possible.
+If your country is not part of the [Schengen Agreement](https://www.schengenvisainfo.com/who-needs-schengen-visa/), you will need to request a tourist Visa in the Danish Embassy. We have spoken to the Danish Immigration Office and below we have compiled a list of attachments you will need to provide when requesting the travel document. Have in mind that this process can take up to 90 days, therefore we recommend starting it as soon as possible.
 
 
 * An invitation letter from the DjangoCon Organiation Team
-After you have purchased your DjangoCon ticket, send an e-mail to hospitality@djangocon.eu with: the purchased ticket, your full name, your address, a copy of your passport, your company and/or university name and address. 
+After you have purchased your DjangoCon ticket, send an e-mail to [hospitality@djangocon.eu](mailto:hospitality@djangocon.eu) with: the purchased ticket, your full name, your address, a copy of your passport, your company and/or university name and address. 
  
 * Travel insurance covering the entire Schengen area which is valid for the expected duration of your stay. The minimum coverage must be 30,000 EUR.
 
