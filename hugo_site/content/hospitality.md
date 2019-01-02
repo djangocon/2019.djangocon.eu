@@ -2,10 +2,6 @@
 
 It's a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). You may also prefer a classic hotel or hostel.
 
-It's a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). You may also prefer a classic hotel or hostel.
-
-It's a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). You may also prefer a classic hotel or hostel.
-
 We have a few accommodation deals with hotels and hostels near the venue. Some discounts also cover days before and after the event.
 
 Some have not provided a discount code to be used online. This means you will need to send an e-mail directly to them requesting your reservation. Below is the list of the establishments and the instructions on how to get your discount:
