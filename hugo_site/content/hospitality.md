@@ -2,7 +2,7 @@
 
 We were able to negotiate deals with a couple of hotels and hostels near the venue. Some of these discounts are extended to days before and after event, in case you would like to expend a few more days touristing in Copenhagen.
 
-Unfortunately some of them could not provide a discount code to be used in the website. This means you will need to send an e-mail directly to them requesting your reservation. Below is the list of the establishments and the instructions on how to get your discount:
+Some have not provided a discount code to be used online. This means you will need to send an e-mail directly to them requesting your reservation. Below is the list of the establishments and the instructions on how to get your discount:
 
 ### Generator Hostel
 
