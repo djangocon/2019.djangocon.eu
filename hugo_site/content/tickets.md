@@ -36,4 +36,4 @@ Choose this ticket type if you or your employer want to especially support us do
               ".ticketbutler-iframe"
             )</script></div>
 
-Don't see the above form? There may be a privacy extension for your browser blocking it. Link directly to the signup page is the following: [https://djangocon.ticketbutler.io/en/e/2019/](https://djangocon.ticketbutler.io/en/e/2019/).
+Don't see the above form? There may be a privacy extension for your browser blocking it. Alternative link for ticket purchase: [https://djangocon.ticketbutler.io/en/e/2019/](https://djangocon.ticketbutler.io/en/e/2019/).
