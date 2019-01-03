@@ -17,11 +17,11 @@ You are most welcome to get in touch if you have questions.
 
 DjangoCon Europe 2019 is carried out by our Danish non-profit association:
 
-**Django Danmark**<br>
-C/O Arbejdsfællesskabet<br>
-Blågårdsgade 19<br>
-2200 Copenhagen N
-
+**Django Danmark**<br/>
+C/O Arbejdsfællesskabet<br/>
+Blågårdsgade 19<br/>
+2200 Copenhagen N<br/>
+Denmark
 CVR/VAT ID: 39311062
 
 ## Bank info
@@ -41,3 +41,20 @@ Account for sponsorships:
 * IBAN: DK7084110004199663
 * SWIFT/BIC: FAELDKK1
 * BIC for transfers from US/Australia: FAELDKK1 via DANBDK22
+
+
+## Venue 
+The venue is located close to the city centre and has easy access by public transport.
+
+AFUK<br/>
+Enghavevej 82B<br/>
+2450 København SV<br/>
+Denmark
+
+Both train and bus stop less than 10 min walk from the venue.
+
+Train:<br/>
+S-train line: B, BX, H and C, use stop "Carlsberg Station".
+
+Bus:<br/>
+Bus route: 1A, 3A, 10 and 14.
