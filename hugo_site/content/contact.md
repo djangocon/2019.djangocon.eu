@@ -58,3 +58,5 @@ S-train line: B, BX, H and C, use stop "Carlsberg Station".
 
 Bus:<br/>
 Bus route: 1A, 3A, 10 and 14.
+
+More information about the venue will be published soon, as well as details about getting around in Copenhagen, finding accommodation etc.
