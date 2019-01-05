@@ -14,6 +14,9 @@ author = "Django Denmark"
     name = "Call for Participation"
     url  = "/cfp"
 [[menu.main]]
+    name = "Tickets"
+    url  = "/tickets"
+[[menu.main]]
     name = "Code of Conduct"
     url  = "/conduct"
 [[menu.main]]

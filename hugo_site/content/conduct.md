@@ -1,6 +1,7 @@
 ---
 title: "Code of Conduct (CoC)"
 date: 2018-12-18T21:58:22+01:00
+description: Everybody who participates in DjangoCon Europe in one way or another is required to conform to this Code of Conduct (CoC).
 draft: false
 ---
 
@@ -18,17 +19,18 @@ We adapted this CoC from DjangoCon Europe 2018, with some own additions and some
 
 Our goals with having this Code of Conduct are:
 
-* Helping everyone feel safe and included. Attendees may have had poor experiences in other events, or can be first-timers. We want to set the expectation that harassment and other unpleasant behaviour are not acceptable. So people who do have an unpleasant experience, know that’s neither the norm nor acceptable to us as a community.
+* Helping everyone feel safe and included. Attendees may have had poor experiences in other events, or can be first-timers. We want to set the expectation that harassment and other unpleasant behaviour are not acceptable. So people who do have an unpleasant experience, know that's neither the norm nor acceptable to us as a community.
 * Helping to build trust that if an incident is reported, we will not respond with victim blaming, and that we will proceed with a thorough investigation. Even, for example, if the incident concerns someone in a position of power.
-* Informing everyone of the expected behaviour. We are a diverse community, and having a Code of Conduct makes the expectations of everybody’s behaviour explicit and transparent.
+* Informing everyone of the expected behaviour. We are a diverse community, and having a Code of Conduct makes the expectations of everybody's behaviour explicit and transparent.
 * Having a framework for report handling. The Code of Conduct is the basis for dealing with a report, assessing whether the CoC was violated, and what action should be taken.
 
 ## Our Code of Conduct
 
 We ask each attendant to keep the community in mind and do their best to foster a positive environment for everyone.
-Behavior that contributes to a positive environment includes
 
-* Being kind and considerate to others.
+Behavior that contributes to a positive environment includes:
+
+* Being kind and considerate to others
 * Behaving professionally
 * Using welcoming and inclusive language
 * Being respectful of differing viewpoints and experiences
@@ -67,11 +69,9 @@ In case of a Code of Conduct violation, some of the most common actions organise
 
 ## Where to report incidents
 
-If a Code of Conduct incident happens to you, or witness it happening to someone else, please contact the CoC team immediately either in person, or by sending an email to [conduct@djangocon.eu](mailto:conduct@djangocon.eu).
+If a Code of Conduct incident happens to you, or witness it happening to someone else, please contact the CoC team immediately either in person, or by sending an email to [conduct@djangocon.eu](mailto:conduct@djangocon.eu). We will publish a phone number to call closer to the event.
 
 Your report will be treated confidentially and only discussed within the CoC team.
-
-We will publish a phone number to call closer to the event.
 
 Our Code of Conduct team consists of:
 
@@ -80,13 +80,13 @@ Our Code of Conduct team consists of:
  * Sarah Braun: [sarah@triplesec.tech](mailto:sarah@triplesec.tech)
  * Víðir Valberg Guðmundsson: [valberg@orn.li](mailto:valberg@orn.li)
 
-If you prefer to speak to a female you can email Sarah. If you prefer to speak to a male you can email Elvis.
+If you prefer to speak to either a male or female, you can email Sarah/she or Elvis/he.
 
 The team members will be introduced in person at the conference. You can approach any of them at any time to discuss an incident or concern. You can also ask any other staff to help you find them at the conference.
 
 ## Guidelines for reporting incidents
 
-Please do not feel like you may be a burden to us by reporting incidents. Even if you happen to report multiple incidents during the conference. We rather consider reports an opportunity for us to act: by knowing about an incident, we can act on it, and often prevent it from continuing or repeating. But if we don’t know, we can’t take action.
+Please do not feel like you may be a burden to us by reporting incidents. Even if you happen to report multiple incidents during the conference. We rather consider reports an opportunity for us to act: by knowing about an incident, we can act on it, and often prevent it from continuing or repeating. But if we don't know, we can't take action.
 
 If you are not sure whether the situation was a Code of Conduct violation, or whether it applied to that particular space, we encourage you to still report it. We would much rather have a few extra reports where we decide to take no action, rather than miss a report of an actual violation. We do not look negatively on you if we find the incident is not a violation. And knowing about incidents that are not violations, or happen outside our spaces, can also help us to improve the Code of Conduct or the processes surrounding it.
 
@@ -100,14 +100,14 @@ In your report please include, when possible:
 * If you believe this incident is ongoing.
 * Any other information you believe we should have.
 
-If you don’t have some of this information, or not at this time, please still make the report anyways.
+If you don't have some of this information, or not at this time, please still make the report anyways.
 
-If you feel unsafe reporting in person, you may choose someone to represent you. In this case, we’d need their contact information, but we’d ask you to make clear that this person represents you.
+If you feel unsafe reporting in person, you may choose someone to represent you. In this case, we'd need their contact information, but we'd ask you to make clear that this person represents you.
 
-When handling a report, we follow specific guidelines.
+When handling a report, we follow our [response guidelines](https://2018.djangocon.eu/conduct-response/) (link correctly refers to 2018 website, contents will be copied over).
 
 ## Emergencies
-If you’re currently afraid of your physical safety or are in danger, contact local law enforcement in Denmark:
+If you're currently afraid of your physical safety or are in danger, contact local law enforcement in Denmark:
 
 * Emergency (Fire, Medical, Police): 112
 * Police directly: 114
