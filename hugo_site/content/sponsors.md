@@ -46,7 +46,7 @@ We have made a large sponsorship menu to invite all to contribute and to give yo
  * free child care for our attendees and their children
  * ...
 
-Anything left over money after the conference is administrated by the organisation Django Denmark and will be used for future non-profit open source events. As it is seen before after other DjangoCon events, we expect the Scandinavian region to be more active with community events in the wake of this event.
+If there are profits from the conference, they are administrated by the registered Danish association [Django Denmark](https://django-denmark.org/), whose purpose is to serve open source Django communities in the Nordic region and in economically marginalized countries. We expect the Nordic region to be more active with community events in the wake of this event.
 
 ## The details
 
