@@ -4,7 +4,7 @@ date: 2019-01-06T21:46:54+01:00
 draft: false
 ---
 
-# Sponsorship
+# Sponsorships
 
 Contact: [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu)
 
