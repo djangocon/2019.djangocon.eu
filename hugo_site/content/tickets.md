@@ -7,7 +7,7 @@ description: "Be an early bird, be a pioneer, get your ticket at a reduced price
 
 # Ticketing
 
-The Pioneer tickets (early bird) are available <u>until January 31 23:59</u>. By buying tickets early, you'll get <strong>a reduced price</strong> because you're <strong>a pioneer</strong> and therefore:
+The Pioneer tickets (early bird) are available <u>until January 31 23:59 UTC+1</u>. By buying tickets early, you'll get <strong>a reduced price</strong> because you're <strong>a pioneer</strong> and therefore:
 
 * Helping us tremendously in our planning
 * Giving us more time to handle any special requirements or inputs you may have
