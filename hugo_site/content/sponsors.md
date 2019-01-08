@@ -2,6 +2,8 @@
 title: "Sponsors"
 date: 2018-12-16T19:06:54+01:00
 draft: false
+menu: main
+weight: 40
 ---
 
 ## Sponsorships

@@ -149,6 +149,10 @@ input[type="submit"] {
 
   nav li {
     list-style-type: none;
+
+    &.active a {
+      color: $bright-blue;
+    }
   }
 
   nav a {
@@ -176,10 +180,31 @@ input[type="submit"] {
       cursor: pointer;
       color: $coral;
     }
+  }
+}
 
-    &.active {
-      color: $coral;
-    }
+.header-submenu {
+  background: white;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.15;
+    color: $coral;
+    display: inline-block;
+    font-size: 16px;
   }
 }
 

@@ -2,6 +2,8 @@
 title: "Contact"
 date: 2018-12-16T18:59:31+01:00
 draft: false
+menu: main
+weight: 50
 ---
 
 # Contact

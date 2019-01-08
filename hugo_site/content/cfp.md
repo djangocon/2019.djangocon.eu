@@ -1,9 +1,11 @@
 ---
-title: "Call for Participation (CfP)"
+title: "Call for Participation"
 date: 2018-12-16T18:48:39+01:00
 draft: false
 type: "single"
 description: "Our Call for Participation is now open: Please feel invited and invite others."
+menu: main
+weight: 10
 ---
 
 ## Call for Participation
