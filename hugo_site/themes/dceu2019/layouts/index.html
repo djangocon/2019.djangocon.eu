@@ -1,12 +1,32 @@
 {{ partial "header.html" . }}
 
-<main class="content page-index">
+<div class="header-hero">
+  {{ partial "nav.html" . }}
+
+  <div class="container">
+    <h1>
+      DjangoCon Europe 2019
+
+      <small>
+        Copenhagen, Denmark
+        <br />
+        April 10-12th 2019
+      </small>
+    </h1>
+
+    <a href="#" class="button button-red">
+      Get your tickets
+    </a>
+  </div>
+</div>
+
+<main class="content page-index container">
   {{ .Content }}
 
-	{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-	{{ range $paginator.Pages }}
-		{{ partial "summary.html" . }}
-	{{ end }}
+  {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+  {{ range $paginator.Pages }}
+    {{ partial "summary.html" . }}
+  {{ end }}
 </main>
 
 {{ partial "footer.html" . }}

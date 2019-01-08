@@ -1,16 +1,17 @@
-$navy-blue: #203341;
-$dark-blue: #2B3A80;
-$bright-blue: #4DC3CE;
-$pink: #F08E8C;
+$navy-blue: #00204a;
+$purple: #39065a;
+$teal: #29a19c;
+$bright-blue: #49beb7;
 $orange: #F17430;
 $peach: #F9B99E;
-$coral: #EE585B;
+$coral: #e61c5d;
 $beige: #C9C3B0;
 $gray-light: #E7E7E7;
 
 $primary-font: 'Poppins', sans-serif;
 
-$tablet: 50rem;
+$tablet: 48rem;
+$desktop: 60rem;
 
 * {
   padding: 0;
@@ -30,18 +31,19 @@ body {
 }
 
 h1 {
+  color: $teal;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 h2 {
-  color: $dark-blue;
+  color: $teal;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 h3 {
-  color: $dark-blue;
+  color: $bright-blue;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
@@ -52,21 +54,9 @@ input[type="text"] {
   border: 0;
   background-color: $gray-light;
   padding: 1rem;
+  line-height: 1;
   font-size: 16px;
   font-family: $primary-font;
-}
-
-.button,
-button,
-input[type="submit"] {
-  padding: 1rem;
-  background: $bright-blue;
-  border: 0;
-  font-size: 16px;
-  font-family: $primary-font;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 p {
@@ -77,31 +67,79 @@ a {
   color: $bright-blue;
 }
 
+a.button,
+button,
+input[type="submit"] {
+  padding: 1rem 1.25rem;
+  background: $bright-blue;
+  border: 0;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: $primary-font;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  transition: transform 0.2s ease-out;
+
+  &.button-red {
+    background: $coral;
+  }
+
+  &.button-orange {
+    background: $orange;
+  }
+
+  &:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform:    scale(1.05);
+    -ms-transform:     scale(1.05);
+    -o-transform:      scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
 .container {
   max-width: 40rem;
   margin: 0 auto;
 }
 
+//
+// Header
+.header-logo {
+  width: 170px;
+  display: block;
+  margin: 0rem auto 1.5rem auto;
+
+  @media (min-width: $tablet) {
+    margin: 0.75rem 1rem 1rem 1rem;
+  }
+}
+
+//
+// Navigation
 .header {
-  display: flex;
-  padding: 1rem;
-  background: $navy-blue, 10%;
+  padding: 1rem 0;
+  z-index: 5;
+  background-color: $navy-blue;
   justify-content: space-between;
   background-position: center;
   background-size: 400px;
+  background-image: url('/img/fin_13.png');
   align-items: center;
-  background-image: url('/img/pattern.jpg');
 
-  nav {
-    @media (min-width: $tablet) {
-      width: 80%;
-    }
+  @media (min-width: $tablet) {
+    display: flex;
+    padding: 1rem;
   }
 
   nav ul {
     display: flex;
     justify-content: space-around;
-    flex-flow: column;
+    flex-flow: row wrap;
     align-items: center;
 
     @media (min-width: $tablet) {
@@ -118,34 +156,134 @@ a {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 0.75rem;
     letter-spacing: 1px;
     line-height: 1.15;
     color: white;
     display: inline-block;
+    font-size: 14px;
+
+    @media (min-width: $tablet) {
+      padding: 1rem;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 16px;
+    }
 
     &:hover {
       background-color: white;
       cursor: pointer;
       color: $coral;
     }
+
+    &.active {
+      color: $coral;
+    }
   }
 }
 
-.header-logo {
-  width: 170px;
-  display: block;
-  margin-left: 1rem;
-  margin: 0.75rem 1rem;
-}
+//
+// Hero
+.header-hero {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 1rem 1rem 4rem 1rem;
+  background-image: url('/img/nick-karvounis-484732-unsplash.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 
-.header-logo-square {
-  width: 60px;
+  @media (min-width: $tablet) {
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 2rem 4rem 2rem;
+  }
+
+  .container {
+    position: relative;
+    z-index: 5;
+  }
+
+  &:before {
+    background: $navy-blue;
+    content: "";
+    position: absolute;
+    opacity: 0.85;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  h1 {
+    color: white;
+    padding: 2rem 0 4rem 0;
+    margin: 0;
+    line-height: 1.25;
+    font-size: 2rem;
+
+    @media (min-width: $tablet) {
+
+    font-size: 2.5rem;
+  }
+  }
+
+  small {
+    display: block;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    color: $bright-blue;
+    font-size: 1.25rem;
+
+    @media (min-width: $tablet) {
+      font-size: 1.75rem;
+
+}
+  }
+
+  p {
+    font-size: 1.35rem;
+  }
+
+  .header {
+    background-image: none;
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+  }
+
+  .header-logo {
+    width: 220px;
+
+    @media (min-width: $tablet) {
+
+    width: 180px;
+  }
+    @media (min-width: $desktop) {
+
+    width: 200px;
+  }
+  }
 }
 
 main {
-  margin: 4rem 0;
+  margin: 2rem 0;
   padding: 0 1rem;
+
+  @media (min-width: $tablet) {
+    margin: 4rem 0;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid $teal;
+  }
 
   h2 {
     margin-top: 2rem;
@@ -156,7 +294,6 @@ main {
   }
 
   ul li {
-    margin-left: 1rem;
     margin-bottom: 1rem;
   }
 }
@@ -166,10 +303,10 @@ footer {
   display: flex;
   padding: 1rem;
   margin-top: 1rem;
-  background: $navy-blue;
+  background: $purple;
   background-position: center;
-  background-image: url('/img/pattern.jpg');
-  background-size: 400px;
+  background-image: url('/img/fin_092.png');
+  background-size: 700px;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
@@ -187,10 +324,16 @@ footer {
 
 .form-subscribe {
   text-align: center;
+  padding: 0 1rem;
   margin: 2rem 0 4rem 0;
 
   p {
     margin-bottom: 1.5rem;
+  }
+
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -206,22 +349,24 @@ footer {
   }
 
   h1 {
-    margin: 3rem 0;
     line-height: 1.25;
-    color: $dark-blue;
   }
 }
 
-.schedule li {
-  list-style-type: none;
-  margin-bottom: 1rem;
-  align-items: center;
+.schedule {
+  margin-bottom: 4rem;
 
-  @media (min-width: $tablet) {
-    display: flex;
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      display: flex;
+    }
   }
 
-  p {
+  li p {
     margin: 0;
     width: 100%;
   }
@@ -244,7 +389,7 @@ footer {
     }
   }
 
-  &.strike {
+  li.strike {
     text-decoration: line-through;
     opacity: 0.6;
 

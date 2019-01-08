@@ -43,7 +43,7 @@ Account for sponsorships:
 * BIC for transfers from US/Australia: FAELDKK1 via DANBDK22
 
 
-## Venue 
+## Venue
 The venue is located close to the city centre and has easy access by public transport.
 
 AFUK<br/>

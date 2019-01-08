@@ -5,23 +5,29 @@ theme = "dceu2019"
 author = "Django Denmark"
 
 [params]
-
     description = "DjangoCon Europe, In Copenhagen April 10-12th 2019"
     twittercardimage="twitter_square.png"
-    headerimage = "logo-white.svg"
+    headerimage = "logo.svg"
 
-[[menu.main]]
-    name = "Call for Participation"
-    url  = "/cfp"
-[[menu.main]]
-    name = "Tickets"
-    url  = "/tickets"
-[[menu.main]]
-    name = "Code of Conduct"
-    url  = "/conduct"
-[[menu.main]]
-    name = "Sponsors"
-    url  = "/sponsors"
-[[menu.main]]
-    name = "Contact"
-    url  = "/contact"
+[menu]
+  [[menu.main]]
+      name = "Call for Papers"
+      url  = "/cfp/"
+      weight = 10
+  [[menu.main]]
+      name = "Tickets"
+      url  = "/tickets/"
+      weight = 20
+  [[menu.main]]
+      name = "Code of Conduct"
+      url  = "/conduct/"
+      weight = 30
+  [[menu.main]]
+      name = "Sponsors"
+      url  = "/sponsors/"
+      weight = 40
+  [[menu.main]]
+      name = "Contact"
+      url  = "/contact/"
+      identifier = "contact"
+      weight = 50

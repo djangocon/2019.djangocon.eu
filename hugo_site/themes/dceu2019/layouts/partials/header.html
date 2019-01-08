@@ -21,23 +21,3 @@
 </head>
 
 <body>
-  <header class="header">
-    <a href="{{ .Site.BaseURL }}">
-      {{if .Params.headerimage}}
-
-      <img src="{{ .Site.BaseURL }}img/{{ printf "%s" $.Params.headerimage }}" alt="DjangoCPH logo" class="header-logo-square"/>
-{{else}}
-<img src="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.headerimage }}" alt="DjangoCPH logo" class="header-logo"/>
-{{end}}
-    </a>
-
-	  <nav>
-		  <ul>
-			  {{ range .Site.Menus.main }}
-			  <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			  {{ end }}
-		  </ul>
-	  </nav>
-  </header>
-
-  <div class="container">
