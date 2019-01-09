@@ -1,0 +1,34 @@
+<header class="header">
+  <a href="{{ .Site.BaseURL }}">
+    <img src="{{ .Site.BaseURL }}img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
+  </a>
+
+  <nav>
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li class="{{ if (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .))}}active{{ end }}">
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
+
+{{ range .Site.Menus.main }}
+  {{ if $currentPage.HasMenuCurrent "main" . }}
+    <!-- Add a "back to parent" link here -->
+  {{end}}
+
+  {{ if $currentPage.IsMenuCurrent "main" . }}
+    <ul class="header-submenu">
+      {{ if .HasChildren }}
+        {{ range .Children }}
+        <li>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

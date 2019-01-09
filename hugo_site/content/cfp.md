@@ -1,12 +1,14 @@
 ---
-title: "Call for Participation (CfP)"
+title: "Call for Participation"
 date: 2018-12-16T18:48:39+01:00
 draft: false
 type: "single"
 description: "Our Call for Participation is now open: Please feel invited and invite others."
+menu: main
+weight: 10
 ---
 
-# Call for Participation
+## Call for Participation
 
 This page contains all information regarding the proposal process for DjangoCon Europe – we will update it regularly as new information becomes available.
 
@@ -110,7 +112,7 @@ Note that there are also sprints in the weekend after the conference; hosting sm
 
 Not up for a full talk or tutorial? Looking to give your first talk at a conference? Lightning talks are talks of 5 minutes or less, with or without slides, on almost any topic you want! Even if you’re nervous or shy, remember: it’s a MAXIMUM of 5 minutes. Everyday of the conference will feature a lightning talk slot at the end of the day. Sign-ups will happen **at the conference**.
 
-# READY?
+## READY?
 
 <center>
 [Add your proposal here](https://members.2019.djangocon.eu/conference/)

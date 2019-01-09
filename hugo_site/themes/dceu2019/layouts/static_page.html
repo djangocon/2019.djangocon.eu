@@ -1,4 +1,6 @@
 {{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
 	<main>
 		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
 		{{ range $paginator.Pages }}
@@ -6,4 +8,5 @@
 		{{ end }}
 		{{ partial "pagination.html" . }}
 	</main>
+
 {{ partial "footer.html" . }}

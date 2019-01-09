@@ -2,9 +2,11 @@
 title: "Sponsors"
 date: 2019-01-06T21:46:54+01:00
 draft: false
+menu: main
+weight: 40
 ---
 
-# Sponsorships
+## Sponsorships
 
 Contact: [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu)
 
