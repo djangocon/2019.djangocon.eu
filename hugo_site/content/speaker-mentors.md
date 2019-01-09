@@ -4,6 +4,9 @@ date: 2018-12-28T18:00:02+01:00
 description: "Thinking about doing a talk? Already developing one? Don't get stuck - get help and advice!"
 type: static
 draft: false
+menu:
+  main:
+    parent: "cfp"
 ---
 
 # Speaker Mentors

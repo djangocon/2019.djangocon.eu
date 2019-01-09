@@ -4,7 +4,7 @@ date: 2019-01-09T00:29:12+01:00
 draft: false
 description: DjangoCon Europe 2019 offers grants to attendees and speakers, so that those who might otherwise not be able to attend won't hesitate to participate.
 menu: main
-weight: 30
+weight: 45
 ---
 
 # Opportunity Grants
@@ -55,4 +55,6 @@ With our limited funds, we can't promise you will receive a grant, but if you're
 
 If you have questions, you can write [grants@djangocon.eu](mailto:grants@djangocon.eu).
 
-<center><a href="https://goo.gl/forms/ChphIwbpczymaZLu1" target="_blank" style="font-size: 150%">Open the application form</a></center>
+<br />
+
+<center><a href="https://grorg.aeracode.org/djeu2019/apply/" target="_blank" class="button">Open the application form</a></center>

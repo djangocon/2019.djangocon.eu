@@ -6,9 +6,13 @@ type: "single"
 description: "Our Call for Participation (CfP) is now open: Please feel invited and invite others."
 menu: main
 weight: 10
+
+menu:
+  main:
+    identifier: "cfp"
 ---
 
-## Call for Participation
+# Call for Participation
 
 This page contains all information regarding the proposal process for DjangoCon Europe – we will update it regularly as new information becomes available.
 
