@@ -53,4 +53,4 @@ With our limited funds, we can't promise you will receive a grant, but if you're
 
 If you have questions, you can write [grants@djangocon.eu](mailto:grants@djangocon.eu).
 
-<center><a href="https://grorg.aeracode.org/djeu2019/apply/" target="_blank" style="font-size: 150%">Open the application form</a></center>
+<center><a href="https://goo.gl/forms/ChphIwbpczymaZLu1" target="_blank" style="font-size: 150%">Open the application form</a></center>
