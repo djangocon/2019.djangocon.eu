@@ -51,4 +51,6 @@ Lastly, we know that some of you reading this will doubt whether it's right and 
 
 With our limited funds, we can't promise you will receive a grant, but if you're not sure, **we encourage you to apply**. If you're uncomfortable with other people knowing you received a grant, you don't have to tell them - our policy is to never publicly identify grant applicants or recipients without their explicit permission.
 
+If you have questions, you can write [grants@djangocon.eu](mailto:grants@djangocon.eu).
+
 <center><a href="https://grorg.aeracode.org/djeu2019/apply/" target="_blank" style="font-size: 150%">Open the application form</a></center>
