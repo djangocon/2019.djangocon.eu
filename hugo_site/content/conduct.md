@@ -1,5 +1,5 @@
 ---
-title: "Code of Conduct"
+title: "Conduct"
 date: 2018-12-18T21:58:22+01:00
 description: Everybody who participates in DjangoCon Europe in one way or another is required to conform to this Code of Conduct (CoC).
 draft: false
