@@ -6,19 +6,19 @@ We have a few accommodation deals with hotels and hostels near the venue. Some d
 
 Some have not provided a discount code to be used online. This means you will need to send an e-mail directly to them requesting your reservation. Below is the list of the establishments and the instructions on how to get your discount:
 
-### Generator Hostel
+## Generator Hostel
 
 [www.generatorhostels.com](www.generatorhostels.com)
 
 Method: Discount code in the Website
 
-Discount Code: DJANGO2019
+Discount Code: `DJANGO2019`
 
 Discount percentage: 18 %
 
 Date range: From 8th of April to the 16th of April
 
-### Danhostel
+## Danhostel
 
 [www.danhostel.dk](www.danhostel.dk)
 
@@ -38,15 +38,15 @@ Date range: 10th of April, until check out Sunday morning 14th April.
 
 A limited amount of beds is available.
 
-Send an e-mail to gb@cphhostel.dk and mention the booking code: “Django 19”.
+Send an e-mail to gb@cphhostel.dk and mention the booking code: `Django 19`.
 
-Cancellation: until 7 days before arrival. There is a cancellation fee of 200 DKK. Less than 7 days before arrival there is no refund.
+Cancellation: Until 7 days before arrival. There is a cancellation fee of 200 DKK. Less than 7 days before arrival there is no refund.
 
-### GlobalHagen
+## GlobalHagen
 
 [www.globalhagen.dk](www.globalhagen.dk)
 
-Send an e-mail to udlejning@ms.dk with code “SDC”.
+Send an e-mail to [udlejning@ms.dk] with information about your booking and the booking code `SDC`.
 
 Room prices per night:
 
@@ -59,7 +59,7 @@ Room prices per night:
 
 Towels: 50 DKK per person
 
-### Urban House Copenhagen
+## Urban House Copenhagen
 
 [www.meininger-hotels.com](www.meininger-hotels.com)
 
@@ -67,11 +67,11 @@ Method: Discount code in the website OR [this link](https://www.meininger-hotels
 
 Discount Code: DjangoCon
 
-Discount percentage: 10% on the refundable rate or 14,5% on the non-refundable rate.
+Discount percentage: 10% on the refundable rate or 14.5% on the non-refundable rate.
 
 Date range: From 8th of April to the 16th April.
 
-### Hotel Copenhagen Island
+## Hotel Copenhagen Island
 
 [https://www.copenhagenisland.com/](https://www.copenhagenisland.com/)
 
