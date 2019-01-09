@@ -1,3 +1,12 @@
+---
+title: "Hospitality"
+date: 2018-12-29T01:11:00+01:00
+draft: false
+menu:
+  main:
+    parent: "tickets"
+---
+
 # Hospitality
 
 It's a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). You may also prefer a classic hotel or hostel.
@@ -34,7 +43,7 @@ Room prices per night:
 
 Towels: Linen and towels are included in the price.
 
-Date range: 10th of April, until check out Sunday morning 14th April. 
+Date range: 10th of April, until check out Sunday morning 14th April.
 
 A limited amount of beds is available.
 
@@ -63,7 +72,7 @@ Towels: 50 DKK per person
 
 [www.meininger-hotels.com](www.meininger-hotels.com)
 
-Method: Discount code in the website OR [this link](https://www.meininger-hotels.com/en/mews/?mewsEnterpriseId=cc6510a2-e304-414c-9ac2-6453badc9fb0&language=en-EN&mewsStart=2019-04-10&mewsEnd=2019-04-14&mewsVoucherCode=DjangoCon&utm_source=djangocon&utm_medium=referral&utm_content=bookinglink) 
+Method: Discount code in the website OR [this link](https://www.meininger-hotels.com/en/mews/?mewsEnterpriseId=cc6510a2-e304-414c-9ac2-6453badc9fb0&language=en-EN&mewsStart=2019-04-10&mewsEnd=2019-04-14&mewsVoucherCode=DjangoCon&utm_source=djangocon&utm_medium=referral&utm_content=bookinglink)
 
 Discount Code: DjangoCon
 
@@ -77,6 +86,6 @@ Date range: From 8th of April to the 16th April.
 
 Method: [This link](https://www.copenhagenisland.com/arpbe/web/en/login/73297099)
 
-Discount percentage: 15 %
+Discount percentage: 15%
 
 Date range: From 10th of April to the 14th of April

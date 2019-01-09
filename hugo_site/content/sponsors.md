@@ -6,7 +6,7 @@ menu: main
 weight: 40
 ---
 
-## Sponsorships
+# Sponsorships
 
 Contact: [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu)
 
@@ -17,7 +17,7 @@ Packages: [Sponsorships Brochure (PDF)](/files/DjangoconEUSponsorBrochure2019.pd
 
 The 11th edition of DjangoCon Europe in 2019 is held in beautiful Scandinavian capital Copenhagen.
 
-DjangoCon Europe is a conference run **by** the Django community **for** the Django community and we believe this is the best conference for partners and sponsors to connect **with** the Django community. 
+DjangoCon Europe is a conference run **by** the Django community **for** the Django community and we believe this is the best conference for partners and sponsors to connect **with** the Django community.
 
 The Django community is proud of being very diverse and showing mutual respect for each other. It has existed more than a decade and is therefore very professional and mature. It is inclusive to hobbyists, newcomers, professionals, enthusiasts, managers, marketers and the list goes on! This community live and flourish across the whole globe on all continents.
 
@@ -56,4 +56,3 @@ You can read about sponsorship opportunities and packages in our [Sponsorships B
 
 Interested in sponsoring DjangoCon Europe 2019, want to know more or have any questions?
 Please contact us on [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu) and we'll get back to you within 24 hours!
-

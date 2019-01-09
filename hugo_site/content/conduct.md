@@ -7,7 +7,7 @@ menu: main
 weight: 30
 ---
 
-## Code of Conduct
+# Code of Conduct
 
 Everybody who participates in DjangoCon Europe in one way or another is required to conform to this Code of Conduct (CoC). This includes attendees, speakers, sponsors, organisers and volunteers.
 

@@ -2,7 +2,6 @@
 title: "Visa Information"
 date: 2018-12-29T01:11:00+01:00
 draft: false
-
 menu:
   main:
     parent: "tickets"

@@ -151,7 +151,7 @@ input[type="submit"] {
     list-style-type: none;
 
     &.active a {
-      color: $bright-blue;
+      color: $coral;
     }
   }
 
@@ -253,9 +253,8 @@ input[type="submit"] {
     font-size: 2rem;
 
     @media (min-width: $tablet) {
-
-    font-size: 2.5rem;
-  }
+      font-size: 2.5rem;
+    }
   }
 
   small {
@@ -267,8 +266,7 @@ input[type="submit"] {
 
     @media (min-width: $tablet) {
       font-size: 1.75rem;
-
-}
+    }
   }
 
   p {
@@ -287,13 +285,12 @@ input[type="submit"] {
     width: 220px;
 
     @media (min-width: $tablet) {
+      width: 180px;
+    }
 
-    width: 180px;
-  }
     @media (min-width: $desktop) {
-
-    width: 200px;
-  }
+      width: 200px;
+    }
   }
 }
 
@@ -305,9 +302,15 @@ main {
     margin: 4rem 0;
   }
 
-  a {
+  a:not(.button) {
     text-decoration: none;
-    border-bottom: 1px solid $teal;
+    color: $teal;
+    border-bottom: 1px solid $bright-blue;
+
+    &:hover {
+      color: $purple;
+      border-bottom: 1px solid $coral;
+    }
   }
 
   h2 {
@@ -320,6 +323,11 @@ main {
 
   ul li {
     margin-bottom: 1rem;
+  }
+
+  b,
+  strong {
+    color: $navy-blue;
   }
 }
 
