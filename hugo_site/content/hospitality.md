@@ -55,7 +55,7 @@ Cancellation: Until 7 days before arrival. There is a cancellation fee of 200 DK
 
 [www.globalhagen.dk](www.globalhagen.dk)
 
-Send an e-mail to [udlejning@ms.dk] with information about your booking and the booking code `SDC`.
+Send an e-mail to [udlejning@ms.dk](mailto:udlejning@ms.dk) with information about your booking and the booking code `SDC`.
 
 Room prices per night:
 
