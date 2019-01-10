@@ -14,6 +14,7 @@ You are most welcome to get in touch if you have questions.
 * [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu)
 * [content@djangocon.eu](mailto:content@djangocon.eu)
 * [conduct@djangocon.eu](mailto:conduct@djangocon.eu)
+* [hospitality@djangocon.eu](mailto:hospitality@djangocon.eu)
 
 ## Django Denmark
 
