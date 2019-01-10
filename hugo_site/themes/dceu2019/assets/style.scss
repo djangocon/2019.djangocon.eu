@@ -184,8 +184,8 @@ input[type="submit"] {
 }
 
 .header-submenu {
-  background: white;
-  margin: 1rem 0 0 0;
+  background: $coral;
+  margin: 0 0 0 0;
   padding: 0;
   justify-content: center;
   display: flex;
@@ -202,9 +202,12 @@ input[type="submit"] {
     padding: 1rem;
     letter-spacing: 1px;
     line-height: 1.15;
-    color: $coral;
+    color: white;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
+    @media (min-width: $desktop) {
+      font-size: 16px;
+    }
   }
 }
 
