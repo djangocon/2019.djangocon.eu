@@ -17,7 +17,7 @@ Some have not provided a discount code to be used online. This means you will ne
 
 ## Generator Hostel
 
-[www.generatorhostels.com](www.generatorhostels.com)
+[www.generatorhostels.com](https://generatorhostels.com/)
 
 Method: Discount code in the Website
 
@@ -29,7 +29,7 @@ Date range: From 8th of April to the 16th of April
 
 ## Danhostel
 
-[www.danhostel.dk](www.danhostel.dk)
+[www.danhostel.dk](https://www.danhostel.dk/)
 
 Room prices per night:
 
@@ -53,7 +53,7 @@ Cancellation: Until 7 days before arrival. There is a cancellation fee of 200 DK
 
 ## GlobalHagen
 
-[www.globalhagen.dk](www.globalhagen.dk)
+[www.globalhagen.dk](https://www.globalhagen.dk/)
 
 Send an e-mail to [udlejning@ms.dk](mailto:udlejning@ms.dk) with information about your booking and the booking code `SDC`.
 
@@ -70,7 +70,7 @@ Towels: 50 DKK per person
 
 ## Urban House Copenhagen
 
-[www.meininger-hotels.com](www.meininger-hotels.com)
+[www.meininger-hotels.com](https://www.meininger-hotels.com/)
 
 Method: Discount code in the website OR [this link](https://www.meininger-hotels.com/en/mews/?mewsEnterpriseId=cc6510a2-e304-414c-9ac2-6453badc9fb0&language=en-EN&mewsStart=2019-04-10&mewsEnd=2019-04-14&mewsVoucherCode=DjangoCon&utm_source=djangocon&utm_medium=referral&utm_content=bookinglink)
 
