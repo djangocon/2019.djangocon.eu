@@ -2,6 +2,9 @@
 title: "Accessibility"
 date: 2019-01-10T22:52:02+01:00
 draft: false
+menu:
+  main:
+    parent: "information"
 ---
 
 # Accessibility
