@@ -1,6 +1,7 @@
 ---
 title: "Hospitality"
 date: 2018-12-29T01:11:00+01:00
+description: "Accommodation for DjangoCon in Copenhagen - find the best places to stay, for yourself or with others"
 draft: false
 menu:
   main:

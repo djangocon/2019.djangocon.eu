@@ -1,6 +1,7 @@
 ---
 title: "Bikes 🚲"
 date: 2019-01-10T22:52:02+01:00
+description: "In collaboration with the social enterprise Baisikeli, we are encouraging you to experience Copenhagen’s bicycle infrastructure."
 draft: false
 menu:
   main:
