@@ -59,8 +59,14 @@ input[type="text"] {
   font-family: $primary-font;
 }
 
-p {
+p, ul {
   margin-bottom: 1rem;
+  line-height: 130%;
+}
+
+ul
+{
+  margin-left: 40px;
 }
 
 a {
@@ -320,10 +326,6 @@ main {
     margin-top: 2rem;
   }
 
-  p {
-    font-size: 1.1rem;
-  }
-
   ul li {
     margin-bottom: 1rem;
   }
@@ -433,4 +435,20 @@ footer {
       color: $navy-blue;
     }
   }
+}
+
+
+code
+{
+  background-color: rgb(249, 242, 244);
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  color: $coral;
+  font-family: monospace;
+  padding: 2px 4px;
+}
+
+img
+{
+  max-width: 100%;
 }
