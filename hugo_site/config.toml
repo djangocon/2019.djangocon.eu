@@ -8,5 +8,5 @@ sectionPagesMenu = "main"
 
 [params]
     description = "DjangoCon Europe, In Copenhagen April 10-12th 2019"
-    twittercardimage="twitter_square.png"
+    twittercardimage="twitter_card.png"
     headerimage = "logo.svg"
