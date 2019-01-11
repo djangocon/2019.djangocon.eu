@@ -112,7 +112,7 @@ The venue provides a number of rooms adjacent to the main hall, one of which wil
 
 If the schedule permits it, sessions can be organized spontaneously during the conference. However, we encourage getting in touch about the session beforehand, such that the session can be advertised and scheduled for the convenience of everyone.
 
-Note that there are also sprints in the weekend after the conference; hosting smaller sessions do not qualify for free adminission.
+Note that there are also sprints in the weekend after the conference; hosting smaller sessions do not qualify for free admission.
 
 ## Lightning Talks 🌩️
 
@@ -121,5 +121,7 @@ Not up for a full talk or tutorial? Looking to give your first talk at a confere
 ## READY?
 
 <center>
-[Add your proposal here](https://members.2019.djangocon.eu/conference/)
+  <a href="https://members.2019.djangocon.eu/conference/" class="button button-red">
+    Add your proposal here
+  </a>
 </center>
