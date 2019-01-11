@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 date: 2018-12-16T18:59:31+01:00
+description: "Get in touch: We are here to answer your questions."
 draft: false
 menu:
   main:

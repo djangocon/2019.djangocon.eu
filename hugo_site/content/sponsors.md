@@ -1,6 +1,7 @@
 ---
 title: "Sponsors"
 date: 2019-01-06T21:46:54+01:00
+description: "Be a sponsor of DjangoCon Europe 2019: Help build the community and be part of it."
 draft: false
 menu: main
 weight: 40

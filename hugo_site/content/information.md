@@ -1,6 +1,7 @@
 ---
 title: "Information"
 date: 2019-01-10T22:29:13+01:00
+description: "Information area for participants of DjangoCon Europe 2019, click on for all you need to know."
 draft: false
 menu:
   main:

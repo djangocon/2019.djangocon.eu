@@ -1,6 +1,7 @@
 ---
 title: "Accessibility"
 date: 2019-01-10T22:52:02+01:00
+description: "DjangoCon focuses on providing accessibility for your needs, both for the physical space and the event itself."
 draft: false
 menu:
   main:

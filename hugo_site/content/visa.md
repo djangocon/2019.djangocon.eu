@@ -1,6 +1,7 @@
 ---
 title: "Visa Information"
 date: 2018-12-29T01:11:00+01:00
+description: "Instructions about Visa for Copenhagen for DjangoCon Europe 2019"
 draft: false
 menu:
   main:
