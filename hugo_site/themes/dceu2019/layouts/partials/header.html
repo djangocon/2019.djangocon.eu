@@ -13,8 +13,9 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="{{ .Site.Title }}" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@DjangoConEurope">
+	<meta name="twitter:creator" content="@DjangoConEurope">
 	<meta name="twitter:title" content="{{ .Title }}" />
 	<meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
 	<meta name="twitter:image" content="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.twittercardimage }}" />
