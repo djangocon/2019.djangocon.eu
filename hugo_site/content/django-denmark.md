@@ -1,6 +1,7 @@
 ---
 title: "Django Denmark"
 date: 2019-01-11T00:41:04+01:00
+description: "Django Denmark is the organisation behind DjangoCon Europe 2019."
 draft: false
 menu:
   main:

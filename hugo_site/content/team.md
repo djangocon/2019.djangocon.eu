@@ -1,6 +1,7 @@
 ---
 title: "Credits"
 date: 2019-01-11T00:41:04+01:00
+description: "Credit where credit is due: These great people helped to create the DjangoCon Europe 2019!"
 draft: false
 menu:
   main:
