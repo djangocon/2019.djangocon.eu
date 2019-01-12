@@ -471,3 +471,17 @@ footer {
     }
   }
 }
+
+.alert
+{
+  background: $peach;
+  border: 2px solid $coral;
+  color: $coral !important;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+  a {
+    color: $coral !important;
+  }
+}
