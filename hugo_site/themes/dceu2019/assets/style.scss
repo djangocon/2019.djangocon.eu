@@ -64,8 +64,7 @@ p, ul {
   line-height: 150%;
 }
 
-ul
-{
+ul {
   margin-left: 40px;
 }
 
@@ -337,6 +336,8 @@ img {
   }
 }
 
+//
+// Markdown Content
 main {
   margin: 2rem 0;
   padding: 0 1rem;
@@ -367,6 +368,20 @@ main {
   b,
   strong {
     color: $navy-blue;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  table th {
+    text-align: left;
+  }
+
+  table td {
+    border-bottom: 1px dotted $beige;
+    padding: 5px 0;
   }
 }
 
@@ -472,16 +487,18 @@ footer {
   }
 }
 
-.alert
-{
-  background: $peach;
-  border: 2px solid $coral;
-  color: $coral !important;
-  padding: 10px;
-  border-radius: 10px;
+.alert {
+  background: $purple;
+  color: white;
+  padding: 1rem;
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 2rem;
+
   a {
     color: $coral !important;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-weight: bold;
   }
 }
