@@ -10,11 +10,12 @@ menu:
 
 # Hospitality
 
-It's a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). You may also prefer a classic hotel or hostel.
+It is a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). 
 
-We have a few accommodation deals with hotels and hostels near the venue. Some discounts also cover days before and after the event.
+Should you prefer a classic hotel or hostel, we recommend staying with one of the hotels/hostels we were able to negotiate accommodation deals with. Some discounts also cover days before and after the event.
 
-Some have not provided a discount code to be used online. This means you will need to send an e-mail directly to them requesting your reservation. Below is the list of the establishments and the instructions on how to get your discount:
+It is worth mentioning that some have not provided a discount code to be used on their website. This means you will need to send an e-mail directly to the hotel/hostel requesting your reservation. Below is the list of the establishments and the instructions on how to get your discount.
+
 
 ## Generator Hostel
 
@@ -27,6 +28,31 @@ Discount Code: `DJANGO2019`
 Discount percentage: 18 %
 
 Date range: From 8th of April to the 16th of April
+
+
+## Urban House Copenhagen
+
+[www.meininger-hotels.com](https://www.meininger-hotels.com/)
+
+Method: Discount code in the website OR [this link](https://www.meininger-hotels.com/en/mews/?mewsEnterpriseId=cc6510a2-e304-414c-9ac2-6453badc9fb0&language=en-EN&mewsStart=2019-04-10&mewsEnd=2019-04-14&mewsVoucherCode=DjangoCon&utm_source=djangocon&utm_medium=referral&utm_content=bookinglink)
+
+Discount Code: `DjangoCon`
+
+Discount percentage: 10% on the refundable rate or 14.5% on the non-refundable rate.
+
+Date range: From 8th of April to the 16th April.
+
+
+## Hotel Copenhagen Island
+
+[https://www.copenhagenisland.com/](https://www.copenhagenisland.com/)
+
+Method: [This link](https://www.copenhagenisland.com/arpbe/web/en/login/73297099)
+
+Discount percentage: 15%
+
+Date range: From 10th of April to the 14th of April
+
 
 ## Danhostel
 
@@ -52,6 +78,7 @@ Send an e-mail to [gb@cphhostel.dk](mailto:gb@cphhostel.dk) and mention the book
 
 Cancellation: Until 7 days before arrival. There is a cancellation fee of 200 DKK. Less than 7 days before arrival there is no refund.
 
+
 ## GlobalHagen
 
 [www.globalhagen.dk](https://www.globalhagen.dk/)
@@ -68,25 +95,3 @@ Room prices per night:
 | Couple room | 650 DKK |
 
 Towels: 50 DKK per person
-
-## Urban House Copenhagen
-
-[www.meininger-hotels.com](https://www.meininger-hotels.com/)
-
-Method: Discount code in the website OR [this link](https://www.meininger-hotels.com/en/mews/?mewsEnterpriseId=cc6510a2-e304-414c-9ac2-6453badc9fb0&language=en-EN&mewsStart=2019-04-10&mewsEnd=2019-04-14&mewsVoucherCode=DjangoCon&utm_source=djangocon&utm_medium=referral&utm_content=bookinglink)
-
-Discount Code: `DjangoCon`
-
-Discount percentage: 10% on the refundable rate or 14.5% on the non-refundable rate.
-
-Date range: From 8th of April to the 16th April.
-
-## Hotel Copenhagen Island
-
-[https://www.copenhagenisland.com/](https://www.copenhagenisland.com/)
-
-Method: [This link](https://www.copenhagenisland.com/arpbe/web/en/login/73297099)
-
-Discount percentage: 15%
-
-Date range: From 10th of April to the 14th of April
