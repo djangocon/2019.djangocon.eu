@@ -9,4 +9,5 @@ sectionPagesMenu = "main"
 [params]
     description = "DjangoCon Europe, In Copenhagen April 10-12th 2019"
     twittercardimage="twitter_card.png"
+    facebookcardimage="facebook_og.png"
     headerimage = "logo.svg"
