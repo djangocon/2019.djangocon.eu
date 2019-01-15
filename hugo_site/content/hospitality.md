@@ -56,7 +56,7 @@ Date range: From 10th of April to the 14th of April
 
 ## Danhostel
 
-[www.danhostel.dk](https://www.danhostel.dk/)
+[www.cphhostel.dk](https://www.cphhostel.dk/en)
 
 Room prices per night:
 
