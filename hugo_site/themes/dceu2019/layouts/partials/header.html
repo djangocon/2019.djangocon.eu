@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ .Title }} - {{ .Site.Title }} • DjangoCon Europe 2019</title>
+	<title>{{ .Title }} • {{ .Site.Title }}</title>
   <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ $style := resources.Get "style.scss" | resources.ToCSS | resources.Minify }}
@@ -17,9 +17,13 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@DjangoConEurope">
 	<meta name="twitter:creator" content="@DjangoConEurope">
-	<meta name="twitter:title" content="{{ .Title }} • DjangoCon Europe 2019" />
+	<meta name="twitter:title" content="{{ .Title }} • {{ .Site.Title }}" />
 	<meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
 	<meta name="twitter:image" content="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.twittercardimage }}" />
+  <meta property="og:title" content="{{ .Title }} • {{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.facebookcardimage }}">
+  <meta property="og:url" content=" {{ .Permalink }}">
 </head>
 
 <body>
