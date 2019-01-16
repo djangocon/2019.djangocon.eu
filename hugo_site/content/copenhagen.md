@@ -12,29 +12,29 @@ Taxis (aka Taxa) in Denmark are quite expensive. A trip from the Kastrup / Copen
 
 ## Public Transport Tickets
 
-To buy a ticket, the city offers a different kinds of options. You can buy it at train stations, the DOT App ([Android](https://play.google.com/store/apps/details?id=dk.unwire.projects.dmm) / [iOS](https://itunes.apple.com/us/app/1415-mobilbilletter/id494862453?mt=8)) or with the bus driver (only cash).
+To buy a ticket, the city offers different options. You can buy it at train stations, the DOT App ([Android](https://play.google.com/store/apps/details?id=dk.unwire.projects.dmm) / [iOS](https://itunes.apple.com/us/app/1415-mobilbilletter/id494862453?mt=8)) or with the bus driver (only cash).
 
 For more information on which types of ticket you can buy, [visit this page](https://dinoffentligetransport.dk/service/for-tourists/).
 
 ## Planning the trips
 
-To know which line you need to jump in, you can use either [Google Maps](https://maps.google.com) or the Rejseplanen ([Web](https://www.rejseplanen.dk/webapp/index.html?language=en_EN) / [Android](https://play.google.com/store/apps/details?id=de.hafas.android.rejseplanen&hl=en) / [iOS](https://itunes.apple.com/us/app/rejseplanen/id317007942?mt=8)). The latter is quite efficient and it will inform you how many zones, which lines you need to get and the total cost of your trip.
+To know which line you need to jump in, you can use either [Google Maps](https://maps.google.com) or the Rejseplanen ([Web](https://www.rejseplanen.dk/webapp/index.html?language=en_EN) / [Android](https://play.google.com/store/apps/details?id=de.hafas.android.rejseplanen&hl=en) / [iOS](https://itunes.apple.com/us/app/rejseplanen/id317007942?mt=8)). The latter is quite efficient and will inform you how many zones, the lines you need to get and the total cost of your trip.
 
 ## Payments (DKK: The Danish Kroner)
 
 As you might know, Denmark's official currency is the Danish crown (Danske Kroner, a.k.a `DKK`). Some shops might accept Euro in cash as payment, but this is not a rule. 
 
-One nice convenience is the fact that most of the establishments in Denmark (hotels, bars, restaurants, shops) will accept payment with Credit Card (VISA and MasterCard). As a matter of fact, shops are allowed to not accept cash should they judge convinient, however in very touristic places this is not a common practice. So should you want practicity, just credit cards instead of cash.
+One nice convenience is the fact that most establishments in Denmark (hotels, bars, restaurants, shops) will accept payment with Credit Card (VISA and MasterCard). As a matter of fact, shops are allowed not to accept cash should they judge convinient, however in very touristic place this is not a common practice. So should you want practicity, just credit cards instead of cash.
 
-Another interesting thing is how the prices are displayed. As you walk around, you will notice prices written as: `53,-` this means 53 Danish crowns.
+Another interesting thing is how prices are displayed. As you walk around, you will notice prices written as: `53,-` this means 53 Danish crowns.
 
 ## Places to visit 
 
-You can check out most of the city's attractions at [Visit Denmark](https://www.visitdenmark.co.uk/en-gb/).
+You can check out most of attractions and events in Copenhagen at [Visit Denmark](https://www.visitdenmark.co.uk/en-gb/).
 
 ## The language
 
-In Denmark, [Danish](https://en.wikipedia.org/wiki/Danish_language) is spoken, but the great majority of the danes also speak English. Should you feel like twisting your tongue a bit, here are the most common danish phrases you can use during your stay in the city:
+In Denmark, [Danish](https://en.wikipedia.org/wiki/Danish_language) is spoken, but the great majority of danes also speak English. Should you feel like twisting your tongue a bit, here are the most common danish phrases you can use during your stay in the city:
 
 Expression | Translation
 ---------- | -----------
