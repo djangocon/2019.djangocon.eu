@@ -1,3 +1,13 @@
+---
+title: "Copenhagen City & Transport Guide"
+date: 2019-01-10T22:52:02+01:00
+description: "The ultimate Copenhagen city-guide for the DjangoCon EU 2019."
+draft: false
+menu:
+  main:
+    parent: "information"
+---
+
 # København
 
 Copenhagen is a fantastic and beautiful city. Its well-designed urban infrastructure fascinates [milions of tourists](https://www.visitdenmark.dk/da/analyse/fakta-og-tal-om-turismen-i-danmark) every year. Since you are going to be one of them this time, here we lay out some of the basic things you need to get the most out of your stay in our city.
