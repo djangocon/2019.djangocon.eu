@@ -36,7 +36,7 @@ To know which line you need to jump in, you can use either [Google Maps](https:/
 
 As you might know, Denmark's official currency is the Danish crown (Danske Kroner, a.k.a `DKK`). Some shops might accept Euro in cash as payment, but this is not a rule. 
 
-One nice convenience is the fact that most establishments in Denmark (hotels, bars, restaurants, shops) will accept payment with Credit cards (VISA and MasterCard). As a matter of fact, shops are allowed not to accept cash should they judge convinient, however in most touristic places this is not a common practice. So should you want practicity, just use your credit cards instead of cash. This way you will avoid having to carry cash around and exchange it all the time.
+One nice convenience is the fact that most establishments in Denmark (hotels, bars, restaurants, shops) will accept payment with Credit cards (VISA and MasterCard). So should you want practicity, you can use only credit cards during your stay in Copenhagen.
 
 Another interesting thing about the currency in Denmark is how prices are displayed. As you walk around, you will notice prices written as: `53,-` this means 53 Danish crowns.
 
