@@ -40,9 +40,15 @@ Most establishments in Denmark (hotels, bars, restaurants, shops) will accept pa
 
 Another interesting thing about the currency in Denmark is how prices are displayed. As you walk around, you will notice prices written as: `53,-` this means 53 Danish crowns.
 
-### Places to visit 
+### Discovering Copenhagen
 
-You can check out most of the attractions and events Copenhagen has to offer at [Visit Denmark](https://www.visitdenmark.co.uk/en-gb/).
+Here are a few resources for discovering Copenhagen
+
+* General attractions and larger events are listed at [Visit Denmark](https://www.visitdenmark.co.uk/en-gb/).
+* [WikiTravel/Copenhagen](https://wikitravel.org/en/Copenhagen)
+* [Tripadvisor: Copenhagen](https://www.tripadvisor.com/Attractions-g189541-Activities-Copenhagen_Zealand.html)
+* [Couchsurfing: Copenhagen](https://www.couchsurfing.com/places/europe/denmark/copenhagen)
+* [GPSMyCity: Walking Tours in Copenhagen](https://www.gpsmycity.com/gps-tour-guides/copenhagen-485.html)
 
 ### The language
 
