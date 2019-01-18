@@ -42,7 +42,7 @@ Another interesting thing about the currency in Denmark is how prices are displa
 
 ### Places to visit 
 
-You can check out most of attractions and events in Copenhagen at [Visit Denmark](https://www.visitdenmark.co.uk/en-gb/).
+You can check out most of the attractions and events Copenhagen has to offer at [Visit Denmark](https://www.visitdenmark.co.uk/en-gb/).
 
 ### The language
 
