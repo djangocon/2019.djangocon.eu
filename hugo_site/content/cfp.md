@@ -14,9 +14,13 @@ menu:
 
 # Call for Participation
 
+**The call has closed - thanks to everyone who responded! This conference will be fantastic thanks to all your inputs, and we are excited to be working on the program now.**
+
+**We will add more information about how and when we reach out about the committee's selections.**
+
 This page contains all information regarding the proposal process for DjangoCon Europe – we will update it regularly as new information becomes available.
 
-## Deadline is 2019-01-20 🔥
+## Deadline <s>is</s> was 2019-01-20 🔥
 
 Precisely speaking, that's January 20th, 2019, 23:59 UTC+1. You can edit your submissions up to this date, so don't hesitate to submit a preliminary version of your talk or workshop.
 
