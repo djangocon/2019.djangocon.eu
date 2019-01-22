@@ -13,4 +13,6 @@ menu:
 We are currently defining our selection process and will make this public before
 contacting selected speakers.
 
-Contents of the programme itself are not expected to appear before March.
+Contents of the programme itself are not expected to appear before March. We are
+reaching out to everyone who submitted a proposal within late January/early
+february
