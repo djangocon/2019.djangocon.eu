@@ -7,6 +7,12 @@ menu: main
 weight: 45
 ---
 
+
+# 🚫 The application window has closed 🚫
+
+We have noted that some talk proposals mentioned a need for grant support but have not put in an application before the deadline. We will address this directly to people who have submitted a talk before the CfP deadline.
+
+
 # Opportunity Grants
 
 DjangoCon Europe 2019 offers grants to attendees and speakers, so that those who might otherwise not be able to attend won't hesitate to participate. Some expenses for the conference attendance (which could include travel, hotel, registration etc) will be covered for opportunity grant recipients.
@@ -41,7 +47,7 @@ Our program prioritises speakers first, and then anyone who is part of an under-
 
 If you are an accepted speaker, and you don't need a grant because your employer is covering your costs of attending, we can recognise your employer for their support. For now, we're planning to get their logo in the programme and a post on the job board. This is opt-in. We hope this will make it a little easier for you to convince your employer to contribute towards your conference costs as a speaker.
 
-## Apply now!
+## <s>Apply now!</s>
 
 Lastly, we know that some of you reading this will doubt whether it's right and proper for you to apply for a grant. That's why we want to stress:
 
@@ -55,6 +61,4 @@ With our limited funds, we can't promise you will receive a grant, but if you're
 
 If you have questions, you can write [grants@djangocon.eu](mailto:grants@djangocon.eu).
 
-<br />
-
-<center><a href="https://grorg.aeracode.org/djeu2019/apply/" target="_blank" class="button">Open the application form</a></center>
+**The application window ended at January 20th**
