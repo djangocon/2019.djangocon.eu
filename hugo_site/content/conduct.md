@@ -3,7 +3,9 @@ title: "Conduct"
 date: 2018-12-18T21:58:22+01:00
 description: Everybody who participates in DjangoCon Europe in one way or another is required to conform to this Code of Conduct (CoC).
 draft: false
-menu: main
+menu:
+  main:
+    identifier: "conduct"
 weight: 30
 ---
 
@@ -11,7 +13,7 @@ weight: 30
 
 Everybody who participates in DjangoCon Europe in one way or another is required to conform to this Code of Conduct (CoC). This includes attendees, speakers, sponsors, organisers and volunteers.
 
-The organisers will introduce a Code of Conduct team that will be primarily responsible for handling any incidents. The CoC applies before and throughout the event (including related activities such as social events, and social media). We have also published our [response guidelines](https://2018.djangocon.eu/conduct-response/).
+The organisers will introduce a Code of Conduct team that will be primarily responsible for handling any incidents. The CoC applies before and throughout the event (including related activities such as social events, and social media). We have also published our [response guidelines](/conduct-response/).
 
 The team can be reached on [conduct@djangocon.eu](mailto:conduct@djangocon.eu).
 
@@ -106,7 +108,7 @@ If you don't have some of this information, or not at this time, please still ma
 
 If you feel unsafe reporting in person, you may choose someone to represent you. In this case, we'd need their contact information, but we'd ask you to make clear that this person represents you.
 
-When handling a report, we follow our [response guidelines](https://2018.djangocon.eu/conduct-response/) (link correctly refers to 2018 website, contents will be copied over).
+When handling a report, we follow our [response guidelines](/conduct-response/).
 
 ## Emergencies
 If you're currently afraid of your physical safety or are in danger, contact local law enforcement in Denmark:
