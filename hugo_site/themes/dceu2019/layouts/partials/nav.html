@@ -16,17 +16,21 @@
 </header>
 
 {{ range .Site.Menus.main }}
-  {{ if $currentPage.HasMenuCurrent "main" . }}
-    <a href="/{{ $currentPage.Params.menu.main.parent }}" class="header-submenu-back">
-      ⬅ Back to {{ $currentPage.Params.menu.main.parent }}
-    </a>
-  {{ end }}
-
-  {{ if $currentPage.IsMenuCurrent "main" . }}
+  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
     <ul class="header-submenu">
+      {{ if and ($currentPage.IsMenuCurrent "main" .) (.HasChildren) }}
+        <li class="active">
+          <a href="/{{ $currentPage.Params.menu.main.identifier }}">{{ $currentPage.Params.menu.main.identifier }}</a>
+        </li>
+      {{ end }}
+      {{ if $currentPage.HasMenuCurrent "main" . }}
+        <li>
+          <a href="/{{ $currentPage.Params.menu.main.parent }}">{{ $currentPage.Params.menu.main.parent }}</a>
+        </li>
+      {{ end }}
       {{ if .HasChildren }}
         {{ range .Children }}
-        <li>
+        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
           <a href="{{ .URL | relURL }}">{{ .Name }}</a>
         </li>
         {{ end }}
