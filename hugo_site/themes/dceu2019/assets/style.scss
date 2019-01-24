@@ -213,8 +213,13 @@ img {
   li {
     list-style-type: none;
 
-    &.active {
+    &.active,
+    &.active:hover {
       background: darken($coral, 10%);
+    }
+
+    &:hover {
+      background: darken($coral, 5%);
     }
   }
 
