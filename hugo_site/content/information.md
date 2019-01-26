@@ -6,6 +6,7 @@ draft: false
 menu:
   main:
     identifier: "information"
+    alias: "General"
 weight: 30
 ---
 
