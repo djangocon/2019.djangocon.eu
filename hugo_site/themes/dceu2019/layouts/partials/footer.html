@@ -12,10 +12,12 @@
     </form>
 
   <footer>
-    <p>Generated on {{ now }}</p>
-    <p><a href="{{ .Site.SitemapAbsURL }}" target="_blank">Sitemap</a></p>
+    <p>Generated on {{ dateFormat "Monday, January 2, 2006 - 15:04 MST" now.UTC }}</p>
 
-    <p>Contributions and source code: <a href="http://github.com/djangocon/2019.djangocon.eu" target="_blank">http://github.com/djangocon/2019.djangocon.eu</a></p>
+    <p>
+      <a href="{{ .Site.SitemapAbsURL }}" target="_blank">Sitemap</a> &middot;
+      Contributions and source code <a href="http://github.com/djangocon/2019.djangocon.eu" target="_blank">on GitHub</a>
+    </p>
   </footer>
 </body>
 </html>
