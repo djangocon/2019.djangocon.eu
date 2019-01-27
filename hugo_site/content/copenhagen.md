@@ -56,8 +56,8 @@ In Denmark, [Danish](https://en.wikipedia.org/wiki/Danish_language) is spoken - 
 
 Expression | Translation
 ---------- | -----------
-God morgen  | Good morning
-God aften | Good evening
+Godmorgen  | Good morning
+Godaften | Good evening
 God eftermiddag | Good afternoon
 Jeg hedder ... | My name is ...
 Hvordan går det? | How are you?
@@ -67,4 +67,4 @@ Tusinde Tak | Thank you very much
 Hej | Hi
 Hej hej | Bye
 
-And of course, you will need to know how to [pronounce](https://translate.google.com/#view=home&op=translate&sl=da&tl=en&text=God%20morgen.%0AGod%20aften.%0AGod%20eftermiddag.%0AJeg%20hedder%20Maria.%0AHvordan%20g%C3%A5r%20det%3F%0AJeg%20har%20det%20godt%2C%20tak.%0ATak.%0ATusinde%20Tak.%0AHej.%0AHej%20hej.) these words.
+And of course, you will need to know how to [pronounce](https://translate.google.com/#view=home&op=translate&sl=da&tl=en&text=Godmorgen.%0AGodaften.%0AGod%20eftermiddag.%0AJeg%20hedder%20Maria.%0AHvordan%20g%C3%A5r%20det%3F%0AJeg%20har%20det%20godt%2C%20tak.%0ATak.%0ATusinde%20Tak.%0AHej.%0AHej%20hej.) these words.
