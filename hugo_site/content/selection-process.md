@@ -8,7 +8,7 @@ menu:
 
 ---
 
-# Selection process.
+# Selection process
 
 We are currently defining our selection process and will make this public before
 contacting selected speakers.

@@ -25,7 +25,7 @@
       {{ end }}
       {{ if $currentPage.HasMenuCurrent "main" . }}
         <li>
-          <a href="{{ .Page.URL | relURL  }}">{{ or .Page.Params.menu.main.alias .Page.Name }}</a>
+          <a href="{{ .Page.URL | relURL  }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
         </li>
       {{ end }}
       {{ if .HasChildren }}
