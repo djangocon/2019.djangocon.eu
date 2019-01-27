@@ -20,12 +20,12 @@
     <ul class="header-submenu">
       {{ if and ($currentPage.IsMenuCurrent "main" .) (.HasChildren) }}
         <li class="active">
-          <a href="/{{ $currentPage.Params.menu.main.identifier }}">{{ $currentPage.Params.menu.main.identifier }}</a>
+          <a href="{{ .URL | relURL }}">{{ or .Page.Params.menu.main.alias .Name }}</a>
         </li>
       {{ end }}
       {{ if $currentPage.HasMenuCurrent "main" . }}
         <li>
-          <a href="/{{ $currentPage.Params.menu.main.parent }}">{{ $currentPage.Params.menu.main.parent }}</a>
+          <a href="{{ .Page.URL | relURL  }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
         </li>
       {{ end }}
       {{ if .HasChildren }}
