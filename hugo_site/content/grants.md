@@ -41,7 +41,7 @@ Our program prioritises speakers first, and then anyone who is part of an under-
 * people who have experienced trauma and its aftermath (PTSD, anxiety, etc)
 * people living with or recovering from substance abuse
 
-**The closing date for grant applications is January 20th, 23:59 (UTC+1)** - a week after the [Call for Participation](/cfp/). We aim to inform you of the results by mid-February. If you would like to submit a proposal, and would need a grant in order to attend if your proposal is accepted, please ensure you fill in both the CfP form and the opportunity grant application form. **Important: if you need a grant, you must apply before the deadline. Speakers do not automatically receive funding to attend.**
+**The closing date for grant applications  <s>is</s> was January 20th, 23:59 (UTC+1)** - along with the [Call for Participation](/cfp/). We aim to inform you of the results by mid-February. If you would like to submit a proposal, and would need a grant in order to attend if your proposal is accepted, please ensure you fill in both the CfP form and the opportunity grant application form. **Important: if you need a grant, you must apply before the deadline. Speakers do not automatically receive funding to attend.**
 
 ## Getting your employer's support
 
