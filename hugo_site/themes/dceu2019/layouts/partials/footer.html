@@ -12,12 +12,37 @@
     </form>
 
   <footer>
-    <p>Generated on {{ dateFormat "Monday, January 2, 2006 - 15:04 MST" now.UTC }}</p>
-
-    <p>
-      <a href="{{ .Site.SitemapAbsURL }}" target="_blank">Sitemap (XML)</a> &middot;
-      Contributions and source code <a href="http://github.com/djangocon/2019.djangocon.eu" target="_blank">on GitHub</a>
-    </p>
+    <section>
+      {{ range .Site.Menus.main }}
+        <p class="equal">
+            <b>{{ .Name }}</b>
+            <br/>
+            {{ if .HasChildren }}
+              <a href="{{ .URL | relURL }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
+              <br/>
+              {{ range $index, $item := .Children }}
+                <a href="{{ $item.URL | relURL }}">{{ or $item.Page.Params.menu.main.alias $item.Page.Params.menu.main.name $item.Page.Name }}</a>
+                {{ if eq (mod (add $index 1) 3) 0 }}
+                </p><p><br/>
+                {{ else }}
+                <br/>
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+            {{ end }}
+        </p>
+      {{ end }}
+    </section>
+    <section class="center middle">
+      <p>
+        Generated on {{ dateFormat "Monday, January 2, 2006 - 15:04 MST" now.UTC }}<br/>
+      </p>
+      <p>
+        <!-- <a href="{{ .Site.SitemapAbsURL }}" target="_blank">Sitemap <small>(XML)</small></a> &middot; -->
+        Contributions and source code <a href="http://github.com/djangocon/2019.djangocon.eu" target="_blank">on GitHub</a>
+      </p>
+    </section>
   </footer>
 </body>
 </html>

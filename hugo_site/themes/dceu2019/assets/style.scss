@@ -397,25 +397,38 @@ main {
 
 footer {
   color: white;
-  display: flex;
   padding: 1rem;
   margin-top: 1rem;
   background: $purple;
   background-position: center;
   background-image: url('/img/fin_092.png');
   background-size: 700px;
-  justify-content: space-between;
-  align-items: center;
   font-size: 0.8rem;
-  flex-flow: column;
-  text-align: center;
 
-  p {
-    margin: 1rem;
-  }
+  section {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
 
-  @media (min-width: $tablet) {
-    flex-flow: row;
+    p {
+      margin: 1rem;
+
+      &.equal {
+        flex: 1;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      flex-flow: row;
+    }
+
+    &.center {
+      text-align: center;
+    }
+
+    &.middle {
+      align-items: center;
+    }
   }
 }
 
