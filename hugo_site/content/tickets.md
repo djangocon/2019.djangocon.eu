@@ -33,11 +33,11 @@ If your employer is paying for the ticket or reimbursing you for your conference
 Choose this ticket type if you or your employer want to especially support us doing this conference. It gives you everything the other tickets do as well, and it includes one post on our conference job board for your company.
 <i>[For sponsorship options please see here](https://2019.djangocon.eu/sponsors/)</i>.
 
-# Ticket purchase form
 
-<div style="width:100%;max-width:810px;margin:0 auto; background-color: #EEE; border-radius: 10px;"><iframe class="ticketbutler-iframe" src="https://djangocon.ticketbutler.io/en/e/2019/iframe/" style="display:block;width:100%;border:0" scrolling="no"></iframe><div style="display:flex;align-items:center; padding: 0 10px;"><span style="margin:5px 0;font-size:14px;color:#63696d;width:100%;font-family:Helvetica, sans-serif;">Powered by</span><a href="//ticketbutler.io" target="_blank" rel="noopener noreferrer"><img style="font-size:14px;color:#63696d;width:100%;max-height:15px;max-width:160px" src="https://djangocon.ticketbutler.io/static/img/ticketbutler_logo.png" alt="Ticketbutler"/></a></div><script type="text/javascript" src="https://djangocon.ticketbutler.io/static/js/lib/embed.min.js"></script><script type="text/javascript">iFrameResize(
-              {heightCalculationMethod: 'lowestElement'},
-              ".ticketbutler-iframe"
-            )</script></div>
+# Get your ticket!
 
-Don't see the above form? There may be a privacy extension for your browser blocking it. Alternative link for ticket purchase: [https://djangocon.ticketbutler.io/en/e/2019/](https://djangocon.ticketbutler.io/en/e/2019/).
+<center><a href="https://djangocon.ticketbutler.io/en/e/2019/" target="_blank" class="button">
+  Open ticket purchase
+</a></center>
+
+<center>Powered by <a href="https://ticketbutler.io/" target="_blank">Ticketbutler</a></center>
