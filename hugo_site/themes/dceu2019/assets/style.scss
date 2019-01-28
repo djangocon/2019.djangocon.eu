@@ -350,12 +350,9 @@ img {
 //
 // Markdown Content
 main {
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
   padding: 0 1rem;
-
-  @media (min-width: $tablet) {
-    margin: 2rem 0;
-  }
 
   a:not(.button) {
     text-decoration: none;
