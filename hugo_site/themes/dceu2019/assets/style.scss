@@ -34,6 +34,7 @@ h1 {
   color: $teal;
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 h2 {
@@ -353,7 +354,7 @@ main {
   padding: 0 1rem;
 
   @media (min-width: $tablet) {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
 
   a:not(.button) {
