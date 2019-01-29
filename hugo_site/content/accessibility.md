@@ -10,4 +10,18 @@ menu:
 
 # Accessibility
 
-We are observant of the needs for accessibility both for the physical space of the venue and for the event itself. We will be adding more information about this, as we are more certain of all the details. You are welcome to write us about any specific needs: [2019@djangocon.eu](mailto:2019@djangocon.eu)
+We are observant of the needs for accessibility both for the physical space of the venue and the activities that take place.
+
+## Transcription (speech to text)
+
+As with previous DjangoCon events, live transcription is provided for all talks. This is done by a professional team known from previous events.
+
+## Wheelchair access
+
+The ground floor of the event is wheelchair friendly and has a wheelchair friendly toilet. The ground floor gives access to the main event hall, outdoor areas and 3 additional rooms.
+
+The first floor is not wheelchair accessible, as it is only accessible through a staircase. It holds part of the dining area/social space and 1 room (potential for workshops). In the event that there is a workshop on the first floor (there might not be any!), and you or another wheelchair user needs access, please let us know, and we can plan around this by moving the workshop.
+
+## Get in touch
+
+You are welcome to write us about any specific needs: [2019@djangocon.eu](mailto:2019@djangocon.eu)
