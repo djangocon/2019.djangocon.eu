@@ -5,6 +5,7 @@ description: "Instructions about Visa for Copenhagen for DjangoCon Europe 2019"
 draft: false
 menu:
   main:
+    name: "Visa"
     parent: "information"
 ---
 
