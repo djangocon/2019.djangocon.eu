@@ -6,7 +6,7 @@ type: static
 draft: false
 menu:
   main:
-    parent: "cfp"
+    parent: "talks"
 ---
 
 # Speaker Mentors

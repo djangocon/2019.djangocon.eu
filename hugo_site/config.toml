@@ -11,3 +11,8 @@ sectionPagesMenu = "main"
     twittercardimage="twitter_card.png"
     facebookcardimage="facebook_og.png"
     headerimage = "logo.svg"
+
+[sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
+    priority = 0.5

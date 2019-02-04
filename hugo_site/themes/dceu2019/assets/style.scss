@@ -34,6 +34,7 @@ h1 {
   color: $teal;
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 h2 {
@@ -213,8 +214,13 @@ img {
   li {
     list-style-type: none;
 
-    &.active {
+    &.active,
+    &.active:hover {
       background: darken($coral, 10%);
+    }
+
+    &:hover {
+      background: darken($coral, 5%);
     }
   }
 
@@ -344,12 +350,9 @@ img {
 //
 // Markdown Content
 main {
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
   padding: 0 1rem;
-
-  @media (min-width: $tablet) {
-    margin: 4rem 0;
-  }
 
   a:not(.button) {
     text-decoration: none;
@@ -392,25 +395,54 @@ main {
 
 footer {
   color: white;
-  display: flex;
   padding: 1rem;
   margin-top: 1rem;
   background: $purple;
   background-position: center;
   background-image: url('/img/fin_092.png');
   background-size: 700px;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-  flex-flow: column;
-  text-align: center;
+  font-size: 0.85rem;
 
-  p {
-    margin: 1rem;
-  }
+  section {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
 
-  @media (min-width: $tablet) {
-    flex-flow: row;
+    // &:nth-child(1) {
+    //   background-color: rgba(255, 255, 255, 0.05);
+    //   margin: -1rem;
+    //   margin-bottom: 1rem;
+    //   padding: 1rem;
+    // }
+
+    p {
+      margin: 1rem;
+
+      &.even {
+        flex: 1;
+      }
+
+      &.pull-up {
+        @media (max-width: $tablet) {
+          margin-top: -1rem;
+          br:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $tablet) {
+      flex-flow: row;
+    }
+
+    &.center {
+      text-align: center;
+    }
+
+    &.middle {
+      align-items: center;
+    }
   }
 }
 
