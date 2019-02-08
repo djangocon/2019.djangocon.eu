@@ -10,7 +10,7 @@ install:
     # Alternative solution
     - sudo pip install pygments\<2.3
     - wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/libs/libsass/libsass1_3.5.5-2_amd64.deb -O /tmp/libsass1.deb && sudo dpkg -i /tmp/libsass1.deb
-    - wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/h/hugo/hugo_0.53-3_amd64.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+    - wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/h/hugo/hugo_0.54.0-1_amd64.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
 
 
 # Build the website
