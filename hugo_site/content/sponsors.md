@@ -20,7 +20,7 @@ The 11th edition of DjangoCon Europe is the first of its kind to take place in t
 
 DjangoCon Europe is a conference run **by** the Django community **for** the Django community and we believe this is the best conference for partners and sponsors to connect **with** the Django community and to be part of it.
 
-The Django community puts pride and effort into diversity, respecting each other and *being excellent* to one another. The conference has existed for a decade and is therefore very professional and mature. It is inclusive to hobbyists, newcomers, professionals, enthusiasts, managers, marketers and the list goes on! This community lives and flourishes across all continents.
+The Django community puts pride and effort into diversity, respecting each other and *being excellent* to one another. The conference has existed for a decade and is therefore very professional and mature. It is inclusive to hobbyists, newcomers, professionals, enthusiasts, managers, marketers and the list goes on! DjangoCons exist world-wide and the community and audience are from all continents (except perhaps Antarctica?).
 
 We are run 100% by passionate volunteers and we run on a not-for-profit basis. The conference must be affordable in order to be inclusive and maintain diversity. This is why you the sponsor community is fundamental and always has been. We need sponsors in our community to make this 11th DjangoCon Europe happen!
 
