@@ -16,7 +16,7 @@ Packages: [Sponsorships Brochure (PDF)](/files/DjangoconEUSponsorBrochure2019.pd
 
 ## Become a part of DjangoCon Europe
 
-The 11th edition of DjangoCon Europe is the first major Python-related event to take place in the Nordic region, namely in Copenhagen, capital of Denmark.
+The 11th edition of DjangoCon Europe is the first of its kind to take place in the Nordic region, namely in Copenhagen, capital of Denmark.
 
 DjangoCon Europe is a conference run **by** the Django community **for** the Django community and we believe this is the best conference for partners and sponsors to connect **with** the Django community and to be part of it.
 
