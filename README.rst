@@ -50,13 +50,18 @@ Developing the Hugo site
 ------------------------
 
 We use a **static main site** because we want to archive the main conference
-website as easily as possible. We are using the default version of Hugo for
-Ubuntu 18.04, so to generate and run the main site, just do:
+website as easily as possible. We are using the latest Hugo from the Debian
+repositories, but the version from Ubuntu 18.04 is too old.
+
+See below method to directly fetch 2 .deb files from a Debian mirror and
+install them.
 
 .. code-block:: console
 
   # Install Hugo
-  $ sudo apt install hugo
+  $ wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/libs/libsass/libsass1_3.5.5-2_amd64.deb -O /tmp/libsass1.deb
+  $ wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/h/hugo/hugo_0.54.0-1_amd64.deb -O /tmp/hugo.deb
+  $ sudo dpkg -i /tmp/hugo.deb /tmp/libsass1.deb
 
   # Go to project directory
   $ cd hugo_site

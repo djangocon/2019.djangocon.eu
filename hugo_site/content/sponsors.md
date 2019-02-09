@@ -1,7 +1,7 @@
 ---
 title: "Sponsors"
 date: 2019-01-06T21:46:54+01:00
-description: "Be a sponsor of DjangoCon Europe 2019: Help build the community and be part of it."
+description: "Be a sponsor: Make yourself known at a unique conference, helping to build the Django community and taking part in it."
 draft: false
 menu: main
 weight: 40
@@ -16,13 +16,13 @@ Packages: [Sponsorships Brochure (PDF)](/files/DjangoconEUSponsorBrochure2019.pd
 
 ## Become a part of DjangoCon Europe
 
-The 11th edition of DjangoCon Europe in 2019 is held in beautiful Scandinavian capital Copenhagen.
+The 11th edition of DjangoCon Europe is the first of its kind to take place in the Nordic region, namely in Copenhagen, capital of Denmark.
 
-DjangoCon Europe is a conference run **by** the Django community **for** the Django community and we believe this is the best conference for partners and sponsors to connect **with** the Django community.
+DjangoCon Europe is a conference run **by** the Django community **for** the Django community and we believe this is the best conference for partners and sponsors to connect **with** the Django community and to be part of it.
 
-The Django community is proud of being very diverse and showing mutual respect for each other. It has existed more than a decade and is therefore very professional and mature. It is inclusive to hobbyists, newcomers, professionals, enthusiasts, managers, marketers and the list goes on! This community live and flourish across the whole globe on all continents.
+The Django community puts pride and effort into diversity, respecting each other and *being excellent* to one another. The conference has existed for a decade and is therefore very professional and mature. It is inclusive to hobbyists, newcomers, professionals, enthusiasts, managers, marketers and the list goes on! DjangoCons exist world-wide and the community and audience are from all continents (except perhaps Antarctica?).
 
-We are run 100% by passionate volunteers and we run on a not-for-profit basis! Because inclusiveness is a must and to maintain diversity it entails the conference must be affordable and this is where you as a sponsor and/or partner is crucial! We need all the support we can get to make this 11th DjangoCon Europe happen!
+We are run 100% by passionate volunteers and we run on a not-for-profit basis. The conference must be affordable in order to be inclusive and maintain diversity. This is why you the sponsor community is fundamental and always has been. We need sponsors in our community to make this 11th DjangoCon Europe happen!
 
 ## Why should you sponsor?
 
@@ -36,7 +36,7 @@ We are run 100% by passionate volunteers and we run on a not-for-profit basis! B
 
 **Networking** If you want to stand out from the crowd with your company, network and seek new potential collaborations and partners, DjangoCon Europe is the place to be. Also, with most sponsor packages are tickets included and your employees will, therefore, attend a conference with valuable education from talks and workshops.
 
-## What does your money go to?
+## What is your sponsorship used for?
 
 We have made a large sponsorship menu to invite all to contribute and to give you the opportunity to customise your support. The list of expenses for the event is long and the list does not include items that are not important to run the event. Here is an insight:
 
@@ -51,9 +51,9 @@ We have made a large sponsorship menu to invite all to contribute and to give yo
 
 If there are profits from the conference, they are administrated by the registered Danish association [Django Denmark](https://django-denmark.org/), whose purpose is to serve open source Django communities in the Nordic region and in economically marginalized countries. We expect the Nordic region to be more active with community events in the wake of this event.
 
-## The details
+## Many options for visibility
 
 You can read about sponsorship opportunities and packages in our [Sponsorships Brochure here (PDF)](/files/DjangoconEUSponsorBrochure2019.pdf)
 
 Interested in sponsoring DjangoCon Europe 2019, want to know more or have any questions?
-Please contact us on [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu) and we'll get back to you within 24 hours!
+Please contact [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu) and we'll get back to you within 24 hours!
