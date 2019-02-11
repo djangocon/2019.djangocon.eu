@@ -1,6 +1,7 @@
 ---
 title: "Selection Process"
 date: 2019-01-22T22:11:31+01:00
+description: "We would like to make our reviewing process and guidelines transparent to every submitter and attendee, both to show you what will await you during the conference as an attendee, and to help you understand our decisions regarding your submissions as a submitter."
 draft: false
 menu:
   main:
