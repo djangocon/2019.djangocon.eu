@@ -5,17 +5,17 @@
             <b>{{ .Name }}</b>
             <br/>
             {{ if .HasChildren }}
-              <a href="{{ .URL | relURL }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
+              <a href="{{ .URL | absURL }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
               <br/>
               {{ range $index, $item := .Children }}
                 {{ if eq (mod (add $index 1) 4) 0 }}
                   </p><p class="even pull-up"><br/>
                 {{ end }}
-                <a href="{{ $item.URL | relURL }}">{{ or $item.Page.Params.menu.main.alias $item.Page.Params.menu.main.name $item.Page.Name }}</a>
+                <a href="{{ $item.URL | absURL }}">{{ or $item.Page.Params.menu.main.alias $item.Page.Params.menu.main.name $item.Page.Name }}</a>
                 <br/>
               {{ end }}
             {{ else }}
-              <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+              <a href="{{ .URL | absURL }}">{{ .Name }}</a>
             {{ end }}
         </p>
       {{ end }}

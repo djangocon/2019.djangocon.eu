@@ -21,10 +21,14 @@ from django.contrib import admin
 from django.urls import include, path
 
 
+from django.shortcuts import render_to_response
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('orga/', include('pretalx.orga.urls', namespace='orga')),
     path('api/', include('pretalx.api.urls', namespace='api')),
+    path('', lambda x: render_to_response("base.html", {},)),
     path('', include('pretalx.agenda.urls', namespace='agenda')),
     path('', include('pretalx.cfp.urls', namespace='cfp')),
 ]
