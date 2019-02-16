@@ -7,12 +7,12 @@
 	<title>{{ .Title }} • {{ .Site.Title }}</title>
   <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-  {{ $style := resources.Get "style.scss" | resources.ToCSS | resources.Minify }}
+  {{ $style := resources.Get "static/style.scss" | resources.ToCSS | resources.Minify }}
 	<link rel="sitemap" href="{{ .Site.SitemapAbsURL }}" />
-	<link rel="stylesheet" href="{{ $style.Permalink }}">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/print.css" media="print">
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	<link rel="stylesheet" href="/static/css/print.css" media="print">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
-  <link rel="icon" href="{{ .Site.BaseURL }}img/favicon.ico" sizes="16x16" type="image/png">
+  <link rel="icon" href="/static/img/favicon.ico" sizes="16x16" type="image/png">
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 	<meta name="twitter:card" content="summary_large_image">
@@ -20,10 +20,10 @@
 	<meta name="twitter:creator" content="@DjangoConEurope">
 	<meta name="twitter:title" content="{{ .Title }} • {{ .Site.Title }}" />
 	<meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
-	<meta name="twitter:image" content="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.twittercardimage }}" />
+	<meta name="twitter:image" content="{{ .Site.BaseURL }}static/img/{{ printf "%s" $.Site.Params.twittercardimage }}" />
   <meta property="og:title" content="{{ .Title }} • {{ .Site.Title }}">
   <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
-  <meta property="og:image" content="{{ .Site.BaseURL }}img/{{ printf "%s" $.Site.Params.facebookcardimage }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}static/img/{{ printf "%s" $.Site.Params.facebookcardimage }}">
   <meta property="og:url" content=" {{ .Permalink }}">
 </head>
 

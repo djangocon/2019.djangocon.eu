@@ -1,0 +1,88 @@
+body, html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Courier New", monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header_image {
+  text-align: center;
+}
+
+.header_image a {
+  margin: 0 auto;
+  display: block;
+}
+
+.header_image img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.all_container {
+  max-width: 800px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 7pt;
+}
+
+ul ul {
+  margin-top: 7pt;
+}
+
+footer {
+  padding-top: 50px;
+  overflow-wrap: break-word; /* To fix scrollbar on mobile */
+}
+
+nav {
+  margin: 30px auto;
+  width: 100%;
+  display: block;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+nav ul li a {
+  background-color: #EEE;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  body {
+    font-size: 130%;
+  }
+
+  h1 {
+    font-size: 250%;
+  }
+}

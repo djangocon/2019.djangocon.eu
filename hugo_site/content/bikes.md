@@ -33,4 +33,4 @@ At the Baisikeli shop, they will tell you more about bike safety. Wearing a helm
 
 We want you to get the best of Copenhagen. We believe this is experienced from a bike. BUT! If you are not comfortable on a bike: you will have a greater time without it. Staying for a few days isn't enough to learn how to ride a bike.
 
-![Baisikeli slips](/img/baisikeli.jpeg)
+![Baisikeli slips](/static/img/baisikeli.jpeg)

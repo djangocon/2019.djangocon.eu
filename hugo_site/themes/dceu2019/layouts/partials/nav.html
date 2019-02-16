@@ -1,6 +1,6 @@
 <header class="header">
   <a href="{{ .Site.BaseURL }}">
-    <img src="{{ .Site.BaseURL }}img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
+    <img src="/static/img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
   </a>
 
   <nav>
