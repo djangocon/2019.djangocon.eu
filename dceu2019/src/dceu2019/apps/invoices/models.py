@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.db import models
 
 from decimal import Decimal
@@ -8,9 +7,12 @@ from djmoney.models.fields import MoneyField
 class BillyInvoiceContact(models.Model):
     """
     A contact created in Billy. The general case is that it's a company with a
-    single contact person (created as a separate object in Billy)    
+    single contact primary person (created as a separate object in Billy)    
     """
 
+    synced = models.BooleanField(default=False)
+    billy_id = models.CharField(max_length=12, null=True)
+    billy_person_id = models.CharField(max_length=12, null=True)
     name = models.CharField(max_length=255)
     type = models.CharField(max_length=12, choices=[
         ('company', 'company'),
@@ -19,7 +21,7 @@ class BillyInvoiceContact(models.Model):
     person_name = models.CharField(max_length=255, null=True)
     person_email = models.EmailField(max_length=255, null=True)
     person_id = models.CharField(max_length=12, null=True)
-    country = models.CharField(max_length=3)
+    country_code = models.CharField(max_length=3)
     street = models.CharField(max_length=255, null=True)
     city_text = models.CharField(max_length=255, null=True)
     zipcode_text = models.CharField(max_length=255, null=True)
@@ -36,15 +38,10 @@ class Invoice(models.Model):
     we have API from Ticketbutler.
     """
     
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        null=True,
-        on_delete=models.SET_NULL,
-    )
-
+    synced = models.BooleanField(default=False)
     ticketbutler_orderid = models.CharField(max_length=16)
 
-    billy_invoice_id = models.CharField(max_length=16)
+    billy_id = models.CharField(max_length=16)
     billy_product_id = models.CharField(max_length=16)
     billy_contact = models.ForeignKey(
         BillyInvoiceContact,
@@ -65,4 +62,4 @@ class Invoice(models.Model):
     
     ticket_type_name = models.CharField(max_length=255)
 
-    pdf = models.FileField()
+    pdf = models.FileField(null=True, blank=True,)

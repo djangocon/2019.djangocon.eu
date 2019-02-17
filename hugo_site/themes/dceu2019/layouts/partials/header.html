@@ -11,7 +11,7 @@
 	<link rel="sitemap" href="{{ .Site.SitemapAbsURL }}" />
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	<link rel="stylesheet" href="/static/css/print.css" media="print">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+  <link href="/static/fonts/poppins/poppins.css" rel="stylesheet">
   <link rel="icon" href="/static/img/favicon.ico" sizes="16x16" type="image/png">
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}

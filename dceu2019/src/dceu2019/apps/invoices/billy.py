@@ -54,46 +54,68 @@ class BillyClient:
             raise e
 
 
-# Creates a contact. The server replies with a list of contacts and we
-# return the id of the first contact of the list
-def createContact(client, organizationId):
+def create_contact_person(client, organization_id, contact_id, name, country_code, email=None):
+    """
+    Creates a contact person object in Billy:
+    https://www.billy.dk/api/#v2contactpersons
+    """
     contact = {
-        'organizationId': organizationId,
-        'name': 'John',
-        'countryId': 'DK'
+        'name': name,
+        'email': email,
+        'isPrimary': True,
+        'contactId': contact_id,
+    }
+    response = client.request('POST', '/contactPersons', {'contactPerson': contact})
+
+    return response['contactPersons'][0]['id']
+
+
+def create_contact(
+        client,
+        organization_id,
+        contact_type,
+        name,
+        country_code,
+        street,
+        city,
+        zip_code,
+        phone,
+        vat_id
+    ):
+    """
+    https://www.billy.dk/api/#v2contacts
+    """
+    contact = {
+        'organizationId': organization_id,
+        'type': contact_type,
+        'name': name,
+        'countryId': country_code,
+        'street': street,
+        'cityText': city,
+        'zipcodeText': zip_code,
+        'phone': phone,
+        'registrationNo': vat_id,
+        'isCustomer': True,
+        'paymentTermsDays': 15,
     }
     response = client.request('POST', '/contacts', {'contact': contact})
 
     return response['contacts'][0]['id']
 
 
-# Creates a product. The server replies with a list of products and we
-# return the id of the first product of the list
-def createProduct(client, organizationId):
-    product = {
-        'organizationId': organizationId,
-        'name': 'Pens',
-        'prices': [{
-            'unitPrice': 200,
-            'currencyId': 'DKK'
-        }]
-    }
-    response = client.request('POST', '/products', {'product': product})
-
-    return response['products'][0]['id']
-
-
 # Creates an invoice, the server replies with a list of invoices and we
 # return the id of the first invoice of the list
-def createInvoice(client, organizationId, contactId, productId):
+def create_invoice(client, organization_id, contact_id, product_id, unit_price, amount, currency, date):
     invoice = {
-        'organizationId': organizationId,
-        'invoiceNo': 65432,
-        'entryDate': '2013-11-14',
-        'contactId': contactId,
+        'organizationId': organization_id,
+        'contactId': contact_id,
+        'currencyId': currency,
+        'entryDate': date[:10],
+        'paymentTermsDays': 15,
         'lines': [{
-            'productId': productId,
-            'unitPrice': 200
+            'productId': product_id,
+            'unitPrice': unit_price,
+            'quantity': amount
         }]
     }
     response = client.request('POST', '/invoices', {'invoice': invoice})
@@ -101,8 +123,31 @@ def createInvoice(client, organizationId, contactId, productId):
     return response['invoices'][0]['id']
 
 
+def create_payment(client, organization_id, invoice_id, contact_id, bank_account_id, amount, currency, date, ):
+    """
+    Crazy messed up way to mark an invoice paid
+    """
+    payment = {
+        'organizationId': organization_id,
+        'contactId': contact_id,
+        'currencyId': currency,
+        'entryDate': date[:10],
+        'cashAmount': amount,
+        'cashSide': 'debit',
+        'cashAccountId': bank_account_id,
+        "associations": [
+          {
+            "subjectReference": "invoice:inv-{}".format(invoice_id)
+          }
+        ]
+    }
+    response = client.request('POST', '/bankPayments', {'bankPayment': payment})
+
+    return response['invoices'][0]['id']
+
+
 # Get id of organization associated with the API token.
-def getOrganizationId(client):
+def get_organization_id(client):
     response = client.request('GET', '/organization', None)
 
     return response['organization']['id']
@@ -115,25 +160,8 @@ def get_invoice(client, invoiceId):
     return response['invoices'][0]
 
 
-
 def print_products(client):
     response = client.request('GET', '/products', None)
 
     for product in response['products']:
         print(product['name'] + ", " + product['id'])
-
-
-def main():
-    client = BillyClient(settings.BILLY_TOKEN)
-
-    currentOrganizationId = getOrganizationId(client)
-    # newContactId = createContact(client, currentOrganizationId)
-    # newProductId = createProduct(client, currentOrganizationId)
-    # newinvoiceId = createInvoice(client, currentOrganizationId, newContactId, newProductId)
-    # newlyCreatedInvoice = get_invoice(client, newinvoiceId)
-
-    print_products(client)
-
-
-if __name__ == '__main__':
-    main()
