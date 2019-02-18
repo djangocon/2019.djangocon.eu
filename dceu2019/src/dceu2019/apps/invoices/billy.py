@@ -191,6 +191,13 @@ def save_invoice_pdf(client, invoice_id, destination):
     open(destination, 'wb').write(response.content)
 
 
+def get_countries(client):
+
+    response = client.request('GET', '/countries', None)
+
+    return [c['id'] for c in response['countries']]
+
+
 # Gets a invoice by its Id
 def print_accounts(client):
     response = client.request('GET', '/accounts', None)
