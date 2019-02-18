@@ -24,13 +24,13 @@ Taxis (aka Taxa) in Denmark are quite expensive. A trip from the Kastrup / Copen
 
 ### Public Transport Tickets
 
-To buy a ticket the city offers different options. You can purchase them at train stations, the DOT App ([Android](https://play.google.com/store/apps/details?id=dk.unwire.projects.dmm) / [iOS](https://itunes.apple.com/us/app/1415-mobilbilletter/id494862453?mt=8)) and with the bus driver (only cash). The DOT app is the most convenience, since you can register your credit card and simply show your ticket from your smartphone when asked. 
+To buy a ticket the city offers different options. You can purchase them at train stations, the DOT App ([Android](https://play.google.com/store/apps/details?id=dk.unwire.projects.dmm) / [iOS](https://itunes.apple.com/us/app/1415-mobilbilletter/id494862453?mt=8)) and from the bus driver (only cash). The DOT app is the most convenient, since you can register your credit card and simply show your ticket from your smartphone when asked. 
 
 For more information on which types of ticket you can buy (weekly tickets, etc), [visit this page](https://dinoffentligetransport.dk/service/for-tourists/).
 
 ### Planning the trips
 
-To know which line you need to jump in to reach the [Venue](/venue/), you can use either [Google Maps](https://maps.google.com) or the Rejseplanen ([Web](https://www.rejseplanen.dk/webapp/index.html?language=en_EN) / [Android](https://play.google.com/store/apps/details?id=de.hafas.android.rejseplanen&hl=en) / [iOS](https://itunes.apple.com/us/app/rejseplanen/id317007942?mt=8)). The latter is quite efficient and will inform you how many zones, the lines you need to get and the total cost of your trip. 
+To know which connections connect to and from the conference [Venues](/venue/), you can use either [Google Maps](https://maps.google.com) or the Rejseplanen ([Web](https://www.rejseplanen.dk/webapp/index.html?language=en_EN) / [Android](https://play.google.com/store/apps/details?id=de.hafas.android.rejseplanen&hl=en) / [iOS](https://itunes.apple.com/us/app/rejseplanen/id317007942?mt=8)). The latter is more detailed and will inform you of travel fares, routes and total cost of your trip.
 
 ### Payments (DKK: The Danish Kroner)
 
