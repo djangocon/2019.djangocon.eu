@@ -110,7 +110,7 @@ def create_contact(client,
         'organizationId': organization_id,
         'type': contact_type,
         'name': name,
-        'countryId': country_code,
+        'countryId': country_code.strip().upper(),
         'street': street,
         'cityText': city,
         'zipcodeText': zip_code,
@@ -187,7 +187,6 @@ def save_invoice_pdf(client, invoice_id, destination):
     Given an invoice ID, saves the PDF to a specific destination
     """
     response = client.request('GET', '/invoices', invoice_id)
-    print(response)
     response = requests.get(response['invoice']['downloadUrl'], allow_redirects=True)
     open(destination, 'wb').write(response.content)
 

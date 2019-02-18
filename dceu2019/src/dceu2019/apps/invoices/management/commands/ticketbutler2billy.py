@@ -36,6 +36,8 @@ class Command(BaseCommand):
 
         tb_data = json.load(open(json_file, 'r'))
 
+        self.valid_countries = billy.get_countries(self.client)
+
         if 'orders' not in tb_data.keys():
             raise CommandError("Not valid JSON data. Were you logged in when you fetched the file?")
 
@@ -99,9 +101,10 @@ class Command(BaseCommand):
 
         while country is None:
             country = input("What country code to use? [{}] ".format(default_country))
+            country = country.strip().upper()
             if country == "":
                 country = default_country
-            if 2 < len(country) < 4:
+            if country not in self.valid_countries:
                 country = None
 
         street = None
@@ -134,7 +137,7 @@ class Command(BaseCommand):
                 type="company" if company else "person",
                 person_name=person_name,
                 person_email=email,
-                country_code=country.upper(),
+                country_code=country.strip().upper(),
                 street=street,
                 city_text=city,
                 zipcode_text=zip_code,
