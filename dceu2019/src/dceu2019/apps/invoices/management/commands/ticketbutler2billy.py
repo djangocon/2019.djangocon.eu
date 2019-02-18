@@ -86,38 +86,44 @@ class Command(BaseCommand):
 
         # Try to figure out country
 
-        print("Order ID: {}".format(order_id))
-        print("Person: {}".format(person_name))
-        print("Company: {}".format(company))
-        print("VAT ID: {}".format(vat_id))
-        print("Email: {}".format(email))
-        print("Address: {}".format(address))
-        default_country = "DK"
+        confirmed = False
 
-        if vat_id:
-            country_match = re_vatid_country.match(vat_id)
-            if country_match:
-                default_country = country_match.group(1)
+        while not confirmed:
 
-        while country is None:
-            country = input("What country code to use? [{}] ".format(default_country))
-            country = country.strip().upper()
-            if country == "":
-                country = default_country
-            if country not in self.valid_countries:
-                country = None
+            print("Order ID: {}".format(order_id))
+            print("Person: {}".format(person_name))
+            print("Company: {}".format(company))
+            print("VAT ID: {}".format(vat_id))
+            print("Email: {}".format(email))
+            print("Address: {}".format(address))
+            default_country = "DK"
 
-        street = None
-        while street is None:
-            street = input("Street? [{}] ".format(address))
+            if vat_id:
+                country_match = re_vatid_country.match(vat_id)
+                if country_match:
+                    default_country = country_match.group(1)
 
-        zip_code = None
-        while zip_code is None:
-            zip_code = input("Zip? [{}] ".format(address))
+            while country is None:
+                country = input("What country code to use? [{}] ".format(default_country))
+                country = country.strip().upper()
+                if country == "":
+                    country = default_country
+                if country not in self.valid_countries:
+                    country = None
 
-        city = None
-        while city is None:
-            city = input("City? [{}] ".format(address))
+            street = None
+            while street is None:
+                street = input("Street? ".format(address))
+
+            zip_code = None
+            while zip_code is None:
+                zip_code = input("Zip? ".format(address))
+
+            city = None
+            while city is None:
+                city = input("City? ".format(address))
+
+            confirmed = input("Confirm it [Y/n]").lower in ["y", ""]
 
         order_info = order['order_lines'][0]
 
@@ -197,7 +203,7 @@ class Command(BaseCommand):
                 invoice.billy_id,
                 contact.billy_id,
                 settings.BILLY_TICKET_ACCOUNT,
-                float(invoice.price.amount * (1 + invoice.vat)) * invoice.amount,
+                float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
                 invoice.price.currency,
                 invoice.when
             )
