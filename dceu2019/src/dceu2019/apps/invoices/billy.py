@@ -110,7 +110,7 @@ def create_contact(client,
         'organizationId': organization_id,
         'type': contact_type,
         'name': name,
-        'countryId': country_code.strip().upper(),
+        'countryId': country_code,
         'street': street,
         'cityText': city,
         'zipcodeText': zip_code,
@@ -118,6 +118,7 @@ def create_contact(client,
         'registrationNo': vat_id,
         'isCustomer': True,
         'paymentTermsDays': 15,
+        'locale': "dk" if country_code == "DK" else "en",
     }
     response = client.request('POST', '/contacts', {'contact': contact})
 
