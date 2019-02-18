@@ -123,7 +123,7 @@ class Command(BaseCommand):
             while city is None:
                 city = input("City? ".format(address))
 
-            confirmed = input("Confirm it [Y/n]").lower in ["y", ""]
+            confirmed = input("Confirm it [Y/n]").lower() in ["y", ""]
 
         order_info = order['order_lines'][0]
 
