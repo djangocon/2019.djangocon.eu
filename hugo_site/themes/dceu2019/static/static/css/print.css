@@ -1,0 +1,21 @@
+
+body {
+  font-family: "Courier New", monospace;
+  font-size: 100%;
+  padding: 0 0;
+}
+
+h1 {
+  font-size: 230%;
+  text-align: center;
+}
+
+.all_container {
+  max-width: none;
+  margin: 0;
+}
+
+header, footer
+{
+  display: none;
+}

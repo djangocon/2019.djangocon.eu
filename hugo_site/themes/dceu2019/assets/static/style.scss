@@ -150,7 +150,7 @@ img {
   justify-content: space-between;
   background-position: center;
   background-size: 400px;
-  background-image: url('/img/fin_13.png');
+  background-image: url('/static/img/fin_13.png');
   align-items: center;
 
   @media (min-width: $desktop) {
@@ -267,7 +267,7 @@ img {
   text-align: center;
   margin-bottom: 3rem;
   padding: 1rem 1rem 4rem 1rem;
-  background-image: url('/img/nick-karvounis-484732-unsplash.jpg');
+  background-image: url('/static/img/nick-karvounis-484732-unsplash.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -399,7 +399,7 @@ footer {
   margin-top: 1rem;
   background: $purple;
   background-position: center;
-  background-image: url('/img/fin_092.png');
+  background-image: url('/static/img/fin_092.png');
   background-size: 700px;
   font-size: 0.85rem;
 

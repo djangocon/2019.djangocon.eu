@@ -1,6 +1,6 @@
 <header class="header">
   <a href="{{ .Site.BaseURL }}">
-    <img src="{{ .Site.BaseURL }}img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
+    <img src="/static/img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
   </a>
 
   <nav>
@@ -8,7 +8,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         <li class="{{ if (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .))}}active{{ end }}">
-          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+          <a href="{{ .URL | absURL }}">{{ .Name }}</a>
         </li>
       {{ end }}
     </ul>
@@ -20,18 +20,18 @@
     <ul class="header-submenu">
       {{ if and ($currentPage.IsMenuCurrent "main" .) (.HasChildren) }}
         <li class="active">
-          <a href="{{ .URL | relURL }}">{{ or .Page.Params.menu.main.alias .Name }}</a>
+          <a href="{{ .URL | absURL }}">{{ or .Page.Params.menu.main.alias .Name }}</a>
         </li>
       {{ end }}
       {{ if $currentPage.HasMenuCurrent "main" . }}
         <li>
-          <a href="{{ .Page.URL | relURL  }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
+          <a href="{{ .Page.URL | absURL  }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
         </li>
       {{ end }}
       {{ if .HasChildren }}
         {{ range .Children }}
         <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+          <a href="{{ .URL | absURL }}">{{ .Name }}</a>
         </li>
         {{ end }}
       {{ end }}

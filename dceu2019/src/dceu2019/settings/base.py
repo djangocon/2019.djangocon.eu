@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "dceu2019.apps.pretalx_utils",
+    'djmoney',
+    "dceu2019.apps.invoices",
 ]
 
 # Settings from Pretalx
@@ -197,3 +199,8 @@ LOGGING = {
         }
     }
 }
+
+BILLY_TOKEN = 'set in local.py'
+BILLY_TICKET_ACCOUNT = 'set in local.py'
+
+CURRENCIES = ('DKK', 'EUR')

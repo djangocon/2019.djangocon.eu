@@ -1,3 +1,6 @@
+# Importing invoices using json files
+/*.json
+
 # Hugo stuff
 hugo_site/public
 hugo_site/resources
