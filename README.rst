@@ -83,19 +83,22 @@ You can install and work on a development version following these steps:
 
   # Create a Python 3.6+ virtualenv (virtualenvwrapper)
   $ mkvirtualenv -p python3
-  
+
   # Install project & dependencies in "editable" mode (-e), with the [dev]
   # dependency subset.
   # You should repeat this command when you pull in new changes which can
   # contain new requirements or version upgrades
   $ pip install -e "dceu2019[dev]"
-  
+
+  # Install our code-quality pre-commit hooks (a.k.a. linting)
+  $ pre-commit install
+
   # Try invoking the Django main management script
   $ python dceu2019/manage.py
 
   # ...you will be told that it has created a local.py file. You might want to
   # edit this now or later depending on your needs.
-  
+
   # When ready, run migrations.
   $ python dceu2019/manage.py migrate
 
@@ -106,4 +109,3 @@ You can install and work on a development version following these steps:
   $ python dceu2019/manage.py runserver
 
   # Point your browser to localhost:8000/ and you'll see an empty schedule
-

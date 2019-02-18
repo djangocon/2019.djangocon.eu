@@ -201,5 +201,6 @@ LOGGING = {
 }
 
 BILLY_TOKEN = 'set in local.py'
+BILLY_TICKET_ACCOUNT = 'set in local.py'
 
 CURRENCIES = ('DKK', 'EUR')

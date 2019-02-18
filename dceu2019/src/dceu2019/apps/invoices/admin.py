@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from . import models
+
+
+@admin.register(models.Invoice)
+class InvoiceAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(models.BillyInvoiceContact)
+class InvoiceContactAdmin(admin.ModelAdmin):
+    pass

@@ -1,8 +1,5 @@
 import requests
 
-from django.conf import settings
-
-
 #: Mapping of our ticket types in Ticketbutler to product ids in Billy
 TICKETBUTLER_PRODUCT_ID_MAPPING = {
     'Business': 'yp9oH3ZWSH6aJFKBYOdKQQ',
@@ -11,16 +8,30 @@ TICKETBUTLER_PRODUCT_ID_MAPPING = {
     'Business Supporter EARLY BIRD': 'Od7vH04ZQE6GXxS3lE1SCg',
     'Individual': 'mu89bJt9QU670vEYJkXhcw',
     'Individual EARLY BIRD': '9Sk7hbw0Sci3QLTbMmNnoA',
-    'Individual Supporter EARLY BIRD': '0vWktrh2SCnthhVrk9vVEg', 
+    'Individual Supporter EARLY BIRD': '0vWktrh2SCnthhVrk9vVEg',
     'Individual Supporter': 'IZo5OGZFQxmF2qUT5ErZlw',
     'Student/Concession': 'vXSLt7lhTvKJGqz4iaR6Wg',
     'Student/Concession EARLY BIRD': 'KufXneavQdaune3J6hxSxg',
     'Test ticket': None,
 }
 
+TICKETBUTLER_IGNORE_LIST = {
+    "duL103749": "cZcUunyMSQeleC1MkSjRDQ",
+    "duL104800": "kxVxDrhyR4qhEt1oOjcIeQ",
+    # "duL105236", Never found an invoice manually created for this.
+    "duL105270": "OX394htpTQ6lofqbZLe2dA",
+    "duL105671": "86XosNdcRaeLshWFIOEo0g",
+    "duL105274": "AnsSABPbRDWjPEI0skUwWA",
+    "duL105037": "ikvKb9rIRvSbgSQrxnDaFg",
+    "duL103267": "3x8H7ReTR0KFDMODonVuQg",
+    "duL105594": "QphSa5EPTyiXI3rzSyMJVg",
+    "duL104454": "wNBtx7yDS5uyASIFfnyekw",
+}
+
 
 # Reusable class for sending requests to the Billy API
 class BillyClient:
+
     def __init__(self, apiToken):
         self.apiToken = apiToken
 
@@ -28,17 +39,29 @@ class BillyClient:
         baseUrl = 'https://api.billysbilling.com/v2'
 
         try:
-            response = {
-                'GET': requests.get(
+
+            # Yay, the API docs don't work, so we need to APPEND the third arg
+            # to the URL...
+            if method == 'GET':
+                if body:
+                    abs_url = "/".join((baseUrl + url, body))
+                else:
+                    abs_url = baseUrl + url
+                response = getattr(requests, method.lower())(
+                    abs_url,
+                    headers={
+                        'X-Access-Token': self.apiToken,
+                    },
+                )
+            else:
+                response = getattr(requests, method.lower())(
                     baseUrl + url,
-                    headers={'X-Access-Token': self.apiToken}
-                ),
-                'POST': requests.post(
-                    baseUrl + url,
+                    headers={
+                        'X-Access-Token': self.apiToken,
+                        'Content-Type': "application/json",
+                    },
                     json=body,
-                    headers={'X-Access-Token': self.apiToken}
-                ),
-            }[method]
+                )
             status_code = response.status_code
             raw_body = response.text
 
@@ -70,18 +93,16 @@ def create_contact_person(client, organization_id, contact_id, name, country_cod
     return response['contactPersons'][0]['id']
 
 
-def create_contact(
-        client,
-        organization_id,
-        contact_type,
-        name,
-        country_code,
-        street,
-        city,
-        zip_code,
-        phone,
-        vat_id
-    ):
+def create_contact(client,
+                   organization_id,
+                   contact_type,
+                   name,
+                   country_code,
+                   street,
+                   city,
+                   zip_code,
+                   phone,
+                   vat_id):
     """
     https://www.billy.dk/api/#v2contacts
     """
@@ -112,6 +133,8 @@ def create_invoice(client, organization_id, contact_id, product_id, unit_price, 
         'currencyId': currency,
         'entryDate': date[:10],
         'paymentTermsDays': 15,
+        'state': 'approved',
+        'sentState': 'sent',
         'lines': [{
             'productId': product_id,
             'unitPrice': unit_price,
@@ -130,15 +153,15 @@ def create_payment(client, organization_id, invoice_id, contact_id, bank_account
     payment = {
         'organizationId': organization_id,
         'contactId': contact_id,
-        'currencyId': currency,
+        'subjectCurrencyId': currency,
         'entryDate': date[:10],
         'cashAmount': amount,
         'cashSide': 'debit',
         'cashAccountId': bank_account_id,
         "associations": [
-          {
-            "subjectReference": "invoice:inv-{}".format(invoice_id)
-          }
+            {
+                "subjectReference": "invoice:{}".format(invoice_id)
+            }
         ]
     }
     response = client.request('POST', '/bankPayments', {'bankPayment': payment})
@@ -154,10 +177,27 @@ def get_organization_id(client):
 
 
 # Gets a invoice by its Id
-def get_invoice(client, invoiceId):
-    response = client.request('GET', '/invoices', invoiceId)
+def get_invoice(client, invoice_id):
+    response = client.request('GET', '/invoices', invoice_id)
+    return response['invoice']
 
-    return response['invoices'][0]
+
+def save_invoice_pdf(client, invoice_id, destination):
+    """
+    Given an invoice ID, saves the PDF to a specific destination
+    """
+    response = client.request('GET', '/invoices', invoice_id)
+    print(response)
+    response = requests.get(response['invoice']['downloadUrl'], allow_redirects=True)
+    open(destination, 'wb').write(response.content)
+
+
+# Gets a invoice by its Id
+def print_accounts(client):
+    response = client.request('GET', '/accounts', None)
+
+    for account in response['accounts']:
+        print(account['name'], account['id'])
 
 
 def print_products(client):

@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/
 
+# Test PDFs
+src/dceu2019/apps/invoices/pdfs/*.pdf
+
 ### Backup ###
 *.bak
 *.gho
