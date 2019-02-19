@@ -5,6 +5,7 @@ description: "Be a sponsor: Make yourself known at a unique conference, helping 
 draft: false
 menu: main
 weight: 40
+show_sponsors: true
 ---
 
 # Sponsorships

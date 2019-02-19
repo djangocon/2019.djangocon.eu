@@ -1,3 +1,11 @@
+  {{ if $.Param "show_sponsors" }}
+    {{ partial "sponsors.html" . }}
+  {{ end }}
+
+  {{ if $.Param "show_newsletter" }}
+    {{ partial "newsletter.html" . }}
+  {{ end }}
+
   <footer>
     <section>
       {{ range .Site.Menus.main }}
