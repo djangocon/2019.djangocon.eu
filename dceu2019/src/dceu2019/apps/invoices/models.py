@@ -1,7 +1,62 @@
 from decimal import Decimal
 
+from django.conf import settings
 from django.db import models
 from djmoney.models.fields import MoneyField
+
+
+class TicketbutlerTicket(models.Model):
+    """
+    Maps a ticketbutler ticket to a user
+
+    We might wanna create users in the system that have access but don't have a
+    ticket, and we don't want to fail our imports if a user already exists, then
+    we might just have multiple tickets.
+
+    The invoice says what type of ticket or how expensive it was etc.. but not
+    really important, so we just store it there.
+
+    This might at some point also start storing more information from
+    Ticketbutler about food preferences etc. such that user can edit them
+    later.
+
+    Also: Sprints?
+    """
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='tickets', on_delete=models.CASCADE)
+    ticketbutler_orderid = models.CharField(max_length=32, default="")
+    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL)
+
+    sprints = models.PositiveSmallIntegerField(
+        choices=[(0, 'no'), (1, 'maybe'), (2, 'yes')],
+        null=True,
+        blank=True,
+    )
+
+    @classmethod
+    def get_or_create(cls, email, name, ticketbutler_orderid, sprints):
+        """
+        Creates a TicketbutlerTicket and possibly a disabled user account
+        """
+
+        # Need to import here, otherwise models fail to load
+        from pretalx.person.models import User
+
+        try:
+            return TicketbutlerTicket.objects.get(ticketbutler_orderid=ticketbutler_orderid)
+        except TicketbutlerTicket.DoesNotExist:
+            pass
+
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            user = User.objects.create_user(email=email, name=name)
+
+        return TicketbutlerTicket.objects.create(
+            user=user,
+            ticketbutler_orderid=ticketbutler_orderid,
+            sprints=sprints,
+        )
 
 
 class BillyInvoiceContact(models.Model):
@@ -67,5 +122,3 @@ class Invoice(models.Model):
     amount = models.SmallIntegerField(default=1)
 
     ticket_type_name = models.CharField(max_length=255)
-
-    pdf = models.FileField(null=True, blank=True,)
