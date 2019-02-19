@@ -109,3 +109,15 @@ You can install and work on a development version following these steps:
   $ python dceu2019/manage.py runserver
 
   # Point your browser to localhost:8000/ and you'll see an empty schedule
+
+  Adding a sponsor logo
+  -----------------------------
+  Add an item to the array in this file: `hugo_site/themes/dceu2019/data/sponsors.json`, and logo image here: `hugo_site/static/static/sponsors/`
+
+  ```
+  {
+    "name": "Company Name",
+    "logo": "logo.png",
+    "website": "#"
+  }
+  ```

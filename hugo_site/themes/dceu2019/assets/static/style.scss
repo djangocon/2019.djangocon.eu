@@ -519,6 +519,8 @@ $month-offset: 9rem;
   }
 }
 
+//
+// Alerts
 .alert {
   background: $purple;
   color: white;
@@ -532,5 +534,25 @@ $month-offset: 9rem;
     margin-bottom: 1rem;
     display: inline-block;
     font-weight: bold;
+  }
+}
+
+//
+// Sponsors
+.sponsors {
+  display: flex;
+  max-width: 60rem;
+  padding: 0 1.5rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.sponsor-item {
+  flex-basis: 40%; // 10% spacing on either side
+  margin-bottom: 1.5rem;
+
+  @media (min-width: $tablet) {
+    flex-basis: 21%; // 4% spacing on either side
   }
 }

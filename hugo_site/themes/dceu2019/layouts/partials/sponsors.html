@@ -1,0 +1,13 @@
+<h3><a href="/sponsors/">Sponsors</a></h3>
+
+<div class="sponsors">
+  {{ range $.Site.Data.sponsors }}
+    <a href="{{ .website }}" target="_blank" class="sponsor-item">
+      {{ if .logo }}
+        <img src="/static/sponsors/{{ .logo }}" alt="{{ .name }}"/>
+      {{ else }}
+        {{ .name }}
+      {{ end }}
+    </a>
+  {{ end }}
+</div>
