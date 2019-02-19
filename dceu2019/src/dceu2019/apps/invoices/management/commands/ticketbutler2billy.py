@@ -1,8 +1,6 @@
-import json
-import os
 import re
 
-from dceu2019.apps.invoices import billy, models
+from dceu2019.apps.invoices import billy, models, ticketbutler
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from djmoney.money import Money
@@ -14,27 +12,28 @@ class Command(BaseCommand):
     help = 'Fetches all unique ticket types and prices in a JSON'
 
     def add_arguments(self, parser):
-        parser.add_argument('json_file', type=str)
         parser.add_argument(
             '--only-known-invoices',
             action='store_true',
             dest='only_known',
             help='Great for testing and not creating invoices or payments in Billy',
         )
+        parser.add_argument(
+            '--skip-synced',
+            action='store_true',
+            dest='skip_synced',
+            help='Skip things that are already synced',
+        )
 
     def handle(self, *args, **options):
 
-        json_file = options['json_file']
-
         self.only_known = options['only_known']
+        self.skip_synced = options['skip_synced']
 
         self.client = billy.BillyClient(settings.BILLY_TOKEN)
         self.organization_id = billy.get_organization_id(self.client)
 
-        if not os.path.isfile(json_file):
-            raise CommandError("Not found: {}".format(json_file))
-
-        tb_data = json.load(open(json_file, 'r'))
+        tb_data = ticketbutler.TicketbutlerClient().request()
 
         self.valid_countries = billy.get_countries(self.client)
 
@@ -55,7 +54,11 @@ class Command(BaseCommand):
         order_id = order['order_id']
 
         if not order['state'] == 'PAID':
-            self.stdout.write(self.style.ERROR("Skipping unpaid order: {}".format(order['order_id'])))
+            self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order['order_id'])))
+            return
+
+        if any(t['ticket_refund'] for t in order['tickets']):
+            self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order['order_id'])))
             return
 
         if order['order_lines'][0]['discount_total'] is not None:
@@ -66,10 +69,13 @@ class Command(BaseCommand):
             self.stdout.write(self.style.WARNING("Only processing known invoices, skipping {}".format(order_id)))
             return
 
+        # Object containing all created tickets, to have an invoice relation
+        # appended later
+        ticketbutler_tickets = []
+
+        order_info = order['order_lines'][0]
         currency = order['currency']
-
         when = order['date']
-
         first_name = order['address']['first_name'] or ""
         last_name = order['address']['last_name'] or ""
         person_name = " ".join([first_name, last_name])
@@ -77,16 +83,84 @@ class Command(BaseCommand):
         phone = order['address']['phone']
         vat_id = order['address']['vat_number']
         company = order['address']['business_name']
-
         vat_rate = 0.25
+        # Price in Ticketbutler includes VAT, so remove it
+        price = float(order_info['price']) * 1.0 / (1.0 + vat_rate)
+        amount = order_info['quantity']
+        billy_product_id = billy.TICKETBUTLER_PRODUCT_ID_MAPPING[order_info['title']]
 
+        # We need to ask manually
+        country = None
         address = order['address']['address']
 
-        country = None
+        for ticket in order['tickets']:
+
+            # sprints = filter(
+            #     lambda q: q['uuid']=="baff5d43c67f4ff7aedf2968e06e1825",
+            #     ticket['questions']
+            # )[0]
+
+            ticketbutler_tickets.append(models.TicketbutlerTicket.get_or_create(
+                ticket['email'],
+                ticket['full_name'],
+                order_id,
+                None  # Sprints are not detected yet
+            ))
+
+        # Process manually created invoices by preferring data from the
+        # accounting system
+        if order_id in billy.TICKETBUTLER_IGNORE_LIST:
+
+            self.stdout.write(self.style.WARNING("Manually processed, fetching PDF and creating data from Billy {}".format(order_id)))
+            billy_invoice_id = billy.TICKETBUTLER_IGNORE_LIST[order_id]
+            billy_invoice = billy.get_invoice(self.client, billy_invoice_id)
+            billy_contact = billy.get_contact(self.client, billy_invoice['contactId'])
+            billy.save_invoice_pdf(self.client, billy_invoice_id)
+
+            try:
+                contact = models.BillyInvoiceContact.objects.get(billy_id=billy_invoice['contactId'])
+            except models.BillyInvoiceContact.DoesNotExist:
+                contact = models.BillyInvoiceContact(billy_id=billy_invoice['contactId'])
+
+            contact.name = billy_contact['name']
+            contact.type = billy_contact['type']
+            contact.person_name = billy_contact['contactPersons'][0]['name'] if 'contactPersons' in billy_contact else None
+            contact.person_email = billy_contact['contactPersons'][0]['email'] if 'contactPersons' in billy_contact else None
+            contact.country_code = billy_contact['countryId']
+            contact.street = billy_contact['street']
+            contact.city_text = billy_contact['cityText']
+            contact.zipcode_text = billy_contact['zipcodeText']
+            contact.phone = billy_contact['phone']
+            contact.registration_no = billy_contact['registrationNo']
+            contact.ticketbutler_orderid = order_id
+
+            contact.save()
+
+            try:
+                invoice = models.Invoice.objects.get(billy_id=billy_invoice_id)
+            except models.Invoice.DoesNotExist:
+                invoice = models.Invoice(billy_id=billy_invoice_id)
+
+            invoice.billy_contact = contact
+            invoice.billy_product_id = billy_product_id
+            invoice.ticketbutler_orderid = order_id
+            invoice.when = when
+            invoice.price = Money(price, currency)
+            invoice.vat = vat_rate
+            invoice.amount = amount
+            invoice.ticket_type_name = order_info['title']
+
+            invoice.save()
+
+            return
 
         # Try to figure out country
 
         confirmed = False
+
+        if self.skip_synced and models.Invoice.objects.filter(ticketbutler_orderid=order_id).exists():
+            self.stdout.write(self.style.SUCCESS("Already sync'ed, skipping {}".format(order_id)))
+            return
 
         while not confirmed:
 
@@ -123,16 +197,7 @@ class Command(BaseCommand):
             while city is None:
                 city = input("City? ".format(address))
 
-            confirmed = input("Confirm it [Y/n]").lower() in ["y", ""]
-
-        order_info = order['order_lines'][0]
-
-        billy_product_id = billy.TICKETBUTLER_PRODUCT_ID_MAPPING[order_info['title']]
-
-        # Price in Ticketbutler includes VAT, so remove it
-        price = float(order_info['price']) * 1.0 / (1.0 + vat_rate)
-
-        amount = order_info['quantity']
+            confirmed = input("Confirm this [Y/n]").lower() in ["y", ""]
 
         try:
             contact = models.BillyInvoiceContact.objects.get(ticketbutler_orderid=order_id)
@@ -186,13 +251,12 @@ class Command(BaseCommand):
                 self.create_payment(invoice, contact)
 
         # Download invoice PDF
-        destination = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-            "pdfs",
-            invoice.billy_id + ".pdf"
-        )
-        billy.save_invoice_pdf(self.client, invoice.billy_id, destination)
+        billy.save_invoice_pdf(self.client, invoice.billy_id)
         self.stdout.write(self.style.SUCCESS("PDF downloaded and saved."))
+
+        for ticket in ticketbutler_tickets:
+            ticket.invoice = invoice
+            ticket.save()
 
     def create_payment(self, invoice, contact):
 

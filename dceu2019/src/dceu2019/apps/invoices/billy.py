@@ -1,3 +1,5 @@
+import os
+
 import requests
 
 #: Mapping of our ticket types in Ticketbutler to product ids in Billy
@@ -26,6 +28,7 @@ TICKETBUTLER_IGNORE_LIST = {
     "duL103267": "3x8H7ReTR0KFDMODonVuQg",
     "duL105594": "QphSa5EPTyiXI3rzSyMJVg",
     "duL104454": "wNBtx7yDS5uyASIFfnyekw",
+    "duL105305": "kclJN2lAT1KLADJXBIOhEA",
 }
 
 
@@ -183,10 +186,21 @@ def get_invoice(client, invoice_id):
     return response['invoice']
 
 
-def save_invoice_pdf(client, invoice_id, destination):
+# Gets a invoice by its Id
+def get_contact(client, contact_id):
+    response = client.request('GET', '/contacts', contact_id)
+    return response['contact']
+
+
+def save_invoice_pdf(client, invoice_id):
     """
     Given an invoice ID, saves the PDF to a specific destination
     """
+    destination = os.path.join(
+        os.path.dirname(__file__),
+        "pdfs",
+        invoice_id + ".pdf"
+    )
     response = client.request('GET', '/invoices', invoice_id)
     response = requests.get(response['invoice']['downloadUrl'], allow_redirects=True)
     open(destination, 'wb').write(response.content)
