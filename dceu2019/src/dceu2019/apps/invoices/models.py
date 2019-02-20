@@ -23,12 +23,16 @@ class TicketbutlerTicket(models.Model):
     Also: Sprints?
     """
 
+    SPRINTS_NO = 0
+    SPRINTS_MAYBE = 1
+    SPRINTS_YES = 2
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='tickets', on_delete=models.CASCADE)
     ticketbutler_orderid = models.CharField(max_length=32, default="")
     invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL)
 
     sprints = models.PositiveSmallIntegerField(
-        choices=[(0, 'no'), (1, 'maybe'), (2, 'yes')],
+        choices=[(SPRINTS_NO, 'no'), (SPRINTS_MAYBE, 'maybe'), (SPRINTS_YES, 'yes')],
         null=True,
         blank=True,
     )
@@ -43,7 +47,7 @@ class TicketbutlerTicket(models.Model):
         from pretalx.person.models import User
 
         try:
-            return TicketbutlerTicket.objects.get(ticketbutler_orderid=ticketbutler_orderid)
+            return TicketbutlerTicket.objects.get(user__email=email, ticketbutler_orderid=ticketbutler_orderid)
         except TicketbutlerTicket.DoesNotExist:
             pass
 

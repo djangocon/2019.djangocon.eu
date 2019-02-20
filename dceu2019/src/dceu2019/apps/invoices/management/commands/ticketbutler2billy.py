@@ -95,16 +95,23 @@ class Command(BaseCommand):
 
         for ticket in order['tickets']:
 
-            # sprints = filter(
-            #     lambda q: q['uuid']=="baff5d43c67f4ff7aedf2968e06e1825",
-            #     ticket['questions']
-            # )[0]
+            sprints = list(filter(
+                lambda q: q['question'] == 148,
+                ticket['answers']
+            ))[0]
+
+            if any(filter(lambda c: c['choice_heading'].lower() == 'no', sprints['answered_choices'])):
+                sprints = models.TicketbutlerTicket.SPRINTS_NO
+            elif any(filter(lambda c: c['choice_heading'].lower() == 'maybe', sprints['answered_choices'])):
+                sprints = models.TicketbutlerTicket.SPRINTS_MAYBE
+            elif any(filter(lambda c: c['choice_heading'].lower() == 'yes', sprints['answered_choices'])):
+                sprints = models.TicketbutlerTicket.SPRINTS_YES
 
             ticketbutler_tickets.append(models.TicketbutlerTicket.get_or_create(
                 ticket['email'],
                 ticket['full_name'],
                 order_id,
-                None  # Sprints are not detected yet
+                sprints,
             ))
 
         # Process manually created invoices by preferring data from the
