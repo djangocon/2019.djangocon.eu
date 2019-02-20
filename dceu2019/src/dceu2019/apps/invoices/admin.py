@@ -19,6 +19,19 @@ class InvoiceContactAdmin(admin.ModelAdmin):
     pass
 
 
+@admin.register(models.TicketbutlerTicket)
+class TicketbutlerTicketAdmin(admin.ModelAdmin):
+
+    list_display = ['user', 'name', 'nick', 'sprints']
+    list_filter = ['sprints']
+
+    def name(self, instance):
+        return instance.user.name
+
+    def nick(self, instance):
+        return instance.user.nick
+
+
 @admin.register(User)
 class UserAdmin(UserAdmin):
     """
