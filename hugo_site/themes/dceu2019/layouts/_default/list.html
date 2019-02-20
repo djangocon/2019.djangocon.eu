@@ -1,9 +1,40 @@
 {{ partial "header.html" . }}
-	<main>
-		{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
-	</main>
+
+<header class="header">
+  <a href="{{ .Site.BaseURL }}">
+    <img src="/static/img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
+  </a>
+
+  <nav>
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li class="{{ if (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .))}}active{{ end }}">
+          <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Conference Updates</h1>
+
+  {{ range .Pages.ByPublishDate.Reverse }}
+    <div class="post container">
+      <h2>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </h2>
+
+      {{ .Content }}
+
+      <div class="post-date">
+        {{ .Date }}
+      </div>
+    </div>
+  {{ end }}
+</main>
+
 {{ partial "footer.html" . }}

@@ -556,3 +556,21 @@ $month-offset: 9rem;
     flex-basis: 21%; // 4% spacing on either side
   }
 }
+
+//
+// News
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+.post-date {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+
+.post-summaries {
+  margin-bottom: 4rem;
+}
