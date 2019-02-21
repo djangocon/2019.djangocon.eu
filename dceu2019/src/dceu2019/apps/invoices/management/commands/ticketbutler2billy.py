@@ -267,7 +267,7 @@ class Command(BaseCommand):
 
     def create_payment(self, invoice, contact):
 
-        if input("Create payment [y/N]").lower() == "y":
+        if input("Create payment [Y/n]").lower() or "y" == "y":
             billy.create_payment(
                 self.client,
                 self.organization_id,
@@ -275,7 +275,7 @@ class Command(BaseCommand):
                 contact.billy_id,
                 settings.BILLY_TICKET_ACCOUNT,
                 float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
-                invoice.price.currency,
+                str(invoice.price.currency),
                 invoice.when
             )
             self.stdout.write(self.style.SUCCESS("Payment created in Billy"))
