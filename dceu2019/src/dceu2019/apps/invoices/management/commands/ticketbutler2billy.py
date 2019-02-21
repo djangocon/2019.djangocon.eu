@@ -269,20 +269,19 @@ class Command(BaseCommand):
 
     def create_payment(self, invoice, contact):
 
-        if input("Create payment [Y/n]").lower() or "y" == "y":
-            billy.create_payment(
-                self.client,
-                self.organization_id,
-                invoice.billy_id,
-                contact.billy_id,
-                settings.BILLY_TICKET_ACCOUNT,
-                float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
-                str(invoice.price.currency),
-                str(invoice.when)
-            )
-            invoice.billy_payment_created = True
-            invoice.save()
-            self.stdout.write(self.style.SUCCESS("Payment created in Billy"))
+        billy.create_payment(
+            self.client,
+            self.organization_id,
+            invoice.billy_id,
+            contact.billy_id,
+            settings.BILLY_TICKET_ACCOUNT,
+            float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
+            str(invoice.price.currency),
+            str(invoice.when)
+        )
+        invoice.billy_payment_created = True
+        invoice.save()
+        self.stdout.write(self.style.SUCCESS("Payment created in Billy"))
 
     def contact2billy(self, contact):
 
