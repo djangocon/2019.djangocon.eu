@@ -29,6 +29,7 @@ TICKETBUTLER_IGNORE_LIST = {
     "duL105594": "QphSa5EPTyiXI3rzSyMJVg",
     "duL104454": "wNBtx7yDS5uyASIFfnyekw",
     "duL105305": "kclJN2lAT1KLADJXBIOhEA",
+    "duL109254": "cdYpcb5JQZepeD69lqBXsA",
 }
 
 
