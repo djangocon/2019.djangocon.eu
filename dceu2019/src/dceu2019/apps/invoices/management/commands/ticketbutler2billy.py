@@ -255,7 +255,9 @@ class Command(BaseCommand):
             else:
                 self.invoice2billy(invoice)
                 self.stdout.write(self.style.SUCCESS("Invoice created in Billy"))
-                self.create_payment(invoice, contact)
+
+        if order_id not in billy.TICKETBUTLER_IGNORE_LIST and not invoice.billy_payment_created:
+            self.create_payment(invoice, contact)
 
         # Download invoice PDF
         billy.save_invoice_pdf(self.client, invoice.billy_id)
@@ -267,18 +269,19 @@ class Command(BaseCommand):
 
     def create_payment(self, invoice, contact):
 
-        if input("Create payment [y/N]").lower() == "y":
-            billy.create_payment(
-                self.client,
-                self.organization_id,
-                invoice.billy_id,
-                contact.billy_id,
-                settings.BILLY_TICKET_ACCOUNT,
-                float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
-                invoice.price.currency,
-                invoice.when
-            )
-            self.stdout.write(self.style.SUCCESS("Payment created in Billy"))
+        billy.create_payment(
+            self.client,
+            self.organization_id,
+            invoice.billy_id,
+            contact.billy_id,
+            settings.BILLY_TICKET_ACCOUNT,
+            float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
+            str(invoice.price.currency),
+            str(invoice.when)
+        )
+        invoice.billy_payment_created = True
+        invoice.save()
+        self.stdout.write(self.style.SUCCESS("Payment created in Billy"))
 
     def contact2billy(self, contact):
 

@@ -103,6 +103,8 @@ class Invoice(models.Model):
 
     billy_id = models.CharField(max_length=32)
     billy_product_id = models.CharField(max_length=32)
+    # Because Billy doesn't return an ID of a payment object
+    billy_payment_created = models.BooleanField(default=False)
     billy_contact = models.ForeignKey(
         BillyInvoiceContact,
         on_delete=models.PROTECT,
@@ -117,7 +119,6 @@ class Invoice(models.Model):
     # Store the VAT as if it matters.. it's always 0.25 for Danish tickets to anyone
     vat = models.DecimalField(
         decimal_places=2,
-        choices=(("0.00", Decimal(0.00)), ("0.25", Decimal(0.25))),
         default=Decimal(0.25),
         max_digits=6,
     )

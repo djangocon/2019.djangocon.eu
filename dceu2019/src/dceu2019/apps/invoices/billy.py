@@ -169,9 +169,9 @@ def create_payment(client, organization_id, invoice_id, contact_id, bank_account
             }
         ]
     }
-    response = client.request('POST', '/bankPayments', {'bankPayment': payment})
 
-    return response['invoices'][0]['id']
+    # We ignore the response, not sure what it contains
+    client.request('POST', '/bankPayments', {'bankPayment': payment})
 
 
 # Get id of organization associated with the API token.
