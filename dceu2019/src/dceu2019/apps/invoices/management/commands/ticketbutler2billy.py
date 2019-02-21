@@ -256,7 +256,7 @@ class Command(BaseCommand):
                 self.invoice2billy(invoice)
                 self.stdout.write(self.style.SUCCESS("Invoice created in Billy"))
 
-        if order_id not in billy.TICKETBUTLER_IGNORE_LIST:
+        if order_id not in billy.TICKETBUTLER_IGNORE_LIST and not invoice.billy_payment_id:
             self.create_payment(invoice, contact)
 
         # Download invoice PDF
