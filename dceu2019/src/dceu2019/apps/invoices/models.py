@@ -103,6 +103,7 @@ class Invoice(models.Model):
 
     billy_id = models.CharField(max_length=32)
     billy_product_id = models.CharField(max_length=32)
+    billy_payment_id = models.CharField(max_length=32, null=True, blank=True)
     billy_contact = models.ForeignKey(
         BillyInvoiceContact,
         on_delete=models.PROTECT,
