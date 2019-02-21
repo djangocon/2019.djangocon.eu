@@ -278,7 +278,7 @@ class Command(BaseCommand):
                 settings.BILLY_TICKET_ACCOUNT,
                 float(float(invoice.price.amount) * float(1 + invoice.vat)) * invoice.amount,
                 str(invoice.price.currency),
-                invoice.when
+                str(invoice.when)
             )
             invoice.billy_payment_id = payment_id
             invoice.save()
