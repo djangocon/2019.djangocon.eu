@@ -122,7 +122,7 @@ def create_contact(client,
         'registrationNo': vat_id,
         'isCustomer': True,
         'paymentTermsDays': 15,
-        'locale': "da_DK" if country_code == "DK" else "en_US",
+        'localeId': "da_DK" if country_code == "DK" else "en_US",
     }
     response = client.request('POST', '/contacts', {'contact': contact})
 
