@@ -3,8 +3,10 @@ title: "Grants"
 date: 2019-01-09T00:29:12+01:00
 draft: false
 description: DjangoCon Europe 2019 offers grants to attendees and speakers, so that those who might otherwise not be able to attend won't hesitate to participate.
-menu: main
 weight: 45
+menu:
+  main:
+    parent: "information"
 ---
 
 
