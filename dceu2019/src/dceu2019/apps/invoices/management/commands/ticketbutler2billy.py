@@ -256,7 +256,7 @@ class Command(BaseCommand):
                 self.invoice2billy(invoice)
                 self.stdout.write(self.style.SUCCESS("Invoice created in Billy"))
 
-        if order_id not in billy.TICKETBUTLER_IGNORE_LIST and not invoice.billy_payment_id:
+        if order_id not in billy.TICKETBUTLER_IGNORE_LIST and not invoice.billy_payment_created:
             self.create_payment(invoice, contact)
 
         # Download invoice PDF
@@ -270,7 +270,7 @@ class Command(BaseCommand):
     def create_payment(self, invoice, contact):
 
         if input("Create payment [Y/n]").lower() or "y" == "y":
-            payment_id = billy.create_payment(
+            billy.create_payment(
                 self.client,
                 self.organization_id,
                 invoice.billy_id,
@@ -280,7 +280,7 @@ class Command(BaseCommand):
                 str(invoice.price.currency),
                 str(invoice.when)
             )
-            invoice.billy_payment_id = payment_id
+            invoice.billy_payment_created = True
             invoice.save()
             self.stdout.write(self.style.SUCCESS("Payment created in Billy"))
 
