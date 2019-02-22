@@ -188,7 +188,7 @@ class Command(BaseCommand):
                 zip_code = input("Zip? ".format(address))
                 city = input("City? ".format(address))
 
-            default_country = ""
+            default_country = "DK"
 
             if vat_id:
                 country_match = re_vatid_country.match(vat_id)
@@ -198,7 +198,9 @@ class Command(BaseCommand):
             while country is None:
                 country = input("What country code to use? [{}] ".format(default_country))
                 country = country.strip().upper()
-                if country != "" and country not in self.valid_countries:
+                if country == "":
+                    country = default_country
+                if country not in self.valid_countries:
                     country = None
 
             confirmed = input("Confirm this [Y/n]").lower() in ["y", ""]
