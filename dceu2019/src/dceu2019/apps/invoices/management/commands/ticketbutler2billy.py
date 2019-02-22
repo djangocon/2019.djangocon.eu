@@ -198,9 +198,7 @@ class Command(BaseCommand):
             while country is None:
                 country = input("What country code to use? [{}] ".format(default_country))
                 country = country.strip().upper()
-                if country == "":
-                    country = default_country
-                if country not in self.valid_countries:
+                if country != "" and country not in self.valid_countries:
                     country = None
 
             confirmed = input("Confirm this [Y/n]").lower() in ["y", ""]
