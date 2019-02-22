@@ -177,6 +177,17 @@ class Command(BaseCommand):
             print("VAT ID: {}".format(vat_id))
             print("Email: {}".format(email))
             print("Address: {}".format(address))
+
+            if not address.strip():
+                print("There is no address, so will not ask for further details")
+                street = ""
+                zip_code = ""
+                city = ""
+            else:
+                street = input("Street? ".format(address))
+                zip_code = input("Zip? ".format(address))
+                city = input("City? ".format(address))
+
             default_country = "DK"
 
             if vat_id:
@@ -191,18 +202,6 @@ class Command(BaseCommand):
                     country = default_country
                 if country not in self.valid_countries:
                     country = None
-
-            street = None
-            while street is None:
-                street = input("Street? ".format(address))
-
-            zip_code = None
-            while zip_code is None:
-                zip_code = input("Zip? ".format(address))
-
-            city = None
-            while city is None:
-                city = input("City? ".format(address))
 
             confirmed = input("Confirm this [Y/n]").lower() in ["y", ""]
 
