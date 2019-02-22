@@ -51,17 +51,10 @@ class TicketbutlerTicket(models.Model):
         except TicketbutlerTicket.DoesNotExist:
             pass
 
-        # We have some tickets that got created during crashes and then the invoice wasn't created.
-        # TODO: Remove this
         try:
-            return TicketbutlerTicket.objects.get(user__email=email)
-        except TicketbutlerTicket.DoesNotExist:
-            pass
-
-        try:
-            user = User.objects.get(email=email)
+            user = User.objects.get(email=email.lower())
         except User.DoesNotExist:
-            user = User.objects.create_user(email=email, name=name)
+            user = User.objects.create_user(email=email.lower(), name=name)
 
         return TicketbutlerTicket.objects.create(
             user=user,
