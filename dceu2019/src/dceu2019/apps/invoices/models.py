@@ -81,7 +81,7 @@ class BillyInvoiceContact(models.Model):
     person_name = models.CharField(max_length=255, null=True)
     person_email = models.EmailField(max_length=255, null=True)
     person_id = models.CharField(max_length=32, null=True)
-    country_code = models.CharField(max_length=3, null=True)
+    country_code = models.CharField(max_length=3, default="DK")
     street = models.CharField(max_length=255, null=True)
     city_text = models.CharField(max_length=255, null=True)
     zipcode_text = models.CharField(max_length=255, null=True)
