@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.utils.translation import gettext as _
 from pretalx.person.models import User
 
 from . import models
@@ -16,17 +17,20 @@ class InvoiceAdmin(admin.ModelAdmin):
 
 @admin.register(models.BillyInvoiceContact)
 class InvoiceContactAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name', 'person_email']
 
 
 @admin.register(models.TicketbutlerTicket)
 class TicketbutlerTicketAdmin(admin.ModelAdmin):
 
-    list_display = ['user', 'name', 'nick', 'sprints']
+    list_display = ['user', 'name', 'email', 'nick', 'sprints']
     list_filter = ['sprints']
 
     def name(self, instance):
         return instance.user.name
+
+    def email(self, instance):
+        return instance.user.email
 
     def nick(self, instance):
         return instance.user.nick
@@ -40,3 +44,19 @@ class UserAdmin(UserAdmin):
     ordering = None
 
     list_display = ['email', 'name', 'nick']
+
+    search_fields = ['email', 'name', 'nick']
+
+    fieldsets = (
+        (None, {'fields': ('email', 'password')}),
+        (_('Personal info'), {'fields': ('name', 'nick')}),
+        (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser',
+                                       'groups', 'user_permissions')}),
+        (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'password1', 'password2'),
+        }),
+    )

@@ -195,6 +195,7 @@ class Command(BaseCommand):
                 if country_match:
                     default_country = country_match.group(1)
 
+            country = None
             while country is None:
                 country = input("What country code to use? [{}] ".format(default_country))
                 country = country.strip().upper()
