@@ -188,7 +188,7 @@ class Command(BaseCommand):
                 zip_code = input("Zip? ".format(address))
                 city = input("City? ".format(address))
 
-            default_country = "DK"
+            default_country = ""
 
             if vat_id:
                 country_match = re_vatid_country.match(vat_id)
