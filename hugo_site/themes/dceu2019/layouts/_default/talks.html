@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<div class="container">
+  <main>
+    <article>
+      {{ .Content }}
+
+      <div class="talk-list">
+        {{ range $.Site.Data.talks }}
+        <div class="talk">
+          <img src="{{ .speaker_image }}" class="talk-image" />
+
+          <div class="talk-content">
+            <div class="talk-speaker">
+              {{ .speaker }}
+            </div>
+            <p class="talk-title">
+              {{ .title }}
+            </p>
+          </div>
+
+          <div class="talk-abstract">
+            {{ .abstract }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </article>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}
