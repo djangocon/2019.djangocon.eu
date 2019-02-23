@@ -17,7 +17,7 @@ One of the reasons why a few of us from Copenhagen have been reluctant to do a b
 
 And it’s a fantastic venue! Normally it’s a production school for theatre and artistry, and they have great facilities for conferences. The venue is also interesting because it will accommodate smaller workshops in adjacent rooms. This is we provided an option for workshop events in the CfP. We will accept an amount that means we are also able to accommodate a few additional spontaneous workshops/meetups. We really appreciate the ones that are prepared, but we also want to make space for something that happens while people meet IRL.
 
-Oh do you might want to see a photo from the venue?
+Oh you might want to see a photo from the venue?
 
 ![Picture from everyday situation in AFUK](/static/img/venue1.jpeg)
 
