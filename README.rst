@@ -112,7 +112,7 @@ You can install and work on a development version following these steps:
 
   Adding a sponsor logo
   -----------------------------
-  Add an item to the array in this file: `hugo_site/themes/dceu2019/data/sponsors.json`, and logo image here: `hugo_site/static/static/sponsors/`
+  Add an item to the array in this file: `hugo_site/data/sponsors.json`, and logo image here: `hugo_site/static/static/sponsors/`
 
   ```
   {
