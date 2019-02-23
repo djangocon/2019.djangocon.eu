@@ -1,37 +1,18 @@
 {{ partial "header.html" . }}
-
-<header class="header">
-  <a href="{{ .Site.BaseURL }}">
-    <img src="/static/img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
-  </a>
-
-  <nav>
-    <ul>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-        <li class="{{ if (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .))}}active{{ end }}">
-          <a href="{{ .URL | absURL }}">{{ .Name }}</a>
-        </li>
-      {{ end }}
-    </ul>
-  </nav>
-</header>
+{{ partial "nav.html" . }}
 
 <div class="container">
-	<main class="post">
-    <h1>{{ .Title }}</h1>
-
-    {{ .Content }}
-
-    <div class="post-date">
-      {{ .Date }}
-    </div>
-
-    <ul id="tags">
-      {{ range .Params.tags }}
-        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
+	<main>
+		<article>
+			{{ .Content }}
+			<div>
+				<ul id="tags">
+					{{ range .Params.tags }}
+					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+					{{ end }}
+				</ul>
+			</div>
+		</article>
 	</main>
 </div>
 

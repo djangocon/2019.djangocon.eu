@@ -26,7 +26,7 @@
   <h3>Conference Updates</h3>
 
   <div class="post-summaries">
-    {{ range where .Pages "Section" "posts" }}
+    {{ range where .Pages "Section" "news" }}
       {{ partial "summary.html" . }}
     {{ end }}
   </div>

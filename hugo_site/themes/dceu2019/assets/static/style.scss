@@ -370,7 +370,7 @@ main {
   }
 
   ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   b,
@@ -566,9 +566,6 @@ $month-offset: 9rem;
 
 .post-date {
   text-align: center;
-  opacity: 0.5;
-  font-size: 0.75rem;
-  margin-top: 2rem;
 }
 
 .post-summaries {
