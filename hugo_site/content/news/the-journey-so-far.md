@@ -1,5 +1,6 @@
 ---
 title: "The Journey So Far"
+description: "This is our first News section item; so we want to write an overall story of what has happened so far."
 date: 2019-02-23T20:29:02+01:00
 draft: false
 ---
