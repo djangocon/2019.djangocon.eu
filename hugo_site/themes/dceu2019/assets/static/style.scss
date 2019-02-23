@@ -370,7 +370,7 @@ main {
   }
 
   ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   b,
@@ -555,4 +555,19 @@ $month-offset: 9rem;
   @media (min-width: $tablet) {
     flex-basis: 21%; // 4% spacing on either side
   }
+}
+
+//
+// News
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+.post-date {
+  text-align: center;
+}
+
+.post-summaries {
+  margin-bottom: 4rem;
 }
