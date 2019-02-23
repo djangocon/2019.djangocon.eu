@@ -20,21 +20,16 @@
   </div>
 </div>
 
-
-
 <main class="content page-index container">
-{{ .Content }}
+  {{ .Content }}
 
-<h3>Conference Updates</h3>
+  <h3>Conference Updates</h3>
 
-<div class="post-summaries">
-
-
-  {{ range where .Pages "Section" "posts" }}
-          {{ partial "summary.html" . }}
-                {{ end }}
-              </div>
-
+  <div class="post-summaries">
+    {{ range where .Pages "Section" "posts" }}
+      {{ partial "summary.html" . }}
+    {{ end }}
+  </div>
 </main>
 
 {{ partial "footer.html" . }}

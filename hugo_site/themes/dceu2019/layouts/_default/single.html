@@ -19,24 +19,19 @@
 
 <div class="container">
 	<main class="post">
-			<h1>{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
 
-			{{ .Content }}
+    {{ .Content }}
 
-<div class="post-date">
-
-
+    <div class="post-date">
       {{ .Date }}
     </div>
 
-
-			<div>
-				<ul id="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-					{{ end }}
-				</ul>
-			</div>
+    <ul id="tags">
+      {{ range .Params.tags }}
+        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
 	</main>
 </div>
 
