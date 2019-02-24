@@ -8,6 +8,14 @@ from django.core.management.base import BaseCommand
 from pretalx.submission import models
 from sorl.thumbnail import get_thumbnail
 
+PUBLISHED = [
+    "DG7SG8",
+    "ZBYYMV",
+    "GQKCWS",
+    "WAHJMJ",
+    "C3TXDX",
+]
+
 
 class Command(BaseCommand):
     help = ("Output all submissions as CSV (pipe to .csv file)")
@@ -16,7 +24,7 @@ class Command(BaseCommand):
 
         confirmed_talks = []
 
-        for submission in models.Submission.objects.filter(state=models.SubmissionStates.CONFIRMED):
+        for submission in models.Submission.objects.filter(state=models.SubmissionStates.CONFIRMED, code__in=PUBLISHED):
 
             speakers = list(submission.speakers.all())
             speaker_names = ", ".join([person.get_display_name() for person in speakers])
