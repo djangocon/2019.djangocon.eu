@@ -370,7 +370,7 @@ main {
   }
 
   ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   b,
@@ -468,6 +468,8 @@ footer {
   h1 {
     line-height: 1.25;
   }
+
+  margin-bottom: 30px;
 }
 
 $month-offset: 9rem;
@@ -596,4 +598,19 @@ $month-offset: 9rem;
 .talk-abstract {
   width: 100%;
   margin-top: 1rem;
+}
+
+//
+// News
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+.post-date {
+  text-align: center;
+}
+
+.post-summaries {
+  margin-bottom: 4rem;
 }
