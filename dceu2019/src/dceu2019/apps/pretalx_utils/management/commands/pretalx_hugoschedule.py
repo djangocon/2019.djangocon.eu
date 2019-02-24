@@ -26,7 +26,7 @@ class Command(BaseCommand):
             for speaker in speakers:
                 self.stdout.write(self.style.SUCCESS("Adding confirmed speaker {}".format(speaker.get_display_name())))
                 if speaker.avatar:
-                    im = get_thumbnail(speaker.avatar, '300x300', crop='center', quality=80)
+                    im = get_thumbnail(speaker.avatar, '200x200', crop='center', quality=80)
                     images[speaker] = "https://members.2019.djangocon.eu" + im.url
                 elif speaker.get_gravatar:
                     images[speaker] = "https://www.gravatar.com/avatar/" + speaker.gravatar_parameter
