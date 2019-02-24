@@ -31,8 +31,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "dceu2019.apps.pretalx_utils",
     'djmoney',
+    'sorl.thumbnail',
+    "dceu2019.apps.pretalx_utils",
     "dceu2019.apps.invoices",
 ]
 

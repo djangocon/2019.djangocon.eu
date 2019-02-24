@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<div class="container">
+  <main>
+    <article>
+      {{ .Content }}
+
+      <div class="talk-list">
+        {{ range sort $.Site.Data.talks "speaker" }}
+        <div class="talk">
+          <img src="{{ .speaker_image }}" class="talk-image" />
+
+          <div class="talk-content">
+            <div class="talk-speaker">
+              {{ .speaker }}
+            </div>
+            <p class="talk-title">
+              {{ .title }}
+            </p>
+          </div>
+
+          <div class="talk-abstract">
+            {{ .abstract | plainify }}
+            {{/*
+            {{if gt (len .abstract | plainify | truncate 250) 250}}
+              <em>Read more</em>
+            {{end}}
+            */}}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </article>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}
