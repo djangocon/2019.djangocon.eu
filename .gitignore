@@ -4,6 +4,7 @@
 # Hugo stuff
 hugo_site/public
 hugo_site/resources
+hugo_site/data/talks.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
