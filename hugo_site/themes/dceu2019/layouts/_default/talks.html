@@ -21,18 +21,16 @@
           </div>
 
           <div class="talk-abstract">
-            {{ .abstract | plainify }}
-            {{/*
+            {{ .abstract | plainify | truncate 250 }}
             {{if gt (len .abstract | plainify | truncate 250) 250}}
-              <em>Read more</em>
+              <p><em>More to come as we add individual detail pages for each talk</em></p>
             {{end}}
-            */}}
           </div>
         </div>
         {{ end }}
       </div>
 
-      <p style="margin-top: 30px"><em>More to come...</em></p>
+      <p style="margin-top: 30px"><em>More talks are being added as we receive confirmation from speakers...</em></p>
 
     </article>
   </main>
