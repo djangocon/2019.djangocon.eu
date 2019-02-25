@@ -14,7 +14,6 @@ PUBLISHED = [
     "GQKCWS",
     "WAHJMJ",
     "C3TXDX",
-    "H9LCCJ",
     "ERUAGC",
     "QC8SNF",
 ]
