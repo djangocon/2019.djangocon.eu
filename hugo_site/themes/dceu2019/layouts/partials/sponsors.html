@@ -1,3 +1,19 @@
+<h3>Community Sponsors</h3>
+
+<div class="sponsors">
+  {{ range $.Site.Data.sponsors_community }}
+    <a href="{{ .website }}" target="_blank" class="sponsor-item">
+      {{ if .logo }}
+        <img src="/static/sponsors/{{ .logo }}" alt="{{ .name }}"/>
+      {{ else }}
+        {{ .name }}
+      {{ end }}
+    </a>
+  {{ end }}
+</div>
+
+<br  />
+
 <h3><a href="/sponsors/">Sponsors</a></h3>
 
 <div class="sponsors">
@@ -11,3 +27,6 @@
     </a>
   {{ end }}
 </div>
+
+<br  />
+<br  />
