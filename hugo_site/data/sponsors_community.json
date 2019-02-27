@@ -1,0 +1,17 @@
+[
+  {
+    "name": "EuroPython",
+    "logo": "EPS-Logo-with-Text-v3-1024px.png",
+    "website": "https://www.europython-society.org/"
+  },
+  {
+    "name": "Django Software Foundation",
+    "logo": "django-logo-positive.png",
+    "website": "https://www.djangoproject.com/foundation/"
+  },
+  {
+    "name": "Python Software Foundation",
+    "logo": "0345e6d426cec05a2933090cc9de7d40.png",
+    "website": "https://www.python.org/psf-landing/"
+  }
+]
