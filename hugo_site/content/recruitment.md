@@ -18,6 +18,8 @@ The recruitment exposure can be broken down to multiple elements, let's go throu
 
 **Job board** We have made a dedicated section on the conference website with job ads and in addition this year a physical board where attendees can see a printed version.
 
+**Interview lounge** At the venue an interview lounge is for top recruiters available upon request. This provide privacy, snacks and a place to have informal interviews.
+
 **Booth** If you are able to attend the conference and really want to stand out for your candidates getting a booth is the most effective tool. The booths are situated in a location all attendees visit multiple times a day.
 
 **Slack** During the conference there is a virtual workspace for all attendees where news, announcements and communication take place. Here we have a dedicated channel for jobs which you can get access to post in.
