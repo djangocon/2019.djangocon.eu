@@ -16,7 +16,7 @@ This list of individuals is still growing. Nonetheless, these are our sincerest 
  * Daniele Procida
  * Dawn Wages
  * Emil Kjer
- * E. Camilo
+ * Elvis Camilo
  * Jessica Upani
  * Nicole Dominguez
  * Mads Toftum
