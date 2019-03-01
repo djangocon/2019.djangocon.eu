@@ -13,7 +13,7 @@
             <b>{{ .Name }}</b>
             <br/>
             {{ if .HasChildren }}
-              <a href="{{ .URL | absURL }}">{{ or .Page.Params.menu.main.alias .Page.Params.menu.main.name .Page.Name }}</a>
+              <a href="{{ .URL | absURL }}">{{ .Name }}</a>
               <br/>
               {{ range $index, $item := .Children }}
                 {{ if eq (mod (add $index 1) 4) 0 }}

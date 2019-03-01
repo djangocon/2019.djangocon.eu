@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<div class="container">
+	<main>
+		<article>
+        <div class="talk">
+          <img src="{{ .Page.Params.speaker_image }}" class="talk-image" />
+
+          <div class="talk-content">
+            <div class="talk-speaker">
+              {{ .Page.Params.speakers }}
+            </div>
+            <p class="talk-title">
+              {{ .Title }}
+            </p>
+          </div>
+
+          <div class="talk-abstract">
+      			{{ .Content }}
+          </div>
+        </div>
+		</article>
+	</main>
+</div>
+
+{{ partial "footer.html" . }}
