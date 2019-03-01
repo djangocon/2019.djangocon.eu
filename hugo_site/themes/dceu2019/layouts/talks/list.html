@@ -22,7 +22,6 @@
 
           <div class="talk-abstract">
             {{ .abstract | plainify | truncate 250 }}
-            {{if gt (len .abstract | plainify | truncate 250) 250}}...{{end}}
             <p><a href="/talks/{{ .slug }}">Details</a></p>
           </div>
         </div>

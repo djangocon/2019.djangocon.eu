@@ -23,7 +23,7 @@
           <a href="{{ .URL | absURL }}">{{ .Name }}</a>
         </li>
       {{ end }}
-      {{ if $currentPage.HasMenuCurrent "main" . }}
+      {{ if and ($currentPage.HasMenuCurrent "main" .) (not (eq $currentPage.Name .Name)) }}
         <li>
           <a href="{{ .URL | absURL  }}">{{ .Name }}</a>
         </li>
