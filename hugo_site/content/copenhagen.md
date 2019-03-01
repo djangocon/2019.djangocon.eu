@@ -14,7 +14,7 @@ menu:
 
 Copenhagen is a fantastic and beautiful city. Its well-designed urban infrastructure and its [atractions](https://www.visitdenmark.com) fascinate [milions of tourists](https://www.visitdenmark.dk/da/analyse/fakta-og-tal-om-turismen-i-danmark) every year. Since you are going to be one of them this time, here we lay out some of the basic things you will need to get the most out of your stay in our city.
 
-To move around the capital - a quite small one -, we highly recommend you to rent a [bike](https://2019.djangocon.eu/bikes/). It is the most efficient and enviroment-friendly way to get to know things around here. Should you decide to use the public transport, that is not a problem! Below we have compiled the most important things you need to know about the public transport infrastructure.
+To move around the capital - a quite small one -, we highly recommend you to rent a [bike](https://2019.djangocon.eu/bikes/) with our partner. This is because whole city is pretty much covered with bicycle lanes. Not to mention it is the most efficient and enviroment-friendly way to get to know things around here. Should you decide to use the public transport, that is not a problem! Below we have compiled the most important things you need to know about the public transport infrastructure.
 
 ## Transportation
 
