@@ -92,11 +92,10 @@ class TalkExtraProperties(models.Model):
         new_card.paste(background, (0, 0))
 
         # Add the avatar
-        new_card.paste(avatar, (78, 77), mask)
+        new_card.paste(avatar, (58, 77), mask)
 
         # Write the speaker names
         draw = ImageDraw.Draw(new_card)
-        # font = ImageFont.truetype(<font-file>, <font-size>)
         font = ImageFont.truetype(os.path.join(data_dir, "fonts", "Poppins-SemiBold.ttf"), 56)
 
         offset = 60
@@ -126,7 +125,7 @@ class TalkExtraProperties(models.Model):
             offset += 65
 
         # Render it to screen
-        # new_card.show()
+        new_card.show()
 
         image_path = twitter_card_path(self, "blahblah.png")
         full_path = os.path.join(settings.MEDIA_ROOT, image_path)
