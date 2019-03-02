@@ -65,12 +65,16 @@ class Command(BaseCommand):
             props.generate_images()
             self.stdout.write(self.style.SUCCESS("Generated new SOME preview images"))
 
+            if not props.slug:
+                props.slug = slugify(submission.title)
+                props.save()
+
+            slug = props.slug
+
             speakers = list(submission.speakers.all())
             speaker_names = ", ".join([person.get_display_name() for person in speakers])
 
             images = {}
-
-            slug = slugify(submission.title)
 
             if not props.published:
                 self.stdout.write(self.style.WARNING("Skipping unpublished talk"))

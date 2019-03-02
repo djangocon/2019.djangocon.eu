@@ -32,10 +32,14 @@ class TalkExtraProperties(models.Model):
 
     employer_sponsor_name = models.CharField(max_length=255, null=True, blank=True)
 
+    slug = models.SlugField(null=True, blank=True)
+
     twitter_card_image = models.ImageField(
         upload_to=twitter_card_path,
         null=True, blank=True
     )
+
+    speaker_twitter_handle = models.CharField(max_length=255, null=True, blank=True)
 
     keynote = models.BooleanField(default=False)
     published = models.BooleanField(default=False)
