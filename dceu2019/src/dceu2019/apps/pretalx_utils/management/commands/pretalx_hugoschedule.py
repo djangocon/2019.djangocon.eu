@@ -66,7 +66,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Generated new SOME preview images"))
 
             if not props.slug:
-                props.slug = slugify(submission.title)
+                props.slug = slugify(submission.title)[:50]
                 props.save()
 
             slug = props.slug
