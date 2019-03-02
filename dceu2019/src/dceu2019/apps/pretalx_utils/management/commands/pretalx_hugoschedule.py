@@ -9,19 +9,10 @@ from django.core.management.base import BaseCommand
 from django.utils.html import escape, strip_tags
 from django.utils.text import slugify
 from markdown import markdown
-from pretalx.submission import models
+from pretalx.submission import models as submission_models
 from sorl.thumbnail import get_thumbnail
 
-PUBLISHED = [
-    "DG7SG8",
-    "ZBYYMV",
-    "GQKCWS",
-    "WAHJMJ",
-    "C3TXDX",
-    "ERUAGC",
-    "QC8SNF",
-    "ATAANB",
-]
+from ... import models
 
 TALK_PAGE_HTML = """---
 title: "{title}"
@@ -30,6 +21,8 @@ date: {talk_date}
 speakers: {speaker}
 speaker_image: {speaker_image}
 draft: false
+keynote: {keynote}
+twitter_card: {twitter_card}
 ---
 {talk_abstract}
 
@@ -64,7 +57,13 @@ class Command(BaseCommand):
             "talks",
         )
 
-        for submission in models.Submission.objects.filter(state=models.SubmissionStates.CONFIRMED, code__in=PUBLISHED):
+        for submission in submission_models.Submission.objects.filter(state=submission_models.SubmissionStates.CONFIRMED):
+
+            # Create extra properties
+            props, __ = models.TalkExtraProperties.objects.get_or_create(submission=submission)
+
+            props.generate_images()
+            self.stdout.write(self.style.SUCCESS("Generated new SOME preview images"))
 
             speakers = list(submission.speakers.all())
             speaker_names = ", ".join([person.get_display_name() for person in speakers])
@@ -72,6 +71,10 @@ class Command(BaseCommand):
             images = {}
 
             slug = slugify(submission.title)
+
+            if not props.published:
+                self.stdout.write(self.style.WARNING("Skipping unpublished talk"))
+                continue
 
             for speaker in speakers:
                 self.stdout.write(self.style.SUCCESS("Adding confirmed speaker {}".format(speaker.get_display_name())))
@@ -85,11 +88,12 @@ class Command(BaseCommand):
 
             confirmed_talks.append(
                 {
-                    'title': submission.title,
+                    'title': submission.title + "({})".format(speaker_names),
                     'abstract': submission.abstract,
                     'speakers': speaker_names,
                     'speaker_image': images[speakers[0]],
                     'slug': slug,
+                    'keynote': props.keynote,
                 }
             )
 
@@ -102,6 +106,8 @@ class Command(BaseCommand):
                 talk_date=str(datetime.now()),
                 talk_abstract=submission.abstract,
                 talk_description=submission.description,
+                keynote='true' if props.keynote else 'false',
+                twitter_card='https://2019.members.djangocon.eu' + props.twitter_card_image.url
             )
 
             talk_page_file = os.path.join(

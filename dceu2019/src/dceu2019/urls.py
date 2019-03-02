@@ -17,12 +17,10 @@ Examples:
 
 """
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
-
-
 from django.shortcuts import render_to_response
-
+from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -31,7 +29,7 @@ urlpatterns = [
     path('', lambda x: render_to_response("base.html", {},)),
     path('', include('pretalx.agenda.urls', namespace='agenda')),
     path('', include('pretalx.cfp.urls', namespace='cfp')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
