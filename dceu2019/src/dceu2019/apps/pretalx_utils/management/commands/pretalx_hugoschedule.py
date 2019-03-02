@@ -111,7 +111,7 @@ class Command(BaseCommand):
                 talk_abstract=submission.abstract,
                 talk_description=submission.description,
                 keynote='true' if props.keynote else 'false',
-                twitter_card='https://2019.members.djangocon.eu' + props.twitter_card_image.url
+                twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url
             )
 
             talk_page_file = os.path.join(
