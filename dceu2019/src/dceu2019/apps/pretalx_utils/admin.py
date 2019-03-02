@@ -13,15 +13,15 @@ from . import models
 @admin.register(models.TalkExtraProperties)
 class TalkExtraProperties(admin.ModelAdmin):
 
-    list_display = ("title", "speakers", "published", "keynote", "twitter_card", "twitter_draft")
-    list_editable = ("published", "keynote")
+    list_display = ("title", "speakers", "published", "keynote", "twitter_card", "twitter_draft", "speaker_twitter_handle")
+    list_editable = ("published", "keynote", "speaker_twitter_handle")
 
     def title(self, instance):
         return instance.submission.title[:100]
 
     def twitter_draft(self, instance):
         return """Announcing {speaker}'s talk "{title}" at #djangocon 🚲: {url}""".format(
-            speaker=instance.speaker_twitter_handle if instance.speaker_twitter_handle else instance.speakers,
+            speaker="@" + instance.speaker_twitter_handle if instance.speaker_twitter_handle else instance.speakers,
             title=instance.submission.title,
             url="https://2019.djangocon.eu/talks/" + instance.slug,
         )
