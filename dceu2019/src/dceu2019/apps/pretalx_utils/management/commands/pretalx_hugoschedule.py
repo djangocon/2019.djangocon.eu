@@ -1,18 +1,31 @@
-"""
- Prints CSV of all fields of a model.
-"""
 import json
 import os
 from datetime import datetime
 
 from django.core.management.base import BaseCommand
-from django.utils.html import escape, strip_tags
+from django.utils.html import strip_tags
 from django.utils.text import slugify
 from markdown import markdown
 from pretalx.submission import models as submission_models
 from sorl.thumbnail import get_thumbnail
 
 from ... import models
+
+# Escape things a bit differently here, because we don't want to double-escape the ampersands
+_html_escapes = {
+    ord('<'): '&lt;',
+    ord('>'): '&gt;',
+    ord('"'): '&quot;',
+    ord("'"): '&#39;',
+}
+
+
+def escape(text):
+    """
+    Escape things for Hugo markdown-friendlyness
+    """
+    return str(text).translate(_html_escapes)
+
 
 TALK_PAGE_HTML = """---
 title: "{title}"
