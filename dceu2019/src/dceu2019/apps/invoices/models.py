@@ -47,8 +47,8 @@ class TicketbutlerTicket(models.Model):
         from pretalx.person.models import User
 
         try:
-            return TicketbutlerTicket.objects.get(user__email=email, ticketbutler_orderid=ticketbutler_orderid)
-        except TicketbutlerTicket.DoesNotExist:
+            return TicketbutlerTicket.objects.filter(user__email__iexact=email, ticketbutler_orderid=ticketbutler_orderid).order_by('id')[0]
+        except IndexError:
             pass
 
         try:

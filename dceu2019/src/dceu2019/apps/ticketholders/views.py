@@ -6,9 +6,11 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
                                        PasswordResetView)
+from django.shortcuts import redirect
 from django.urls.base import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
+from django.views.decorators.cache import never_cache
 from django.views.generic.base import TemplateView
 
 from .decorators import login_required
@@ -59,6 +61,12 @@ class PasswordResetCompleteView(PasswordResetCompleteView):
 
 class LogoutView(LogoutView):
     template_name = 'ticketholders/auth/logged_out.html'
+
+    @method_decorator(never_cache)
+    def dispatch(self, request, *args, **kwargs):
+        from loginas.utils import restore_original_login
+        restore_original_login(request)
+        return redirect('ticketholders:login')
 
 
 class PasswordChangeView(PasswordChangeView):

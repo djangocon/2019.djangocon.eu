@@ -114,6 +114,36 @@ class Command(BaseCommand):
                 sprints,
             ))
 
+            # Enable all user accounts, in case the account belongs to someone
+            # who had it disabled due to a previous refund or ticket change
+            for ticket in ticketbutler_tickets:
+                ticket.user.is_active = True
+                ticket.user.save()
+
+            # If an email is changed on a TicketButler ticket and an old user exists without any other tickets,
+            # then disable this user's account and delete the ticket from the system
+            all_order_tickets = models.TicketbutlerTicket.objects.filter(ticketbutler_orderid=order_id)
+
+            for verify_ticket in all_order_tickets:
+                # Check if the ticket is active in the current order, if it is
+                # then skip it.
+                if any(active.id == verify_ticket.id for active in ticketbutler_tickets):
+                    continue
+                # Yeah, it's not active anymore, so delete it and potentially
+                # disable the user account
+                inactive_ticket = verify_ticket
+                self.stdout.write(self.style.WARNING("Going to remove ticket for {}, order_id: {}".format(inactive_ticket.user.email, order_id)))
+                if inactive_ticket.user.tickets.all().exclude(id=inactive_ticket.id).exists():
+                    # Just remove the ticket
+                    inactive_ticket.delete()
+                else:
+                    # Remove the user account too if there are no submissions and it's not a superuser
+                    if not inactive_ticket.user.is_superuser and not inactive_ticket.user.submissions.all().exists():
+                        self.stdout.write(self.style.WARNING("Also disabling user account for: {}".format(inactive_ticket.user.email)))
+                        inactive_ticket.user.is_active = False
+                        inactive_ticket.user.save()
+                    inactive_ticket.delete()
+
         # Process manually created invoices by preferring data from the
         # accounting system
         if order_id in billy.TICKETBUTLER_IGNORE_LIST:
@@ -158,6 +188,11 @@ class Command(BaseCommand):
             invoice.ticket_type_name = order_info['title']
 
             invoice.save()
+
+            for ticket in ticketbutler_tickets:
+                self.stdout.write(self.style.SUCCESS("Saving Invoice ID {} on Ticket ID {}.".format(invoice.id, ticket.id)))
+                ticket.invoice = invoice
+                ticket.save()
 
             return
 
@@ -264,6 +299,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS("PDF downloaded and saved."))
 
         for ticket in ticketbutler_tickets:
+            self.stdout.write(self.style.SUCCESS("Saving Invoice ID {} on Ticket ID {}.".format(invoice.id, ticket.id)))
             ticket.invoice = invoice
             ticket.save()
 

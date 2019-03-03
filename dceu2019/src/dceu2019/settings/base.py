@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "dceu2019.apps.pretalx_utils",
     "dceu2019.apps.invoices",
     "dceu2019.apps.ticketholders",
+    "loginas",  # Need this for superusers to test some of the user functionality for now
 ]
 
 # Settings from Pretalx
@@ -213,3 +214,9 @@ CURRENCIES = ('DKK', 'EUR')
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = reverse_lazy('ticketholders:login')
 LOGOUT_URL = reverse_lazy('ticketholders:logout')
+
+
+# LOGINAS changes
+LOGOUT_URL = reverse_lazy('loginas-logout')
+LOGINAS_LOGOUT_REDIRECT_URL = reverse_lazy('admin:index')
+LOGINAS_USERNAME_FIELD = 'email'

@@ -9,7 +9,7 @@ from . import models
 @admin.register(models.Invoice)
 class InvoiceAdmin(admin.ModelAdmin):
 
-    list_display = ('ticket_type_name', 'name', 'when', 'price',)
+    list_display = ('ticket_type_name', 'name', 'when', 'price', 'amount')
 
     def name(self, instance):
         return instance.billy_contact.name
@@ -23,8 +23,8 @@ class InvoiceContactAdmin(admin.ModelAdmin):
 @admin.register(models.TicketbutlerTicket)
 class TicketbutlerTicketAdmin(admin.ModelAdmin):
 
-    list_display = ['user', 'name', 'email', 'nick', 'sprints']
-    list_filter = ['sprints']
+    list_display = ['user', 'name', 'email', 'nick', 'sprints', 'logged_in', 'active']
+    list_filter = ['sprints', 'user__is_active']
 
     def name(self, instance):
         return instance.user.name
@@ -34,6 +34,14 @@ class TicketbutlerTicketAdmin(admin.ModelAdmin):
 
     def nick(self, instance):
         return instance.user.nick
+
+    def logged_in(self, instance):
+        return instance.user.has_usable_password()
+    logged_in.boolean = True
+
+    def active(self, instance):
+        return instance.user.is_active
+    active.boolean = True
 
 
 @admin.register(User)
@@ -59,3 +67,5 @@ class UserAdmin(UserAdmin):
             'fields': ('email', 'password1', 'password2'),
         }),
     )
+
+    change_form_template = 'loginas/change_form.html'

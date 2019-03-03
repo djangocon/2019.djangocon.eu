@@ -13,6 +13,7 @@ class TicketList(ListView):
 
     model = models.TicketbutlerTicket
     template_name = "invoices/ticket_list.html"
+    context_object_name = "tickets"
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
@@ -29,9 +30,9 @@ class FetchInvoicePDF(View):
 
         invoice_id = kwargs.get("invoice_id")
 
-        models.Invoice.objects.get(id=invoice_id, tickets__user=request.user)
+        invoice = models.Invoice.objects.get(id=invoice_id, tickets__user=request.user)
 
-        file_name = self.billy_id + ".pdf"
+        file_name = invoice.billy_id + ".pdf"
         pdf_path = os.path.join(
             os.path.dirname(__file__), "pdfs", file_name
         )

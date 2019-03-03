@@ -24,6 +24,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("admin/", include('loginas.urls')),
     path('orga/', include('pretalx.orga.urls', namespace='orga')),
     path('api/', include('pretalx.api.urls', namespace='api')),
     path('ticketholder/', include('dceu2019.apps.ticketholders.urls', namespace='ticketholder')),
