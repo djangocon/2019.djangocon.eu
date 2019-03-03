@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import (LoginView, LogoutView,
+                                       PasswordChangeDoneView,
+                                       PasswordChangeView,
                                        PasswordResetCompleteView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
@@ -56,3 +58,12 @@ class PasswordResetCompleteView(PasswordResetCompleteView):
 
 class LogoutView(LogoutView):
     template_name = 'ticketholders/auth/logged_out.html'
+
+
+class PasswordChangeView(PasswordChangeView):
+    success_url = reverse_lazy('ticketholders:password_change_done')
+    template_name = 'ticketholders/auth/password_change_form.html'
+
+
+class PasswordChangeDoneView(PasswordChangeDoneView):
+    template_name = 'ticketholders/auth/password_change_done.html'
