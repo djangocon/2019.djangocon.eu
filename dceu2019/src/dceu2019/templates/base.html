@@ -87,18 +87,24 @@
 
 
 
+<ul class="header-submenu">
+    {% block menu %}
+        {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'ticketholders:logout' %}">Logout</a>
+            </li>
+        {% endif %}
+    {% endblock %}
+</ul>
+
 <div class="container">
-	<main>
-		<article>
+    <main>
+        <article>
 
 {% block content %}{% endblock %}
-			<div>
-				<ul id="tags">
 
-				</ul>
-			</div>
-		</article>
-	</main>
+        </article>
+    </main>
 </div>
 
 
@@ -239,7 +245,7 @@
     </section>
     <section class="center middle">
       <p>
-        Generated on Sunday, March 3, 2019 - 00:48 UTC<br/>
+        Generated on Sunday, March 3, 2019 - 01:23 UTC<br/>
       </p>
       <p>
 
