@@ -11,9 +11,18 @@
 <h2>Ticket: {{ ticket.ticketbutler_orderid }}</h2>
 
 <ul>
-    <li>Invoice: {% url 'invoices:ticket_invoice' invoice_id=ticket.invoice.id %}</li>
+    <li>Invoice:
+      {% if ticket.invoice %}
+        <a href="{% url 'invoices:ticket_invoice' invoice_id=ticket.invoice.id %}">View PDF</a>
+      {% else %}
+        <em>Not generated</em>
+      {% endif %}
+    </li>
 </ul>
 
+{% empty %}
+
+<p>You don't seem to have any tickets and invoices. But this could be because we don't synchronize our system with the ticket system all too often and the sync'ing is still a manual process... try checking back again tomorrow or write 2019@djangocon.eu if something seems wrong.</p>
 
 {% endfor %}
 
