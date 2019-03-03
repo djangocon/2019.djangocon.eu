@@ -16,10 +16,10 @@ Examples:
         2. Add a URL to urlpatterns: path("blog/", include("dceu2019.apps.blog.urls"))
 
 """
+from dceu2019.apps.ticketholders.views import IndexView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.shortcuts import render_to_response
 from django.urls import include, path
 
 urlpatterns = [
@@ -27,7 +27,7 @@ urlpatterns = [
     path('orga/', include('pretalx.orga.urls', namespace='orga')),
     path('api/', include('pretalx.api.urls', namespace='api')),
     path('ticketholder/', include('dceu2019.apps.ticketholders.urls', namespace='ticketholder')),
-    path('', lambda x: render_to_response("base.html", {},)),
+    path('', IndexView.as_view(), name='index'),
     path('', include('pretalx.agenda.urls', namespace='agenda')),
     path('', include('pretalx.cfp.urls', namespace='cfp')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<ul class="header-submenu">
+    {% block menu %}
+        {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'ticketholders:logout' %}">Logout</a>
+            </li>
+        {% endif %}
+    {% endblock %}
+</ul>
+
+<div class="container">
+    <main>
+        <article>
+            {{ .Content }}
+        </article>
+    </main>
+</div>
+
+{{ partial "footer.html" . }}
