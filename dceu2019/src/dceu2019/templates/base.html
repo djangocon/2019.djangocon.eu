@@ -93,10 +93,13 @@
             <a href="{% url 'index' %}">Start</a>
         </li>
         <li>
-            <a href="{% url 'ticketholders:logout' %}">Logout</a>
+            <a href="{% url 'invoices:ticket_list' %}">Invoices</a>
         </li>
         <li>
             <a href="{% url 'ticketholders:password_change' %}">Change password</a>
+        </li>
+        <li>
+            <a href="{% url 'ticketholders:logout' %}">Logout</a>
         </li>
     {% endif %}
     {% block menu %}
@@ -251,7 +254,7 @@
     </section>
     <section class="center middle">
       <p>
-        Generated on Sunday, March 3, 2019 - 01:30 UTC<br/>
+        Generated on Sunday, March 3, 2019 - 02:05 UTC<br/>
       </p>
       <p>
 
