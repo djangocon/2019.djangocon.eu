@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 import pathlib
 
+from django.urls.base import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: str(BASE_DIR / "static")
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     "dceu2019.apps.pretalx_utils",
     "dceu2019.apps.invoices",
+    "dceu2019.apps.ticketholders",
 ]
 
 # Settings from Pretalx
@@ -207,3 +209,7 @@ TICKETBUTLER_API = 'set in local.py'
 TICKETBUTLER_TOKEN = 'set in local.py'
 
 CURRENCIES = ('DKK', 'EUR')
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = reverse_lazy('ticketholders:login')
+LOGOUT_URL = reverse_lazy('ticketholders:logout')

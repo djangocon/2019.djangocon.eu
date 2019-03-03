@@ -52,6 +52,7 @@ h3 {
 }
 
 input[type="email"],
+input[type="password"],
 input[type="text"] {
   border: 0;
   background-color: $gray-light;
@@ -59,6 +60,15 @@ input[type="text"] {
   line-height: 1;
   font-size: 16px;
   font-family: $primary-font;
+}
+
+label {
+  display: block;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
 }
 
 p, ul {
