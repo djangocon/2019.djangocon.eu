@@ -88,7 +88,6 @@ LANGUAGES_OFFICIAL = {'en', 'de'}
 
 # Pretalx wants this..
 AUTH_USER_MODEL = 'person.User'
-LOGIN_URL = '/orga/login'
 AUTHENTICATION_BACKENDS = (
     'rules.permissions.ObjectPermissionBackend',
     'django.contrib.auth.backends.ModelBackend',

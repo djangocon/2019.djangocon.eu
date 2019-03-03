@@ -18,10 +18,10 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@DjangoConEurope">
 	<meta name="twitter:creator" content="@DjangoConEurope">
-	<meta name="twitter:title" content="{{ .Title }} • {{ .Site.Title }}" />
+	<meta name="twitter:title" content="{{ if .Params.twitter_title }}{{ .Params.twitter_title }}{{ else }}{{ .Title }}{{ end }} • {{ .Site.Title }}" />
 	<meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
 	<meta name="twitter:image" content="{{ if .Params.twitter_card }}{{ .Params.twitter_card }}{{ else }}{{ .Site.BaseURL }}static/img/{{ printf "%s" $.Site.Params.twittercardimage }}{{ end }}" />
-  <meta property="og:title" content="{{ .Title }} • {{ .Site.Title }}">
+  <meta property="og:title" content="{{ if .Params.og_title }}{{ .Params.og_title }}{{ else }}{{ .Title }}{{ end }} • {{ .Site.Title }}">
   <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta property="og:image" content="{{ .Site.BaseURL }}static/img/{{ printf "%s" $.Site.Params.facebookcardimage }}">
   <meta property="og:url" content=" {{ .Permalink }}">

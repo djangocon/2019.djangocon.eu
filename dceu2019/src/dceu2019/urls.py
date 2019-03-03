@@ -26,6 +26,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('orga/', include('pretalx.orga.urls', namespace='orga')),
     path('api/', include('pretalx.api.urls', namespace='api')),
+    path('ticketholder/', include('dceu2019.apps.ticketholders.urls', namespace='ticketholder')),
     path('', lambda x: render_to_response("base.html", {},)),
     path('', include('pretalx.agenda.urls', namespace='agenda')),
     path('', include('pretalx.cfp.urls', namespace='cfp')),
