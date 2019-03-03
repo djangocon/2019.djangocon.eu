@@ -2,12 +2,18 @@
 {{ partial "nav.html" . }}
 
 <ul class="header-submenu">
+    {% if user.is_authenticated %}
+        <li>
+            <a href="{% url 'index' %}">Start</a>
+        </li>
+        <li>
+            <a href="{% url 'ticketholders:logout' %}">Logout</a>
+        </li>
+        <li>
+            <a href="{% url 'ticketholders:password_change' %}">Change password</a>
+        </li>
+    {% endif %}
     {% block menu %}
-        {% if user.is_authenticated %}
-            <li>
-                <a href="{% url 'ticketholders:logout' %}">Logout</a>
-            </li>
-        {% endif %}
     {% endblock %}
 </ul>
 
