@@ -7,10 +7,13 @@
             <a href="{% url 'index' %}">Start</a>
         </li>
         <li>
-            <a href="{% url 'ticketholders:logout' %}">Logout</a>
+            <a href="{% url 'invoices:ticket_list' %}">Invoices</a>
         </li>
         <li>
             <a href="{% url 'ticketholders:password_change' %}">Change password</a>
+        </li>
+        <li>
+            <a href="{% url 'ticketholders:logout' %}">Logout</a>
         </li>
     {% endif %}
     {% block menu %}

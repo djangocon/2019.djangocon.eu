@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Tickets and invoices{% endblock %}
+
+{% block content %}
+
+<h1>Tickets and invoices</h1>
+
+{% for ticket in tickets %}
+
+<h2>Ticket: {{ ticket.ticketbutler_orderid }}</h2>
+
+<ul>
+    <li>Invoice: {% url 'invoices:ticket_invoice' invoice_id=ticket.invoice.id %}</li>
+</ul>
+
+
+{% endfor %}
+
+{% endblock %}

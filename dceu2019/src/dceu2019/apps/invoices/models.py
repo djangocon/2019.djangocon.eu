@@ -29,7 +29,7 @@ class TicketbutlerTicket(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='tickets', on_delete=models.CASCADE)
     ticketbutler_orderid = models.CharField(max_length=32, default="")
-    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL)
+    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL, related_name="tickets")
 
     sprints = models.PositiveSmallIntegerField(
         choices=[(SPRINTS_NO, 'no'), (SPRINTS_MAYBE, 'maybe'), (SPRINTS_YES, 'yes')],
