@@ -31,6 +31,11 @@ class TicketbutlerTicket(models.Model):
     ticketbutler_orderid = models.CharField(max_length=32, default="")
     invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL, related_name="tickets")
 
+    invited = models.BooleanField(
+        default=False,
+        help_text="Invitation to create a user account sent",
+    )
+
     sprints = models.PositiveSmallIntegerField(
         choices=[(SPRINTS_NO, 'no'), (SPRINTS_MAYBE, 'maybe'), (SPRINTS_YES, 'yes')],
         null=True,

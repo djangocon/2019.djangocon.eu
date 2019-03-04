@@ -9,7 +9,7 @@ re_vatid_country = re.compile(r"^([a-zA-Z]+).*$")
 
 
 class Command(BaseCommand):
-    help = 'Fetches all unique ticket types and prices in a JSON'
+    help = 'Fetches all ticket holders from Ticketbutler and creates accounts and invoices'
 
     def add_arguments(self, parser):
         parser.add_argument(
