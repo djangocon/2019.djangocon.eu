@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Community{% endblock %}
+
+{% block content %}
+
+<p>Organize something in advance? Or spontaneously during the event?</p>
+
+<p>Meet up with other ticketholders on the attendee Slack Channel (sign-up required via below link):</p>
+
+<p style="overflow-x: hidden;">
+    <a href="https://join.slack.com/t/djangoconeurope2019/shared_invite/{{ slack_invite_token }}">
+        https://join.slack.com/t/djangoconeurope2019/shared_invite/{{ slack_invite_token }}
+    </a>
+</p>
+
+<p>Additionally, on IRC:</p>
+
+<ul>
+    <li>#djangocon on Freenode</li>
+</ul>
+
+{% endblock %}
