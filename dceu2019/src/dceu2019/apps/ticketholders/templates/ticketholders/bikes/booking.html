@@ -4,6 +4,13 @@
 
 {% block content %}
 
+<h1>Book a bike</h1>
+
+<p>On this page, you can reserve a bike of your choice and make sure that there is one available for you to easily pick up.
+Bikes can be picked up during extended opening hours at the <a href="https://baisikeli.dk/pages/bike-rental" target="_blank">Baisikeli</a> shop, close to the venue (a 15 minutes walk).</p>
+
+<p>This is a reservation. The actual payment is done through cash or credit card.</p>
+
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
