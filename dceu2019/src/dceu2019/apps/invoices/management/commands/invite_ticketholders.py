@@ -45,7 +45,7 @@ class Command(BaseCommand):
             subject = loader.render_to_string(PasswordResetView.subject_template_name, context)
 
             subject = ''.join(subject.splitlines())
-            body = loader.render_to_string(PasswordResetView.email_template_name, context)
+            body = loader.render_to_string("ticketholders/auth/invite_email.txt", context)
 
             email_message = EmailMultiAlternatives(subject, body, "robot@django-denmark.org", [ticket.user.email])
             if PasswordResetView.html_email_template_name is not None:
