@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordChangeDoneView,
@@ -6,13 +7,15 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
                                        PasswordResetView)
-from django.shortcuts import redirect
+from django.shortcuts import redirect, resolve_url
 from django.urls.base import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.generic.base import TemplateView
+from django.views.generic.edit import UpdateView
 
+from . import models
 from .decorators import login_required
 
 
@@ -76,3 +79,25 @@ class PasswordChangeView(PasswordChangeView):
 
 class PasswordChangeDoneView(PasswordChangeDoneView):
     template_name = 'ticketholders/auth/password_change_done.html'
+
+
+class BikeBooking(UpdateView):
+    """
+    We don't try to manage several bookings per ticket holder. Even if they have
+    friends or partners. This is a technical concern for now, but if someone
+    wants to create a more granular set of CRUD views, that would be great!
+    """
+
+    template_name = 'ticketholders/bikes/booking.html'
+    model = models.BicycleBooking
+    fields = ('confirmed', 'bike_type', 'from_date', 'days')
+
+    def get_object(self, queryset=None):
+        return models.BicycleBooking.objects.get_or_create(user=self.request.user)[0]
+
+    def form_valid(self, form):
+        messages.success(self.request, "Saved your booking")
+        return UpdateView.form_valid(self, form)
+
+    def get_success_url(self):
+        return resolve_url('ticketholders:bike_booking')

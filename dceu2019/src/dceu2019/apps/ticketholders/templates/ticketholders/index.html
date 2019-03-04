@@ -4,15 +4,18 @@
 
 {% block content %}
 
-<h1>Welcome to our ticket holder area</h1>
+<h1>Welcome to our Ticket Holder Area</h1>
 
 <p>We will be expanding this area with a lot of nice functions leading up to the conference. We are kicking off with the most important functions:</p>
 
 <ul>
+    <li>User auth: Login, password reminders, change password ✔️</li>
+    <li><a href="{% url 'invoices:ticket_list' %}">Download invoice</a> ✔️</li>
     <li>Ride sharing</li>
     <li>Accommodation sharing</li>
-    <li>Bike booking</li>
+    <li><a href="{% url 'ticketholders:bike_booking' %}">Bike booking</a> ✔️</li>
     <li>Personal preferences</li>
+    <li>Your idea? <a href="https://github.com/djangocon/2019.djangocon.eu">Submit an issue or PR</a></li>
 </ul>
 
 {% endblock %}

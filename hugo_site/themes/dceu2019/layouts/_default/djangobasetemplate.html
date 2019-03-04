@@ -13,6 +13,9 @@
             <a href="{% url 'ticketholders:password_change' %}">Change password</a>
         </li>
         <li>
+            <a href="{% url 'ticketholders:bike_booking' %}">Book a bike</a>
+        </li>
+        <li>
             <a href="{% url 'ticketholders:logout' %}">Logout</a>
         </li>
     {% endif %}
@@ -22,6 +25,16 @@
 
 <div class="container">
     <main>
+        {% if messages %}
+        <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+
+            {% for message in messages %}
+            <div class="alert">
+              ¤{¤{ message ¤}¤}
+            </div>
+            {% endfor %}
+        {% endif %}
+
         <article>
             {{ .Content }}
         </article>
