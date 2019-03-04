@@ -10,15 +10,13 @@
 
 <h2>Ticket: {{ ticket.ticketbutler_orderid }}</h2>
 
-<ul>
-    <li>Invoice:
-      {% if ticket.invoice %}
-        <a href="{% url 'invoices:ticket_invoice' invoice_id=ticket.invoice.id %}">View PDF</a>
-      {% else %}
-        <em>Not generated</em>
-      {% endif %}
-    </li>
-</ul>
+<p style="text-align: center">
+  {% if ticket.invoice %}
+    <a href="{% url 'invoices:ticket_invoice' invoice_id=ticket.invoice.id %}" class="button button-red">View invoice PDF</a>
+  {% else %}
+    <em>Invoice not generated</em>
+  {% endif %}
+</p>
 
 {% empty %}
 

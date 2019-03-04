@@ -52,7 +52,9 @@ h3 {
 }
 
 input[type="email"],
+input[type="number"],
 input[type="password"],
+select,
 input[type="text"] {
   border: 0;
   background-color: $gray-light;

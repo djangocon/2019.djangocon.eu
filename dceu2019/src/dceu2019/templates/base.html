@@ -99,6 +99,9 @@
             <a href="{% url 'ticketholders:password_change' %}">Change password</a>
         </li>
         <li>
+            <a href="{% url 'ticketholders:bike_booking' %}">Book a bike</a>
+        </li>
+        <li>
             <a href="{% url 'ticketholders:logout' %}">Logout</a>
         </li>
     {% endif %}
@@ -108,6 +111,16 @@
 
 <div class="container">
     <main>
+        {% if messages %}
+        <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+
+            {% for message in messages %}
+            <div class="alert">
+              {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+
         <article>
 
 {% block content %}{% endblock %}
@@ -254,7 +267,7 @@
     </section>
     <section class="center middle">
       <p>
-        Generated on Sunday, March 3, 2019 - 02:05 UTC<br/>
+        Generated on Monday, March 4, 2019 - 00:23 UTC<br/>
       </p>
       <p>
 
