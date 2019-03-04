@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import (LoginView, LogoutView,
@@ -25,6 +26,19 @@ class IndexView(TemplateView):
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return TemplateView.dispatch(self, request, *args, **kwargs)
+
+
+class CommunityView(TemplateView):
+    template_name = 'ticketholders/community.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return TemplateView.dispatch(self, request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        c = TemplateView.get_context_data(self, **kwargs)
+        c['slack_invite_token'] = settings.SLACK_INVITE_TOKEN
+        return c
 
 
 # Create your views here.

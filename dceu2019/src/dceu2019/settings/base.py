@@ -208,6 +208,7 @@ BILLY_TOKEN = 'set in local.py'
 BILLY_TICKET_ACCOUNT = 'set in local.py'
 TICKETBUTLER_API = 'set in local.py'
 TICKETBUTLER_TOKEN = 'set in local.py'
+SLACK_INVITE_TOKEN = 'set in local.py'
 
 CURRENCIES = ('DKK', 'EUR')
 
