@@ -1,0 +1,28 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}Dear DjangoCon Europe 2019 attendee!
+
+We have a special site for you! And its a Django project!
+
+The site is intended as a space for a couple of things to happen before the
+conference:
+
+ * Joining the attendee Slack/IRC channel
+ * Getting bikes in Copenhagen
+ * Setting your personal preferences: Like Sprints attendance and meals
+ * Fetching invoices for ticket purchases
+ * Organizing accommodation and ride sharing
+ * Maybe more?{% endblocktrans %}
+
+Some things are still not done, but we are working on them.
+
+{% trans "Please go to the following page and choose a new password:" %}
+{% block reset_link %}
+{{ protocol }}://{{ domain }}{% url 'ticketholders:password_reset_confirm' uidb64=uid token=token %}
+{% endblock %}
+{% trans "Your username, in case you've forgotten:" %} {{ user.get_username }}
+
+{% trans "Thanks for using our site!" %}
+
+{% blocktrans %}DjangoCon Europe 2019 team{% endblocktrans %}
+
+{% endautoescape %}
