@@ -47,7 +47,7 @@ Date range: From 8th of April to the 16th April.
 
 [https://www.copenhagenisland.com/](https://www.copenhagenisland.com/)
 
-Method: [This link](https://www.copenhagenisland.com/arpbe/web/en/login/73297099)
+Method: [Use this authenticated link](https://www.copenhagenisland.com/arpbe/web/en/login/73297099) to (automatically) login to their website, then select the dates you wish to stay at the hotel. You will see a Tab called "Negotiated rates" and the discount for the DjangoCon conference.
 
 Discount percentage: 15%
 
