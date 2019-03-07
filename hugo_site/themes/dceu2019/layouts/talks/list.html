@@ -7,7 +7,7 @@
       {{ .Content }}
 
       <div class="talk-list">
-        {{ range sort $.Site.Data.talks "speaker" }}
+        {{ range sort $.Site.Data.talks "keynote" "desc" }}
         <div class="talk">
           <img src="{{ .speaker_image }}" class="talk-image" />
 
