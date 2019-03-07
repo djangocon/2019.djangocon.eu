@@ -5,4 +5,4 @@ from . import models
 
 @admin.register(models.BikeType)
 class BikeTypeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'size', 'price_per_day')
+    list_display = ('name', 'price_per_day')

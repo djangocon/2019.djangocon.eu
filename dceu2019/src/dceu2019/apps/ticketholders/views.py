@@ -16,7 +16,7 @@ from django.views.decorators.cache import never_cache
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import UpdateView
 
-from . import models
+from . import forms, models
 from .decorators import login_required
 
 
@@ -104,7 +104,7 @@ class BikeBooking(UpdateView):
 
     template_name = 'ticketholders/bikes/booking.html'
     model = models.BicycleBooking
-    fields = ('confirmed', 'bike_type', 'from_date', 'days')
+    form_class = forms.BicycleBookingForm
 
     def get_object(self, queryset=None):
         return models.BicycleBooking.objects.get_or_create(user=self.request.user)[0]
