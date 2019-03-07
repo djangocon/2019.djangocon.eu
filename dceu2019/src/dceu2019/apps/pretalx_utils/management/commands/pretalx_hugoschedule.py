@@ -105,7 +105,7 @@ class Command(BaseCommand):
 
             confirmed_talks.append(
                 {
-                    'title': submission.title + "({})".format(speaker_names),
+                    'title': submission.title,
                     'abstract': submission.abstract,
                     'speakers': speaker_names,
                     'speaker_image': images[speakers[0]],
