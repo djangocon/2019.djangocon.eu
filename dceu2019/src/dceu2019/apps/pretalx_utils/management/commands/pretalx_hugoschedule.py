@@ -110,7 +110,7 @@ class Command(BaseCommand):
                     'speakers': speaker_names,
                     'speaker_image': images[speakers[0]],
                     'slug': slug,
-                    'keynote': props.keynote,
+                    'keynote': 1 if props.keynote else 0,
                 }
             )
 
