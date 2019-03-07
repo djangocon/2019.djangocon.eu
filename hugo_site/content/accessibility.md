@@ -14,7 +14,8 @@ We are observant of the needs for accessibility both for the physical space of t
 
 ## Transcription (speech to text)
 
-As with previous DjangoCon events, live transcription is provided for all talks. This is done by a professional team known from previous events.
+As with previous DjangoCon events, live transcription is provided for all talks. This is done by a professional team called ["LIVE CAPTIONING UK"](https://livecaptioninguk.com/) . They have experience in covering previous django conferences.
+
 
 ## Wheelchair access
 
