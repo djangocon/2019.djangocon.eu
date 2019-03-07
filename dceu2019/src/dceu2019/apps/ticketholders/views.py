@@ -106,6 +106,10 @@ class BikeBooking(UpdateView):
     model = models.BicycleBooking
     form_class = forms.BicycleBookingForm
 
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return TemplateView.dispatch(self, request, *args, **kwargs)
+
     def get_object(self, queryset=None):
         return models.BicycleBooking.objects.get_or_create(user=self.request.user)[0]
 
