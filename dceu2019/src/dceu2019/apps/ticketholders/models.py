@@ -5,13 +5,14 @@ from django.db import models
 from djmoney.models.fields import MoneyField
 
 
-class BikeType(models.Model):
+class BicycleType(models.Model):
 
     name = models.CharField(max_length=255)
     price_per_day = MoneyField(
         decimal_places=2,
         max_digits=14,
-        help_text="Not displayed to people right now, there is a table further down"
+        help_text="Not displayed to people right now, there is a table further down",
+        default=0,
     )
 
     def __str__(self):
@@ -28,9 +29,11 @@ class BicycleBooking(models.Model):
         default=False,
         help_text="Please check or un-check this field so we can understand whether this booking is confirmed or not."
     )
-    bike_type = models.ForeignKey(
-        'BikeType',
+    bicycle_type = models.ForeignKey(
+        'BicycleType',
         on_delete=models.CASCADE,
+        null=True,
+        blank=True,
     )
     size = models.CharField(
         max_length=255,
