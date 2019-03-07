@@ -1,17 +1,79 @@
 {% extends "base.html" %}
 
-{% block title %}Bike booking{% endblock %}
+{% block title %}Bike preference{% endblock %}
 
 {% block content %}
 
-<h1>Book a bike</h1>
+<h1>Submit bike preference</h1>
 
-<p>On this page, you can reserve a bike of your choice and make sure that there is one available for you to easily pick up.
-Bikes can be picked up during extended opening hours at the <a href="https://baisikeli.dk/pages/bike-rental" target="_blank">Baisikeli</a> shop, close to the venue (a 15 minutes walk).</p>
+<p>It's important to reserve a bike preference for you to easily pick up at the
+<a href="https://baisikeli.dk/pages/bike-rental" target="_blank">Baisikeli</a>
+shop, close to the venue (a 15 minutes walk). They are a socio-economical
+company doing great things, and they will find a bike that fits you and help
+you get the seat adjusted.</p>
 
-<p>This is a reservation. The actual payment is done through cash or credit card.</p>
+<p><strong>The actual payment is done through cash or credit card at the shop.</strong></p>
 
-<form method="POST">
+<h2>Prices</h2>
+
+<table class="priceTable">
+<thead>
+<tr>
+<th>TIME</th>
+<th>BUDGET</th>
+<th>STANDARD</th>
+<th>LUX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 days</td>
+<td>150 kr. (€20.22)</td>
+<td>210 kr. (€28.30)</td>
+<td>270 kr. (€36.39)</td>
+</tr>
+<tr>
+<td>Add day</td>
+<td>35 kr. (€4.72)</td>
+<td>50 kr. (€6.74)</td>
+<td>65 kr. (€8.76)</td>
+</tr>
+<tr>
+<td>1 week</td>
+<td>270 kr. (€36.39)</td>
+<td>385 kr. (€51.89)</td>
+<td>500 kr. (€67.39</td>
+</tr>
+<tr>
+<td>Add day</td>
+<td>20 kr. (€2.70)</td>
+<td>30 kr. (€4.04)</td>
+<td>40 kr. (€5.39)</td>
+</tr>
+</tbody>
+</table>
+
+<p>For prices longer durations and other bike times (like cargo bikes, bikes for children and racking bikes), <a href="https://baisikeli.dk/pages/bike-rental">check the website</a>.</p>
+
+<h2>Save a preference</h2>
+
+<style>
+#id_size,
+#id_size li
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-indent: 0;
+}
+#id_size input
+{
+    float: left;
+    margin-right: 10px;
+}
+</style>
+
+<form method="POST" style="width: 100%">
     {% csrf_token %}
     {{ form.as_p }}
     <p><button type="submit">Update booking</button></p>
