@@ -3,5 +3,10 @@
     "name": "StickerMule",
     "logo": "02-sticker-mule-logo-light.png",
     "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
+  },
+  {
+    "name": "Deutscher Django-Verein",
+    "logo": "151221_ddv_logo_gruen_cropped.svg",
+    "website": "https://www.django-verein.de/"
   }
 ]

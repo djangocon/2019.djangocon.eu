@@ -562,20 +562,32 @@ $month-offset: 9rem;
 }
 
 .sponsor-item {
-  flex-basis: 40%; // 10% spacing on either side
+  flex-basis: 100%;
   margin-bottom: 1.5rem;
+}
 
-  @media (min-width: $tablet) {
-    flex-basis: 21%; // 4% spacing on either side
+.sponsors-community {
+  .sponsor-item {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: $tablet) {
+  .sponsor-item {
+    flex-basis: 32%;
+  }
+
+  .sponsors-community {
+    width: 50%;
+  }
+
+  .sponsors-community .sponsor-item {
+    flex-basis: 21%;
   }
 }
 
 //
 // Talks
-.talk-list {
-
-}
-
 .talk {
   padding: 2rem 0;
   border-bottom: 1px solid $gray-light;
