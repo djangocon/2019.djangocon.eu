@@ -69,7 +69,6 @@ label {
 }
 
 form {
-  width: 400px;
   margin: 0 auto;
 }
 
@@ -454,6 +453,7 @@ footer {
 .form-subscribe {
   text-align: center;
   margin: 0rem auto 3rem auto;
+  width: 100%;
 
   p {
     margin-bottom: 1.5rem;
@@ -462,6 +462,11 @@ footer {
   .form-wrapper {
     display: flex;
     justify-content: center;
+  }
+
+  input {
+    width: 50%;
+    max-width: 380px;
   }
 }
 
