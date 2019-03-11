@@ -44,6 +44,10 @@ class Command(BaseCommand):
 
         for ticket in tickets:
 
+            if ticket.user.has_usable_password():
+                self.stdout.write(self.style.SUCCESS("Already active {}".format(ticket.user.email)))
+                continue
+
             context = {
                 'email': ticket.user.email,
                 'domain': domain,
