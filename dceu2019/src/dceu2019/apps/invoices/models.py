@@ -98,6 +98,9 @@ class BillyInvoiceContact(models.Model):
     phone = models.CharField(max_length=255, null=True)
     registration_no = models.CharField(max_length=255, null=True)
 
+    def __str__(self):
+        return "Billy Contact: {}".format(self.name)
+
 
 class Invoice(models.Model):
     """
@@ -137,3 +140,6 @@ class Invoice(models.Model):
     amount = models.SmallIntegerField(default=1)
 
     ticket_type_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return "Billy invoice {}".format(self.billy_id)
