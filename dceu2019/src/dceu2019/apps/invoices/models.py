@@ -52,7 +52,12 @@ class TicketbutlerTicket(models.Model):
         from pretalx.person.models import User
 
         try:
-            return TicketbutlerTicket.objects.filter(user__email__iexact=email, ticketbutler_orderid=ticketbutler_orderid).order_by('id')[0]
+            ticket = TicketbutlerTicket.objects.filter(user__email__iexact=email, ticketbutler_orderid=ticketbutler_orderid).order_by('id')[0]
+            # Ensure that the user is marked as active in case of previous
+            # import bugs of if the user had a refund and got deactivated
+            ticket.user.is_active = True
+            ticket.user.save()
+            return ticket
         except IndexError:
             pass
 
