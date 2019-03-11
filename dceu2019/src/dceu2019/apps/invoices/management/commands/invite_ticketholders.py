@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 from dceu2019.apps.ticketholders.views import PasswordResetView
 from django.conf import settings
 from django.core.mail.message import EmailMultiAlternatives
@@ -25,7 +27,13 @@ class Command(BaseCommand):
         tickets = models.TicketbutlerTicket.objects.all()
 
         if not options['reinvite']:
-            tickets = tickets.filter(invited=False)
+            tickets = tickets.filter(
+                invited=False
+            )
+        else:
+            tickets = tickets.filter(
+                invited_when=datetime.now() - timedelta(days=2)
+            )
 
         domain = '127.0.0.1:8000' if settings.DEBUG else 'members.2019.djangocon.eu'
 
@@ -65,6 +73,7 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.SUCCESS("Re-invited {}".format(ticket.user.email)))
 
             ticket.invited = True
+            ticket.invited_when = datetime.now()
             ticket.save()
 
             invited += 1
