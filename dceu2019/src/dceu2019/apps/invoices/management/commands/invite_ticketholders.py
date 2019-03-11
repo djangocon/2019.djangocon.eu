@@ -1,12 +1,14 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from dceu2019.apps.ticketholders.views import PasswordResetView
 from django.conf import settings
 from django.core.mail.message import EmailMultiAlternatives
 from django.core.management.base import BaseCommand
+from django.db.models import Q
 from django.template import loader
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
+from django.utils.timezone import datetime
 
 from ... import models
 
@@ -32,7 +34,8 @@ class Command(BaseCommand):
             )
         else:
             tickets = tickets.filter(
-                invited_when__lte=datetime.now() - timedelta(days=2)
+                Q(invited_when__lte=datetime.now() - timedelta(days=2)) |
+                Q(invited_when=None)
             )
 
         domain = '127.0.0.1:8000' if settings.DEBUG else 'members.2019.djangocon.eu'
