@@ -6,9 +6,9 @@ from django.core.mail.message import EmailMultiAlternatives
 from django.core.management.base import BaseCommand
 from django.db.models import Q
 from django.template import loader
+from django.utils import timezone
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-from django.utils.timezone import datetime
 
 from ... import models
 
@@ -34,7 +34,7 @@ class Command(BaseCommand):
             )
         else:
             tickets = tickets.filter(
-                Q(invited_when__lte=datetime.now() - timedelta(days=2)) |
+                Q(invited_when__lte=timezone.now() - timedelta(days=2)) |
                 Q(invited_when=None)
             )
 
@@ -80,7 +80,7 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.SUCCESS("Re-invited {}".format(ticket.user.email)))
 
             ticket.invited = True
-            ticket.invited_when = datetime.now()
+            ticket.invited_when = timezone.now()
             ticket.save()
 
             invited += 1
