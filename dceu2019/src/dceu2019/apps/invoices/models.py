@@ -35,6 +35,7 @@ class TicketbutlerTicket(models.Model):
         default=False,
         help_text="Invitation to create a user account sent",
     )
+    invited_when = models.DateTimeField(editable=False, null=True)
 
     sprints = models.PositiveSmallIntegerField(
         choices=[(SPRINTS_NO, 'no'), (SPRINTS_MAYBE, 'maybe'), (SPRINTS_YES, 'yes')],
