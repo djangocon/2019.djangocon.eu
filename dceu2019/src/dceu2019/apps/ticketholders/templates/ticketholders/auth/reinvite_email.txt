@@ -1,0 +1,17 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}Dear DjangoCon Europe 2019 attendee!
+
+We are re-inviting you to our ticket holder area. Your previous token might have
+expired or you might be affected by an early bug regarding group bookings.
+
+{% trans "Please go to the following page and choose a new password:" %}
+{% block reset_link %}
+{{ protocol }}://{{ domain }}{% url 'ticketholders:password_reset_confirm' uidb64=uid token=token %}
+{% endblock %}
+{% trans "Your username, in case you've forgotten:" %} {{ user.get_username }}
+
+{% trans "Thanks for using our site!" %}
+
+{% blocktrans %}DjangoCon Europe 2019 team{% endblocktrans %}
+
+{% endautoescape %}
