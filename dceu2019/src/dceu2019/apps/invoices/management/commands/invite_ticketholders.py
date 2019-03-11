@@ -32,7 +32,7 @@ class Command(BaseCommand):
             )
         else:
             tickets = tickets.filter(
-                invited_when=datetime.now() - timedelta(days=2)
+                invited_when__lte=datetime.now() - timedelta(days=2)
             )
 
         domain = '127.0.0.1:8000' if settings.DEBUG else 'members.2019.djangocon.eu'
