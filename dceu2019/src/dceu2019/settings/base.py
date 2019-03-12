@@ -204,6 +204,8 @@ LOGGING = {
     }
 }
 
+PASSWORD_RESET_TIMEOUT_DAYS = 7
+
 BILLY_TOKEN = 'set in local.py'
 BILLY_TICKET_ACCOUNT = 'set in local.py'
 TICKETBUTLER_API = 'set in local.py'
