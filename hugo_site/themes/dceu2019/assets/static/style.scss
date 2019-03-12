@@ -564,6 +564,7 @@ $month-offset: 9rem;
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-around;
+  align-items: center;
 }
 
 .sponsor-item {
@@ -587,7 +588,7 @@ $month-offset: 9rem;
   }
 
   .sponsors-community .sponsor-item {
-    flex-basis: 21%;
+    flex-basis: 32%;
   }
 }
 
