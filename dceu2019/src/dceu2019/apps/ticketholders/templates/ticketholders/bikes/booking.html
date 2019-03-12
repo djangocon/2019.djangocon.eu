@@ -9,9 +9,11 @@
 <p>If you would like to commute by bike, you can reserve a bike
 preference for easy pickup and drop-off at the
 <a href="https://baisikeli.dk/pages/bike-rental" target="_blank">Baisikeli</a>
-shop, close to the venue (a 15 minutes walk). They are a socio-economical
+shop, close to the venue (a 15 minutes walk). They are a socio-economic
 company doing great things, and they will find a bike that fits you and help
 you get the seat adjusted.</p>
+
+<p>Confirmations will be submitted on <strong><u>Saturday March 24th 00:00 CET</u></strong>.</p>
 
 <p><strong>The actual payment is done through cash or credit card at the shop.</strong></p>
 
@@ -56,8 +58,6 @@ you get the seat adjusted.</p>
 
 <p>For prices longer durations and other bike times (like cargo bikes, bikes for children and racking bikes), <a href="https://baisikeli.dk/pages/bike-rental">check the website</a>.</p>
 
-<h2>Save a preference</h2>
-
 <style>
 #id_size,
 #id_size li
@@ -77,7 +77,7 @@ you get the seat adjusted.</p>
 <form method="POST" style="width: 100%">
     {% csrf_token %}
     {{ form.as_p }}
-    <p><button type="submit">Update booking</button></p>
+    <p><button type="submit">Save changes</button></p>
 </form>
 
 {% endblock %}

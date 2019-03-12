@@ -27,7 +27,7 @@ class BicycleBooking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     confirmed = models.BooleanField(
         default=False,
-        help_text="Please check or un-check this field so we can understand whether this booking is confirmed or not."
+        help_text="Check this field to confirm your intention to pick up a bike."
     )
     bicycle_type = models.ForeignKey(
         'BicycleType',
