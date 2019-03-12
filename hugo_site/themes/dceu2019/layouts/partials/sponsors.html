@@ -18,7 +18,7 @@
 
 <div class="sponsors sponsors-community">
   {{ range $.Site.Data.sponsors_community }}
-    <a href="{{ .website }}" target="_blank" class="sponsor-item">
+    <a href="{{ .website }}" target="_blank" class="sponsor-item" {{ if .extra_flex }}style="flex-basis: {{ .extra_flex }}"{{ end }}>
       {{ if .logo }}
         <img src="/static/sponsors/{{ .logo }}" alt="{{ .name }}"/>
       {{ else }}

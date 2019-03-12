@@ -5,6 +5,12 @@
     "website": "https://www.europython-society.org/"
   },
   {
+    "name": "Deutscher Django-Verein",
+    "logo": "151221_ddv_logo_gruen_cropped.svg",
+    "website": "https://www.django-verein.de/",
+    "extra_flex": "50%"
+  },
+  {
     "name": "Django Software Foundation",
     "logo": "django-logo-positive.png",
     "website": "https://www.djangoproject.com/foundation/"
