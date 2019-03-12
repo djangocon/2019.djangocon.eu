@@ -33,8 +33,10 @@ description: "{description}"
 date: {talk_date}
 speakers: {speaker}
 speaker_image: {speaker_image}
+speaker_twitter: {speaker_twitter}
 draft: false
 keynote: {keynote}
+workshop: {workshop}
 twitter_card: {twitter_card}
 ---
 {talk_abstract}
@@ -47,7 +49,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
+        confirmed_keynotes = []
         confirmed_talks = []
+        confirmed_workshops = []
 
         import dceu2019
 
@@ -103,16 +107,23 @@ class Command(BaseCommand):
                 else:
                     images[speaker] = None
 
-            confirmed_talks.append(
-                {
-                    'title': submission.title,
-                    'abstract': submission.abstract,
-                    'speakers': speaker_names,
-                    'speaker_image': images[speakers[0]],
-                    'slug': slug,
-                    'keynote': 1 if props.keynote else 0,
-                }
-            )
+            submission_json = {
+                'title': submission.title,
+                'abstract': submission.abstract,
+                'speakers': speaker_names,
+                'speaker_image': images[speakers[0]],
+                'slug': slug,
+                'speaker_twitter': props.speaker_twitter_handle,
+                'keynote': 1 if props.keynote else 0,
+                'workshop': 1 if props.workshop else 0,
+            }
+
+            if props.keynote:
+                confirmed_keynotes.append(submission_json)
+            elif props.workshop:
+                confirmed_workshops.append(submission_json)
+            else:
+                confirmed_talks.append(submission_json)
 
             talk_detail_page_content = TALK_PAGE_HTML.format(
                 title=escape(submission.title),
@@ -123,7 +134,9 @@ class Command(BaseCommand):
                 talk_date=str(datetime.now()),
                 talk_abstract=submission.abstract,
                 talk_description=submission.description,
+                speaker_twitter=props.speaker_twitter_handle or "",
                 keynote='true' if props.keynote else 'false',
+                workshop='true' if props.workshop else 'false',
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url
             )
 
@@ -141,5 +154,27 @@ class Command(BaseCommand):
 
         json.dump(
             confirmed_talks,
+            open(json_path, "w")
+        )
+
+        json_path = os.path.join(
+            hugo_site_path,
+            "data",
+            "keynotes.json"
+        )
+
+        json.dump(
+            confirmed_keynotes,
+            open(json_path, "w")
+        )
+
+        json_path = os.path.join(
+            hugo_site_path,
+            "data",
+            "workshops.json"
+        )
+
+        json.dump(
+            confirmed_workshops,
             open(json_path, "w")
         )

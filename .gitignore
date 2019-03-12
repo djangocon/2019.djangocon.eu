@@ -5,6 +5,8 @@
 hugo_site/public
 hugo_site/resources
 hugo_site/data/talks.json
+hugo_site/data/keynotes.json
+hugo_site/data/workshops.json
 hugo_site/content/talks/*
 !hugo_site/content/talks/_index.md
 
