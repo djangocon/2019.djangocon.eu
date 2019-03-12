@@ -20,7 +20,8 @@ class TalkExtraProperties(admin.ModelAdmin):
         return instance.submission.title[:100]
 
     def twitter_draft(self, instance):
-        return """Announcing {speaker}'s talk "{title}" at #djangocon 🚲: {url}""".format(
+        return """Announcing {speaker}'s {type} "{title}" at #djangocon 🚲: {url}""".format(
+            type="keynote" if instance.keynote else "workshop/break-out" if instance.workshop else "talk",
             speaker="@" + instance.speaker_twitter_handle if instance.speaker_twitter_handle else instance.speakers,
             title=instance.submission.title,
             url="https://2019.djangocon.eu/talks/" + instance.slug,

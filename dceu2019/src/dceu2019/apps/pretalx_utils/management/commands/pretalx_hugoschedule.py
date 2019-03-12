@@ -33,7 +33,7 @@ description: "{description}"
 date: {talk_date}
 speakers: {speaker}
 speaker_image: {speaker_image}
-speaker_twitter: {speaker_twitter}
+speaker_twitter: "{speaker_twitter}"
 draft: false
 keynote: {keynote}
 workshop: {workshop}
