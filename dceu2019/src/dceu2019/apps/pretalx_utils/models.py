@@ -43,6 +43,8 @@ class TalkExtraProperties(models.Model):
 
     keynote = models.BooleanField(default=False)
     published = models.BooleanField(default=False)
+    announced = models.BooleanField(default=False)
+    workshop = models.BooleanField(default=False)
 
     @property
     def speakers(self):
@@ -125,7 +127,7 @@ class TalkExtraProperties(models.Model):
             offset += 65
 
         # Render it to screen
-        new_card.show()
+        # new_card.show()
 
         image_path = twitter_card_path(self, "blahblah.png")
         full_path = os.path.join(settings.MEDIA_ROOT, image_path)

@@ -1,0 +1,17 @@
+<div class="talk">
+  <img src="{{ .speaker_image }}" class="talk-image" />
+
+  <div class="talk-content">
+    <div class="talk-speaker">
+      {{ .speakers }}
+    </div>
+    <p class="talk-title">
+      {{ .title }}
+    </p>
+  </div>
+
+  <div class="talk-abstract">
+    {{ .abstract | plainify | truncate 250 }}
+    <p><a href="/talks/{{ .slug }}">Details</a></p>
+  </div>
+</div>

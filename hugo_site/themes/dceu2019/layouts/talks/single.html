@@ -12,12 +12,19 @@
               {{ .Page.Params.speakers }}
             </div>
             <p class="talk-title">
+              {{ if .Page.Params.workshop }}<strong>Workshop/break-out session:</strong><br>{{ end }}
+              {{ if .Page.Params.keynote }}<strong>Keynote:</strong><br>{{ end }}
               {{ .Title }}
             </p>
           </div>
 
           <div class="talk-abstract">
       			{{ .Content }}
+
+      			{{ if .Page.Params.workshop }}
+      			<p><em>Break-out sessions are expected to last around 60 minutes. They will have limited seats and will have a sign-up option provided on the ticketholder website, once the schedule is known.</em></p>
+      			{{ end }}
+
           </div>
         </div>
 		</article>
