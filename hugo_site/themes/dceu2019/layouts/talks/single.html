@@ -16,6 +16,13 @@
               {{ if .Page.Params.keynote }}<strong>Keynote:</strong><br>{{ end }}
               {{ .Title }}
             </p>
+            <p>
+              {{ if .Page.Params.speaker_twitter }}
+                <a href="https://twitter.com/{{ .Page.Params.speaker_twitter }}" target="_blank" style="border: none">
+                🐦 @{{ .Page.Params.speaker_twitter }}
+                </a>
+              {{ end }}
+            </p>
           </div>
 
           <div class="talk-abstract">
