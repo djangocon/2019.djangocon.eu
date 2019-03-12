@@ -10,4 +10,4 @@ class BicycleBookingForm(forms.ModelForm):
         widgets = {
             'size': forms.widgets.RadioSelect
         }
-        fields = ('confirmed', 'bicycle_type', 'size', 'frame_type', 'from_date', 'days')
+        fields = ('bicycle_type', 'size', 'frame_type', 'from_date', 'days', 'confirmed')
