@@ -8,5 +8,10 @@
     "name": "JetBrains",
     "logo": "jetbrains-variant-4.svg",
     "website": "https://www.jetbrains.com/"
+  },
+  {
+    "name": "ZibraWireless",
+    "logo": "zibra_logo.svg",
+    "website": "https://www.zibrawireless.dk/"
   }
 ]
