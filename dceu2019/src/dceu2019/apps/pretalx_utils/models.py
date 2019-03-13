@@ -46,6 +46,9 @@ class TalkExtraProperties(models.Model):
     announced = models.BooleanField(default=False)
     workshop = models.BooleanField(default=False)
 
+    employer_attribution = models.CharField(null=True, blank=True, max_length=255)
+    employer_url = models.URLField(null=True, blank=True)
+
     @property
     def speakers(self):
         return ", ".join([person.get_display_name() for person in self.submission.speakers.all()])
