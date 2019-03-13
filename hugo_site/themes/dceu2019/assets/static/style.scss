@@ -580,15 +580,21 @@ $month-offset: 9rem;
 
 @media (min-width: $tablet) {
   .sponsor-item {
-    flex-basis: 32%;
+    flex-basis: 26%;
   }
 
   .sponsors-community {
     width: 50%;
+
+    &:hover .sponsor-item {
+      filter: grayscale(0);
+    }
   }
 
   .sponsors-community .sponsor-item {
-    flex-basis: 32%;
+    flex-basis: 30%;
+    transition: all .25s ease-out;
+    filter: grayscale(1);
   }
 }
 
