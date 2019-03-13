@@ -13,5 +13,10 @@
     "name": "ZibraWireless",
     "logo": "zibra_logo.svg",
     "website": "https://www.zibrawireless.dk/"
+  },
+  {
+    "name": "TicketButler",
+    "logo": "ticketbutler.png",
+    "website": "https://ticketbutler.io/"
   }
 ]
