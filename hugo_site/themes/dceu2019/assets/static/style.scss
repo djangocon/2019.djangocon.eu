@@ -562,29 +562,48 @@ $month-offset: 9rem;
   max-width: 60rem;
   padding: 0 1.5rem;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 1rem auto;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 .sponsor-item {
   flex-basis: 100%;
-  margin-bottom: 1.5rem;
+  margin: 1rem auto;
+
+  img {
+    width: 90%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
 }
 
 .sponsors-community {
   .sponsor-item {
-    flex-basis: 40%;
+    flex-basis: 100%;
+    min-width: 180px;
+    //
+    // img {
+    //   width: 100%;
+    // }
   }
 }
 
 @media (min-width: $tablet) {
   .sponsor-item {
     flex-basis: 26%;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      min-width: auto;
+    }
+
   }
 
   .sponsors-community {
-    width: 50%;
+    width: 60%;
 
     &:hover .sponsor-item {
       filter: grayscale(0);
