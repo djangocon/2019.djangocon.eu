@@ -34,6 +34,8 @@ date: {talk_date}
 speakers: {speaker}
 speaker_image: {speaker_image}
 speaker_twitter: "{speaker_twitter}"
+employer_attribution: "{employer_attribution}"
+employer_url: "{employer_url}"
 draft: false
 keynote: {keynote}
 workshop: {workshop}
@@ -135,6 +137,8 @@ class Command(BaseCommand):
                 talk_abstract=submission.abstract,
                 talk_description=submission.description,
                 speaker_twitter=props.speaker_twitter_handle or "",
+                employer_attribution=props.employer_attribution,
+                employer_url=props.employer_url,
                 keynote='true' if props.keynote else 'false',
                 workshop='true' if props.workshop else 'false',
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url
