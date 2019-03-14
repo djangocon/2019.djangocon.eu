@@ -3,7 +3,7 @@ title: "Sprints"
 date: 2019-1-16T18:48:39+01:00
 draft: false
 type: "single"
-description: "Description of sprints "
+description: "This is your opportunity to contribute to Open Source software. Even if you haven't contributed before, this is also an option to take your first steps."
 menu:
   main:
     name: "Sprints"
