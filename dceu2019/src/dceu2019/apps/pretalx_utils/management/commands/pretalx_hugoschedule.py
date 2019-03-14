@@ -137,8 +137,8 @@ class Command(BaseCommand):
                 talk_abstract=submission.abstract,
                 talk_description=submission.description,
                 speaker_twitter=props.speaker_twitter_handle or "",
-                employer_attribution=props.employer_attribution,
-                employer_url=props.employer_url,
+                employer_attribution=props.employer_attribution or "",
+                employer_url=props.employer_url or "",
                 keynote='true' if props.keynote else 'false',
                 workshop='true' if props.workshop else 'false',
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url
