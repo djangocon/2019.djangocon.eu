@@ -23,7 +23,8 @@ Besides Sprints we will also have workshops on various topics.
 The Sprints are free for all conference participants. However, as the Sprints venue does not have unlimited capacity, and we would like to prepare a precise amount of food and drinks, please keep your participation status updated on the Ticketholder Website (after buying your ticket).
 
 # Venue
-The Sprints will be arranged on the excellent indoor venue, with a big outdoor space at the heart of copenhagen. <br>
+The Sprints will be arranged on the excellent indoor venue, with a big outdoor space at the heart of Copenhagen.
+
 <strong>Kulturhuset Indre By<br>
 Charlotte Ammundsens Plads 3<br> 
 1359 København K
