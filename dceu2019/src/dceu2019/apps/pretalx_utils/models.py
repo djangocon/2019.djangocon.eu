@@ -30,8 +30,6 @@ class TalkExtraProperties(models.Model):
 
     submission = models.ForeignKey('submission.Submission', on_delete=models.CASCADE)
 
-    employer_sponsor_name = models.CharField(max_length=255, null=True, blank=True)
-
     slug = models.SlugField(null=True, blank=True)
 
     twitter_card_image = models.ImageField(
