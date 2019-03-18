@@ -48,7 +48,7 @@ class BicycleBooking(models.Model):
         choices=[
             (None, "Undecided"),
             (0, "Straight bar"),
-            (1, "Step-trough"),
+            (1, "Step-through"),
         ],
         default=None,
         null=True,
@@ -61,7 +61,7 @@ class BicycleBooking(models.Model):
             (4, "4 days"),
             (5, "5 days"),
             (6, "6 days"),
-            (7, "7 week"),
+            (7, "1 week"),
             (8, "Over a week"),
         ]
     )
