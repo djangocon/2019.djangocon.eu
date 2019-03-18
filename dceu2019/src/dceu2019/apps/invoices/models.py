@@ -116,6 +116,8 @@ class Invoice(models.Model):
     synced = models.BooleanField(default=False)
     ticketbutler_orderid = models.CharField(max_length=32)
 
+    ticketbutler_order_line_no = models.PositiveSmallIntegerField(default=0)
+
     billy_id = models.CharField(max_length=32)
     billy_product_id = models.CharField(max_length=32)
     # Because Billy doesn't return an ID of a payment object
