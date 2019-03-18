@@ -29,7 +29,8 @@ class TicketbutlerTicket(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='tickets', on_delete=models.CASCADE)
     ticketbutler_orderid = models.CharField(max_length=32, default="")
-    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL, related_name="tickets")
+    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL)
+    invoices = models.ManyToManyField("Invoice", blank=True, related_name="tickets")
 
     invited = models.BooleanField(
         default=False,

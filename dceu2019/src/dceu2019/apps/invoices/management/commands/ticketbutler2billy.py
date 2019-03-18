@@ -49,7 +49,7 @@ class Command(BaseCommand):
         Creates an invoice from a dictionary of ticketbutler API output
         """
 
-        if len(order['order_lines']) != 1:
+        if len(order['order_lines']) == 0:
             raise RuntimeError(
                 "Expected 1 order_lines in order {}, got: {}".format(
                     order['order_id'],
@@ -59,45 +59,27 @@ class Command(BaseCommand):
 
         order_id = order['order_id']
 
-        if not order['state'] == 'PAID':
-            self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order['order_id'])))
-            return
+        for order_line in order['order_lines']:
 
-        if any(t['ticket_refund'] for t in order['tickets']):
-            self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order['order_id'])))
-            return
+            if not order['state'] == 'PAID':
+                self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order_id)))
+                return
 
-        if order['order_lines'][0]['discount_total'] is not None:
-            self.stdout.write(self.style.WARNING("Skipping manually invoiced/discounted ticket: {}".format(order_id)))
-            return
+            if any(t['ticket_refund'] for t in order['tickets']):
+                self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order_id)))
+                return
 
-        if self.only_known and order_id not in billy.TICKETBUTLER_IGNORE_LIST:
-            self.stdout.write(self.style.WARNING("Only processing known invoices, skipping {}".format(order_id)))
-            return
+            if order_line['discount_total'] is not None:
+                self.stdout.write(self.style.WARNING("Skipping manually invoiced/discounted ticket: {}".format(order['order_id'])))
+                continue
+
+            if self.only_known and order_id not in billy.TICKETBUTLER_IGNORE_LIST:
+                self.stdout.write(self.style.WARNING("Only processing known invoices, skipping {}".format(order_id)))
+                return
 
         # Object containing all created tickets, to have an invoice relation
         # appended later
         ticketbutler_tickets = []
-
-        order_info = order['order_lines'][0]
-        currency = order['currency']
-        when = order['date']
-        first_name = order['address']['first_name'] or ""
-        last_name = order['address']['last_name'] or ""
-        person_name = " ".join([first_name, last_name])
-        email = order['address']['email']
-        phone = order['address']['phone']
-        vat_id = order['address']['vat_number']
-        company = order['address']['business_name']
-        vat_rate = 0.25
-        # Price in Ticketbutler includes VAT, so remove it
-        price = float(order_info['price']) * 1.0 / (1.0 + vat_rate)
-        amount = order_info['quantity']
-        billy_product_id = billy.TICKETBUTLER_PRODUCT_ID_MAPPING[order_info['title']]
-
-        # We need to ask manually
-        country = None
-        address = order['address']['address']
 
         for ticket in order['tickets']:
 
@@ -116,7 +98,7 @@ class Command(BaseCommand):
             ticketbutler_tickets.append(models.TicketbutlerTicket.get_or_create(
                 ticket['email'],
                 ticket['full_name'],
-                order_id,
+                order_line,
                 sprints,
             ))
 
@@ -138,7 +120,8 @@ class Command(BaseCommand):
                 if inactive_ticket.user.tickets.all().exclude(id=inactive_ticket.id).exists():
                     # Just remove the ticket
                     self.stdout.write(self.style.WARNING("Found another ticket for user {} and deleted the inactive ticket in question but not the user".format(inactive_ticket.user.email)))
-                    inactive_ticket.delete()
+                    if inactive_ticket.pk:
+                        inactive_ticket.delete()
                 else:
                     # Remove the user account too if there are no submissions and it's not a superuser
                     if not inactive_ticket.user.is_superuser and not inactive_ticket.user.submissions.all().exists():
@@ -149,6 +132,38 @@ class Command(BaseCommand):
                         else:
                             self.stdout.write(self.style.WARNING("User was already inactive: {}".format(inactive_ticket.user.email)))
                     inactive_ticket.delete()
+
+        if 'discount' in order:
+            if order['discount']['amount'] == 100:
+                self.stdout.write(self.style.SUCCESS("Skipping invoice for free ticket for order id: {}".format(order_id)))
+                return
+            else:
+                raise RuntimeError("Unknown discount: {}".format(order['discount']['amount']))
+
+        self.process_order_line(order, order_line, ticketbutler_tickets)
+
+    def process_order_line(self, order, order_line, ticketbutler_tickets):  # noqa:max-complexity=18
+
+        order_id = order['order_id']
+
+        currency = order['currency']
+        when = order['date']
+        first_name = order['address']['first_name'] or ""
+        last_name = order['address']['last_name'] or ""
+        person_name = " ".join([first_name, last_name])
+        email = order['address']['email']
+        phone = order['address']['phone']
+        vat_id = order['address']['vat_number']
+        company = order['address']['business_name']
+        vat_rate = 0.25
+        # Price in Ticketbutler includes VAT, so remove it
+        price = float(order_line['price']) * 1.0 / (1.0 + vat_rate)
+        amount = order_line['quantity']
+        billy_product_id = billy.TICKETBUTLER_PRODUCT_ID_MAPPING[order_line['title']]
+
+        # We need to ask manually
+        country = None
+        address = order['address']['address']
 
         # Process manually created invoices by preferring data from the
         # accounting system
@@ -191,14 +206,14 @@ class Command(BaseCommand):
             invoice.price = Money(price, currency)
             invoice.vat = vat_rate
             invoice.amount = amount
-            invoice.ticket_type_name = order_info['title']
+            invoice.ticket_type_name = order_line['title']
 
             invoice.save()
 
             for ticket in ticketbutler_tickets:
-                self.stdout.write(self.style.SUCCESS("Saving Invoice ID {} on Ticket ID {}.".format(invoice.id, ticket.id)))
-                ticket.invoice = invoice
-                ticket.save()
+                if not ticket.invoices.filter(id=invoice.id).exists():
+                    self.stdout.write(self.style.SUCCESS("Saving Invoice ID {} on Ticket ID {}.".format(invoice.id, ticket.id)))
+                    ticket.invoices.add(invoice)
 
             return
 
@@ -281,7 +296,7 @@ class Command(BaseCommand):
                 price=Money(price, currency),
                 vat=vat_rate,
                 amount=amount,
-                ticket_type_name=order_info['title'],
+                ticket_type_name=order_line['title'],
             )
 
             if order_id in billy.TICKETBUTLER_IGNORE_LIST:
@@ -305,9 +320,9 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS("PDF downloaded and saved."))
 
         for ticket in ticketbutler_tickets:
-            self.stdout.write(self.style.SUCCESS("Saving Invoice ID {} on Ticket ID {}.".format(invoice.id, ticket.id)))
-            ticket.invoice = invoice
-            ticket.save()
+            if not ticket.invoices.filter(id=invoice.id).exists():
+                self.stdout.write(self.style.SUCCESS("Saving Invoice ID {} on Ticket ID {}.".format(invoice.id, ticket.id)))
+                ticket.invoices.add(invoice)
 
     def create_payment(self, invoice, contact):
 

@@ -10,13 +10,13 @@
 
 <h2>Ticket: {{ ticket.ticketbutler_orderid }}</h2>
 
+{% for invoice in ticket.invoices %}
 <p style="text-align: center">
-  {% if ticket.invoice %}
-    <a href="{% url 'invoices:ticket_invoice' invoice_id=ticket.invoice.id %}" class="button button-red">View invoice PDF</a>
-  {% else %}
-    <em>Invoice not generated</em>
-  {% endif %}
+    <a href="{% url 'invoices:ticket_invoice' invoice_id=invoice.id %}" class="button button-red">View invoice PDF</a>
 </p>
+  {% empty %}
+    <em>Invoice not generated</em>
+{% endfor %}
 
 {% empty %}
 
