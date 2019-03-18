@@ -59,23 +59,17 @@ class Command(BaseCommand):
 
         order_id = order['order_id']
 
-        for order_line in order['order_lines']:
+        if not order['state'] == 'PAID':
+            self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order_id)))
+            return
 
-            if not order['state'] == 'PAID':
-                self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order_id)))
-                return
+        if any(t['ticket_refund'] for t in order['tickets']):
+            self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order_id)))
+            return
 
-            if any(t['ticket_refund'] for t in order['tickets']):
-                self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order_id)))
-                return
-
-            if order_line['discount_total'] is not None:
-                self.stdout.write(self.style.WARNING("Skipping manually invoiced/discounted ticket: {}".format(order['order_id'])))
-                continue
-
-            if self.only_known and order_id not in billy.TICKETBUTLER_IGNORE_LIST:
-                self.stdout.write(self.style.WARNING("Only processing known invoices, skipping {}".format(order_id)))
-                return
+        if self.only_known and order_id not in billy.TICKETBUTLER_IGNORE_LIST:
+            self.stdout.write(self.style.WARNING("Only processing known invoices, skipping {}".format(order_id)))
+            return
 
         # Object containing all created tickets, to have an invoice relation
         # appended later
@@ -98,7 +92,7 @@ class Command(BaseCommand):
             ticketbutler_tickets.append(models.TicketbutlerTicket.get_or_create(
                 ticket['email'],
                 ticket['full_name'],
-                order_line,
+                order_id,
                 sprints,
             ))
 
@@ -140,9 +134,11 @@ class Command(BaseCommand):
             else:
                 raise RuntimeError("Unknown discount: {}".format(order['discount']['amount']))
 
-        self.process_order_line(order, order_line, ticketbutler_tickets)
+        for ticketbutler_order_line_no, order_line in enumerate(order['order_lines']):
 
-    def process_order_line(self, order, order_line, ticketbutler_tickets):  # noqa:max-complexity=18
+            self.process_order_line(order, order_line, ticketbutler_tickets, ticketbutler_order_line_no=ticketbutler_order_line_no)
+
+    def process_order_line(self, order, order_line, ticketbutler_tickets, ticketbutler_order_line_no):  # noqa:max-complexity=18
 
         order_id = order['order_id']
 
@@ -202,6 +198,7 @@ class Command(BaseCommand):
             invoice.billy_contact = contact
             invoice.billy_product_id = billy_product_id
             invoice.ticketbutler_orderid = order_id
+            invoice.ticketbutler_order_line_no = ticketbutler_order_line_no
             invoice.when = when
             invoice.price = Money(price, currency)
             invoice.vat = vat_rate
@@ -221,7 +218,7 @@ class Command(BaseCommand):
 
         confirmed = False
 
-        if self.skip_synced and models.Invoice.objects.filter(ticketbutler_orderid=order_id).exists():
+        if self.skip_synced and models.Invoice.objects.filter(ticketbutler_orderid=order_id, ticketbutler_order_line_no=ticketbutler_order_line_no).exists():
             self.stdout.write(self.style.SUCCESS("Already sync'ed, skipping {}".format(order_id)))
             return
 
@@ -292,6 +289,7 @@ class Command(BaseCommand):
                 billy_contact=contact,
                 billy_product_id=billy_product_id,
                 ticketbutler_orderid=order_id,
+                ticketbutler_order_line_no=ticketbutler_order_line_no,
                 when=when,
                 price=Money(price, currency),
                 vat=vat_rate,
