@@ -280,7 +280,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Created a contact in Billy"))
 
         try:
-            invoice = models.Invoice.objects.get(ticketbutler_orderid=order_id)
+            invoice = models.Invoice.objects.get(ticketbutler_orderid=order_id, ticketbutler_order_line_no=ticketbutler_order_line_no)
             self.stdout.write(self.style.WARNING("Invoice already existed: {}".format(order_id)))
 
         except models.Invoice.DoesNotExist:
