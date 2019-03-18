@@ -1,13 +1,28 @@
 [
   {
-    "name": "StickerMule",
-    "logo": "02-sticker-mule-logo-light.png",
-    "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
+    "name": "Nexmo",
+    "logo": "nexmologo.png",
+    "website": "https://www.nexmo.com/"
+  },
+  {
+    "name": "Kolonial",
+    "logo": "Kolonialno_Frontify_graphic_Logo_Main.png",
+    "website": "https://kolonial.no/"
   },
   {
     "name": "JetBrains",
     "logo": "jetbrains-variant-4.svg",
     "website": "https://www.jetbrains.com/"
+  },
+  {
+    "name": "Sherpany",
+    "logo": "Sherpany_Version_Blue.png",
+    "website": "https://www.sherpany.com/"
+  },
+  {
+    "name": "StickerMule",
+    "logo": "02-sticker-mule-logo-light-bg.svg",
+    "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
   },
   {
     "name": "ZibraWireless",
