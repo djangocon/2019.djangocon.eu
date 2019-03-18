@@ -49,7 +49,13 @@ class Command(BaseCommand):
         Creates an invoice from a dictionary of ticketbutler API output
         """
 
-        assert len(order['order_lines']) == 1
+        if len(order['order_lines']) != 1:
+            raise RuntimeError(
+                "Expected 1 order_lines in order {}, got: {}".format(
+                    order['order_id'],
+                    order['order_lines']
+                )
+            )
 
         order_id = order['order_id']
 
