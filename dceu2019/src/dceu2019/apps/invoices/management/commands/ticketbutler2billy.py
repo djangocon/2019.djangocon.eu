@@ -129,6 +129,11 @@ class Command(BaseCommand):
 
         if 'discount' in order:
             if order['discount']['amount'] == 100:
+
+                for ticket in ticketbutler_tickets:
+                    ticket.free_ticket = True
+                    ticket.save()
+
                 self.stdout.write(self.style.SUCCESS("Skipping invoice for free ticket for order id: {}".format(order_id)))
                 return
             else:
