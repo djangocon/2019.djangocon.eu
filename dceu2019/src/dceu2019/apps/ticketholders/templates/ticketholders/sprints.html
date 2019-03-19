@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Bike preference{% endblock %}
+
+{% block content %}
+
+<h1>Sprints attendance</h1>
+
+<p>To make it easy for us to know if you're going to the
+<a href="2019.djangocon.eu/sprints/">Sprints</a>, please let us know in advance.</p>
+
+<p>All ticket holders are welcome at the Sprints. Saying No or Maybe is not
+something that will deny you access to the event at all, and maybe just going
+one day will make you want to say Maybe (but say Yes!). But please try to keep
+us updated for as long as this form is open, as it affects our planning for
+food, drinks, electrical outlets etc.</p>
+
+<form method="POST" style="width: 100%">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit">Save changes</button></p>
+</form>
+
+{% endblock %}

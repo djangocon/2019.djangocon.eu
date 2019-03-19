@@ -11,18 +11,26 @@
             <div class="talk-speaker">
               {{ .Page.Params.speakers }}
             </div>
+            {{ if .Page.Params.speaker_twitter }}
+              <p>
+                <a href="https://twitter.com/{{ .Page.Params.speaker_twitter }}" target="_blank" style="border: none">
+                  🐦 @{{ .Page.Params.speaker_twitter }}
+                </a>
+              </p>
+            {{ end }}
             <p class="talk-title">
               {{ if .Page.Params.workshop }}<strong>Workshop/break-out session:</strong><br>{{ end }}
               {{ if .Page.Params.keynote }}<strong>Keynote:</strong><br>{{ end }}
               {{ .Title }}
             </p>
-            <p>
-              {{ if .Page.Params.speaker_twitter }}
-                <a href="https://twitter.com/{{ .Page.Params.speaker_twitter }}" target="_blank" style="border: none">
-                🐦 @{{ .Page.Params.speaker_twitter }}
+            {{ if .Page.Params.employer_attribution }}
+              <p>
+                With thanks to
+                <a href="{{ .Page.Params.employer_url }}" target="_blank" style="border: none">
+                  {{ .Page.Params.employer_attribution }}
                 </a>
-              {{ end }}
-            </p>
+              </p>
+            {{ end }}
           </div>
 
           <div class="talk-abstract">

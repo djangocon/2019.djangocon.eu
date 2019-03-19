@@ -29,7 +29,14 @@ class TicketbutlerTicket(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='tickets', on_delete=models.CASCADE)
     ticketbutler_orderid = models.CharField(max_length=32, default="")
-    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL, related_name="tickets")
+
+    free_ticket = models.BooleanField(
+        default=False,
+        help_text="Ticket was free (and has no invoice)",
+    )
+
+    invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL)
+    invoices = models.ManyToManyField("Invoice", blank=True, related_name="tickets")
 
     invited = models.BooleanField(
         default=False,
@@ -114,6 +121,8 @@ class Invoice(models.Model):
 
     synced = models.BooleanField(default=False)
     ticketbutler_orderid = models.CharField(max_length=32)
+
+    ticketbutler_order_line_no = models.PositiveSmallIntegerField(default=0)
 
     billy_id = models.CharField(max_length=32)
     billy_product_id = models.CharField(max_length=32)

@@ -17,6 +17,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import UpdateView
 
 from . import forms, models
+from ..invoices.models import TicketbutlerTicket
 from .decorators import login_required
 
 
@@ -119,3 +120,29 @@ class BikeBooking(UpdateView):
 
     def get_success_url(self):
         return resolve_url('ticketholders:bike_booking')
+
+
+class SprintsUpdate(UpdateView):
+    """
+    We don't try to manage several bookings per ticket holder. Even if they have
+    friends or partners. This is a technical concern for now, but if someone
+    wants to create a more granular set of CRUD views, that would be great!
+    """
+
+    template_name = 'ticketholders/sprints.html'
+    model = TicketbutlerTicket
+    form_class = forms.SprintsForm
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return TemplateView.dispatch(self, request, *args, **kwargs)
+
+    def get_object(self, queryset=None):
+        return TicketbutlerTicket.objects.get_or_create(user=self.request.user)[0]
+
+    def form_valid(self, form):
+        messages.success(self.request, "Saved your attendance")
+        return UpdateView.form_valid(self, form)
+
+    def get_success_url(self):
+        return resolve_url('ticketholders:sprints')

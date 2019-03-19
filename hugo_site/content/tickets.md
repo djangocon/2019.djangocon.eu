@@ -13,7 +13,7 @@ menu:
 
 The Pioneer ticket sales (early bird) <u>ended January 31</u>. DjangoCon Europe always sells out (currently <50 available), and we have a limited number of tickets for sale. Therefore, we strongly encourage you to buy your ticket before they sell out, which in addition gives you more time to plan your trip and can save money on accommodation and transport.
 
-All tickets include access to all 3 conference days (April 10-12) and the 2 sprints days (April 13-14).
+All tickets include access to all 3 conference days (April 10-12) and the 2 [Sprints](/sprints/) days (April 13-14).
 
 If you wish to change from Individual to Business or any other way amend the order please contact [2019@djangocon.eu](mailto:2019@djangocon.eu).
 

@@ -30,8 +30,6 @@ class TalkExtraProperties(models.Model):
 
     submission = models.ForeignKey('submission.Submission', on_delete=models.CASCADE)
 
-    employer_sponsor_name = models.CharField(max_length=255, null=True, blank=True)
-
     slug = models.SlugField(null=True, blank=True)
 
     twitter_card_image = models.ImageField(
@@ -45,6 +43,9 @@ class TalkExtraProperties(models.Model):
     published = models.BooleanField(default=False)
     announced = models.BooleanField(default=False)
     workshop = models.BooleanField(default=False)
+
+    employer_attribution = models.CharField(null=True, blank=True, max_length=255)
+    employer_url = models.URLField(null=True, blank=True)
 
     @property
     def speakers(self):

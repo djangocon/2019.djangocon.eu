@@ -20,5 +20,11 @@
     "logo": "isshub.png",
     "website": "https://www.isshub.io/",
     "level": "Bronze"
+  },
+  {
+    "name": "TicketButler",
+    "logo": "ticketbutler.png",
+    "website": "https://ticketbutler.io/"
+    "level": "Gold"
   }
 ]

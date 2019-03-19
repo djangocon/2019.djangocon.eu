@@ -1,8 +1,10 @@
+<br  />
+
 <h3><a href="/sponsors/">Sponsors</a></h3>
 
 <div class="sponsors">
   {{ range $.Site.Data.sponsors }}
-    <a href="{{ .website }}" target="_blank" class="sponsor-item">
+    <a href="{{ .website }}" rel="external" target="_blank" class="sponsor-item">
       {{ if .logo }}
         <img src="/static/sponsors/{{ .logo }}" alt="{{ .name }}"/>
       {{ else }}
@@ -13,12 +15,14 @@
 </div>
 
 <br  />
+<br  />
+<br  />
 
 <h3>Community Sponsors</h3>
 
 <div class="sponsors sponsors-community">
   {{ range $.Site.Data.sponsors_community }}
-    <a href="{{ .website }}" target="_blank" class="sponsor-item" {{ if .extra_flex }}style="flex-basis: {{ .extra_flex }}"{{ end }}>
+    <a href="{{ .website }}" rel="external" target="_blank" class="sponsor-item" {{ if .extra_flex }}style="flex-basis: {{ .extra_flex }}"{{ end }}>
       {{ if .logo }}
         <img src="/static/sponsors/{{ .logo }}" alt="{{ .name }}"/>
       {{ else }}
