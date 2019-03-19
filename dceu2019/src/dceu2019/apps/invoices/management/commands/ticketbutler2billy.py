@@ -94,6 +94,7 @@ class Command(BaseCommand):
                 ticket['full_name'],
                 order_id,
                 sprints,
+                ticket['ticket_type_name'],
             ))
 
         # If an email is changed on a TicketButler ticket and an old user exists without any other tickets,

@@ -24,7 +24,7 @@ class InvoiceContactAdmin(admin.ModelAdmin):
 class TicketbutlerTicketAdmin(admin.ModelAdmin):
 
     list_display = ['user', 'name', 'email', 'nick', 'sprints', 'logged_in', 'active', 'free_ticket']
-    list_filter = ['sprints', 'user__is_active', 'free_ticket']
+    list_filter = ['sprints', 'user__is_active', 'free_ticket', 'ticketbutler_ticket_type_name']
 
     def name(self, instance):
         return instance.user.name

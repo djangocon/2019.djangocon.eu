@@ -29,6 +29,7 @@ class TicketbutlerTicket(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='tickets', on_delete=models.CASCADE)
     ticketbutler_orderid = models.CharField(max_length=32, default="")
+    ticketbutler_ticket_type_name = models.CharField(max_length=255, default="")
 
     free_ticket = models.BooleanField(
         default=False,
@@ -51,7 +52,7 @@ class TicketbutlerTicket(models.Model):
     )
 
     @classmethod
-    def get_or_create(cls, email, name, ticketbutler_orderid, sprints):
+    def get_or_create(cls, email, name, ticketbutler_orderid, sprints, ticket_type_name):
         """
         Creates a TicketbutlerTicket and possibly a disabled user account
         """
@@ -64,7 +65,9 @@ class TicketbutlerTicket(models.Model):
             # Ensure that the user is marked as active in case of previous
             # import bugs of if the user had a refund and got deactivated
             ticket.user.is_active = True
+            ticket.ticketbutler_ticket_type_name = ticket_type_name
             ticket.user.save()
+            ticket.save()
             return ticket
         except IndexError:
             pass
@@ -78,6 +81,7 @@ class TicketbutlerTicket(models.Model):
             user=user,
             ticketbutler_orderid=ticketbutler_orderid,
             sprints=sprints,
+            ticketbutler_ticket_type_name=ticket_type_name,
         )
 
 
