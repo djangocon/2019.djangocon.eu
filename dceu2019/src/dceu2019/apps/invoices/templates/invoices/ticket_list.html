@@ -10,7 +10,7 @@
 
 <h2>Ticket: {{ ticket.ticketbutler_orderid }}</h2>
 
-{% for invoice in ticket.invoices %}
+{% for invoice in ticket.invoices.all %}
 <p style="text-align: center">
     <a href="{% url 'invoices:ticket_invoice' invoice_id=invoice.id %}" class="button button-red">View invoice PDF</a>
 </p>
