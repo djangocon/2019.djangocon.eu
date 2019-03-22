@@ -17,7 +17,7 @@ DjangoCon Europe 2019 is carried out by our Danish non-profit association:
 C/O Arbejdsfællesskabet<br/>
 Blågårdsgade 19<br/>
 2200 Copenhagen N<br/>
-Denmark
+Denmark<br/>
 CVR/VAT ID: 39311062
 
 Website: [django-denmark.org](https://django-denmark.org/)
@@ -44,4 +44,3 @@ Account for sponsorships:
 * IBAN: DK7084110004199663
 * SWIFT/BIC: FAELDKK1
 * BIC for transfers from US/Australia: FAELDKK1 via DANBDK22
-
