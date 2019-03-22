@@ -8,5 +8,5 @@ weight: 25
 
 # Talks
 
-On this page, we will publish about 30 talks and 10 workshops, one by one, as
-they are confirmed. Stay tuned on [Twitter @DjangoConEurope](https://twitter.com/djangoconeurope).
+All contents of the program are listed below. Stay tuned on [Twitter @DjangoConEurope](https://twitter.com/djangoconeurope)
+as we announce them one by one. The final schedule is pending.
