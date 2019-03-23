@@ -22,3 +22,10 @@ class SprintsForm(forms.ModelForm):
             'size': forms.widgets.RadioSelect
         }
         fields = ('sprints',)
+
+
+class NewsletterSignupForm(forms.ModelForm):
+
+    class Meta:
+        model = models.Newsletter
+        fields = ('email',)

@@ -20,4 +20,5 @@ urlpatterns = [
     path('bikes/booking/', views.BikeBooking.as_view(), name='bike_booking'),
     path('community/', views.CommunityView.as_view(), name='community'),
     path('sprints/', views.SprintsUpdate.as_view(), name='sprints'),
+    path('newsletter/', views.newsletter, name='newsletter'),
 ]

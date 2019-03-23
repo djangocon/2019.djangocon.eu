@@ -69,3 +69,52 @@ class BicycleBooking(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+
+class Email(models.Model):
+
+    name = models.CharField(
+        max_length=255,
+        unique=True,
+        help_text="Used to send this email from CLI",
+    )
+    template_content = models.TextField()
+    subject = models.CharField(max_length=255)
+
+    newsletter = models.BooleanField(
+        default=True,
+        help_text="Creates an unsubscribe link for newsletter subscribers."
+    )
+
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    count = models.PositiveSmallIntegerField(default=0)
+
+    first_time_send = models.DateTimeField(null=True, blank=True)
+
+    recipients = models.ManyToManyField("Recipient", blank=True)
+
+    def __str__(self):
+        return self.subject
+
+
+class Recipient(models.Model):
+    """
+    Creates a unique hash of a recipient when sending an email, but not actually
+    an email address! So should be fine not to clean up.
+    """
+
+    email_hash = models.CharField(max_length=255)
+    created = models.DateTimeField(auto_now_add=True)
+
+
+class Newsletter(models.Model):
+    """
+    Who subscribes to the newsletter?
+
+    Unsubscribe = DELETE!
+    """
+
+    email = models.EmailField(unique=True)
+    created = models.DateTimeField(auto_now_add=True)

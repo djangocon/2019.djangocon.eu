@@ -223,3 +223,5 @@ LOGOUT_URL = reverse_lazy('ticketholders:logout')
 LOGOUT_URL = reverse_lazy('loginas-logout')
 LOGINAS_LOGOUT_REDIRECT_URL = reverse_lazy('admin:index')
 LOGINAS_USERNAME_FIELD = 'email'
+
+SECRET_UNSUBSCRIBE_KEY = "set in local.py"

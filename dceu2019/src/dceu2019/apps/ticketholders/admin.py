@@ -17,3 +17,15 @@ class BicycleBookingAdmin(admin.ModelAdmin):
 
     def email(self, instance):
         return instance.user.email
+
+
+@admin.register(models.Email)
+class EmailAdmin(admin.ModelAdmin):
+
+    list_filter = ('subject', 'name', 'count', 'first_time_send')
+
+
+@admin.register(models.Newsletter)
+class NewsletterAdmin(admin.ModelAdmin):
+
+    list_filter = ('email', 'created',)
