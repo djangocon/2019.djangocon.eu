@@ -9,6 +9,8 @@ from . import models
 @admin.register(models.Invoice)
 class InvoiceAdmin(admin.ModelAdmin):
 
+    search_fields = ('name',)
+
     list_display = ('ticket_type_name', 'name', 'when', 'price', 'amount')
 
     def name(self, instance):
@@ -17,11 +19,14 @@ class InvoiceAdmin(admin.ModelAdmin):
 
 @admin.register(models.BillyInvoiceContact)
 class InvoiceContactAdmin(admin.ModelAdmin):
+    search_fields = ('name', 'person_email',)
     list_display = ['name', 'person_email']
 
 
 @admin.register(models.TicketbutlerTicket)
 class TicketbutlerTicketAdmin(admin.ModelAdmin):
+
+    search_fields = ('user__name', 'user__email')
 
     list_display = ['user', 'name', 'email', 'nick', 'sprints', 'logged_in', 'active', 'free_ticket']
     list_filter = ['sprints', 'user__is_active', 'free_ticket', 'ticketbutler_ticket_type_name']
