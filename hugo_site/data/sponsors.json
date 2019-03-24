@@ -12,11 +12,19 @@
   {
     "name": "ZibraWireless",
     "logo": "zibra_logo.svg",
-    "website": "https://www.zibrawireless.dk/"
+    "website": "https://www.zibrawireless.dk/",
+    "level": "Silver"
+  },
+  {
+    "name": "IssHub",
+    "logo": "isshub.png",
+    "website": "https://www.isshub.io/",
+    "level": "Bronze"
   },
   {
     "name": "TicketButler",
     "logo": "ticketbutler.png",
-    "website": "https://ticketbutler.io/"
+    "website": "https://ticketbutler.io/",
+    "level": "Gold"
   }
 ]
