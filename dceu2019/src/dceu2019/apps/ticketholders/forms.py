@@ -26,6 +26,10 @@ class SprintsForm(forms.ModelForm):
 
 class NewsletterSignupForm(forms.ModelForm):
 
+    def clean_email(self):
+        email = self.cleaned_data.get('email', "")
+        return email.lower()
+
     class Meta:
-        model = models.Newsletter
+        model = models.Subscription
         fields = ('email',)

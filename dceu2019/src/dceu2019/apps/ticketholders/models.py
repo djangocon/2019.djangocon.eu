@@ -1,7 +1,10 @@
 import datetime
 
 from django.conf import settings
+from django.core.mail.message import EmailMultiAlternatives
 from django.db import models
+from django.template import Template
+from django.template.context import Context
 from djmoney.models.fields import MoneyField
 
 
@@ -71,14 +74,16 @@ class BicycleBooking(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
 
-class Email(models.Model):
+class EmailTemplate(models.Model):
 
     name = models.CharField(
         max_length=255,
         unique=True,
         help_text="Used to send this email from CLI",
     )
-    template_content = models.TextField()
+    template_content = models.TextField(
+        help_text="Unsubscribe links are automatically added at the bottom. Remember to add a good footer, and start it with '--' and linebreak",
+    )
     subject = models.CharField(max_length=255)
 
     newsletter = models.BooleanField(
@@ -93,7 +98,52 @@ class Email(models.Model):
 
     first_time_send = models.DateTimeField(null=True, blank=True)
 
-    recipients = models.ManyToManyField("Recipient", blank=True)
+    def populate_recipients(self, emails):
+        for email in emails:
+            Recipient.objects.get_or_create(
+                email_template=self,
+                email=email,
+            )
+
+    def mark_sent(self, email):
+        Recipient.objects.filter(email_template=self, email=email).update(
+            sent=True,
+        )
+
+    def send(self, recipient, unsubscribe=False):
+        from dceu2019.apps.ticketholders.views import get_unsubscribe_key
+
+        domain = '127.0.0.1:8000' if settings.DEBUG else 'members.2019.djangocon.eu'
+
+        email = recipient.email
+
+        context = {
+            'email': recipient.email,
+            'domain': domain,
+            'site_name': domain,
+            'protocol': 'http' if settings.DEBUG else 'https',
+            'unsubscribe_key': get_unsubscribe_key(email),
+        }
+
+        body_template_source = self.template_content
+
+        if unsubscribe:
+            body_template_source += (
+                "\n" +
+                "\n" +
+                "Unsubscribe:\n{{ protocol }}://{{ site_name }}{% url 'unsubscribe' email=email key=unsubscribe_key %}"
+            )
+
+        body = Template(body_template_source).render(Context(context))
+
+        subject = self.subject
+        subject = ''.join(subject.splitlines())
+
+        email_message = EmailMultiAlternatives(subject, body, "robot@django-denmark.org", [email])
+
+        email_message.send(fail_silently=False)
+
+        self.mark_sent(email)
 
     def __str__(self):
         return self.subject
@@ -102,14 +152,19 @@ class Email(models.Model):
 class Recipient(models.Model):
     """
     Creates a unique hash of a recipient when sending an email, but not actually
-    an email address! So should be fine not to clean up.
+    an email address. So should be fine not to clean up.
     """
 
-    email_hash = models.CharField(max_length=255)
-    created = models.DateTimeField(auto_now_add=True)
+    email_template = models.ForeignKey("EmailTemplate", related_name="recipients", on_delete=models.CASCADE)
+    email = models.EmailField()
+    sent = models.BooleanField(default=False)
+    modified = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ("email_template", "email")
 
 
-class Newsletter(models.Model):
+class Subscription(models.Model):
     """
     Who subscribes to the newsletter?
 

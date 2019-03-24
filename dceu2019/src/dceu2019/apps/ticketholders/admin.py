@@ -19,13 +19,14 @@ class BicycleBookingAdmin(admin.ModelAdmin):
         return instance.user.email
 
 
-@admin.register(models.Email)
+@admin.register(models.EmailTemplate)
 class EmailAdmin(admin.ModelAdmin):
 
-    list_filter = ('subject', 'name', 'count', 'first_time_send')
+    list_display = ('subject', 'name', 'count', 'first_time_send')
 
 
-@admin.register(models.Newsletter)
-class NewsletterAdmin(admin.ModelAdmin):
+@admin.register(models.Subscription)
+class SubscriptionAdmin(admin.ModelAdmin):
 
-    list_filter = ('email', 'created',)
+    search_fields = ('email',)
+    list_display = ('email', 'created',)

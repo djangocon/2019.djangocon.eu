@@ -1,25 +1,33 @@
-from dceu2019.apps.ticketholders.views import PasswordResetView
-from django.conf import settings
-from django.core.mail.message import EmailMultiAlternatives
+
 from django.core.management.base import BaseCommand, CommandError
-from django.template import Template
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode
+from django.db.models import Q
 from pretalx.person.models import User
 
 from ... import models
 
 
 class Command(BaseCommand):
-    help = 'Mandatory emails to ticket holders, contain no unsubscribe option'
+    help = 'Mandatory emails to ticket holders, contains an unsubscribe option if they receive the newsletter but don\'t have a ticket'
 
     def add_arguments(self, parser):
         parser.add_argument('email_name', type=str)
         parser.add_argument(
-            '--all',
+            '--danger-all-active-users',
             action='store_true',
-            dest='all',
-            help="Email any user, also the ones who did not yet register or don't have tickets (includes speakers not with a ticket yet)",
+            dest='allusers',
+            help="Dangerous: Emails all active users, also users without tickets (includes un-accepted speakers)",
+        )
+        parser.add_argument(
+            '--active-ticketholders',
+            action='store_true',
+            dest='registered',
+            help="Only active ticket-holders",
+        )
+        parser.add_argument(
+            '--inactive-ticketholders',
+            action='store_true',
+            dest='unregistered',
+            help="Only active ticket-holders",
         )
         parser.add_argument(
             '--reset',
@@ -27,51 +35,81 @@ class Command(BaseCommand):
             dest='reset',
             help="Resets all before sending (force resend)",
         )
+        parser.add_argument(
+            '--newsletter',
+            action='store_true',
+            dest='newsletter',
+            help="Sends to all newsletter recipients",
+        )
+        parser.add_argument(
+            '--users',
+            action='store_true',
+            dest='users',
+            help="Sends to users (default: ticketholders)",
+        )
+        parser.add_argument(
+            '--test-to',
+            type=str,
+            dest='test',
+            help="Sends to a test email and does not fetch recipients from db",
+        )
 
-    def handle(self, *args, **options):
+    def handle(self, *args, **options):  # noqa:max-complexity=11
 
         try:
-            email = models.Email.objects.get(name=options['email_name'])
-        except models.Email.DoesNotExist:
+            email_template = models.EmailTemplate.objects.get(name=options['email_name'])
+        except models.EmailTemplate.DoesNotExist:
             raise CommandError("Email '{}' not found".format(options['email_name']))
 
         users = User.objects.filter(is_active=True)
 
         if options['reset']:
-            email.recipients.all().delete()
+            # This deletes rather than updates, because the recipient list could
+            # have changed
+            email_template.recipients.all().delete()
 
-        if not options['all']:
+        if not options['allusers']:
             users = users.exclude(tickets=None)
 
-        users = users.exclude(id__in=[u.id for u in email.recipients.all()])
+        # Forgot about YAGNI here..
+        if options['unregistered']:
+            users = users.filter(Q(password__startswith='!') | Q(password__isnull=True))
+        if options['registered']:
+            users = users.exclude(Q(password__startswith='!') | Q(password__isnull=True))
 
-        domain = '127.0.0.1:8000' if settings.DEBUG else 'members.2019.djangocon.eu'
+        emails = set()
+
+        if options['users']:
+            self.stdout.write(self.style.WARNING("Sending to {} users".format(users.count())))
+            for u in users:
+                emails.add(u.email.lower())
+        else:
+            self.stdout.write(self.style.WARNING("Not sending to any users"))
+
+        no_unsubscribe = emails.copy()
+
+        if options['newsletter']:
+            self.stdout.write(self.style.WARNING("Sending to newsletter recipients as well"))
+            for subscriber in models.Subscription.objects.all():
+                emails.add(subscriber.email.lower())
+
+        if options['test']:
+            self.stdout.write(self.style.WARNING("Sending just a test to: {}".format(options['test'])))
+            no_unsubscribe = set()
+            emails = set()
+            emails.add(options['test'])
+
+        if input("Continue? [y/N] ").lower().strip() != "y":
+            return
+
+        email_template.populate_recipients(emails)
 
         sent = 0
 
-        for user in users:
+        for recipient in email_template.recipients.filter(sent=False):
 
-            context = {
-                'email': user.email,
-                'domain': domain,
-                'site_name': "members.2019.djangocon.eu",
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
-                'user': user,
-                'token': PasswordResetView.token_generator.make_token(user),
-                'protocol': 'http' if settings.DEBUG else 'https',
-                'name': user.name,
-            }
-            body_template = Template(email.template_content)
-            body = body_template(context)
-            subject = email.subject
-            subject = ''.join(subject.splitlines())
-
-            email_message = EmailMultiAlternatives(subject, body, "robot@django-denmark.org", [user.email])
-
-            email_message.send(fail_silently=False)
-
-            email.recipients.add(user)
-
+            unsubscribe = recipient.email in no_unsubscribe and options['newsletter']
+            email_template.send(recipient, unsubscribe=unsubscribe)
             sent += 1
 
         self.stdout.write(self.style.SUCCESS("Sent to {} new users".format(sent)))
