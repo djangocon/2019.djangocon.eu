@@ -44,6 +44,9 @@ class TalkExtraProperties(models.Model):
     announced = models.BooleanField(default=False)
     workshop = models.BooleanField(default=False)
 
+    ticket_voucher = models.CharField(max_length=255, default="")
+    voucher_sent = models.BooleanField(default=False)
+
     employer_attribution = models.CharField(null=True, blank=True, max_length=255)
     employer_url = models.URLField(null=True, blank=True)
 

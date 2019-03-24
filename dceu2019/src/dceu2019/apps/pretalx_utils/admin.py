@@ -13,8 +13,9 @@ from . import models
 @admin.register(models.TalkExtraProperties)
 class TalkExtraProperties(admin.ModelAdmin):
 
-    list_display = ("title", "speakers", "published", "twitter_card", "twitter_draft", "speaker_twitter_handle", "announced", "keynote", "workshop")
-    list_editable = ("published", "keynote", "speaker_twitter_handle", "announced", "workshop")
+    list_display = ("title", "speakers", "published", "twitter_card", "twitter_draft", "speaker_twitter_handle", "announced")
+    list_editable = ("published", "speaker_twitter_handle", "announced",)
+    list_filter = ("published", "announced", "workshop", "keynote")
 
     def title(self, instance):
         return instance.submission.title[:100]
