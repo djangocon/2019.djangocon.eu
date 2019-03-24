@@ -1,0 +1,25 @@
+{% load i18n %}{% autoescape off %}
+Dear {{ name }},
+
+We have a free ticket for you, as you are a speaker! Please go here:
+
+https://djangocon.ticketbutler.io/en/e/2019/
+
+And use your voucher: {{ voucher }}
+
+For our convenience, we would like you to choose the "Individual ticket", this
+will make it easier for us when we break down our ticket statistics in the end,
+however your choice does not affect anything happening during the event, don't
+worry!
+
+When getting the ticket, please also use your email: {{ email }}
+
+This avoids multiple user accounts on the ticketholder site and PreTalx site
+so you don't have to log in and out of accounts...
+
+
+Regards,
+
+DjangoCon Europe 2019 organizer team
+
+{% endautoescape %}
