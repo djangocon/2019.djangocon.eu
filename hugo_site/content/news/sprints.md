@@ -25,4 +25,4 @@ late -- and the outside areas and dining options are great as well!
 
 **See you there!**
 
-*The organizing team*
+*The organising team*

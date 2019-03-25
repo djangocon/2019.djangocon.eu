@@ -10,7 +10,7 @@ conference:
  * Getting bikes in Copenhagen
  * Setting your personal preferences: Like Sprints attendance and meals
  * Fetching invoices for ticket purchases
- * Organizing accommodation and ride sharing
+ * Organising accommodation and ride sharing
  * Maybe more?{% endblocktrans %}
 
 Some things are still not done, but we are working on them.

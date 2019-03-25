@@ -31,7 +31,7 @@ We're not just looking for any old tech talk – we're looking for talks from, b
 
 Now, we know that submitting a talk can be nerve-wracking even for experienced speakers, and even more so to people who are inexperienced. Since we want to invite everybody to feel comfortable to submit talks, we'd like to introduce our speaker mentors – wonderful people who are experienced speakers, and who'll be happy to offer help and advice regarding your talks. They can help you to formulate a vague idea, or be a sounding board on the best direction you could develop a talk that's already half way done.
 
- * [Anna Ossowski](mailto:annabell.ossowski@gmail.com), Developer Relations at Elastic, speaker, mentor, PyCon Open Spaces advisor, DjangoCon Diversity Chair, Django Girls Omaha and San Francisco organizer, PyLadies Remote co-lead.
+ * [Anna Ossowski](mailto:annabell.ossowski@gmail.com), Developer Relations at Elastic, speaker, mentor, PyCon Open Spaces advisor, DjangoCon Diversity Chair, Django Girls Omaha and San Francisco organiser, PyLadies Remote co-lead.
  * [Frank Wiles](mailto:frank@revsys.com), President of the Board, Django Software Foundation, Founder, REVSYS.
  * [Jacinda Shelly](mailto:jacinda.shelly@gmail.com), Jacinda nurtured an early love of sharing knowledge by recording books on cassette for her brothers to listen to as bedtime stories. She has spoken at multiple technical conferences, including PyCon and DjangoCon US. She works for Doctor On Demand and lives in San Francisco with her husband and daughter.
  * [Katie McLaughlin](mailto:katie@glasnt.com) has spoken about emoji, JavaScript, security, and being nice to people, in half a dozen countries.
