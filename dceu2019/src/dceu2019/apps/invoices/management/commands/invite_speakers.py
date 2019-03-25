@@ -17,7 +17,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        talks = TalkExtraProperties.objects.exclude(ticket_voucher="")
+        talks = TalkExtraProperties.objects.exclude(ticket_voucher="").exclude(published=False)
 
         if not options['reinvite']:
             talks = talks.exclude(voucher_sent=True)

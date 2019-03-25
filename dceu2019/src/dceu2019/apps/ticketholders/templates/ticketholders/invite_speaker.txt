@@ -20,6 +20,6 @@ so you don't have to log in and out of accounts...
 
 Regards,
 
-DjangoCon Europe 2019 organizer team
+DjangoCon Europe 2019 organiser team
 
 {% endautoescape %}

@@ -57,7 +57,7 @@ As a speaker, you will not need to buy a ticket, since you gain free entrance to
 
 We will not be able to cover travelling and accommodation costs for all speakers, but if you require financial support, please participate in our Opportunity Grant process – speakers will receive special consideration in the selection process.
 
-For companies or employers: Talk content should not be influenced directly by commercial interests, but if your company or employer has supported your process for creating and giving the talk (for instance allowing you to prepare it in working hours), you are *always* welcome to mention this support during a talk. If your employer or company covers travel and accommodation costs, we have a sponsor recognition policy, meaning the company or organization can join as a sponsor. Please get in touch with [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu) to hear more.
+For companies or employers: Talk content should not be influenced directly by commercial interests, but if your company or employer has supported your process for creating and giving the talk (for instance allowing you to prepare it in working hours), you are *always* welcome to mention this support during a talk. If your employer or company covers travel and accommodation costs, we have a sponsor recognition policy, meaning the company or organisation can join as a sponsor. Please get in touch with [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu) to hear more.
 
 ## Guidelines 📏
 
@@ -95,7 +95,7 @@ If your talk idea does not match any of these categories, or matches more than o
 
 ### Reviewing 🕑
 
-Our review team has not been assembled yet, but we’re working towards a mix of some organizers, some core developers and DSF members, and some Django Girls members/organizers. (Again, if you think we’re missing somebody, please get in touch!)
+Our review team has not been assembled yet, but we’re working towards a mix of some organisers, some core developers and DSF members, and some Django Girls members/organisers. (Again, if you think we’re missing somebody, please get in touch!)
 
 Reviewers will be asked to look at a set of submissions and submit a review (both a few words and a rough rating). After the review period is over, we will go through the talks by category and select the talks based on accumulated reviews. If we can’t make the decision among two or three talks, we’ll check back with the reviewers and ask them for their opinion.
 
@@ -105,14 +105,14 @@ We value your feedback. If you have any concerns or suggestions on how we can im
 
 ## Smaller sessions 🙌
 
-The venue provides a number of rooms adjacent to the main hall, one of which will be setup for self-organized workshops. This is a chance to:
+The venue provides a number of rooms adjacent to the main hall, one of which will be setup for self-organised workshops. This is a chance to:
 
 * Discussions with fellow peers
 * Introducing Django applications
 * Find and tutor new developers and maintainers
 * Live demos
 
-If the schedule permits it, sessions can be organized spontaneously during the conference. However, we encourage getting in touch about the session beforehand, such that the session can be advertised and scheduled for the convenience of everyone.
+If the schedule permits it, sessions can be organised spontaneously during the conference. However, we encourage getting in touch about the session beforehand, such that the session can be advertised and scheduled for the convenience of everyone.
 
 Note that there are also sprints in the weekend after the conference; hosting smaller sessions do not qualify for free admission.
 

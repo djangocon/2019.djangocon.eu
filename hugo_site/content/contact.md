@@ -20,3 +20,8 @@ You are most welcome to get in touch if you have questions.
 * [conduct@djangocon.eu](mailto:conduct@djangocon.eu)
 * [hospitality@djangocon.eu](mailto:hospitality@djangocon.eu)
 
+
+## Sending merchandise
+
+If you are a sponsor and need to ship something to the conference, please
+send it to [Django Denmark](/django-denmark/) and notify the sponsor's team.

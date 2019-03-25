@@ -37,13 +37,13 @@ DjangoCon Europe has three conference days reserved for talks (followed by two d
 
 * 2 talks focusing on languages or frameworks that are **not Django**.
 
-* ~9 **break-out session slots** (a.k.a. workshops) and an additional option for at least 3 self-organized sessions (final numbers to be decided)
+* ~9 **break-out session slots** (a.k.a. workshops) and an additional option for at least 3 self-organised sessions (final numbers to be decided)
 
 If your talk idea does not match any of these categories, or matches more than one – don't worry! This is not a strict list that every submission needs to fit in, it is just meant as a guide for attendees, submitters, and reviewers alike.
 
 ## Reviewing
 
-Our review team is made up of 6 people from the organizer team and 1 from outside. We are a mix of organizers, some core developers and DSF (Django Software Foundation) members, and some Django Girls members/organizers.
+Our review team is made up of 6 people from the organiser team and 1 from outside. We are a mix of organisers, some core developers and DSF (Django Software Foundation) members, and some Django Girls members/organisers.
 
 Reviewers will be asked to look at a set of submissions and submit a review (both a few words and a rough rating). After the review period is over, we will go through the talks by category and select the talks based on accumulated reviews. If we can't make the decision among two or three talks, we'll check back with the reviewers and ask them for their opinion.
 

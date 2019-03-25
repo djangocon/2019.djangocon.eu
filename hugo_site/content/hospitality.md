@@ -10,7 +10,7 @@ menu:
 
 # Hospitality
 
-It is a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organize accommodation with others (this solution is coming up shortly). 
+It is a good idea to book your accommodation early on. One option is to buy a ticket and use the attendee channels to organise accommodation with others (this solution is coming up shortly).
 
 Should you prefer a classic hotel or hostel, we recommend staying with one of the hotels/hostels we were able to negotiate accommodation deals with. Some discounts also cover days before and after the event.
 

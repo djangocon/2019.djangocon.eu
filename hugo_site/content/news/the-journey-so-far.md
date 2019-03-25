@@ -5,7 +5,7 @@ date: 2019-02-23T20:29:02+01:00
 draft: false
 ---
 
-Hi all! This is our first News section item; so we want to write an overall story of what has happened so far. If you are not that interested in conference organizing, we also have a fast ⏩ summary.
+Hi all! This is our first News section item; so we want to write an overall story of what has happened so far. If you are not that interested in conference organising, we also have a fast ⏩ summary.
 
 **The fast ⏩ summary: We will start announcing [the schedule](/talks/) very soon, as we are reaching out to people who have submitted proposals right now. We had an amazing amount of proposals, and this alone means that the conference could have been more than 3 days. We stick to the usual 3-day talks + 2-day sprints format, but hey: There’s energy and potential for so much more! We will also add more details about the conference venue and the sprints venue soon.**
 <!--more-->
@@ -27,9 +27,9 @@ Quick word on food: We don’t know the exact menu, but we know that it will be 
 
 We [have listed some discounted Hotels and Hostels](/hospitality/) that we hope can help people find a decently priced room, and moreover we encourage you to use an soon-to-be-published ticket-holder website to help coordinate both accommodation and ride sharing.
 
-Leading up to the early-bird deadline, we sold a lot of [tickets](/tickets/), and we are now close to being sold out. Being new conference organizers, we hadn’t anticipated the pace of activities and weren’t able to build an invoice system fast enough. We also wanted to seek out professional consultation to ensure whether or not VAT could be deducted for non-Danish buyers: It cannot. But we have the invoices generated now, and we will send out emails next week -- not just about these invoices, but also invitations to join the new ticket-holder website. This website is a common-ground, so please don’t mind if you [send in a PR](https://github.com/djangocon/2019.djangocon.eu) with your idea ;)
+Leading up to the early-bird deadline, we sold a lot of [tickets](/tickets/), and we are now close to being sold out. Being new conference organisers, we hadn’t anticipated the pace of activities and weren’t able to build an invoice system fast enough. We also wanted to seek out professional consultation to ensure whether or not VAT could be deducted for non-Danish buyers: It cannot. But we have the invoices generated now, and we will send out emails next week -- not just about these invoices, but also invitations to join the new ticket-holder website. This website is a common-ground, so please don’t mind if you [send in a PR](https://github.com/djangocon/2019.djangocon.eu) with your idea ;)
 
-We are adding a bit to the live-streaming online experience this year: Knowing that not everyone who sent in an application for [Opportunity Grants](/grants/) such that they can be present at the conference, and knowing that there are so many other reasons not to be able to go, we will read questions from internet-participants. It’s an experiment, but we will do our best to make it work out. For ticket-holders, we are also opening up Slack channels for organizing meetups etc.
+We are adding a bit to the live-streaming online experience this year: Knowing that not everyone who sent in an application for [Opportunity Grants](/grants/) such that they can be present at the conference, and knowing that there are so many other reasons not to be able to go, we will read questions from internet-participants. It’s an experiment, but we will do our best to make it work out. For ticket-holders, we are also opening up Slack channels for organising meetups etc.
 
 We also would like this conference to add an environmental and climate-friendly effort: Please do try see if you can travel to Copenhagen by train, bus or ride-sharing. Once you are here, we also have an option to try out the city’s bicycle-friendly infrastructure by riding the [bikes](/bikes/) provided through a collaboration with a local social enterprise. Bicycles are not included in the ticket prices, but can be ordered on the ticket-holder website (to be announced) at affordable rates.
 
@@ -37,7 +37,7 @@ Merchandise? We didn’t mention this. But that’s a surprise ;)
 
 Finally, a big shout-out to the previous conferences whom are the shoulders that we are standing out. Their efforts, instructions, documentation and guidance are priceless.
 
-Right now, the organizing team is quite submerged in putting together the program, responding to grants applications, catering to visa requests and reaching out to [sponsors](/sponsors/). So if it’s possible, we really prefer that practical needs are dealt with during late-March.
+Right now, the organising team is quite submerged in putting together the program, responding to grants applications, catering to visa requests and reaching out to [sponsors](/sponsors/). So if it’s possible, we really prefer that practical needs are dealt with during late-March.
 
 * General inquiries: [2019@djangocon.eu](mailto:2019@djangocon.eu)
 * Sponsors: [sponsors@djangocon.eu](mailto:sponsors@djangocon.eu)
