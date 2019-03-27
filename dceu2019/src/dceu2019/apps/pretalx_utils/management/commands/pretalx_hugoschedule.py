@@ -16,7 +16,6 @@ _html_escapes = {
     ord('<'): '&lt;',
     ord('>'): '&gt;',
     ord('"'): '&quot;',
-    ord("'"): '&#39;',
 }
 
 
