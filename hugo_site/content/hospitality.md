@@ -34,7 +34,7 @@ Date range: From 8th of April to the 16th of April
 
 [www.meininger-hotels.com](https://www.meininger-hotels.com/)
 
-Method: Discount code in the website OR [this link](https://www.meininger-hotels.com/en/mews/?mewsEnterpriseId=cc6510a2-e304-414c-9ac2-6453badc9fb0&language=en-EN&mewsStart=2019-04-10&mewsEnd=2019-04-14&mewsVoucherCode=DjangoCon&utm_source=djangocon&utm_medium=referral&utm_content=bookinglink)
+Method: Send an e-mail to [copenhagen-urban-house@meininger-hotels.com](copenhagen-urban-house@meininger-hotels.com) and mention the discount code below.
 
 Discount Code: `DjangoCon`
 
