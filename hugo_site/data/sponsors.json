@@ -1,8 +1,18 @@
 [
   {
-    "name": "StickerMule",
-    "logo": "02-sticker-mule-logo-light.png",
-    "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
+    "name": "3Yourmind",
+    "logo": "3yourmind.svg",
+    "website": "https://www.3yourmind.com/"
+  },
+  {
+    "name": "Kolonial.no",
+    "logo": "kolonial.NO.svg",
+    "website": "https://kolonial.no/"
+  },
+  {
+    "name": "PROSA",
+    "logo": "prosa.svg",
+    "website": "https://www.prosa.dk/"
   },
   {
     "name": "JetBrains",
@@ -20,6 +30,11 @@
     "logo": "isshub.png",
     "website": "https://www.isshub.io/",
     "level": "Bronze"
+  },
+  {
+    "name": "StickerMule",
+    "logo": "02-sticker-mule-logo-light.png",
+    "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
   },
   {
     "name": "TicketButler",
