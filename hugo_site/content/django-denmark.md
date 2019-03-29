@@ -15,7 +15,7 @@ DjangoCon Europe 2019 is carried out by our Danish non-profit association:
 
 **Django Danmark**<br/>
 C/O Arbejdsfællesskabet<br/>
-Blågårdsgade 19<br/>
+Blågårdsgade 19, kl.<br/>
 2200 Copenhagen N<br/>
 Denmark<br/>
 CVR/VAT ID: 39311062
