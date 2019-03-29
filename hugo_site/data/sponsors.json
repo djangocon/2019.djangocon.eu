@@ -20,6 +20,11 @@
     "website": "https://www.divio.com/"
   },
   {
+    "name": "Verve",
+    "logo": "verve.svg",
+    "website": "https://www.verve.co/"
+  },
+  {
     "name": "JetBrains",
     "logo": "jetbrains-variant-4.svg",
     "website": "https://www.jetbrains.com/"
