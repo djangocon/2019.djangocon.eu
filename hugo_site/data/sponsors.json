@@ -15,6 +15,11 @@
     "website": "https://www.prosa.dk/"
   },
   {
+    "name": "Divio",
+    "logo": "divio.svg",
+    "website": "https://www.divio.com/"
+  },
+  {
     "name": "JetBrains",
     "logo": "jetbrains-variant-4.svg",
     "website": "https://www.jetbrains.com/"
