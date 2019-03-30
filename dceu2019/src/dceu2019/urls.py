@@ -16,7 +16,8 @@ Examples:
         2. Add a URL to urlpatterns: path("blog/", include("dceu2019.apps.blog.urls"))
 
 """
-from dceu2019.apps.ticketholders.views import IndexView
+from dceu2019.apps.ticketholders.views import (IndexView, newsletter,
+                                               newsletter_unsubscribe)
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -29,6 +30,8 @@ urlpatterns = [
     path('api/', include('pretalx.api.urls', namespace='api')),
     path('ticketholder/', include('dceu2019.apps.ticketholders.urls', namespace='ticketholder')),
     path('tickets/', include('dceu2019.apps.invoices.urls', namespace='invoices')),
+    path('newsletter/', newsletter, name='newsletter'),
+    path('newsletter/unsubscribe/<email>/<key>/', newsletter_unsubscribe, name='unsubscribe'),
     path('', IndexView.as_view(), name='index'),
     path('', include('pretalx.agenda.urls', namespace='agenda')),
     path('', include('pretalx.cfp.urls', namespace='cfp')),

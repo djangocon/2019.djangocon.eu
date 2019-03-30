@@ -22,3 +22,14 @@ class SprintsForm(forms.ModelForm):
             'size': forms.widgets.RadioSelect
         }
         fields = ('sprints',)
+
+
+class NewsletterSignupForm(forms.ModelForm):
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email', "")
+        return email.lower()
+
+    class Meta:
+        model = models.Subscription
+        fields = ('email',)

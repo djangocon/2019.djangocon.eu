@@ -17,3 +17,16 @@ class BicycleBookingAdmin(admin.ModelAdmin):
 
     def email(self, instance):
         return instance.user.email
+
+
+@admin.register(models.EmailTemplate)
+class EmailAdmin(admin.ModelAdmin):
+
+    list_display = ('subject', 'name', 'count', 'first_time_send')
+
+
+@admin.register(models.Subscription)
+class SubscriptionAdmin(admin.ModelAdmin):
+
+    search_fields = ('email',)
+    list_display = ('email', 'created',)

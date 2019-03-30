@@ -1,3 +1,5 @@
+import hashlib
+
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
@@ -8,11 +10,13 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
                                        PasswordResetView)
-from django.shortcuts import redirect, resolve_url
+from django.http.response import HttpResponse
+from django.shortcuts import redirect, render_to_response, resolve_url
 from django.urls.base import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import UpdateView
 
@@ -146,3 +150,42 @@ class SprintsUpdate(UpdateView):
 
     def get_success_url(self):
         return resolve_url('ticketholders:sprints')
+
+
+@csrf_exempt
+def newsletter(request):
+
+    context = {}
+
+    if request.method == "POST":
+        f = forms.NewsletterSignupForm(request.POST)
+        email = request.POST.get('email', "")
+        # Do not disclose if an email already exists, just say that it's been
+        # subscribed.
+        if models.Subscription.objects.filter(email=email) or f.is_valid():
+            if f.is_valid():
+                f.save()
+            return render_to_response("ticketholders/newsletter.html", context)
+        return HttpResponse("Something went wrong:<br><br>" + str(f.errors))
+
+    return HttpResponse("I only do POST", status=405)
+
+
+def get_unsubscribe_key(email):
+    correct_key = hashlib.sha256()
+    correct_key.update(email.encode())
+    correct_key.update(settings.SECRET_UNSUBSCRIBE_KEY.encode())
+    return correct_key.hexdigest()
+
+
+@csrf_exempt
+def newsletter_unsubscribe(request, email, key):
+
+    correct_key = get_unsubscribe_key(email)
+
+    if correct_key == key:
+        # Don't bother about being verbose, it can be used to brute force the
+        # key *tinfoil*
+        models.Subscription.objects.filter(email=email).delete()
+
+    return render_to_response("ticketholders/newsletter_unsubscribed.html", {})
