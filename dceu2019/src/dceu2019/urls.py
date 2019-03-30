@@ -17,6 +17,7 @@ Examples:
 
 """
 from dceu2019.apps.ticketholders.views import (IndexView, newsletter,
+                                               newsletter_confirm,
                                                newsletter_unsubscribe)
 from django.conf import settings
 from django.conf.urls.static import static
@@ -31,7 +32,8 @@ urlpatterns = [
     path('ticketholder/', include('dceu2019.apps.ticketholders.urls', namespace='ticketholder')),
     path('tickets/', include('dceu2019.apps.invoices.urls', namespace='invoices')),
     path('newsletter/', newsletter, name='newsletter'),
-    path('newsletter/unsubscribe/<email>/<key>/', newsletter_unsubscribe, name='unsubscribe'),
+    path('newsletter/unsubscribe/<email>/<key>/', newsletter_unsubscribe, name='newsletter_unsubscribe'),
+    path('newsletter/confirm/<email>/<key>/', newsletter_confirm, name='newsletter_confirm'),
     path('', IndexView.as_view(), name='index'),
     path('', include('pretalx.agenda.urls', namespace='agenda')),
     path('', include('pretalx.cfp.urls', namespace='cfp')),

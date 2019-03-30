@@ -131,7 +131,12 @@ class EmailTemplate(models.Model):
             body_template_source += (
                 "\n" +
                 "\n" +
-                "Unsubscribe:\n{{ protocol }}://{{ site_name }}{% url 'unsubscribe' email=email key=unsubscribe_key %}"
+                "Unsubscribe:\n{{ protocol }}://{{ site_name }}{% url 'newsletter_unsubscribe' email=email key=unsubscribe_key %}"
+            )
+        else:
+            body_template_source += (
+                "\n\n" +
+                "You are receiving this email because you have a ticket to DjangoCon Europe 2019 or a user account on the members' website."
             )
 
         body = Template(body_template_source).render(Context(context))
@@ -173,3 +178,37 @@ class Subscription(models.Model):
 
     email = models.EmailField(unique=True)
     created = models.DateTimeField(auto_now_add=True)
+    confirmed = models.BooleanField(default=False)
+
+    def send_confirm(self):
+        from dceu2019.apps.ticketholders.views import get_subscribe_key
+
+        domain = '127.0.0.1:8000' if settings.DEBUG else 'members.2019.djangocon.eu'
+
+        context = {
+            'email': self.email,
+            'domain': domain,
+            'site_name': domain,
+            'protocol': 'http' if settings.DEBUG else 'https',
+            'subscribe_key': get_subscribe_key(self.email),
+        }
+
+        body_template_source = (
+            "You or someone else has asked you to subscribe to our newsletter."
+            "\n" +
+            "\n" +
+            "Confirm your subscription:\n{{ protocol }}://{{ site_name }}{% url 'newsletter_confirm' email=email key=subscribe_key %}" +
+            "\n" +
+            "\n" +
+            "Ignore this email and you won't be subscribed." +
+            "\n" +
+            "\n" +
+            "--\n"
+            "{{ protocol }}://{{ site_name }}"
+        )
+
+        body = Template(body_template_source).render(Context(context))
+        subject = "Confirm your subscription to DjangoCon Europe 2019 newsletter"
+
+        email_message = EmailMultiAlternatives(subject, body, "robot@django-denmark.org", [self.email])
+        email_message.send(fail_silently=False)
