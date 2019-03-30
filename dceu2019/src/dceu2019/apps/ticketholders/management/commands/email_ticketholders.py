@@ -90,7 +90,7 @@ class Command(BaseCommand):
 
         if options['newsletter']:
             self.stdout.write(self.style.WARNING("Sending to newsletter recipients as well"))
-            for subscriber in models.Subscription.objects.all():
+            for subscriber in models.Subscription.objects.filter(confirmed=True):
                 emails.add(subscriber.email.lower())
 
         if options['test']:
