@@ -164,11 +164,19 @@ def newsletter(request):
         # subscribed.
         if models.Subscription.objects.filter(email=email) or f.is_valid():
             if f.is_valid():
-                f.save()
+                subscription = f.save()
+                subscription.send_confirm()
             return render_to_response("ticketholders/newsletter.html", context)
         return HttpResponse("Something went wrong:<br><br>" + str(f.errors))
 
     return HttpResponse("I only do POST", status=405)
+
+
+def get_subscribe_key(email):
+    correct_key = hashlib.sha256()
+    correct_key.update(email.encode())
+    correct_key.update(settings.SECRET_UNSUBSCRIBE_KEY.encode())
+    return correct_key.hexdigest()
 
 
 def get_unsubscribe_key(email):
@@ -189,3 +197,16 @@ def newsletter_unsubscribe(request, email, key):
         models.Subscription.objects.filter(email=email).delete()
 
     return render_to_response("ticketholders/newsletter_unsubscribed.html", {})
+
+
+@csrf_exempt
+def newsletter_confirm(request, email, key):
+
+    correct_key = get_subscribe_key(email)
+
+    if correct_key == key:
+        # Don't bother about being verbose, it can be used to brute force the
+        # key *tinfoil*
+        models.Subscription.objects.filter(email=email).update(confirmed=True)
+
+    return render_to_response("ticketholders/newsletter_confirmed.html", {})
