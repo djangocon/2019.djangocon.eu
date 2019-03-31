@@ -110,10 +110,15 @@ class Command(BaseCommand):
 
         sent = 0
 
-        for recipient in email_template.recipients.filter(sent=False):
+        recipients = email_template.recipients.filter(sent=False)
+
+        self.stdout.write(self.style.WARNING("Filtering out the ones that have already received, the total recipient count is: {}".format(recipients.count())))
+
+        for recipient in recipients:
 
             unsubscribe = recipient.email in no_unsubscribe and options['newsletter']
             email_template.send(recipient, unsubscribe=unsubscribe)
+            self.stdout.write(self.style.SUCCESS("Sent to {}".format(recipient.email)))
             sent += 1
 
-        self.stdout.write(self.style.SUCCESS("Sent to {} new users".format(sent)))
+        self.stdout.write(self.style.SUCCESS("Sent to {} recipients".format(sent)))
