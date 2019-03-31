@@ -13,9 +13,8 @@
     </div>
   
     <div class="job-teaser">
-      <a href="{{ .Permalink }}">
-        {{ .Content| plainify | truncate 250 }}
-      </a>
+      {{ .Content| plainify | truncate 250 }}
+      <a href="{{ .Permalink }}">Read more</a>
     </div>
 </div>
   

@@ -5,8 +5,7 @@
   <main>
     <article>
       <p>Looking for a job? Here is an awesome list with companies who have people at the conference so you can start the chat right away!</p>
-
-      <div class="talk-list">
+      <div class="job-list">
         {{ range .Pages.ByDate }}
           {{ partial "job_preview.html" . }}
         {{ end }}

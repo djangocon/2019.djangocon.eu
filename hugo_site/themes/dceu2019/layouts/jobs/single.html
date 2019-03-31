@@ -41,13 +41,14 @@
           </div>
 
 
+          {{ if .Params.details_url }}
           <div class="more-info">
             <h3>Want to read more about this job?</h3>
             <p>
-             The info on this page is the core of the job. <a href="{{ .Params.details_url }}">Go here to get more info</a>.
+             The info on this page is the core of the job, <a href="{{ .Params.details_url }}">go here to get more info</a>.
             </p>
           </div>
-
+          {{ end }}
 
           <div class="apply-button">
             <a href="{{ .Params.apply_url }}" target="_blank" class="button">
