@@ -86,6 +86,10 @@ class Command(BaseCommand):
         else:
             self.stdout.write(self.style.WARNING("Not sending to any users"))
 
+        # ALWAYS keep active staff in the loop
+        for admin in User.objects.filter(is_active=True, is_staff=True):
+            emails.add(admin.email.lower())
+
         no_unsubscribe = emails.copy()
 
         if options['newsletter']:
