@@ -30,3 +30,4 @@ class SubscriptionAdmin(admin.ModelAdmin):
 
     search_fields = ('email',)
     list_display = ('email', 'created',)
+    list_filter = ('confirmed',)
