@@ -162,14 +162,13 @@ def newsletter(request):
         email = request.POST.get('email', "")
         # Do not disclose if an email already exists, just say that it's been
         # subscribed.
-        if not models.Subscription.objects.filter(email=email, confirmed=True).exists():
+        if not models.Subscription.objects.filter(email=email).exists():
             if f.is_valid():
                 subscription = f.save()
                 subscription.send_confirm()
-            # We could confirmations again, but that would mean we have to deal
-            # with DOS... so skipping this.
-            return render_to_response("ticketholders/newsletter.html", context)
-        return HttpResponse("Something went wrong:<br><br>" + str(f.errors))
+        # We could confirmations again, but that would mean we have to deal
+        # with DOS... so skipping this.
+        return render_to_response("ticketholders/newsletter.html", context)
 
     return HttpResponse("I only do POST", status=405)
 
