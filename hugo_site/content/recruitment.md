@@ -18,7 +18,7 @@ The recruitment exposure can be broken down to multiple elements, let's go throu
 
 **Job board** We have made a dedicated section on the conference website with job ads and in addition this year a physical board where attendees can see a printed version.\
 You can see all the available jobs on the [job bard here]({{< ref "/jobs" >}}).\
-Get your job ads online via the [Job board description page]({{< ref "job-board.md" >}}).
+Get your job ads online via the [Job Board description page]({{< ref "job-board.md" >}}).
 
 **Interview lounge** At the venue an interview lounge is for top recruiters available upon request. This provide privacy, snacks and a place to have informal interviews.
 

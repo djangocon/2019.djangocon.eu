@@ -10,15 +10,15 @@ weight: 40
 ---
 # Job board ads
 
-We have made a dedicated section on the conference website with job ads and in addition this year a physical board where attendees can see a printed version.
+We have made a dedicated section on the conference website with job ads.
 
-All ads will be printed and put up on the job physical board.
+In addition this year a physical job board where attendees can see a printed version and put up on the job physical board!
 
 When you have submitted a job we also submit it to the #jobs channel on the internal Slack. Here attendees can ask questions directly on the ad or in private messages to you or one of your employees. Just make sure to send us the nick name of the person representing your company or send a private message on Slack to *Emil Kjer*.
 
 You can see all the available jobs on the [job bard here]({{< ref "/jobs" >}}).
 
-If you're looking for a job write an email to: <a href="mailto:sponsors@djangocon.eu">sponsors@djangocon.eu</a> with full name, contact details, job type(s) you're looking for and optionally links to references (CV, Github, Linkedin ...).
+If you're looking for a job write an email to: <a href="mailto:2019@djangocon.eu">2019@djangocon.eu</a> with full name, contact details, job type(s) you're looking for and optionally links to references (CV, Github, Linkedin ...).
 
 
 # Submit a job ad
