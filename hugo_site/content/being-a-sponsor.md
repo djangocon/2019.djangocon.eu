@@ -6,7 +6,7 @@ draft: false
 menu:
   main:
     parent: "sponsors"
-weight: 40
+weight: 20
 ---
 
 # Being a sponsor

@@ -1,0 +1,20 @@
+<div class="job">
+    <img src="{{ .Params.company_logo }}" class="talk-image" />
+  
+    <div class="talk-content">
+        <a href="{{ .Permalink }}">
+       <div class="talk-speaker">
+        {{ .Params.company_name }}
+      </div>
+      <p class="talk-title">
+        {{ .Params.job_title }}
+      </p>
+        </a>
+    </div>
+  
+    <div class="job-teaser">
+      {{ .Content| plainify | truncate 250 }}
+      <a href="{{ .Permalink }}">Read more</a>
+    </div>
+</div>
+  
