@@ -6,7 +6,7 @@ draft: false
 menu:
   main:
     parent: "sponsors"
-weight: 10
+weight: 30
 ---
 
 # Recruitment
@@ -16,7 +16,9 @@ The recruitment exposure can be broken down to multiple elements, let's go throu
 
 **Sponsor packages** The basics is to attend the conference, however, to stand out the Bronze - Diamond sponsor levels allow for your brand to be seen online on the website as well as on printed material and on banners dependent on the level. 
 
-**Job board** We have made a dedicated section on the conference website with job ads and in addition this year a physical board where attendees can see a printed version.
+**Job board** We have made a dedicated section on the conference website with job ads and in addition this year a physical board where attendees can see a printed version.\
+You can see all the available jobs on the [job bard here]({{< ref "/jobs" >}}).\
+Get your job ads online via the [Job board description page]({{< ref "job-board.md" >}}).
 
 **Interview lounge** At the venue an interview lounge is for top recruiters available upon request. This provide privacy, snacks and a place to have informal interviews.
 

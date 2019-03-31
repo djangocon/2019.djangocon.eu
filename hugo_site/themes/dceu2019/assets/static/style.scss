@@ -665,3 +665,66 @@ $month-offset: 9rem;
 .post-summaries {
   margin-bottom: 4rem;
 }
+
+
+
+
+// Jobs
+.job {
+  padding: 2rem 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 1em;
+
+    .logo {
+        height: 100px;
+        flex-wrap: wrap;
+        margin-right: 1.5rem;
+        max-width: 100px;
+  
+        a {
+            text-decoration: none !important;
+            border: 0 none;
+          }
+        
+    }
+    h2 {
+      text-align: left;
+      margin-top: 0;
+    }
+    .bullets {
+      margin-left: 5%;
+    }
+  }
+
+  .more-info {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+  }
+
+  .apply-button {
+    text-align: center;
+    margin: auto;
+    margin-top: 2em;
+  }
+
+  .job-teaser {
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e7e7e7;
+
+    a {
+      text-decoration: none;
+      border: none;
+    }
+  }
+
+}

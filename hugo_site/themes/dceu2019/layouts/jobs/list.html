@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<div class="container">
+  <main>
+    <article>
+      <p>Looking for a job? Here is an awesome list with companies who have people at the conference so you can start the chat right away!</p>
+
+      <div class="talk-list">
+        {{ range .Pages.ByDate }}
+          {{ partial "job_preview.html" . }}
+        {{ end }}
+      </div>
+      <p>
+        To get your job-ad added to this list go to the <a href="/job-board/">job-board description page</a> and get more info.
+      </p> 
+      <p>        
+        If you're looking for a job and want it added to the list write an email to: <a href="mailto:2019@djangocon.eu">2019@djangocon.eu</a> with full name, contact details, job type(s) you're looking for, optionally a picture and optionally links to references (CV, Github, Linkedin ...).
+      </p>
+      <p>        
+        If you have any questions don't hesitate to write an email to: <a href="mailto:2019@djangocon.eu">2019@djangocon.eu</a>.
+      </p>
+
+    </article>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}

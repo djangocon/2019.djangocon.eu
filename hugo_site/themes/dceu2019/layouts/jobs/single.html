@@ -1,0 +1,63 @@
+{{ partial "header.html" . }}
+
+<header class="header">
+  <a href="{{ .Site.BaseURL }}">
+    <img src="/static/img/{{if .Params.headerimage }}{{ printf "%s" $.Params.headerimage }}{{else}}{{ printf "%s" $.Site.Params.headerimage }}{{end}}" alt="DjangoCPH logo" class="header-logo"/>
+  </a>
+
+  <nav>
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li class="{{ if (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .))}}active{{ end }}">
+          <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+	<main>
+		<article>
+        <div class="job">
+          <div class="head">
+            <div class="logo">
+             <a href="{{ .Params.company_url }}" target="_blank"><img src="{{ .Params.company_logo }}"/></a>
+            </div>
+            <div class="bullets">
+              <h2>{{ .Params.job_title }}</h2>
+              <b>Company:</b> {{ .Params.company_name }}<br/>
+              <b>Location:</b> {{ .Params.job_location }}<br/>
+              <b>Job type:</b> {{ .Params.job_type }}
+            </div>
+          </div>
+
+
+          <div class="content">
+            <h1>JOB DESCRIPTION</h1>
+            {{ .Content }}
+          </div>
+
+
+          <div class="more-info">
+            <h3>Want to read more about this job?</h3>
+            <p>
+             The info on this page is the core of the job. <a href="{{ .Params.details_url }}">Go here to get more info</a>.
+            </p>
+          </div>
+
+
+          <div class="apply-button">
+            <a href="{{ .Params.apply_url }}" target="_blank" class="button">
+              Apply now
+            </a>
+          </div>
+
+        </div>
+		</article>
+	</main>
+</div>
+
+{{ partial "footer.html" . }}
