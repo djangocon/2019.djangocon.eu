@@ -36,8 +36,13 @@ Choose this ticket type if you or your employer want to especially support us do
 
 # Get your ticket!
 
-<center><a href="https://djangocon.ticketbutler.io/en/e/2019/" target="_blank" class="button">
-  Open ticket purchase
-</a></center>
+<center>*🚫 We are sold out 🚫*</center>
 
-<center>Powered by <a href="https://ticketbutler.io/" target="_blank">Ticketbutler</a></center>
+Please get in touch, if you have a ticket claim, for instance through a sponsorship or as a speaker: [2019@djangocon.eu](mailto:2019@djangocon.eu)
+
+
+<!--<center><a href="https://djangocon.ticketbutler.io/en/e/2019/" target="_blank" class="button">
+  Open ticket purchase
+</a></center>-->
+
+Our ticket sales were proudly powered by <a href="https://ticketbutler.io/" target="_blank">Ticketbutler</a>
