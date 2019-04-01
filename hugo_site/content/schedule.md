@@ -8,6 +8,7 @@ menu:
   main:
     name: "Schedule"
     weight: 26
+    identifier: "schedule"
 ---
 
 # Schedule
