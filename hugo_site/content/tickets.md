@@ -7,6 +7,7 @@ weight: 20
 menu:
   main:
     identifier: "tickets"
+    parent: "contact"
 ---
 
 # Ticketing
