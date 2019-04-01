@@ -9,7 +9,7 @@ from . import models
 @admin.register(models.Invoice)
 class InvoiceAdmin(admin.ModelAdmin):
 
-    search_fields = ('name',)
+    search_fields = ('billy_contact__name', 'ticket_type_name')
 
     list_display = ('ticket_type_name', 'name', 'when', 'price', 'amount')
 
