@@ -29,7 +29,7 @@ class TicketbutlerTicketAdmin(admin.ModelAdmin):
     search_fields = ('user__name', 'user__email')
 
     list_display = ['user', 'name', 'email', 'nick', 'sprints', 'logged_in', 'active', 'free_ticket']
-    list_filter = ['sprints', 'user__is_active', 'free_ticket', 'ticketbutler_ticket_type_name']
+    list_filter = ['sprints', 'user__is_active', 'free_ticket', 'refunded', 'ticketbutler_ticket_type_name']
 
     def name(self, instance):
         return instance.user.name

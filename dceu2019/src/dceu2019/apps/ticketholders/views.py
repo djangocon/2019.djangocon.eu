@@ -142,7 +142,7 @@ class SprintsUpdate(UpdateView):
         return TemplateView.dispatch(self, request, *args, **kwargs)
 
     def get_object(self, queryset=None):
-        return TicketbutlerTicket.objects.get_or_create(user=self.request.user)[0]
+        return TicketbutlerTicket.objects.get_or_create(user=self.request.user, refunded=False)[0]
 
     def form_valid(self, form):
         messages.success(self.request, "Saved your attendance")

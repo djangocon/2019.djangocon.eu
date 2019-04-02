@@ -36,6 +36,11 @@ class TicketbutlerTicket(models.Model):
         help_text="Ticket was free (and has no invoice)",
     )
 
+    refunded = models.BooleanField(
+        default=False,
+        help_text="Ticket was free (and has no invoice)",
+    )
+
     invoice = models.ForeignKey("Invoice", null=True, blank=True, on_delete=models.SET_NULL)
     invoices = models.ManyToManyField("Invoice", blank=True, related_name="tickets")
 

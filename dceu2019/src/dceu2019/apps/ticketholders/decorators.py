@@ -7,7 +7,7 @@ REDIRECT_FIELD_NAME = 'next'
 def login_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
 
     def test_user(user):
-        return user.is_authenticated and (user.is_superuser or TicketbutlerTicket.objects.filter(user=user).exists())
+        return user.is_authenticated and (user.is_superuser or TicketbutlerTicket.objects.filter(user=user, refunded=False).exists())
 
     actual_decorator = user_passes_test(
         test_user,
