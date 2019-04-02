@@ -63,10 +63,6 @@ class Command(BaseCommand):
             self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order_id)))
             return
 
-        if any(t['ticket_refund'] for t in order['tickets']):
-            self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order_id)))
-            return
-
         if self.only_known and order_id not in billy.TICKETBUTLER_IGNORE_LIST:
             self.stdout.write(self.style.WARNING("Only processing known invoices, skipping {}".format(order_id)))
             return
@@ -89,13 +85,23 @@ class Command(BaseCommand):
             elif any(filter(lambda c: c['choice_heading'].lower() == 'yes', sprints['answered_choices'])):
                 sprints = models.TicketbutlerTicket.SPRINTS_YES
 
-            ticketbutler_tickets.append(models.TicketbutlerTicket.get_or_create(
+            ticketbutler_ticket = models.TicketbutlerTicket.get_or_create(
                 ticket['email'],
                 ticket['full_name'],
                 order_id,
                 sprints,
                 ticket['ticket_type_name'],
-            ))
+            )
+            if ticket.get('ticket_refunded', False):
+                self.stdout.write(self.style.WARNING("This ticket was marked refunded: {}".format(order_id)))
+                ticketbutler_ticket.refunded = True
+                ticketbutler_ticket.save()
+
+            ticketbutler_tickets.append(ticketbutler_ticket)
+
+        if any(t['ticket_refund'] for t in order['tickets']):
+            self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order_id)))
+            return
 
         # If an email is changed on a TicketButler ticket and an old user exists without any other tickets,
         # then disable this user's account and delete the ticket from the system
