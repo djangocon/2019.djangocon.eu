@@ -92,7 +92,7 @@ class Command(BaseCommand):
                 sprints,
                 ticket['ticket_type_name'],
             )
-            if ticket.get('ticket_refunded', False):
+            if ticket.get('ticket_refund', False):
                 self.stdout.write(self.style.WARNING("This ticket was marked refunded: {}".format(order_id)))
                 ticketbutler_ticket.refunded = True
                 ticketbutler_ticket.save()
