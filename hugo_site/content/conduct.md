@@ -16,7 +16,7 @@ Everybody who participates in DjangoCon Europe in one way or another is required
 
 The organisers will introduce a Code of Conduct team that will be primarily responsible for handling any incidents. The CoC applies before and throughout the event (including related activities such as social events, and social media). We have also published our [response guidelines](/conduct-response/).
 
-The team can be reached on [conduct@djangocon.eu](mailto:conduct@djangocon.eu).
+The team can be reached on [conduct@djangocon.eu](mailto:conduct@djangocon.eu) or +45 52709432.
 
 We adapted this CoC from DjangoCon Europe 2018, with some own additions and some inspiraton from other events. A big thank you to their CoC team, especially for the awesome response guidelines, which we have adopted unedited.
 
