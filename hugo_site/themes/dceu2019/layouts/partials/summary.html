@@ -5,7 +5,7 @@
 	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 	{{ end }}
 	<div>
-		{{ .Summary | plainify | safeHTML }}
+		{{ .Summary | plainify }}
 		{{ if .Truncated }}
 			<a href="{{ .Permalink }}">Read more...</a>
 		{{ end }}
