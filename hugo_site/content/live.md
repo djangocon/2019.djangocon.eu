@@ -24,7 +24,7 @@ perceived violations will be filtered out.
 
 ## Asking good questions
 
-If a speaker takes questions after their talk, we encourage you to come to the mic
+If a speaker takes questions after a talk, we encourage you to come to the mic 🎤
 placed in the room. We will also take questions from internet audiences if time
 permits. Please ask questions that are constructive and supportive:
 
@@ -39,6 +39,6 @@ permits. Please ask questions that are constructive and supportive:
 You can read more examples of good conference questions in this
 [Guardian article](https://www.theguardian.com/higher-education-network/2015/nov/11/dont-be-a-conference-troll-a-guide-to-asking-good-questions).
 
-* **A bad question**: Is something that seeks to emphasize your own knowledge;
-  seeks details at a level that is irrelevant to most people; or tries to trick
-  the speaker, make them look bad or point out errors.
+* **A bad question**: Is something that seeks to only emphasize your own
+  knowledge; seeks details at a level that is irrelevant to most people; or
+  tries to trick the speaker, make them look bad or point out errors.
