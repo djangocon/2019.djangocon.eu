@@ -24,7 +24,7 @@ perceived violations will be filtered out.
 
 ## Asking good questions
 
-If a speaker takes questions a their talk, we encourage you to come to the mic
+If a speaker takes questions after their talk, we encourage you to come to the mic
 placed in the room. We will also take questions from internet audiences if time
 permits. Please ask questions that are constructive and supportive:
 
