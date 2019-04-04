@@ -48,6 +48,11 @@
     "level": "Bronze"
   },
   {
+    "name": "4teamwork",
+    "logo": "4teamwork.svg",
+    "website": "https://www.4teamwork.ch/"
+  },
+  {
     "name": "StickerMule",
     "logo": "02-sticker-mule-logo-light.png",
     "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
