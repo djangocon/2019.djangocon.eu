@@ -144,7 +144,7 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.SUCCESS("Skipping invoice for free ticket for order id: {}".format(order_id)))
                 return
             else:
-                raise RuntimeError("Unknown discount: {}".format(order['discount']['amount']))
+                self.stdout.write(self.style.ERROR("!!! Order id {} will have an invoice generated with missing information, Ticketbutler said the discount was: {}".format(order_id, order['discount']['amount'])))
 
         for ticketbutler_order_line_no, order_line in enumerate(order['order_lines']):
 
