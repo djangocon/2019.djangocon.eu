@@ -5,7 +5,7 @@ date: 2019-04-03T08:00:02+02:00
 draft: false
 ---
 
-We are sold out and making final arrangements now. We (the volunteers organizing this conference)
+We are sold out and making final arrangements now. We (the volunteers organising this conference)
 have lots and lots of things to do, and in case you find our news flow to be slow, please rest assure that
 we are busy behind the scenes making this the best possible conference for each and everyone 💚
 
