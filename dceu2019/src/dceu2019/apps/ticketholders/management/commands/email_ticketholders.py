@@ -58,7 +58,7 @@ class Command(BaseCommand):
             '--sleep',
             type=int,
             dest='sleep',
-            help="Sleep for every <cnt> emails. Useful for Gmail SMTP.",
+            help="Sleep for every <cnt> emails. Useful for Gmail SMTP. 88 for Gmail.",
         )
 
     def handle(self, *args, **options):  # noqa:max-complexity=11
@@ -110,9 +110,6 @@ class Command(BaseCommand):
             emails = set()
             emails.add(options['test'])
 
-        if input("Continue? [y/N] ").lower().strip() != "y":
-            return
-
         email_template.populate_recipients(emails)
 
         sent = 0
@@ -120,6 +117,9 @@ class Command(BaseCommand):
         recipients = email_template.recipients.filter(sent=False)
 
         self.stdout.write(self.style.WARNING("Filtering out the ones that have already received, the total recipient count is: {}".format(recipients.count())))
+
+        if input("Continue? [y/N] ").lower().strip() != "y":
+            return
 
         for recipient in recipients:
 
@@ -131,6 +131,6 @@ class Command(BaseCommand):
             if options['sleep']:
                 if sent % options['sleep'] == 0:
                     self.stdout.write(self.style.SUCCESS("Sleeping after {} emails".format(sent)))
-                    time.sleep(10)
+                    time.sleep(61)
 
         self.stdout.write(self.style.SUCCESS("Sent to {} recipients".format(sent)))
