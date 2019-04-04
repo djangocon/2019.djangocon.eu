@@ -1,3 +1,4 @@
+import time
 
 from django.core.management.base import BaseCommand, CommandError
 from django.db.models import Q
@@ -52,6 +53,12 @@ class Command(BaseCommand):
             type=str,
             dest='test',
             help="Sends to a test email and does not fetch recipients from db",
+        )
+        parser.add_argument(
+            '--sleep',
+            type=int,
+            dest='sleep',
+            help="Sleep for every <cnt> emails. Useful for Gmail SMTP.",
         )
 
     def handle(self, *args, **options):  # noqa:max-complexity=11
@@ -120,5 +127,10 @@ class Command(BaseCommand):
             email_template.send(recipient, unsubscribe=unsubscribe)
             self.stdout.write(self.style.SUCCESS("Sent to {}".format(recipient.email)))
             sent += 1
+
+            if options['sleep']:
+                if sent % options['sleep'] == 0:
+                    self.stdout.write(self.style.SUCCESS("Sleeping after {} emails".format(sent)))
+                    time.sleep(10)
 
         self.stdout.write(self.style.SUCCESS("Sent to {} recipients".format(sent)))
