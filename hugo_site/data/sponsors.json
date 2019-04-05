@@ -25,6 +25,16 @@
     "website": "https://www.verve.co/"
   },
   {
+    "name": "Django Stars",
+    "logo": "djangostars.svg",
+    "website": "https://djangostars.com/"
+  },
+  {
+    "name": "JamBon Software",
+    "logo": "JamBonSWLogoLong.svg",
+    "website": "http://www.jambonsw.com/"
+  },
+  {
     "name": "JetBrains",
     "logo": "jetbrains-variant-4.svg",
     "website": "https://www.jetbrains.com/"
