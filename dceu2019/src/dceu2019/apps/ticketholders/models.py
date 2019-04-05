@@ -74,6 +74,14 @@ class BicycleBooking(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
 
+class WorkshopAttending(models.Model):
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    workshop = models.ForeignKey("pretalx_utils.TalkExtraProperties", on_delete=models.CASCADE, related_name="workshop_attendees")
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+
 class EmailTemplate(models.Model):
 
     name = models.CharField(

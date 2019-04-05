@@ -1,5 +1,6 @@
 import hashlib
 
+from dceu2019.apps.pretalx_utils.models import TalkExtraProperties
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
@@ -10,6 +11,7 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
                                        PasswordResetView)
+from django.db.models.aggregates import Count
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render_to_response, resolve_url
 from django.urls.base import reverse_lazy
@@ -18,7 +20,9 @@ from django.utils.translation import gettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView
+from django.views.generic.list import ListView
 
 from . import forms, models
 from ..invoices.models import TicketbutlerTicket
@@ -46,7 +50,63 @@ class CommunityView(TemplateView):
         return c
 
 
-# Create your views here.
+class WorkshopListView(ListView):
+    template_name = 'ticketholders/workshops.html'
+    model = TalkExtraProperties
+    context_object_name = "workshops"
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return TemplateView.dispatch(self, request, *args, **kwargs)
+
+    def get_queryset(self):
+        q = ListView.get_queryset(self)
+        q = q.filter(workshop=True, published=True)
+        q = q.annotate(attending=Count("workshop_attendees__id"))
+        return q
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        c = ListView.get_context_data(self, **kwargs)
+        c['attending'] = [a.workshop for a in models.WorkshopAttending.objects.filter(user=self.request.user)]
+        return c
+
+
+class WorkshopAttendView(DetailView):
+    model = TalkExtraProperties
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        workshop = self.get_object(self.get_queryset())
+
+        if models.WorkshopAttending.objects.filter(workshop=workshop).count() >= (workshop.max_attendance or 100000):
+            messages.error(self.request, "The workshop '{}' is fully booked 🚫".format(workshop.submission.title))
+        else:
+            models.WorkshopAttending.objects.get_or_create(user=request.user, workshop=workshop)
+            messages.success(self.request, "Your workshop attendance for '{}' was registered 🚲".format(workshop.submission.title))
+        return redirect("ticketholders:workshops")
+
+    def get_queryset(self):
+        q = DetailView.get_queryset(self)
+        q = q.filter(workshop=True, published=True)
+        return q
+
+
+class WorkshopUnAttendView(DetailView):
+    model = TalkExtraProperties
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        workshop = self.get_object(self.get_queryset())
+        models.WorkshopAttending.objects.filter(user=request.user, workshop=workshop).delete()
+        messages.success(self.request, "Your workshop attendance for '{}' was removed".format(workshop.submission.title))
+        return redirect("ticketholders:workshops")
+
+    def get_queryset(self):
+        q = DetailView.get_queryset(self)
+        q = q.filter(workshop=True, published=True)
+        return q
+
+
 class LoginView(LoginView):
     """
     Display the login form and handle the login action.
