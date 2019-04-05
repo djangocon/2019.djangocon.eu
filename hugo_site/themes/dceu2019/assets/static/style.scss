@@ -588,7 +588,11 @@ $month-offset: 9rem;
 
 @media (min-width: $tablet) {
   .sponsor-item {
+    display: flex;
     flex-basis: 26%;
+    min-height: 125px;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: 100%;
@@ -687,12 +691,12 @@ $month-offset: 9rem;
         flex-wrap: wrap;
         margin-right: 1.5rem;
         max-width: 100px;
-  
+
         a {
             text-decoration: none !important;
             border: 0 none;
           }
-        
+
     }
     h2 {
       text-align: left;
