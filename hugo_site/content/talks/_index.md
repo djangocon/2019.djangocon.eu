@@ -9,4 +9,4 @@ weight: 25
 # Talks
 
 All contents of the program are listed below. Stay tuned on [Twitter @DjangoConEurope](https://twitter.com/djangoconeurope)
-as we announce them one by one. The final schedule is pending.
+as we announce them one by one. We have also published a [schedule](/schedule/) and [live stream](/live/).
