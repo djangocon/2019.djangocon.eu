@@ -5,19 +5,14 @@
     "website": "https://www.3yourmind.com/"
   },
   {
+    "name": "Nexmo",
+    "logo": "526ab50145ed3adb4a094acb9cc833ce.png",
+    "website": "https://www.nexmo.com/"
+  },
+  {
     "name": "Kolonial.no",
     "logo": "kolonial.NO.svg",
     "website": "https://kolonial.no/"
-  },
-  {
-    "name": "PROSA",
-    "logo": "prosa.svg",
-    "website": "https://www.prosa.dk/"
-  },
-  {
-    "name": "Divio",
-    "logo": "divio.svg",
-    "website": "https://www.divio.com/"
   },
   {
     "name": "Verve",
@@ -25,14 +20,14 @@
     "website": "https://www.verve.co/"
   },
   {
+    "name": "Divio",
+    "logo": "divio.svg",
+    "website": "https://www.divio.com/"
+  },
+  {
     "name": "Django Stars",
     "logo": "djangostars.svg",
     "website": "https://djangostars.com/"
-  },
-  {
-    "name": "JamBon Software",
-    "logo": "JamBonSWLogoLong.svg",
-    "website": "http://www.jambonsw.com/"
   },
   {
     "name": "JetBrains",
@@ -40,10 +35,19 @@
     "website": "https://www.jetbrains.com/"
   },
   {
-    "name": "ZibraWireless",
-    "logo": "zibra_logo.svg",
-    "website": "https://www.zibrawireless.dk/",
-    "level": "Silver"
+    "name": "PROSA",
+    "logo": "prosa.svg",
+    "website": "https://www.prosa.dk/"
+  },
+  {
+    "name": "15five",
+    "logo": "15five-3.svg",
+    "website": "https://www.15five.com/"
+  },
+  {
+    "name": "JamBon Software",
+    "logo": "JamBonSWLogoLong.svg",
+    "website": "http://www.jambonsw.com/"
   },
   {
     "name": "Hypernode by byte.nl",
@@ -61,6 +65,22 @@
     "name": "4teamwork",
     "logo": "4teamwork.svg",
     "website": "https://www.4teamwork.ch/"
+  },
+  {
+    "name": "Lincoln Loop",
+    "logo": "lincolnloop-logo-full-color.b2c6a699af68.svg",
+    "website": "https://lincolnloop.com/"
+  },
+  {
+    "name": "Maykin Media",
+    "logo": "maykin logo_name_tagline.svg",
+    "website": "https://www.maykinmedia.nl/"
+  },
+  {
+    "name": "ZibraWireless",
+    "logo": "zibra_logo.svg",
+    "website": "https://www.zibrawireless.dk/",
+    "level": "Silver"
   },
   {
     "name": "StickerMule",
