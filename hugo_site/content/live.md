@@ -16,25 +16,32 @@ Tune in here: https://www.youtube.com/user/djangoconeurope
 
 # Questions
 
-During talks, a host will select questions from the internet crowd. You can tag your question
-Twitter with `djangoconQA` or send a question on the Freenode channel `#djangocon`.
+## Internet questions
+
+During talks, a host will select questions from the internet crowd. You can tag your
+question on Twitter with `#djangoconQA` or send a question on the IRC channel
+`#djangocon` on [Freenode](https://freenode.net/).
 
 Questions asked are subject to our [Code of Conduct](/conduct/) and any
 perceived violations will be filtered out.
 
-## Asking good questions
+## Attendee questions
 
 If a speaker takes questions after a talk, we encourage you to come to the mic 🎤
 placed in the room. We will also take questions from internet audiences if time
-permits. Please ask questions that are constructive and supportive:
+permits.
 
-* **A good question**: is not a comment, and ends in a question mark; Is one that seeks to explore the topic of the talk;
-  is perceived valuable to others in the audience; clarifies something that you
-  found hard to understand in the talk; breaks the silence of the crowd, asking
-  a supportive question for the speaker; the self-less question that seeks to
-  bind knowledge from other people in the crowd with the speaker's; the
-  practical recommendation that doesn't demand to know why the speaker didn't
-  mention a, b, c.
+## Asking good questions
+
+Please ask questions that are constructive and supportive:
+
+* **A good question**: Is not a comment, and ends in a question mark; is one that
+  seeks to explore the topic of the talk; is perceived valuable to others in the
+  audience; clarifies something that you found hard to understand in the talk;
+  breaks the silence of the crowd, asking a supportive question for the speaker;
+  the self-less question that seeks to bind knowledge from other people in the
+  crowd with the speaker's; the practical recommendation that doesn't demand to
+  know why the speaker didn't mention a, b, c.
 
 You can read more examples of good conference questions in this
 [Guardian article](https://www.theguardian.com/higher-education-network/2015/nov/11/dont-be-a-conference-troll-a-guide-to-asking-good-questions).
