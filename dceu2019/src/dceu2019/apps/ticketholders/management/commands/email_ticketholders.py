@@ -131,6 +131,6 @@ class Command(BaseCommand):
             if options['sleep']:
                 if sent % options['sleep'] == 0:
                     self.stdout.write(self.style.SUCCESS("Sleeping after {} emails".format(sent)))
-                    time.sleep(61)
+                    time.sleep(181)
 
         self.stdout.write(self.style.SUCCESS("Sent to {} recipients".format(sent)))
