@@ -28,7 +28,7 @@ If a speaker takes questions after a talk, we encourage you to come to the mic ð
 placed in the room. We will also take questions from internet audiences if time
 permits. Please ask questions that are constructive and supportive:
 
-* **A good question**: Is one that seeks to explore the topic of the talk;
+* **A good question**: is not a comment, and ends in a question mark; Is one that seeks to explore the topic of the talk;
   is perceived valuable to others in the audience; clarifies something that you
   found hard to understand in the talk; breaks the silence of the crowd, asking
   a supportive question for the speaker; the self-less question that seeks to
