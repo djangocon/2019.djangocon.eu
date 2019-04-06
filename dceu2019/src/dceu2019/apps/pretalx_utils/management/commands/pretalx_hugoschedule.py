@@ -39,6 +39,8 @@ draft: false
 keynote: {keynote}
 workshop: {workshop}
 twitter_card: {twitter_card}
+room: {room}
+timeslot: {timeslot}
 ---
 {talk_abstract}
 
@@ -140,7 +142,9 @@ class Command(BaseCommand):
                 employer_url=props.employer_url or "",
                 keynote='true' if props.keynote else 'false',
                 workshop='true' if props.workshop else 'false',
-                twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url
+                twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
+                room=props.submission.slot.room,
+                timeslot=props.submission.slot.start.strftime("%A %H:%M") + "-" + props.submission.slot.end.strftime("%H:%M"),
             )
 
             talk_page_file = os.path.join(
