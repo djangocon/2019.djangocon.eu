@@ -32,8 +32,9 @@
               </p>
             {{ end }}
             <p>
-                <a href="/live/" target="_blank">{{ .Page.Params.timeslot }}</a> in {{ .Page.Params.room }}
-                {{ if not .Page.Params.workshop }}<strong>streamed!</strong><br>{{ end }}
+                <a href="/schedule/" target="_blank">{{ .Page.Params.timeslot }}</a> in {{ .Page.Params.room }}
+                {{ if not .Page.Params.workshop }}
+                    <a href="/live/" target="_blank"><strong>streamed 📺</strong></a><br>{{ end }}
             </p>
           </div>
 
