@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 
 from django.core.management.base import BaseCommand
+from django.utils import timezone
 from django.utils.html import strip_tags
 from django.utils.text import slugify
 from markdown import markdown
@@ -144,7 +145,11 @@ class Command(BaseCommand):
                 workshop='true' if props.workshop else 'false',
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
                 room=props.submission.slot.room,
-                timeslot=props.submission.slot.start.strftime("%A %H:%M") + "-" + props.submission.slot.end.strftime("%H:%M"),
+                timeslot=(
+                    timezone.localtime(props.submission.slot.start).strftime("%A %H:%M") +
+                    "-" +
+                    timezone.localtime(props.submission.slot.end).strftime("%H:%M")
+                ),
             )
 
             talk_page_file = os.path.join(
