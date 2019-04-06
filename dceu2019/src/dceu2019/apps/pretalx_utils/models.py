@@ -50,9 +50,18 @@ class TalkExtraProperties(models.Model):
     employer_attribution = models.CharField(null=True, blank=True, max_length=255)
     employer_url = models.URLField(null=True, blank=True)
 
+    max_attendance = models.PositiveSmallIntegerField(default=None, null=True, blank=True, help_text="Max attendance (for workshops)")
+
     @property
     def speakers(self):
         return ", ".join([person.get_display_name() for person in self.submission.speakers.all()])
+
+    def get_public_site_url(self):
+        if settings.DEBUG:
+            domain = "http://localhost:1313"
+        else:
+            domain = "https://2019.djangocon.eu"
+        return domain + "/talks/" + self.slug
 
     def generate_images(self):
         """

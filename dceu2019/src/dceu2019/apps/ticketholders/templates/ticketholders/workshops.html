@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Workshop attendance{% endblock %}
+
+{% block content %}
+
+<h1>Workshop attendance</h1>
+
+<p>Sign up for workshops here. You can do it before the conference and during
+the conference. Make sure that you unbook your seat if you're not going anyways.</p>
+
+<p><em>This page will be updated to show the timeslots of the workshops, meanwhile check out the <a href="https://2019.djangocon.eu/schedule/">schedule</a> for times.</em></p>
+
+<table>
+
+<thead>
+<tr>
+    <th>Workshop</th>
+    <th>Host</th>
+    <th>Attendance</th>
+<tr>
+</thead>
+
+<tbody>
+
+{% for workshop in workshops %}
+<tr>
+    <td>
+        <a href="{{ workshop.get_public_site_url }}">{{ workshop.submission.title }}</a>
+    </td>
+    <td>
+        {% for speaker in workshop.submission.speakers.all %}
+        {{ speaker.name }}
+        {% endfor %}
+    </td>
+    <td>{{ workshop.attending }} / {{ workshop.max_attendance }}</td>
+    <td>
+        {% if workshop in attending %}
+        <a href="{% url 'ticketholders:workshop_unattend' pk=workshop.id %}" class="button">Un-attend</a>
+        {% else %}
+        <a href="{% url 'ticketholders:workshop_attend' pk=workshop.id %}" class="button">Attend</a>
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}
