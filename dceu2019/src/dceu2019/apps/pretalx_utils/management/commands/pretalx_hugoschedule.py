@@ -40,8 +40,8 @@ draft: false
 keynote: {keynote}
 workshop: {workshop}
 twitter_card: {twitter_card}
-room: {room}
-timeslot: {timeslot}
+room: "{room}"
+timeslot: "{timeslot}"
 ---
 {talk_abstract}
 
