@@ -77,6 +77,18 @@
     "website": "https://www.maykinmedia.nl/"
   },
   {
+    "name": "TicketButler",
+    "logo": "ticketbutler.svg",
+    "website": "https://ticketbutler.io/",
+    "level": "Gold"
+  },
+  {
+    "name": "Saleor",
+    "logo": "Saleor_logo.png",
+    "website": "https://getsaleor.com/",
+    "level": "Workshop"
+  },
+  {
     "name": "ZibraWireless",
     "logo": "zibra_logo.svg",
     "website": "https://www.zibrawireless.dk/",
@@ -86,11 +98,5 @@
     "name": "StickerMule",
     "logo": "02-sticker-mule-logo-light.png",
     "website": "https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=DjangoConEurope2019"
-  },
-  {
-    "name": "TicketButler",
-    "logo": "ticketbutler.png",
-    "website": "https://ticketbutler.io/",
-    "level": "Gold"
   }
 ]
