@@ -131,7 +131,7 @@ class Command(BaseCommand):
 
             with timezone.override("Europe/Copenhagen"):
                 start_time = timezone.localtime(props.submission.slot.start).strftime("%A %H:%M")
-                end_time = timezone.localtime(props.submission.slot.start).strftime("%H:%M")
+                end_time = timezone.localtime(props.submission.slot.end).strftime("%H:%M")
 
             talk_detail_page_content = TALK_PAGE_HTML.format(
                 title=escape(submission.title),
