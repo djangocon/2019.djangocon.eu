@@ -40,8 +40,8 @@ draft: false
 keynote: {keynote}
 workshop: {workshop}
 twitter_card: {twitter_card}
-room: {room}
-timeslot: {timeslot}
+room: "{room}"
+timeslot: "{timeslot}"
 ---
 {talk_abstract}
 
@@ -129,6 +129,10 @@ class Command(BaseCommand):
             else:
                 confirmed_talks.append(submission_json)
 
+            with timezone.override("Europe/Copenhagen"):
+                start_time = timezone.localtime(props.submission.slot.start).strftime("%A %H:%M")
+                end_time = timezone.localtime(props.submission.slot.start).strftime("%H:%M")
+
             talk_detail_page_content = TALK_PAGE_HTML.format(
                 title=escape(submission.title),
                 description=escape(strip_tags(markdown(submission.abstract))),
@@ -145,11 +149,7 @@ class Command(BaseCommand):
                 workshop='true' if props.workshop else 'false',
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
                 room=props.submission.slot.room,
-                timeslot=(
-                    timezone.localtime(props.submission.slot.start).strftime("%A %H:%M") +
-                    "-" +
-                    timezone.localtime(props.submission.slot.end).strftime("%H:%M")
-                ),
+                timeslot=start_time + "-" + end_time,
             )
 
             talk_page_file = os.path.join(
