@@ -32,9 +32,12 @@
               </p>
             {{ end }}
             <p>
-                <a href="/schedule/" target="_blank">{{ .Page.Params.timeslot }}</a> in {{ .Page.Params.room }}
+                <a href="/schedule/" target="_blank">{{ .Page.Params.timeslot }} UTC+2</a> in {{ .Page.Params.room }}
+            </p>
+            <p>
                 {{ if not .Page.Params.workshop }}
-                    <a href="/live/" target="_blank"><strong>streamed 📺</strong></a><br>{{ end }}
+                    <a href="/live/" target="_blank"><strong>Will be streamed 📺</strong></a><br>
+                {{ end }}
             </p>
           </div>
 
