@@ -76,7 +76,7 @@ class Command(BaseCommand):
             email_template.recipients.all().delete()
 
         if not options['allusers']:
-            users = users.exclude(tickets=None)
+            users = users.filter(tickets__refunded=False)
 
         # Forgot about YAGNI here..
         if options['unregistered']:
