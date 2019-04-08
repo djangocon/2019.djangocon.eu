@@ -26,7 +26,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        tickets = models.TicketbutlerTicket.objects.all()
+        tickets = models.TicketbutlerTicket.objects.filter(refunded=False)
 
         if not options['reinvite']:
             tickets = tickets.filter(
