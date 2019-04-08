@@ -22,5 +22,6 @@ urlpatterns = [
     path('workshops/<pk>/unattend', views.WorkshopUnAttendView.as_view(), name='workshop_unattend'),
     path('bikes/booking/', views.BikeBooking.as_view(), name='bike_booking'),
     path('community/', views.CommunityView.as_view(), name='community'),
+    path('tshirts/', views.TShirtView.as_view(), name='tshirts'),
     path('sprints/', views.SprintsUpdate.as_view(), name='sprints'),
 ]
