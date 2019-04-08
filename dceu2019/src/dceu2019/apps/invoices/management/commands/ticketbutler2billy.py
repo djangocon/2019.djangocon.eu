@@ -132,6 +132,7 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.WARNING("Found another ticket for user {} and deleted the inactive ticket in question but not the user".format(inactive_ticket.user.email)))
                     if inactive_ticket.pk:
                         inactive_ticket.delete()
+                        continue
                 else:
                     # Remove the user account too if there are no submissions and it's not a superuser
                     if not inactive_ticket.user.is_superuser and not inactive_ticket.user.submissions.all().exists():
@@ -141,7 +142,9 @@ class Command(BaseCommand):
                             inactive_ticket.user.save()
                         else:
                             self.stdout.write(self.style.WARNING("User was already inactive: {}".format(inactive_ticket.user.email)))
-                    inactive_ticket.delete()
+                    # In case the user had several tickets, and one of them was already deleted
+                    if inactive_ticket.pk:
+                        inactive_ticket.delete()
 
         if 'discount' in order:
             if order['discount']['amount'] == 100:
