@@ -84,6 +84,8 @@ class Command(BaseCommand):
         if options['registered']:
             users = users.exclude(Q(password__startswith='!') | Q(password__isnull=True))
 
+        users = users.distinct()
+
         emails = set()
 
         if options['users']:

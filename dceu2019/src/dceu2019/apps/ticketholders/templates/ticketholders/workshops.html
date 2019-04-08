@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+{% load tz %}
 
 {% block title %}Workshop attendance{% endblock %}
 
 {% block content %}
+{% timezone "Europe/Copenhagen" %}
 
 <h1>Workshop attendance</h1>
 
@@ -52,5 +54,9 @@ the conference. Make sure that you unbook your seat if you're not going anyways.
 </tbody>
 
 </table>
+
+<p><a href="https://github.com/djangocon/2019.djangocon.eu/issues/320">Bug fix</a>: All times are displayed in local Copenhagen time now, not UTC. </p>
+
+{% endtimezone %}
 
 {% endblock %}
