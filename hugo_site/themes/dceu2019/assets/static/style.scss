@@ -674,6 +674,13 @@ $month-offset: 9rem;
 
 
 // Jobs
+.job-list {
+  padding-bottom: 80px;
+  margin-top: 80px;
+  border-top: 1px solid #e7e7e7;
+
+}
+
 .job {
   padding: 2rem 0;
   display: flex;
@@ -681,29 +688,35 @@ $month-offset: 9rem;
   flex-wrap: wrap;
 
   .head {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    //flex-wrap: wrap;
     width: 100%;
     padding-bottom: 1em;
 
     .logo {
-        height: 100px;
-        flex-wrap: wrap;
-        margin-right: 1.5rem;
-        max-width: 100px;
+        height: 140px;
+        max-width: 200px;
+        margin: auto;
+        display: block;
+        img {
+          max-height: 100px;
+          height: 100%;
+        }
 
         a {
             text-decoration: none !important;
             border: 0 none;
-          }
+        }
 
     }
     h2 {
       text-align: left;
       margin-top: 0;
+      padding-bottom: 20px;
     }
     .bullets {
-      margin-left: 5%;
+      margin: auto;
+      padding-bottom: 20px;
     }
   }
 
@@ -718,19 +731,29 @@ $month-offset: 9rem;
     margin: auto;
     margin-top: 2em;
   }
+  h1 {
+    text-align: left;
+  }
 
+  &.item {
 
-
-  .job-teaser {
-    width: 100%;
-    margin-top: 1rem;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #e7e7e7;
-
-    a {
-      text-decoration: none;
-      border: none;
+    img {
+      max-width: 120px;
+      padding-right: 10px;
     }
+
+    .description {
+      width: 100%;
+      margin-top: 1rem;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #e7e7e7;
+
+      a {
+        text-decoration: none;
+        border: none;
+      }
+    }
+
   }
 
 }
