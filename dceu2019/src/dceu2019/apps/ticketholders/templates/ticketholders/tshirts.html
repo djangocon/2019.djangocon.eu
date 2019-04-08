@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load tz static %}
+
+{% block title %}T-shirts{% endblock %}
+
+{% block content %}
+
+<h1>T-shirts</h1>
+
+<p>Choose between 3 surprise custom prints: Get a brand new Fairtrade t-shirt
+or use your own garment (such as the official Tote Bag or your own t-shirt).</p>
+
+<p><em><strong>It's all screen-printed and delivered on location!</strong></em></p>
+
+<p>Get an original souvenir, help future Django community activities: Order a t-shirt w/print or a separate print on your own garment. Our venue partner are staffing the screen print action on the first floor.</p>
+
+<p style="text-align: center">
+    <a href="https://djangocon.ticketbutler.io/en/e/djangocon-merch/" class="button button-red" target="_blank">Yay! Onwards!</a><br>
+    Note: This is sold as a of ticket, meaning that you present it in the
+    <code>validate()</code> Area (Registration/Help Desk), where you get a
+    voucher form for the print or t-shirt, which you fill in and bring to the
+    print shop on the first floor.
+</p>
+
+<p>
+<img src="{% static "img/tshirt-teaser.png" %}">
+</p>
+{% endblock %}

@@ -50,6 +50,14 @@ class CommunityView(TemplateView):
         return c
 
 
+class TShirtView(TemplateView):
+    template_name = 'ticketholders/tshirts.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return TemplateView.dispatch(self, request, *args, **kwargs)
+
+
 class WorkshopListView(ListView):
     template_name = 'ticketholders/workshops.html'
     model = TalkExtraProperties
