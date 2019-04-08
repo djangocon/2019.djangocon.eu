@@ -6,7 +6,7 @@ company_logo: "/static/jobs/kolonial.NO.svg"
 job_title: "3 things Kolonial offer senior software engineers"
 company_url: "https://kolonial.no"
 apply_url: "https://medium.com/kolonial-no-product-tech/3-things-kolonial-no-offer-senior-software-engineers-591a4f688c9b"
-job_location: "NYDALEN, OSLO"
+job_location: "Nydalen, Oslo"
 job_type: "Full-time"
 ---
 
