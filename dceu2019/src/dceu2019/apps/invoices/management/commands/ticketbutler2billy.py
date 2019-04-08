@@ -239,7 +239,7 @@ class Command(BaseCommand):
 
         confirmed = False
 
-        if self.skip_synced and models.Invoice.objects.filter(ticketbutler_orderid=order_id, ticketbutler_order_line_no=ticketbutler_order_line_no).exists():
+        if self.skip_synced and models.Invoice.objects.filter(ticketbutler_orderid=order_id).exists():
             self.stdout.write(self.style.SUCCESS("Already sync'ed, skipping {}".format(order_id)))
             return
 
