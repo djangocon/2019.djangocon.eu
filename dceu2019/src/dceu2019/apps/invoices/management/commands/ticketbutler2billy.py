@@ -59,8 +59,14 @@ class Command(BaseCommand):
 
         order_id = order['order_id']
 
-        if not order['state'] == 'PAID':
-            self.stdout.write(self.style.WARNING("Skipping unpaid order: {}".format(order_id)))
+        refund = False
+        if order['state'] == 'REFUND':
+            refund = True
+            self.stdout.write(self.style.WARNING("Refunded order: {}".format(order_id)))
+        elif order['state'] == 'PAID':
+            pass
+        else:
+            self.stdout.write(self.style.WARNING("Not processing unknown order state {} for: {}".format(order['state'], order_id)))
             return
 
         if self.only_known and order_id not in billy.TICKETBUTLER_IGNORE_LIST:
@@ -92,14 +98,17 @@ class Command(BaseCommand):
                 sprints,
                 ticket['ticket_type_name'],
             )
-            if ticket.get('ticket_refund', False):
+            if refund:
                 self.stdout.write(self.style.WARNING("This ticket was marked refunded: {}".format(order_id)))
                 ticketbutler_ticket.refunded = True
+                ticketbutler_ticket.save()
+            else:
+                ticketbutler_ticket.refunded = False
                 ticketbutler_ticket.save()
 
             ticketbutler_tickets.append(ticketbutler_ticket)
 
-        if any(t['ticket_refund'] for t in order['tickets']):
+        if refund:
             self.stdout.write(self.style.WARNING("Skipping refunded order: {}".format(order_id)))
             return
 
