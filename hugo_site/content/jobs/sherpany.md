@@ -4,13 +4,12 @@ draft: false
 company_name: "SHERPANY"
 company_logo: "/static/jobs/sherpany.png"
 contact_email: ""
+job_title: "Senior Python / Django Engineer"
 company_url: "https://www.sherpany.com"
 apply_url: "https://stackoverflow.com/jobs/apply/244315?reset=False"
 details_url: "https://stackoverflow.com/jobs/244315/senior-python-django-engineer-sherpany-ag"
-job_title: "Senior Python / Django Engineer"
 job_location: "Remote / No office location"
 job_type: "Full-time"
-job_teaser: "SHERPANY is a young and multi award-winning start-up with headquarters in Zurich and further offices in Lisbon, Paris, Milan and Wroclaw. With our SaaS Solution, the “Boardroom”, we turn formal meetings from time-wasters into value-creators by driving focus on the output. We enco"
 ---
 
 
