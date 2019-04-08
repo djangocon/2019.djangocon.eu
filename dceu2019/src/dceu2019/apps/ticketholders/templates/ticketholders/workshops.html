@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+{% load tz %}
 
 {% block title %}Workshop attendance{% endblock %}
 
 {% block content %}
+{% timezone "Europe/Copenhagen" %}
 
 <h1>Workshop attendance</h1>
 
@@ -12,6 +14,7 @@ the conference. Make sure that you unbook your seat if you're not going anyways.
 <p><em>This page will be updated to show the timeslots of the workshops, meanwhile check out the <a href="https://2019.djangocon.eu/schedule/">schedule</a> for times.</em></p>
 
 <p>Try to be at the workshop a few minutes before they start. If you didn't click Attend, it's important to pay attention to the capacity of the room before entering.</p>
+
 
 <table>
 
@@ -52,5 +55,7 @@ the conference. Make sure that you unbook your seat if you're not going anyways.
 </tbody>
 
 </table>
+
+{% endtimezone %}
 
 {% endblock %}
