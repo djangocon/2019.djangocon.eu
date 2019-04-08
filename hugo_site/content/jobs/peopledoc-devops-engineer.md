@@ -7,7 +7,7 @@ contact_email: ""
 job_title: "DevOps Engineer"
 company_url: "https://www.people-doc.com"
 apply_url: "https://boards.greenhouse.io/peopledoc/jobs/1504344"
-job_location: "France -- Paris"
+job_location: "France, Paris"
 job_type: "Full-time"
 ---
 
