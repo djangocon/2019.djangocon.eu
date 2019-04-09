@@ -12,9 +12,13 @@ menu:
 
 # Live stream
 
-Tune in here: https://www.youtube.com/user/djangoconeurope
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCr7bPKCES6rP1UbX0dTVv-Q" frameborder="0" allowfullscreen class="videowrapper"></iframe>
+</div>
 
-# Questions
+<p style="margin-top: 20px;">Direct link: <a href="https://www.youtube.com/user/djangoconeurope">https://www.youtube.com/user/djangoconeurope</a></p>
+
+# Asking questions during talks
 
 ## Internet questions
 
