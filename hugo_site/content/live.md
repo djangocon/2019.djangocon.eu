@@ -1,5 +1,5 @@
 ---
-title: Schedule
+title: View Live Stream
 date: 2018-12-16T18:48:39+01:00
 draft: false
 type: "single"
@@ -8,6 +8,8 @@ menu:
   main:
     parent: "schedule"
     name: "Live stream and questions"
+    identifier: "live"
+weight: 20
 ---
 
 # Live stream
