@@ -2,13 +2,13 @@
 title: Schedule
 date: 2018-12-16T18:48:39+01:00
 draft: false
-type: "single"
 description: "DjangoCon Europe 2019 schedule - plan your DjangoCon."
 menu:
   main:
     name: "Schedule"
     weight: 26
     identifier: "schedule"
+show_schedule: true
 ---
 
 # Schedule
