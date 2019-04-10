@@ -9,7 +9,6 @@ menu:
     parent: "schedule"
     name: "Live stream and questions"
     identifier: "live"
-weight: 20
 ---
 
 # Live stream
