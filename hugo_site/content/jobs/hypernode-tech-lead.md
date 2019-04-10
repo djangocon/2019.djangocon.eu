@@ -7,7 +7,7 @@ contact_email: ""
 job_title: "Tech Lead Hypernode webteam"
 company_url: "http://www.hypernode.com/"
 apply_url: "http://www.hypernode.com/careers"
-job_location: "Netherlands, Amsterdam"
+job_location: "Amsterdam, Netherlands"
 job_type: "Full-time"
 ---
 Since Hypernode is not only a national product but also gaining floor on international grounds, our control panel has passed its expiration date. We are creating a brand new control panel which is very cool project to work on. Not only is it challenging from a technical perspective but the impact of this project is substantial for our organisation. This position is for only those who share our DNA core values sincere, smart, groundbreaking, inspired. To be successful in this role you need to be/have:

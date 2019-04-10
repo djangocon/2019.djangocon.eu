@@ -730,10 +730,14 @@ $month-offset: 9rem;
     margin: auto;
     margin-top: 2em;
   }
+
   h1 {
     text-align: left;
   }
 
+  ol {
+    padding-left: 20px;
+  }
   &.item {
 
     img {

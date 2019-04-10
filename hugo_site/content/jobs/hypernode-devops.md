@@ -7,7 +7,7 @@ contact_email: ""
 job_title: "DevOps"
 company_url: "https://www.hypernode.com"
 apply_url: "https://www.hypernode.com/careers"
-job_location: "Netherlands, Amsterdam"
+job_location: "Amsterdam, Netherlands"
 job_type: "Full-time"
 ---
 
