@@ -3,10 +3,8 @@ title: "Sponsors"
 date: 2019-01-06T21:46:54+01:00
 description: "Be a sponsor: Make yourself known at a unique conference, helping to build the Django community and taking part in it."
 draft: false
-menu:
-  main:
-    name: "Sponsors"
-    identifier: "sponsors"
+
+
 weight: 40
 show_sponsors: true
 ---
@@ -22,7 +20,7 @@ DjangoCon Europe has existed for a decade and is therefore very professionally r
 
 ## Many options for visibility
 
-We have made a large sponsorship menu to invite all to contribute and to give you the opportunity to customise your support. Please see the detailed description and options in the [Sponsorships Brochure here (PDF)](/files/DjangoconEUSponsorBrochure2019.pdf). 
+We have made a large sponsorship menu to invite all to contribute and to give you the opportunity to customise your support. Please see the detailed description and options in the [Sponsorships Brochure here (PDF)](/files/DjangoconEUSponsorBrochure2019.pdf).
 
 The following table highlight the main sponsor levels.
 
@@ -42,13 +40,13 @@ We say a humble thanks to any contribution and support given!
 
 ## Who is attending
 
-This is a conference for software developers, DevOps, entrepreneurs, marketeers, sprouting new Djangonauts, recruiters and exciting partners working with Python and Django. 
+This is a conference for software developers, DevOps, entrepreneurs, marketeers, sprouting new Djangonauts, recruiters and exciting partners working with Python and Django.
 
 The attendees is a mixed crowd with various professional positions and levels. Approximately half are newcomers.
 
-Participants are from all over Europe and this edition is heavily represented by the Nordic countries. 
+Participants are from all over Europe and this edition is heavily represented by the Nordic countries.
 
-We have room for 400 attendees at the venue and at present have sold 3/4 of the tickets. 
+We have room for 400 attendees at the venue and at present have sold 3/4 of the tickets.
 
 DjangoCons exist world-wide and the community and audience are from all continents (except perhaps Antarctica?).
 
@@ -69,7 +67,7 @@ DjangoCons exist world-wide and the community and audience are from all continen
 
 
 
-See detailed descriptions and custom opportunities in our [Sponsorships Brochure here (PDF)](/files/DjangoconEUSponsorBrochure2019.pdf). 
+See detailed descriptions and custom opportunities in our [Sponsorships Brochure here (PDF)](/files/DjangoconEUSponsorBrochure2019.pdf).
 
 **Note**: some options are already booked out and many are subject to availability
 
