@@ -1,13 +1,13 @@
 ---
-title: Schedule
+title: Live Stream
 date: 2018-12-16T18:48:39+01:00
 draft: false
-type: "single"
 description: "DjangoCon Europe 2019 LIVE - stream and ask questions"
 menu:
   main:
     parent: "schedule"
     name: "Live stream and questions"
+
 ---
 
 # Live stream
