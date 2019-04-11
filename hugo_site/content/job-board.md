@@ -3,9 +3,6 @@ title: "Job Board ads"
 date: 2019-02-27T00:41:04+01:00
 description: "Job board ads"
 draft: false
-menu:
-  main:
-    parent: "sponsors"
 weight: 40
 ---
 # Job board ads
@@ -31,4 +28,3 @@ If the below iframe doesn't work just use the following link to go straight to t
 [https://forms.gle/YqB46fakwKwu4S3S6](https://forms.gle/YqB46fakwKwu4S3S6)
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbW3DY484i9rUlqfURlI1cGayHDyziqtciTApnmjckBB0BZg/viewform?embedded=true" width="640" height="2108" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-
