@@ -1,6 +1,6 @@
 <article>
 	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  <p class="post-date">{{ .Date }}</p>
+
 	{{ range .Params.tags }}
 	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 	{{ end }}
@@ -10,4 +10,6 @@
 			<a href="{{ .Permalink }}">Read more...</a>
 		{{ end }}
 	</div>
+
+	<p class="post-date">{{ .Date.Format "02 Jan 06 15:04 MST" }}</p>
 </article>

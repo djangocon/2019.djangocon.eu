@@ -8,7 +8,6 @@ menu:
     name: "Schedule"
     weight: 26
     identifier: "schedule"
-show_schedule: true
 ---
 
 # Schedule

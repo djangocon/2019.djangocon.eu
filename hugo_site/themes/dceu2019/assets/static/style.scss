@@ -31,9 +31,10 @@ body {
 }
 
 h1 {
-  color: $teal;
+  color: $bright-blue;
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 2rem;
   margin-top: 3rem;
 }
 
@@ -45,7 +46,7 @@ h2 {
 }
 
 h3 {
-  color: $bright-blue;
+  color: $purple;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
@@ -72,7 +73,8 @@ form {
   margin: 0 auto;
 }
 
-p, ul {
+p,
+ul {
   margin-bottom: 1rem;
   line-height: 150%;
 }
@@ -134,7 +136,7 @@ img {
 }
 
 .container {
-  max-width: 40rem;
+  max-width: 42rem;
   margin: 0 auto;
 }
 
@@ -475,6 +477,8 @@ footer {
 //
 
 .page-index {
+  margin-bottom: 2rem;
+
   .logo {
     width: 70%;
     display: block;
@@ -484,8 +488,6 @@ footer {
   h1 {
     line-height: 1.25;
   }
-
-  margin-bottom: 30px;
 }
 
 $month-offset: 9rem;
@@ -664,21 +666,23 @@ $month-offset: 9rem;
 
 .post-date {
   text-align: center;
+  opacity: 0.75;
+  font-size: 0.95rem;
+  margin: 1rem 0;
 }
 
 .post-summaries {
-  margin-bottom: 4rem;
+  article {
+    margin-bottom: 4rem;
+  }
 }
 
-
-
-
+//
 // Jobs
 .job-list {
   padding-bottom: 80px;
   margin-top: 80px;
   border-top: 1px solid #e7e7e7;
-
 }
 
 .job {
@@ -689,30 +693,31 @@ $month-offset: 9rem;
 
   .head {
     display: block;
-    //flex-wrap: wrap;
     width: 100%;
     padding-bottom: 1em;
 
     .logo {
-        height: 140px;
-        max-width: 230px;
-        margin: auto;
-        display: block;
-        img {
-          max-height: 100px;
-        }
+      height: 140px;
+      max-width: 230px;
+      margin: auto;
+      display: block;
 
-        a {
-            text-decoration: none !important;
-            border: 0 none;
-        }
+      img {
+        max-height: 100px;
+      }
 
+      a {
+        text-decoration: none !important;
+        border: 0 none;
+      }
     }
+
     h2 {
       text-align: left;
       margin-top: 0;
       padding-bottom: 20px;
     }
+
     .bullets {
       margin: auto;
       padding-bottom: 20px;
@@ -738,8 +743,8 @@ $month-offset: 9rem;
   ol {
     padding-left: 20px;
   }
-  &.item {
 
+  &.item {
     img {
       max-width: 120px;
       padding-right: 10px;
@@ -756,21 +761,22 @@ $month-offset: 9rem;
         border: none;
       }
     }
-
   }
-
 }
 
+//
+// Video Embed
 .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
+
 .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
