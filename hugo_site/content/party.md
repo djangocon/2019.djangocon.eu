@@ -12,7 +12,7 @@ menu:
 
 # Party 🎉
 <center>
-  Friday at 20:00, at Food Space, Slagtehusgade 11.
+  Friday at 20:00-24:00, at Food Space, Slagtehusgade 11 (see map below).
 
   Drink vouchers are available for <a href="https://djangocon.ticketbutler.io/en/e/djangocon-party/" target="_blank">purchase online</a> or at the venue for 100DKK per set of 5 credits.
 
