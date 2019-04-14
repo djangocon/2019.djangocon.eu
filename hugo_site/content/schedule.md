@@ -5,9 +5,7 @@ draft: false
 description: "DjangoCon Europe 2019 schedule - plan your DjangoCon."
 menu:
   main:
-    name: "Schedule"
-    weight: 26
-    identifier: "schedule"
+    parent: "talks"
 ---
 
 # Schedule
