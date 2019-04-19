@@ -42,6 +42,7 @@ workshop: {workshop}
 twitter_card: {twitter_card}
 room: "{room}"
 timeslot: "{timeslot}"
+youtube_url: "{youtube_url}"
 ---
 {talk_abstract}
 
@@ -150,6 +151,7 @@ class Command(BaseCommand):
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
                 room=props.submission.slot.room,
                 timeslot=start_time + "-" + end_time,
+                youtube_url=props.youtube_url,
             )
 
             talk_page_file = os.path.join(
