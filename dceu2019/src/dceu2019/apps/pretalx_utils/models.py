@@ -52,6 +52,8 @@ class TalkExtraProperties(models.Model):
 
     max_attendance = models.PositiveSmallIntegerField(default=None, null=True, blank=True, help_text="Max attendance (for workshops)")
 
+    youtube_url = models.URLField(null=True, blank=True)
+
     @property
     def speakers(self):
         return ", ".join([person.get_display_name() for person in self.submission.speakers.all()])

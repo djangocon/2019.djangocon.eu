@@ -7,11 +7,8 @@ description: "DjangoCon Europe 2019 LIVE - stream and ask questions"
 
 # Live stream
 
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCr7bPKCES6rP1UbX0dTVv-Q" frameborder="0" allowfullscreen class="videowrapper"></iframe>
-</div>
-
-<p style="margin-top: 20px;">Direct link: <a href="https://www.youtube.com/user/djangoconeurope">https://www.youtube.com/user/djangoconeurope</a></p>
+Talks have finished live streaming and will be uploaded individually. Please see
+our Youtube channel: <a href="https://www.youtube.com/user/djangoconeurope">https://www.youtube.com/user/djangoconeurope</a>
 
 # Asking questions during talks
 
