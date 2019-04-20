@@ -32,28 +32,27 @@
               </p>
             {{ end }}
             <p>
-                <a href="/schedule/" target="_blank">{{ .Page.Params.timeslot }} UTC+2</a> in {{ .Page.Params.room }}
-            </p>
-            <p>
-                {{ if not .Page.Params.workshop }}
-                    <a href="/live/" target="_blank"><strong>Will be streamed 📺</strong></a><br>
-                {{ end }}
+              <a href="/schedule/" target="_blank">{{ .Page.Params.timeslot }} UTC+2</a> in {{ .Page.Params.room }}
             </p>
           </div>
 
           <div class="talk-abstract">
-      			{{ .Content }}
+            {{ if not .Page.Params.workshop }}
 
-      			{{ if .Page.Params.workshop }}
-      			<p><em>Break-out sessions are expected to last around 60 minutes. They will have limited seats and will have a sign-up option provided on the ticketholder website, once the schedule is known.</em></p>
-      			{{ end }}
-
-            {{ if .Page.Params.youtube_url }}
+              {{ if .Page.Params.youtube_url }}
                 <div class="videoWrapper">
                 <iframe width="560" height="315" src="{{ .Page.Params.youtube_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+              {{ else }}
+                Video is processed, meanwhile review the <a href="/live/" target="_blank">live stream<strong> 📺</strong></a><br>
+              {{ end }}
             {{ end }}
 
+  			{{ .Content }}
+
+  			{{ if .Page.Params.workshop }}
+  			<p><em>Break-out sessions are expected to last around 60 minutes. They will have limited seats and will have a sign-up option provided on the ticketholder website, once the schedule is known.</em></p>
+    		{{ end }}
           </div>
         </div>
 		</article>
