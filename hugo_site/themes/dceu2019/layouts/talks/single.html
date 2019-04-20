@@ -40,11 +40,11 @@
             {{ if not .Page.Params.workshop }}
 
               {{ if .Page.Params.youtube_url }}
-                <div class="videoWrapper">
+                <div class="videoWrapper" style="margin-bottom: 20px;">
                 <iframe width="560" height="315" src="{{ .Page.Params.youtube_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               {{ else }}
-                Video is processed, meanwhile review the <a href="/live/" target="_blank">live stream<strong> 📺</strong></a><br>
+                <p>Video is processed, meanwhile review the <a href="/live/" target="_blank">live stream<strong> 📺</strong></a></p>
               {{ end }}
             {{ end }}
 
