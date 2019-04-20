@@ -151,7 +151,7 @@ class Command(BaseCommand):
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
                 room=props.submission.slot.room,
                 timeslot=start_time + "-" + end_time,
-                youtube_url=props.youtube_url,
+                youtube_url=props.youtube_url or "",
             )
 
             talk_page_file = os.path.join(
