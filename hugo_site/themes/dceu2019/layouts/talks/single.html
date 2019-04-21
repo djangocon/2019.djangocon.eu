@@ -34,19 +34,6 @@
             <p>
               <a href="/schedule/" target="_blank">{{ .Page.Params.timeslot }} UTC+2</a> in {{ .Page.Params.room }}
             </p>
-          </div>
-
-          <div class="talk-abstract">
-            {{ if not .Page.Params.workshop }}
-
-              {{ if .Page.Params.youtube_url }}
-                <div class="videoWrapper" style="margin-bottom: 20px;">
-                <iframe width="560" height="315" src="{{ .Page.Params.youtube_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              {{ else }}
-                <p>Video is processed, meanwhile review the <a href="/live/" target="_blank">live stream<strong> 📺</strong></a></p>
-              {{ end }}
-            {{ end }}
 
             {{ if .Page.Params.slides1 }}
             <p>
@@ -55,6 +42,22 @@
                     <a href="https://members.2019.djangocon.eu{{ .Page.Params.slides2 }}" target="_blank">Download Slides (alternative) 🎬</a>
                 {{ end }}
             </p>
+            {{ end }}
+          </div>
+
+          <div class="talk-abstract">
+            {{ if not .Page.Params.workshop }}
+
+              {{ if .Page.Params.youtube_id }}
+                <div class="videoWrapper" style="margin-bottom: 20px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ .Page.Params.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    <a href="https://www.youtube.com/watch?v={{ .Page.Params.youtube_id }}" target="_blank">View on Youtube</a>
+                </p>
+              {{ else }}
+                <p>Video is processed, meanwhile review the <a href="/live/" target="_blank">live stream<strong> 📺</strong></a></p>
+              {{ end }}
             {{ end }}
 
   			{{ .Content }}

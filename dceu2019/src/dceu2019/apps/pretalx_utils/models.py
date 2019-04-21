@@ -52,7 +52,7 @@ class TalkExtraProperties(models.Model):
 
     max_attendance = models.PositiveSmallIntegerField(default=None, null=True, blank=True, help_text="Max attendance (for workshops)")
 
-    youtube_url = models.URLField(null=True, blank=True)
+    youtube_id = models.CharField(null=True, blank=True, max_length=64)
 
     @property
     def speakers(self):

@@ -42,9 +42,9 @@ workshop: {workshop}
 twitter_card: {twitter_card}
 room: "{room}"
 timeslot: "{timeslot}"
-youtube_url: "{youtube_url}"
+youtube_id: "{youtube_id}"
 slides1: "{slides1}"
-slides1: "{slides1}"
+slides2: "{slides2}"
 ---
 {talk_abstract}
 
@@ -156,10 +156,15 @@ class Command(BaseCommand):
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
                 room=props.submission.slot.room,
                 timeslot=start_time + "-" + end_time,
-                youtube_url=props.youtube_url or "",
+                youtube_id=props.youtube_id or "",
                 slides1=slides[0] if slides else "",
                 slides2=slides[1] if len(slides) > 1 else "",
             )
+
+            if props.youtube_id:
+                props.submission.recording_url = "https://www.youtube.com/watch?v={}".format(props.youtube_id)
+                props.submission.recording_source = "Youtube"
+                props.submission.save()
 
             talk_page_file = os.path.join(
                 talk_details_pages_path,

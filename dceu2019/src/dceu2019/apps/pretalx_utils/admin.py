@@ -13,8 +13,8 @@ from . import models
 @admin.register(models.TalkExtraProperties)
 class TalkExtraProperties(admin.ModelAdmin):
 
-    list_display = ("title", "speakers", "published", "twitter_card", "twitter_draft", "speaker_twitter_handle", "announced")
-    list_editable = ("published", "speaker_twitter_handle", "announced",)
+    list_display = ("title", "speakers", "published", "twitter_card", "twitter_draft", "youtube_id", "announced")
+    list_editable = ("published", "youtube_id", "announced",)
     list_filter = ("published", "announced", "workshop", "keynote")
 
     def title(self, instance):
