@@ -137,7 +137,7 @@ class Command(BaseCommand):
                 end_time = timezone.localtime(props.submission.slot.end).strftime("%H:%M")
 
             # Assume that resources are slides
-            slides = [r.resource.url for r in props.submission.active_resources]
+            slides = [r.resource.url if r.resource else "" for r in props.submission.active_resources]
 
             talk_detail_page_content = TALK_PAGE_HTML.format(
                 title=escape(submission.title),
