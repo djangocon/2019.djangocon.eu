@@ -48,6 +48,15 @@
               {{ end }}
             {{ end }}
 
+            {{ if .Page.Params.slides1 }}
+            <p>
+                <a href="https://members.2019.djangocon.eu{{ .Page.Params.slides1 }}" target="_blank">Download Slides 🎬</a>
+                {{ if .Page.Params.slides2 }}
+                    <a href="https://members.2019.djangocon.eu{{ .Page.Params.slides2 }}" target="_blank">Download Slides (alternative) 🎬</a>
+                {{ end }}
+            </p>
+            {{ end }}
+
   			{{ .Content }}
 
   			{{ if .Page.Params.workshop }}

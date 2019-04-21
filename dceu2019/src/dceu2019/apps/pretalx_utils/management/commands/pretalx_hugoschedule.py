@@ -43,6 +43,8 @@ twitter_card: {twitter_card}
 room: "{room}"
 timeslot: "{timeslot}"
 youtube_url: "{youtube_url}"
+slides1: "{slides1}"
+slides1: "{slides1}"
 ---
 {talk_abstract}
 
@@ -134,6 +136,9 @@ class Command(BaseCommand):
                 start_time = timezone.localtime(props.submission.slot.start).strftime("%A %H:%M")
                 end_time = timezone.localtime(props.submission.slot.end).strftime("%H:%M")
 
+            # Assume that resources are slides
+            slides = [r.resource.url for r in props.submission.active_resources]
+
             talk_detail_page_content = TALK_PAGE_HTML.format(
                 title=escape(submission.title),
                 description=escape(strip_tags(markdown(submission.abstract))),
@@ -152,6 +157,8 @@ class Command(BaseCommand):
                 room=props.submission.slot.room,
                 timeslot=start_time + "-" + end_time,
                 youtube_url=props.youtube_url or "",
+                slides1=slides[0] if slides else "",
+                slides2=slides[1] if len(slides) > 1 else "",
             )
 
             talk_page_file = os.path.join(
