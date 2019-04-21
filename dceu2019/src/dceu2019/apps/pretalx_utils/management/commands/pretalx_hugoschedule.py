@@ -42,7 +42,9 @@ workshop: {workshop}
 twitter_card: {twitter_card}
 room: "{room}"
 timeslot: "{timeslot}"
-youtube_url: "{youtube_url}"
+youtube_id: "{youtube_id}"
+slides1: "{slides1}"
+slides2: "{slides2}"
 ---
 {talk_abstract}
 
@@ -134,6 +136,9 @@ class Command(BaseCommand):
                 start_time = timezone.localtime(props.submission.slot.start).strftime("%A %H:%M")
                 end_time = timezone.localtime(props.submission.slot.end).strftime("%H:%M")
 
+            # Assume that resources are slides
+            slides = [r.resource.url for r in props.submission.active_resources]
+
             talk_detail_page_content = TALK_PAGE_HTML.format(
                 title=escape(submission.title),
                 description=escape(strip_tags(markdown(submission.abstract))),
@@ -151,8 +156,15 @@ class Command(BaseCommand):
                 twitter_card='https://members.2019.djangocon.eu' + props.twitter_card_image.url,
                 room=props.submission.slot.room,
                 timeslot=start_time + "-" + end_time,
-                youtube_url=props.youtube_url or "",
+                youtube_id=props.youtube_id or "",
+                slides1=slides[0] if slides else "",
+                slides2=slides[1] if len(slides) > 1 else "",
             )
+
+            if props.youtube_id:
+                props.submission.recording_url = "https://www.youtube.com/watch?v={}".format(props.youtube_id)
+                props.submission.recording_source = "Youtube"
+                props.submission.save()
 
             talk_page_file = os.path.join(
                 talk_details_pages_path,
