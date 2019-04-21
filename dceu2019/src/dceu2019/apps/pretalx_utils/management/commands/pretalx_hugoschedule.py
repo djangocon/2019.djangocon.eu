@@ -163,7 +163,7 @@ class Command(BaseCommand):
 
             if props.youtube_id:
                 props.submission.recording_url = "https://www.youtube.com/watch?v={}".format(props.youtube_id)
-                props.submission.recording_source = "Youtube"
+                props.submission.recording_source = "YT"
                 props.submission.save()
 
             talk_page_file = os.path.join(
