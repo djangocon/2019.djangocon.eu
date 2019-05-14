@@ -21,3 +21,5 @@ or you can click each individual talk in the program and see the video embedded
 below the talk description:
 
 <center><a href="/talks/" class="button button-orange">Program with videos</a></center>
+
+[![Heart mosaic](/static/img/mosaic_heart_thumb.jpeg)](/static/img/mosaic_heart.jpeg)
