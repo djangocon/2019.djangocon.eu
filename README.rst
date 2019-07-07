@@ -59,8 +59,8 @@ install them.
 .. code-block:: console
 
   # Install Hugo
-  $ wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/libs/libsass/libsass1_3.5.5-2_amd64.deb -O /tmp/libsass1.deb
-  $ wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/h/hugo/hugo_0.54.0-1_amd64.deb -O /tmp/hugo.deb
+  $ wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/libs/libsass/libsass1_3.5.5-4_amd64.deb -O /tmp/libsass1.deb
+  $ wget https://mirror.csclub.uwaterloo.ca/debian/pool/main/h/hugo/hugo_0.55.6+really0.54.0-1_amd64.deb -O /tmp/hugo.deb
   $ sudo dpkg -i /tmp/hugo.deb /tmp/libsass1.deb
 
   # Go to project directory

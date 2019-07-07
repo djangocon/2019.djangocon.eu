@@ -7,6 +7,8 @@ repos:
         args:
         - --exclude=*/*migrations/*, dceu2019/src/dceu2019/settings/*
     -   id: check-added-large-files
+        args:
+        - --maxkb=1200
     -   id: debug-statements
     -   id: end-of-file-fixer
 -   repo: git://github.com/FalconSocial/pre-commit-python-sorter
