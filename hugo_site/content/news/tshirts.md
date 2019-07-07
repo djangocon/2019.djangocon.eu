@@ -37,7 +37,7 @@ The garments, both tote bag and t-shirts, were made from ecological cotton and u
 
 ## A little shop
 
-Since its free to setup a shop on various outlets, we've chosen one with ecological garments (Spreadshirt).
+Since its free to setup a shop on various outlets, we've chosen one with ecological garments (Spreadshirt). Oh and since it's also digital print, we thought we'd add more colors, so we've made a pride-colored 🌈 edition of the Django heart.
 
 You are not supporting anything financially by buying from this shop, we have zero profits from it. If you would like to support Django, we suggest direct donations to Django Software Foundation.
 
