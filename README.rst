@@ -110,14 +110,16 @@ You can install and work on a development version following these steps:
 
   # Point your browser to localhost:8000/ and you'll see an empty schedule
 
-  Adding a sponsor logo
-  -----------------------------
-  Add an item to the array in this file: `hugo_site/data/sponsors.json`, and logo image here: `hugo_site/static/static/sponsors/`
 
-  ```
+Adding a sponsor logo
+-----------------------------
+
+Add an item to the array in this file: ``hugo_site/data/sponsors.json``, and logo image here: ``hugo_site/static/static/sponsors/``
+
+.. code-block:: json
+
   {
     "name": "Company Name",
     "logo": "logo.png",
     "website": "#"
   }
-  ```
