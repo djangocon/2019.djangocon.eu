@@ -15,7 +15,7 @@ Guided by previous DjangoCons, these are some of the things we planned to secure
 - A phone number to get in direct contact with the Code of Conduct Team was available during the whole event;
 - We made sure a member of the Code of Conduct team was made physically available at both the conference venue and at the party;
 
-Although no incidents were reported, a few participants brought to our attention something they thought could insult someone: someone walking around with a t-shirt that they thought could be interpreted as an insult to some. Upon investigation, we found out the person was part of the venue's staff. Then, by kindly have an informal conversation to the venue's director and getting to know this person's background a bit more, we decided that the situation could not disrespect any member of our event. And as expected, no one filled a formal report about this matter.
+Although no incidents were reported, a few participants brought to our attention something: someone walking around with a t-shirt that they thought could be an insult to some. Upon investigation, we found out the person was part of the venue's staff. Then, by having a kind and informal conversation to the venue's director, we got to know the t-shirt owner's background a bit more. We decided that the situation could not disrespect any member of our event, given the context. And as expected, no one filled a formal report about this matter.
 
 It was an amazing experience for all of the DjangoCon CoC Team. We were extremely satisfied with the outcome of the conference and even more importantly, with the ambiance the community provided to itself. We are definitely looking forward to contributing to future events such as this.
 
